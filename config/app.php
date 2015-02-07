@@ -139,13 +139,17 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
+		 // Laravel Defaults
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+        // Mah custom ones
+        'App\Providers\ComposerServiceProvider',
 
+        // Third Party
 		'GrahamCampbell\Markdown\MarkdownServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 
