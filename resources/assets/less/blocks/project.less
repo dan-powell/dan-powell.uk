@@ -19,7 +19,7 @@
     }
 
     ._titleWrapper {
-        opacity: 0;
+        opacity: 1;
         z-index: 1000;
         position: absolute;
         top: 0;
@@ -93,7 +93,7 @@
         top: 0;
         border-radius: 50%;
         background: rgba(red(@theme-secondary), green(@theme-secondary), blue(@theme-secondary), 0.6);
-        opacity:0;
+        opacity: 1;
         .transition(opacity .3s ease-in);
 
         .box-shadow(inset rgba(0, 0, 0, 0.4) 0 0 4px);
@@ -112,11 +112,11 @@
 	    cursor: pointer;
 
         ._titleWrapper {
-            opacity: 1;
+            opacity: 0;
         }
 
         &::after {
-            opacity: 1;
+            opacity: 0;
         }
 
 
@@ -129,4 +129,20 @@
 
         }
     }
+
+    &:active,
+    &:focus {
+
+        ._titleWrapper {
+            .transition(opacity 0);
+            opacity: 1;
+        }
+
+        &::after {
+            .transition(opacity 0);
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
+
 }

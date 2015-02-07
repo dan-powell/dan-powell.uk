@@ -14,6 +14,8 @@
 
                     <hr/>
 
+                    &copy; 2014 - {{ date("Y") }} Dan Powell
+
                 </div>
 
                 @include('partials.nav-tertiary')

@@ -2,9 +2,7 @@
     <div class="ProjectList">
     	@foreach($projects as $project)
     	    <div class="_column">
-
                 @include('projects.partials.project', ['project' => $project])
-
     	    </div>
     	@endforeach
     </div>

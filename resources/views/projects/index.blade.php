@@ -36,8 +36,6 @@
                 	@foreach($projects as $project)
                 	    <div class="_column {{ $project->allTags }}" data-order-type="{{{ $project->allTags }}}" data-order-created="{{{ $project->created_at }}}">
                             @include('projects.partials.project', ['project3' => $project])
-                	        <h3>{{{ $project->title }}}</h3>
-                	        <h5>{{{ $project->allTags }}}</h5>
                 	    </div>
                 	@endforeach
 
@@ -66,7 +64,7 @@
 @section('sidebar')
 @stop
 
-@section('htmlfoot')
+@section('scripts')
     <script src="{{ url() }}/js/projects.js" type="text/javascript"></script>
 
     <script type="text/javascript">

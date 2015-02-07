@@ -53,8 +53,8 @@ gulp.task('js', function() {
 
             gulp.src([
                 './bower_components/isotope/dist/isotope.pkgd.min.js',
-                    './bower_components/imagesloaded/imagesloaded.pkgd.js',
-                        './resources/assets/js/projects.js',
+                './bower_components/imagesloaded/imagesloaded.pkgd.js',
+                './resources/assets/js/projects.js',
             ]).pipe(concat('projects.js'))
         )
 
