@@ -1,0 +1,70 @@
+.NavTertiary {
+
+    text-align: center;
+
+    padding: 0 @sidebar-padding;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    ul, li {
+        padding: 0;
+        margin:0;
+        list-style: none;
+    }
+
+    ._item {
+        display: inline-block;
+
+        &::before {
+            .fa-icon();
+            content: @fa-var-circle-o;
+            color: rgba(255, 255, 255, 0.4);
+
+        }
+
+        &.-first::before {
+            display: none;
+        }
+
+    }
+
+    ._link {
+        padding: 8px;
+        border-radius: 50%;
+        
+        &:hover {
+            background: rgba(0, 0, 0, .6);
+            
+        }
+        
+    }
+
+
+/*
+
+
+    ._item {
+        display: inline-block;
+
+
+        border-left: rgba(255,255,255,0.05) solid 1px;
+
+        &:first {
+            border-left: none;
+        }
+    }
+
+    ._link {
+        display: inline-block;
+        padding: 12px;
+
+        &:hover {
+            background: rgba(0,0,0,0.4);
+        }
+
+    }
+*/
+
+
+}

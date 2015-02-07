@@ -1,0 +1,42 @@
+// Reference these styles. This allows us to us thier styles without writting superflous code to the final css file
+@import (reference) './main.less';
+
+.ie9 {
+
+
+    // Allow the navbar to be toggled (<IE9 doesn't support translate3d)
+    .Sidebar {
+        width: @sidebar-stripe-width;
+        > ._content {
+            display: none;
+        }
+    }
+    body.-showSidebar {
+        .Sidebar {
+            width: @sidebar-desktop-width;
+            > ._content {
+               display: block;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+.ie8 {
+
+    .View {
+        ._main {
+            padding-left: @sidebar-desktop-width;
+        }
+    }
+
+    // *Fix* all instances of RGBA
+    .Sidebar {
+        background: #222;
+    }
+}
+

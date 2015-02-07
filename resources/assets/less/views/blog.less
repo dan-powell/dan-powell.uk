@@ -1,0 +1,35 @@
+body.Blog {
+
+    &._index {
+
+        ._Article {
+            margin-bottom: @spacer;
+            ._ReadMore {
+                margin-top: @spacer/2;
+            }
+        }
+
+    }
+
+    &._show {
+        ._Article {
+            ._Image {
+                max-width:50%;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: @screen-md) {
+        &.-showArticle {
+            ._Article {
+                ._Image {
+                    max-width: none;
+                    width:100%;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

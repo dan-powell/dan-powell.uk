@@ -1,0 +1,222 @@
+.Section {
+
+	@sm: @spacer*0.75;
+	@md: @spacer;
+	@lg: @spacer*2;
+	@xl: @spacer*3;
+
+
+    .clearfix();
+
+
+    // Sizes
+    &.-sm {
+        padding: @sm;
+        //padding-bottom: @sm;
+    }
+    &.-md {
+        padding: @md;
+        //padding-bottom: @md;
+    }
+    &.-lg {
+        padding: @lg;
+        //padding-bottom: @lg;
+    }
+    &.-xl {
+        padding: @xl;
+        //padding-bottom: @xl;
+    }
+
+    // Backgrounds
+
+    &.-dark,
+    ._container.-dark {
+	    #background > .dark();
+         .contentStyle > .light();
+    }
+
+    &.-light,
+    ._container.-light {
+	    #background  > .light();
+	    .contentStyle > .dark();
+    }
+
+    &.-content,
+    ._container.-content {
+	    #background > .light();
+    }
+
+    &.-lightGrad,
+    ._container.-lightGrad {
+	    #background > .lightGradient();
+	    &.-animated {
+        	#background > .animatedGradientvert();
+        }
+    }
+
+    &.-primary,
+    ._container.-primary {
+	    #background > .primary();
+    }
+
+    &.-primaryGrad,
+    ._container.-primaryGrad {
+	    #background > .primaryGradient();
+		&.-animated {
+        	#background > .animatedGradientvert();
+        }
+    }
+
+    &.-secondary,
+    ._container.-secondary {
+	    #background > .secondary();
+	     .contentStyle > .light();
+    }
+
+    &.-secondaryGrad,
+    ._container.-secondaryGrad {
+	    #background > .secondaryGradient();
+	     .contentStyle > .white();
+	    &.-animated {
+        	#background > .animatedGradientvert();
+        }
+    }
+
+    &.-tertiary,
+    ._container.-tertiary {
+	    #background > .tertiary();
+	     .contentStyle > .white();
+    }
+
+
+
+
+
+    // Extras
+
+    &.-center,
+    ._container.-center {
+        text-align: center;
+        img {
+            display: inline-block;
+        }
+    }
+
+    &.-rounded,
+    ._container.-rounded {
+		border-radius: 30px;
+    }
+
+
+
+	// Components
+
+    ._container {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        &.-sm {
+            padding: @sm;
+            ._fullWidth {
+                margin: @sm -(@sm);
+            }
+        }
+
+        &.-md {
+            padding: @md;
+            ._fullWidth {
+                margin: @md -(@md);
+            }
+        }
+
+        &.-lg {
+            padding: @lg;
+            ._fullWidth {
+                margin: @lg -(@lg);
+            }
+        }
+
+        &.-xl {
+            padding: @xl;
+            ._fullWidth {
+                margin: @xl -(@xl);
+            }
+        }
+
+    }
+
+
+
+
+
+
+    // Let's set some different padding sizes
+
+
+
+
+
+    @media only screen and (max-width: @screen-md) {
+
+	    &.-xl,
+	    ._container.-xl {
+            padding: @lg;
+            ._fullWidth {
+                margin: @lg -(@lg);
+            }
+        }
+
+	}
+
+
+
+    @media only screen and (max-width: @screen-sm) {
+
+        &.-lg,
+        ._container.-lg {
+            padding: @md;
+
+            ._fullWidth {
+                margin: @md -(@md);
+            }
+
+        }
+
+        &.-xl,
+        ._container.-xl {
+            padding: @lg;
+
+
+            ._fullWidth {
+                margin: @lg -(@lg);
+            }
+        }
+
+    }
+
+
+    @media only screen and (max-width: @screen-xs) {
+
+        &.-lg,
+        ._container.-lg {
+            padding: @md;
+
+            ._fullWidth {
+                margin: @md -(@md);
+            }
+        }
+
+        &.-xl,
+        ._container.-xl {
+            padding: @md;
+
+            ._fullWidth {
+                margin: @md -(@md);
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,200 @@
+body.Static._home {
+
+	._heading {
+		position: relative;
+		.clearfix();
+
+		img {
+			vertical-align: top;
+		}
+
+		._column {
+
+			&.-left {
+				float: left;
+				width: 35%;
+				margin-top: 16px;
+				bottom: 0;
+				position: absolute;
+
+                img {
+                    float: right;
+                }
+			}
+
+			&.-right {
+				width: 60%;
+				margin-left: 40%;
+				float: right;
+			}
+		}
+
+		._speechWrapper {
+			position: relative;
+			background: url('../img/speech_bubble.png') left bottom no-repeat;
+			margin-bottom: @spacer;
+
+			._speechBubble {
+				display: inline-block;
+				background: #fff;
+				border-radius: 0 0 100% 100%;
+				//padding: 30px;
+				padding-top: 150px;
+				margin-top: -150px;
+
+				box-shadow: rgba(0, 0, 0, 0.2) 4px 0px 3px;
+
+				._speech {
+					display: block;
+					padding: 20px 60px 30px 60px;
+					text-align: center;
+					font-family: Georgia,Times,"Times New Roman",serif;
+					font-style: italic;
+					font-size: 40px;
+					line-height: 1.1;
+					color: rgba(0,0,0, 0.4);
+				}
+			}
+
+		}
+
+		._homeHeading {
+			font-size: 56px;
+			line-height: 1.2;
+			color: rgba(0,0,0,0.4);
+			text-shadow: rgba(255, 255, 255, 1) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+		}
+
+		@media only screen and (max-width: @screen-sm) {
+            ._homeHeading {
+				font-size: 40px;
+			}
+        }
+
+		@media only screen and (max-width: @screen-xs) {
+
+            ._column {
+                float: none;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+    			&.-left {
+    				width: 100%;
+    				position: relative;
+    				img {
+                        float: none;
+                        display: inline-block;
+                    }
+                }
+
+                &.-right {
+    				width: 100%;
+    				margin-left: 0;
+
+                }
+    		}
+
+            ._speechWrapper {
+			    position: relative;
+                background: none;
+                margin-bottom: @spacer/2;
+
+                ._speechBubble {
+                    width: 100%;
+                }
+			}
+
+			._homeHeading {
+				font-size: 34px;
+			}
+		}
+
+	}
+
+	.Section.-hero {
+
+		._intro {
+
+			font-size: 56px;
+			line-height: 1.2;
+			color: rgba(0,0,0,0.5);
+			text-shadow: rgba(255, 255, 255, 0.4) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+
+			._text {
+				display: block;
+
+				&.-one { font-size: 48px; }
+				&.-two { font-size: 96px; }
+				&.-three { font-size: 42px; }
+
+				@media only screen and (max-width: @screen-xs) {
+
+					&.-one { font-size: 24px; }
+					&.-two { font-size: 48px; }
+					&.-three { font-size: 22px; }
+
+				}
+			}
+		}
+	}
+
+	.Section.-projects {
+    	text-align: center;
+	}
+
+	.ProjectList {
+
+    	._column {
+        	float: left;
+        	width: 33.3%;
+        	padding: 20px;
+
+        	@media only screen and (max-width: @screen-sm) and (min-width: @screen-xs) {
+    	    	width: 50%;
+            	padding: 12px;
+
+                &:last-child {
+                    margin-top: -8px;
+                    padding-top: 0;
+                    margin-left: 25%;
+                }
+
+            }
+
+        	@media only screen and (max-width: @screen-xs) {
+    	    	width: 100%;
+            	padding: 8px;
+            }
+
+
+    	}
+    }
+
+    .Section.-cta {
+
+    	text-align: center;
+
+    	._column {
+        	float: left;
+        	width: 45%;
+        	//padding: px;
+
+        	&.-middle {
+            	width:10%;
+            	padding: 0 12px;
+        	}
+
+
+    	}
+
+        @media only screen and (max-width: @screen-xs) {
+            ._column {
+                width: 100%;
+                &.-middle {
+                    width:100%;
+                }
+            }
+        }
+    }
+
+}
