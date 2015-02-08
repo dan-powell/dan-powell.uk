@@ -14,4 +14,10 @@ class Project extends Model {
         return $this->morphMany('App\Models\Section', 'attachment')->orderBy('rank', 'ASC');
     }
 
+    public function pages()
+    {
+        return $this->morphMany('App\Models\ProjectPage', 'attachment');
+    }
+
+
 }

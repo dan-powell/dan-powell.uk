@@ -23,6 +23,8 @@ Route::get('/portfolio', array('as' => 'projects.index', 'uses' => 'ProjectsCont
 
 Route::get('/portfolio/{slug}', ['as' => 'projects.show', 'uses' => 'ProjectsController@show']);
 
+Route::get('/portfolio/{slug}/{pageSlug}', ['as' => 'projects.show', 'uses' => 'ProjectsController@page']);
+
 
 Route::get('/skills', array('as' => 'static.skills', function()
 {
@@ -51,13 +53,6 @@ $glide = ServerFactory::create([
     'max_image_size' => 2560*2000,
     //'driver' => 'imagick',
 ]);
-
-
-Route::get('/portfolio/three-six-five/index', array(function()
-{
-	return View::make('projects.static.threesixfive2010');
-}));
-
 
 
 /*

@@ -1,4 +1,4 @@
-@extends('projects.show')
+@extends('base')
 
 @section('body-class')Projects _show -static @stop
 
@@ -105,4 +105,4 @@
 	</div>
 </div>
 
-@append
+@stop
