@@ -53,6 +53,10 @@ $glide = ServerFactory::create([
 ]);
 
 
+Route::get('/portfolio/three-six-five/index', array(function()
+{
+	return View::make('projects.static.threesixfive2010');
+}));
 
 
 

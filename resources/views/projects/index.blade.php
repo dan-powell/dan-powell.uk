@@ -42,7 +42,7 @@
                 	@if(isset($tags) && count($tags) > 0)
                         @foreach($tags as $tag)
                             <div class="_column -{{ str_slug($tag->title) }} -type" data-order-type="-{{ str_slug($tag->title) }}" data-order-created="0000">
-                                <a class="Project" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">
+                                <a class="Project -divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">
                                     <img src="{{ url() }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_symbol.png'" alt="{{{ $project->title }}}"/>
                                     <div class="_titleWrapper">
                     	                <h3 class="_title">{{{ $tag->title }}}&nbsp;</h3>

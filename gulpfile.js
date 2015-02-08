@@ -55,7 +55,12 @@ gulp.task('js', function() {
                 './bower_components/isotope/dist/isotope.pkgd.min.js',
                 './bower_components/imagesloaded/imagesloaded.pkgd.js',
                 './resources/assets/js/projects.js',
-            ]).pipe(concat('projects.js'))
+            ]).pipe(concat('projects.js')),
+
+            gulp.src([
+                './bower_components/bootstrap/js/modal.js',
+                './bower_components/ekko-lightbox/dist/ekko-lightbox.min.js',
+            ]).pipe(concat('bootstrap.js'))
         )
 
          // Use plumber to output errors through Notify
@@ -88,6 +93,17 @@ gulp.task('rev', function() {
     .pipe(rev())
     .pipe(gulp.dest('./resources/views/partials/'));
 });
+
+
+gulp.task('copy', function() {
+    gulp.src([
+            './bower_components/jquery/dist/jquery.min.js',
+            './bower_components/jquery/dist/jquery.min.map',
+            './bower_components/jquery.lazyload/jquery.lazyload.min.js'
+        ])
+        .pipe(gulp.dest('./public/js/vendor/'));
+});
+
 
 
 // Browser-Sync

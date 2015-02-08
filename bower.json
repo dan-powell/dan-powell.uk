@@ -26,6 +26,7 @@
     "ekko-lightbox": "~3.2.*",
     "isotope": "~2.1.*",
     "isotope-packery": "~1.1.*",
-    "imagesloaded": "~3.1.*"
+    "imagesloaded": "~3.1.*",
+    "jquery.lazyload": "~1.9.3"
   }
 }
