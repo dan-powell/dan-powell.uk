@@ -1,7 +1,8 @@
 <?php namespace App\Http\Controllers;
 
-use App\Project;
-use App\Tag;
+// Load up the models
+use App\Models\Project;
+use App\Models\Tag;
 
 
 class ProjectsController extends Controller {
@@ -89,69 +90,4 @@ class ProjectsController extends Controller {
 	        }
         }
 	}
-
-
-    /**
-    *   Processess a text string, splitting it into sections that have custom parameters. Used to split to body text in to something useful.
-	*
-	* @param String $source - The string to process
-	* @param Array $parameter_names - An array of property names. Used as a fallback if a property is set without a name.
-	* @return Array - Returns an array of objects. Each object represents a section of content and has a 'content' property as well as custom properties.
-	*/
-
-	private function parseSections($source, $parameter_names = []) {
-
-        // Define a few regexes used to split up our markdown in to sections and parameters
-		$section_splitter = '/\@{4,}/'; // @@@@
-		$parameter_splitter = '/;{2,}/'; // ;;
-		$value_splitter = '/:{2,}/'; // ::
-
-		// First, split the text in to sections
-		$sections = preg_split($section_splitter, $source, null, true);
-
-        $array = [];
-        // Loop through each section and process it. Add the section object to the array when done.
-        foreach($sections as $key => $section) {
-            if(trim($section) != ''){
-
-                $object = new stdClass();
-
-                // Split the section in to parameters.
-                $params = preg_split($parameter_splitter, $section);
-
-                // The last 'parameter' is in fact the content, so add that the section object and remove it from the array.
-                $object->content = array_pop($params);
-
-                // If the array still has elements, then we know the parameter(s) have been set.
-                if(count($params) > 0) {
-
-                    // Loop through each parameter..
-                    foreach($params as $key => $param) {
-
-                        //And split it in to an array that contains the property name [0] and value [1].
-                        $parameter = preg_split($value_splitter, $param);
-
-                        // Check if a property name was set and use it, othewise make one up or take it from the $parameter_names array provided.
-                        if (count($parameter) > 1 && $parameter[0] != '') {
-                            $property = str_replace([' ', '-'], '_', strtolower(trim($parameter[0])));
-                            // Add the property and value to the object
-                            $object->$property = trim($parameter[1]);
-                        } else {
-                            if (array_key_exists($key, $parameter_names)) {
-                                $property = $parameter_names[$key];
-                            } else {
-                                $property = 'property' . $key;
-                            }
-                            // Add the property and value to the object
-                            $object->$property = trim($parameter[0]);
-                        }
-                    }
-                }
-                // Add the object to the final array of sections.
-                array_push($array, $object);
-            }
-        }
-        // Return the array of sections.
-        return $array;
-    }
 }

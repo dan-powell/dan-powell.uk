@@ -1,7 +1,7 @@
 <?php namespace App\Http\ViewComposers;
 
 use Illuminate\Contracts\View\View;
-use App\Project;
+use App\Models\Project;
 
 class ProjectListComposer {
 

@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use App\Project;
+use App\Models\Project;
 
 class SitemapController extends Controller {
 
