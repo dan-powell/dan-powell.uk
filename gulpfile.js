@@ -1,42 +1,55 @@
+// Load environment variables
+var env = require('node-env-file');
+env(__dirname + '/.env');
+
+
 var gulp        = require('gulp');
 var plumber = require('gulp-plumber');
-var browserSync = require('browser-sync');
 var less = require('gulp-less');
 var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
 var filter      = require('gulp-filter');
-var notify = require("gulp-notify");
 var concat = require('gulp-concat');
 var rev = require('gulp-rev-append');
 var streamqueue = require('streamqueue');
+var gulpif = require('gulp-if');
+
+// Load up local dependencies
+if (process.env.APP_ENV == 'local') {
+	var sourcemaps = require('gulp-sourcemaps');
+	var notify = require("gulp-notify");
+	var browserSync = require('browser-sync');
+}
+
+
 
 
 // Process LESS
 gulp.task('less', function () {
-    var stream = gulp.src('./resources/assets/less/main.less')
+	
+    return gulp.src('./resources/assets/less/main.less')
 
-    // Use plumber to output errors through Notify
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")}))
-
-    // initialize source-maps
-    .pipe(sourcemaps.init())
-
-    // Do the processing
-    .pipe(less({
-        compress: true
-    }))
-
-    // Write source maps to file
-    .pipe(sourcemaps.write('.'))
-
-    // Write processed data to file
-    .pipe(gulp.dest('./public/css/'))
-
-    // Filtering stream to only relevant files get passed to browser sync for injection & Notify upon successful completion!
-    .pipe(filter('**/*.css'))
-    .pipe(notify("Less Gulped!"))
-    .pipe(browserSync.reload({stream:true}));
-
+	    // Use plumber to output errors through Notify
+	    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")}))
+	
+	    // initialize source-maps
+	    .pipe(sourcemaps.init())
+	
+	    // Do the processing
+	    .pipe(less({
+	        compress: true
+	    }))
+	
+	    // Write source maps to file
+	    .pipe(sourcemaps.write('.'))
+	
+	    // Write processed data to file
+	    .pipe(gulp.dest('./public/css/'))
+	
+	    // Filtering stream to only relevant files get passed to browser sync for injection & Notify upon successful completion!
+	    .pipe(filter('**/*.css'))
+	    .pipe(notify("Less Gulped!"))
+	    .pipe(gulpif(process.env.APP_ENV == 'local', browserSync.reload({stream:true})))
+    
 });
 
 
