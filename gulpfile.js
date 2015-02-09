@@ -2,7 +2,9 @@
 var env = require('node-env-file');
 env(__dirname + '/.env');
 
+var local_env = process.env.APP_ENV == 'local' ? true : false;
 
+// Load Gulp plugins
 var gulp        = require('gulp');
 var plumber = require('gulp-plumber');
 var less = require('gulp-less');
@@ -12,44 +14,38 @@ var concat = require('gulp-concat');
 var rev = require('gulp-rev-append');
 var streamqueue = require('streamqueue');
 var gulpif = require('gulp-if');
-
-// Load up local dependencies
-if (process.env.APP_ENV == 'local') {
-	var sourcemaps = require('gulp-sourcemaps');
-	var notify = require("gulp-notify");
-	var browserSync = require('browser-sync');
-}
-
-
+var sourcemaps = require('gulp-sourcemaps');
+var notify = require("gulp-notify");
+var browserSync = require('browser-sync');
 
 
 // Process LESS
 gulp.task('less', function () {
-	
+
     return gulp.src('./resources/assets/less/main.less')
 
 	    // Use plumber to output errors through Notify
-	    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")}))
-	
+	    .pipe(gulpif(local_env, plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")})))
+
 	    // initialize source-maps
-	    .pipe(sourcemaps.init())
-	
+	    .pipe(gulpif(local_env, sourcemaps.init()))
+
 	    // Do the processing
 	    .pipe(less({
 	        compress: true
 	    }))
-	
+
 	    // Write source maps to file
-	    .pipe(sourcemaps.write('.'))
-	
+	    .pipe(gulpif(local_env, sourcemaps.write('.')))
+
 	    // Write processed data to file
 	    .pipe(gulp.dest('./public/css/'))
-	
+
 	    // Filtering stream to only relevant files get passed to browser sync for injection & Notify upon successful completion!
-	    .pipe(filter('**/*.css'))
-	    .pipe(notify("Less Gulped!"))
-	    .pipe(gulpif(process.env.APP_ENV == 'local', browserSync.reload({stream:true})))
-    
+	    .pipe(gulpif(local_env, filter('**/*.css'))
+	    .pipe(gulpif(local_env, notify("Less Gulped!")))
+	    .pipe(gulpif(local_env, browserSync.reload({stream:true})))
+
 });
 
 
