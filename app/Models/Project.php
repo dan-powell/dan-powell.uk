@@ -16,7 +16,7 @@ class Project extends Model {
 
     public function pages()
     {
-        return $this->morphMany('App\Models\ProjectPage', 'attachment');
+        return $this->morphMany('App\Models\Page', 'attachment');
     }
 
 

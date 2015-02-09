@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectPages extends Migration {
+class CreatePages extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateProjectPages extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('project_pages', function($table)
+        Schema::create('pages', function($table)
 		{
     		$table->increments('id');
     		$table->timestamps();
@@ -20,10 +20,9 @@ class CreateProjectPages extends Migration {
             $table->string('slug', 80);
             $table->string('seo_title', 255);
             $table->string('seo_description', 255);
-            $table->string('url', 255);
-            $table->text('content');
-            $table->text('javascript');
-            $table->text('css');
+            $table->text('markup');
+            $table->text('scripts');
+            $table->text('styles');
             $table->string('template', 80);
             $table->integer('attachment_id');
             $table->string('attachment_type', 255);
@@ -38,7 +37,7 @@ class CreateProjectPages extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('project_pages');
+		Schema::drop('pages');
 	}
 
 }

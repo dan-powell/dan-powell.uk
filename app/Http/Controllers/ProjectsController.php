@@ -2,7 +2,7 @@
 
 // Load up the models
 use App\Models\Project;
-use App\Models\ProjectPage;
+use App\Models\Page;
 use App\Models\Tag;
 
 
@@ -79,7 +79,7 @@ class ProjectsController extends Controller {
 		        if ($project->template == null || $project->template == 'default') {
 			        $template = 'projects.show';
 			    } else {
-				    $template = 'projects.layouts.' . $project->template;
+				    $template = 'projects.templates.' . $project->template;
 				}
 
                 // Return view with projects
@@ -94,56 +94,50 @@ class ProjectsController extends Controller {
 
 
     /**
-    *   Return a view showing one of the projects
+    *   Return a view showing one of the pages
 	*
 	* @param String $slug - if numeric will be treated as an id, otherwise will search for matching slug
+	* @param String $pageSlug - if numeric will be treated as an id, otherwise will search for matching slug
 	* @return View - returns created page, or throws a 404 if slug is invalid or can't find a matching record
 	*/
 	public function page($slug, $pageSlug)
 	{
-        // check to see if id is valid then determine if it is an id or a slug
-        if (is_numeric($slug)) {
-            // If a number is supplied, use that to find project by ID
-            $project = Project::find($slug);
+    	// Build query to find relevent Project
+        $query = Project::where('slug', '=', $slug)->with('pages');
+        $project = $query->first();
 
-            // Check if a project was found
-            if ($project != null) {
-                // Project found OK, return a 301 redirect to the correct slug
-            	return redirect()->route('projects.show', $project->slug, 301);
-            } else {
-                // No project found, throw a 404.
-	            return abort('404', 'Invalid project id');
-	        }
-        }
-        else {
-	        $query = Project::where('slug', '=', $slug)->with('pages');
-	        $project = $query->first();
+        // Check if a project was found
+        if ($project == null) {
+            return abort('404', 'Invalid project slug');
+        } else {
 
-
+            // Filter related pages and return the one with the correct slug
             $filteredPages = $project->pages->filter(function($page) use ($pageSlug)
             {
                 if(isset($page->slug) && $page->slug == $pageSlug) {
             	    return $page;
             	}
             });
-
-
-
             $page = $filteredPages->first();
 
+            // Check if a page was found
+            if ($page != null) {
 
-
-            // Check if a project was found
-	        if ($page != null) {
+                if ($page->template == null || $page->template == 'default') {
+    		        $template = 'projects.page';
+    		    } else {
+    			    $template = 'projects.pages.' . $page->template;
+    			}
 
                 // Return view with projects
-				return view('projects.static.' . $page->template)->with(['page' => $page]);
+    			return view($template)->with(['page' => $page, 'project' => $project]);
 
-		   	} else {
+    	   	} else {
     		   	// No project found, throw a 404.
-	            return abort('404', 'Invalid page slug');
-	        }
+                return abort('404', 'Invalid page slug');
+            }
         }
+
 	}
 
 

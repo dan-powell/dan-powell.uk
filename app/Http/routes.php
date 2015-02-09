@@ -23,7 +23,7 @@ Route::get('/portfolio', array('as' => 'projects.index', 'uses' => 'ProjectsCont
 
 Route::get('/portfolio/{slug}', ['as' => 'projects.show', 'uses' => 'ProjectsController@show']);
 
-Route::get('/portfolio/{slug}/{pageSlug}', ['as' => 'projects.show', 'uses' => 'ProjectsController@page']);
+Route::get('/portfolio/{slug}/{pageSlug}', ['as' => 'projects.page', 'uses' => 'ProjectsController@page']);
 
 
 Route::get('/skills', array('as' => 'static.skills', function()

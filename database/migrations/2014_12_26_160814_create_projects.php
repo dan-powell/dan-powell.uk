@@ -20,8 +20,10 @@ class CreateProjects extends Migration {
             $table->string('slug', 80);
             $table->string('seo_title', 255);
             $table->string('seo_description', 255);
+            $table->text('markup');
+            $table->text('scripts');
+            $table->text('styles');
             $table->string('url', 255);
-            $table->text('content');
             $table->tinyInteger('featured')->default(0);
             $table->string('template', 80);
 		});

@@ -15,12 +15,11 @@ class CreateSections extends Migration {
         Schema::create('sections', function($table)
 		{
     		$table->increments('id');
-
-            $table->text('content');
+            $table->text('markup');
+            $table->text('scripts');
+            $table->text('styles');
             $table->string('section_classes', 255);
             $table->string('container_classes', 255);
-            $table->text('javascript');
-            $table->text('css');
             $table->integer('rank');
             $table->integer('attachment_id');
             $table->string('attachment_type', 255);

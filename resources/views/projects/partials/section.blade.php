@@ -1,17 +1,17 @@
 @section('styles')
     @parent
-    @if (isset($section->style) && $section->style != '')
+    @if (isset($section->styles) && $section->styles != '')
         <style type="text/css">
-            {!! $section->style !!}
+            {!! $section->styles !!}
         </style>
     @endif
 @stop
 
-@if(isset($section->content) && $section->content != '')
+@if(isset($section->markup) && $section->markup != '')
     <section class="Section{{(isset($section->section_classes)) ? ' ' . $section->section_classes : ''}}" style>
         <div class="{{(isset($section->container_classes)) ? '_container ' . $section->container_classes : ''}}">
         	<div class="Content">
-                {!! Markdown::convertToHtml($section->content) !!}
+                {!! Markdown::convertToHtml($section->markup) !!}
         	</div>
      	</div>
     </section>
@@ -19,9 +19,9 @@
 
 @section('scripts')
     @parent
-    @if (isset($section->script) && $section->script != '')
+    @if (isset($section->scripts) && $section->scripts != '')
         <script type="text/javascript">
-            {!! $section->script !!}
+            {!! $section->scripts !!}
         </script>
     @endif
 @stop
