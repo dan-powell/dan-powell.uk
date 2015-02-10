@@ -1,0 +1,39 @@
+{
+    "title" : "Dan-Powell",
+    "proxy" : "dan-powell.dev",
+    "js": [
+        {
+            "input": [
+                "./resources/assets/js/classie.js",
+                "./resources/assets/js/sidebar.js",
+                "./resources/assets/js/main.js"
+            ],
+            "output": "main.js"
+        },
+        {
+            "input": [
+                "./resources/assets/js/classie.js",
+                "./resources/assets/js/sidebar.js",
+                "./resources/assets/js/main.js"
+            ],
+            "output": "mainTEST.js"
+        }
+    ],
+    "less": [
+        {
+            "input": [
+                "./resources/assets/less/main.less"
+            ]
+        }
+    ],
+    "copy": [
+        {
+            "input": [
+                "./bower_components/jquery/dist/jquery.min.js",
+                "./bower_components/jquery/dist/jquery.min.map",
+                "./bower_components/jquery.lazyload/jquery.lazyload.min.js"
+            ],
+            "output": "./public/js/vendor/"
+        }
+    ]
+}

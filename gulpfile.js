@@ -9,12 +9,28 @@ var streamqueue = require('streamqueue');
 var sourcemaps = require('gulp-sourcemaps');
 var notify = require("gulp-notify");
 var browserSync = require('browser-sync');
+var mergeStream = require('merge-stream');
 
+var config = require('./assetconfig.json');
 
 // Process LESS
 gulp.task('less', function () {
 
-    return gulp.src('./resources/assets/less/main.less')
+
+    // Merges multiple streams together - Allows multiple groups of scripts to be processed through one pipe.
+    var mergeSources = function(i, source) {
+        //Check if this is the last iteration or not
+        if (i > 0){
+            // Merge the current stream with the next by a calling this function recursively
+            return mergeStream(mergeSources(i - 1, source), gulp.src(source[i].input));
+        } else {
+            // Return last stream
+            return gulp.src(source[i].input);
+        }
+    };
+
+    // Merge the groups of scripts in to a single stream
+    mergeSources(config.less.length - 1, config.less)
 
 	    // Use plumber to output errors through Notify
 	    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")}))
@@ -24,8 +40,8 @@ gulp.task('less', function () {
 
 	    // Do the processing
 	    .pipe(less({
-	        compress: false
-	    }))
+            compress: false
+        }))
 
 	    // Write source maps to file
 	    .pipe(sourcemaps.write('.'))
@@ -36,7 +52,7 @@ gulp.task('less', function () {
 	    // Filtering stream to only relevant files get passed to browser sync for injection & Notify upon successful completion!
 	    .pipe(filter('**/*.css'))
 	    .pipe(notify("Less Gulped!"))
-	    .pipe(browserSync.reload({stream:true}))
+	    .pipe(browserSync.reload({stream:true}));
 
 });
 
@@ -44,8 +60,7 @@ gulp.task('less', function () {
 // Process JS
 gulp.task('js', function() {
 
-    return streamqueue({ objectMode: true },
-
+        /*
             gulp.src([
                 './resources/assets/js/classie.js',
                 './resources/assets/js/sidebar.js',
@@ -62,7 +77,23 @@ gulp.task('js', function() {
                 './bower_components/bootstrap/js/modal.js',
                 './bower_components/ekko-lightbox/dist/ekko-lightbox.min.js',
             ]).pipe(concat('bootstrap.js'))
-        )
+        */
+
+
+    // Merges multiple streams together - Allows multiple groups of scripts to be processed through one pipe.
+    var mergeSources = function(i, source) {
+        //Check if this is the last iteration or not
+        if (i > 0){
+            // Merge the current stream with the next by a calling this function recursively
+            return mergeStream(mergeSources(i - 1, source), gulp.src(source[i].input).pipe(concat(source[i].output)));
+        } else {
+            // Return last stream
+            return gulp.src(source[i].input).pipe(concat(source[i].output));
+        }
+    };
+
+    // Merge the groups of scripts in to a single stream
+    mergeSources(config.js.length - 1, config.js)
 
         // Use plumber to output errors through Notify
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %> | Extract: <%= error.extract %>")}))
@@ -90,12 +121,8 @@ gulp.task('js', function() {
 
 
 gulp.task('copy', function() {
-    gulp.src([
-            './bower_components/jquery/dist/jquery.min.js',
-            './bower_components/jquery/dist/jquery.min.map',
-            './bower_components/jquery.lazyload/jquery.lazyload.min.js'
-        ])
-        .pipe(gulp.dest('./public/js/vendor/'));
+    gulp.src(config.copy[0].input)
+        .pipe(gulp.dest(config.copy[0].output));
 });
 
 
@@ -103,7 +130,7 @@ gulp.task('copy', function() {
 // Browser-Sync
 gulp.task('browser-sync', function() {
     browserSync({
-        proxy: "dan-powell.dev",
+        proxy: config.proxy,
         browser: "google chrome"
     });
 });
