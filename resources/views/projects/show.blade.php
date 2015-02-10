@@ -11,11 +11,24 @@
 @section('main')
     <article>
 
-        @foreach($project->sections as $section)
 
-            @include('projects.partials.section')
+		@if (count($project->sections) > 0)
+	        @foreach($project->sections as $section)
+	
+	            @include('projects.partials.section')
+	
+	        @endforeach
+        @else
+        
+            <section class="Section -primary">
+		        <div class="_container">
+		        	<div class="Content">
+		                {!! Markdown::convertToHtml($project->markup) !!}
+		        	</div>
+		     	</div>
+		    </section>
 
-        @endforeach
+		@endif
 
     </article>
 @stop

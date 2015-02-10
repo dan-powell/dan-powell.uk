@@ -1,4 +1,8 @@
 <?php
+	
+use Illuminate\Database\Seeder;
+use App\Models\Project;
+use App\Models\Section;
 
 class ProjectsSeeder extends Seeder {
 
@@ -10,25 +14,27 @@ class ProjectsSeeder extends Seeder {
   		// create some Portfolio Items
 		for ($i = 0; $i < 20; $i++)
 		{
-		  $user = Project::create(array(
+		  Project::create(array(
             'created_at' => $faker->dateTimeBetween($startDate = '-1 years', $endDate = 'now'),
+            'updated_at' => $faker->dateTimeBetween($startDate = '-1 years', $endDate = 'now'),
 		    'title' => $faker->sentence(rand(2, 5)),
 		    'slug' => $faker->slug,
 		    'seo_title' => $faker->sentence(rand(1, 4)),
 		    'seo_description' => $faker->paragraph(1),
-		    'content' => $faker->paragraph(rand(3, 8)),
+		    'markup' => $faker->paragraph(rand(3, 8)),
+		    'featured' => $faker->randomElement([0, 1])
 		  ));
 		}
-
-
-		// Create some Tags
-		for ($i = 0; $i < 10; $i++)
+		
+		
+		for ($i = 0; $i < 40; $i++)
 		{
-		  $user = Tag::create(array(
-		    'title' => $faker->word,
+		  Section::create(array(
+		    'markup' => $faker->paragraph(rand(3, 8)),
+		    'attachment_id' => $faker->numberBetween(1, 20),
+		    'attachment_type' => 'App\Models\Project'
 		  ));
 		}
-
 
   	}
 
