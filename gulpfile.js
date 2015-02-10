@@ -16,7 +16,6 @@ var config = require('./assetconfig.json');
 // Process LESS
 gulp.task('less', function () {
 
-
     // Merges multiple streams together - Allows multiple groups of scripts to be processed through one pipe.
     var mergeSources = function(i, source) {
         //Check if this is the last iteration or not
@@ -60,26 +59,6 @@ gulp.task('less', function () {
 // Process JS
 gulp.task('js', function() {
 
-        /*
-            gulp.src([
-                './resources/assets/js/classie.js',
-                './resources/assets/js/sidebar.js',
-                './resources/assets/js/main.js',
-            ]).pipe(concat('main.js')),
-
-            gulp.src([
-                './bower_components/isotope/dist/isotope.pkgd.min.js',
-                './bower_components/imagesloaded/imagesloaded.pkgd.js',
-                './resources/assets/js/projects.js',
-            ]).pipe(concat('projects.js')),
-
-            gulp.src([
-                './bower_components/bootstrap/js/modal.js',
-                './bower_components/ekko-lightbox/dist/ekko-lightbox.min.js',
-            ]).pipe(concat('bootstrap.js'))
-        */
-
-
     // Merges multiple streams together - Allows multiple groups of scripts to be processed through one pipe.
     var mergeSources = function(i, source) {
         //Check if this is the last iteration or not
@@ -111,7 +90,7 @@ gulp.task('js', function() {
         .pipe(sourcemaps.write('.'))
 
         // Write processed data to file
-        .pipe(gulp.dest('./public/js/'))
+        .pipe(gulp.dest('.'))
 
         // Notify upon successful completion & reload page via Browser-sync
         .pipe(notify("Scripts Gulped!"))
