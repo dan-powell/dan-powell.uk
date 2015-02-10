@@ -26,13 +26,23 @@ class ProjectsSeeder extends Seeder {
 		  ));
 		}
 		
-		
+		// Add some Sections to projects
 		for ($i = 0; $i < 40; $i++)
 		{
 		  Section::create(array(
 		    'markup' => $faker->paragraph(rand(3, 8)),
 		    'attachment_id' => $faker->numberBetween(1, 20),
 		    'attachment_type' => 'App\Models\Project'
+		  ));
+		}
+		
+		// Assign some tags to projects
+		for ($i = 0; $i < 16; $i++)
+		{
+		  DB::table('taggables')->insert(array(
+		    'tag_id' => $faker->numberBetween(1, 10),
+		    'taggable_id' => $faker->numberBetween(1, 20),
+            'taggable_type' => 'App\Models\Project'
 		  ));
 		}
 

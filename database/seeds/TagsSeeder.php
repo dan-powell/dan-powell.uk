@@ -19,14 +19,7 @@ class TagsSeeder extends Seeder {
 		  ));
 		}
 
-		for ($i = 0; $i < 16; $i++)
-		{
-		  DB::table('taggables')->insert(array(
-		    'tag_id' => $faker->numberBetween(1, 10),
-		    'taggable_type' => $faker->numberBetween(1, 10),
-            'taggable_type' => $faker->randomElement(['App\Models\Project', 'App\Models\Project']),
-		  ));
-		}
+
 
   	}
 
