@@ -5,7 +5,7 @@
             src="{{ url() }}/img/projects/{{ $project->slug }}/thumb.jpg?w=400&h=400&fit=crop"
             alt="{{{ $project->title }}}"/>
     @else
-        <img src="{{ url() }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_symbol.png'" alt="{{{ $project->title }}}"/>
+        <img src="{{ url() }}/img/holding/spacer_1x1.png" alt="{{{ $project->title }}}"/>
     @endif
 
     <div class="_titleWrapper">

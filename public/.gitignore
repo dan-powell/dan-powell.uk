@@ -1,0 +1,13 @@
+*
+!.gitignore
+
+!.htaccess.example
+!favicon
+!index.php
+!robots.txt
+!humans.txt
+!img/
+!img/*
+
+img/**/~
+img/**/.DS_Store
