@@ -12,7 +12,7 @@ class ComposerServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->view->composer('projects.partials.list','App\Http\ViewComposers\ProjectlistComposer');
+        $this->app->view->composer('projects.partials.list','App\Http\ViewComposers\ProjectListComposer');
     }
 
 }
