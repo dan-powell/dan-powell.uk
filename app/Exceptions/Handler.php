@@ -49,8 +49,10 @@ class Handler extends ExceptionHandler {
                         return response()->view('system.403', [], 403);
                     case 404: /* not found */
                         return response()->view('system.404', [], 404);
-                    case 500: /* internal error */
+                    case 503: /* service unavailable - down for maintenance */
+                        return response()->view('system.503', [], 503);
                     default:
+                        /* internal error */
                         return response()->view('system.500', [], 500);
                 }
 
