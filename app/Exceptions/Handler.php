@@ -59,7 +59,13 @@ class Handler extends ExceptionHandler {
             }
             else
             {
-                return $this->renderHttpException($e);
+                /* service unavailable - down for maintenance */
+                if($e->getStatusCode() == 503)
+                    return response()->view('system.503', [], 503);
+                else {
+                    return $this->renderHttpException($e);
+                }
+
             }
 
 		}
