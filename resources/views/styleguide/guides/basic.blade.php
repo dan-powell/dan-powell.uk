@@ -6,7 +6,7 @@
     @parent
     <section class="Section">
         <div class="_container -lg Content">
-            @include('styleguide.content.basic')
+            {!! Markdown::parse(View::make('styleguide.content.basic-md')) !!}
         </div>
     </section>
 @stop

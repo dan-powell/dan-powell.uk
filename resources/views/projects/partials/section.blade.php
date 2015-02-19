@@ -11,7 +11,7 @@
     <section class="Section{{(isset($section->section_classes)) ? ' ' . $section->section_classes : ''}}" style>
         <div class="{{(isset($section->container_classes)) ? '_container ' . $section->container_classes : ''}}">
         	<div class="Content">
-                {!! Markdown::convertToHtml($section->markup) !!}
+                {!! Markdown::parse($section->markup) !!}
         	</div>
      	</div>
     </section>

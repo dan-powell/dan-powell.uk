@@ -25,7 +25,7 @@
 	@if (isset($project->intro) && $project->intro != null)
     <section class="Section -hero -md">
 	    <div class="_container Content">
-            {{ Markdown::render($project->intro) }}
+            {{ Markdown::parse($project->intro) }}
 	    </div>
     </section>
     @endif
@@ -34,7 +34,7 @@
     <section class="Section -content -xl">
         <div class="_container">
             <article class="Content UserGrid">
-				{{ Markdown::render($project->body) }}
+				{{ Markdown::parse($project->body) }}
             </article>
         </div>
     </section>

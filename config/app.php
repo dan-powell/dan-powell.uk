@@ -150,7 +150,7 @@ return [
         'App\Providers\ComposerServiceProvider',
 
         // Third Party
-		'GrahamCampbell\Markdown\MarkdownServiceProvider',
+		'AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
 
 	],
@@ -202,7 +202,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
 
-		'Markdown' => 'GrahamCampbell\Markdown\Facades\Markdown',
+		'Markdown'  => 'AlfredoRamos\ParsedownExtra\Facades\ParsedownExtra',
 		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 		'Carbon'   => 'Carbon\Carbon'
 	],

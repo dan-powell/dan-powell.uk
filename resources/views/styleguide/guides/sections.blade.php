@@ -32,7 +32,7 @@
 &lt;/section&gt;</code>
 
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
             </div>
         </section>
 
@@ -44,7 +44,7 @@
 	&lt;/div&gt;
 &lt;/section&gt;</code>
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
     		</div>
 
     		<div class="_container -secondaryGrad -xl -center Content -animated">
@@ -53,18 +53,18 @@
     ...
 &lt;/div&gt;</code>
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
     		</div>
 
     		<div class="_container -light -xl Content">
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
 
     	        <div class="_fullWidth">
     	        <img src="{{ url() }}/img/img/test-hero/hero_2x1_1.jpg?w=1140&h=285&fit=crop" alt="alt text" class=""/>
     	        </div>
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
 
     		</div>
 
@@ -72,7 +72,7 @@
 <code>&lt;div class=&quot;_container -tertiary -xl Content&quot;&gt;
     ...
 &lt;/div&gt;</code>
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
 
     		</div>
 
@@ -85,7 +85,7 @@
 ...
 &lt;/section&gt;</code>
 
-                @include('styleguide.content.test')
+                {!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
 
     		</div>
 
@@ -95,7 +95,7 @@
     ...
 &lt;/div&gt;</code>
 
-    		@include('styleguide.content.test')
+    		{!! Markdown::parse(View::make('styleguide.content.test-md')) !!}
 
         </section>
     </article>

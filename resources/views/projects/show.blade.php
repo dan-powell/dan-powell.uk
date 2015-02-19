@@ -14,16 +14,16 @@
 
 		@if (count($project->sections) > 0)
 	        @foreach($project->sections as $section)
-	
+
 	            @include('projects.partials.section')
-	
+
 	        @endforeach
         @else
-        
+
             <section class="Section -primary">
 		        <div class="_container">
 		        	<div class="Content">
-		                {!! Markdown::convertToHtml($project->markup) !!}
+		                {!! Markdown::parse($project->markup) !!}
 		        	</div>
 		     	</div>
 		    </section>
@@ -39,5 +39,9 @@
 
 @section('scripts')
     @parent
-    <script src="{{ url() }}/js/projects.js" type="text/javascript"></script>
+
+
+        @if (isset($project->scripts) && $project->scripts != '')
+	            {!! $project->scripts !!}
+        @endif
 @stop

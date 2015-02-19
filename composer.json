@@ -8,7 +8,7 @@
 		"laravel/framework": "5.0.*",
         "fzaninotto/faker": "1.4.*",
 		"nesbot/Carbon": "1.13.*",
-		"graham-campbell/markdown": "dev-master",
+		"alfredo-ramos/parsedown-extra-laravel": "~0.2",
 		"barryvdh/laravel-debugbar": "~2.0",
 		"league/glide": "0.3.*"
 	},
