@@ -4,7 +4,12 @@
             srcset="{{ url() }}/img/projects/{{ $project->slug }}/thumb.jpg?w=800&h=800&fit=crop 2x"
             src="{{ url() }}/img/projects/{{ $project->slug }}/thumb.jpg?w=400&h=400&fit=crop"
             alt="{{{ $project->title }}}"/>
+    @elseif(File::exists('projects/' . $project->slug . '/thumb.gif'))
+        <img
+            src="{{ url() }}/projects/{{ $project->slug }}/thumb.gif"
+            alt="{{{ $project->title }}}"/>
     @else
+
         <img src="{{ url() }}/img/holding/spacer_1x1.png" alt="{{{ $project->title }}}"/>
     @endif
 
