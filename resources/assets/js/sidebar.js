@@ -15,24 +15,27 @@
         openbtn = document.querySelectorAll( '.js_openSidebar' ),
         closebtn = document.getElementById( 'js_closeSidebar' ),
         isOpen = false,
-
-
-/*
-        morphEl = document.getElementById( 'morph-shape' ),
-        s = Snap( morphEl.querySelector( 'svg' ) );
-        path = s.select( 'path' );
-        initialPath = this.path.attr('d'),
-        steps = morphEl.getAttribute( 'data-morph-open' ).split(';');
-        console.log(steps);
-        stepsTotal = steps.length;
-        console.log(stepsTotal);
-*/
-
         isAnimating = false;
-
 
     function init() {
         initEvents();
+
+        if (readCookie('sidebar') == 'true' && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 970) {
+            classie.add( bodyEl, '-showSidebar' );
+            isOpen = true;
+        }
+
+    }
+
+    function readCookie(name) {
+	    var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+    	for(var i=0;i < ca.length;i++) {
+    		var c = ca[i];
+    		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    	}
+    	return null;
     }
 
     function initEvents() {
@@ -43,13 +46,15 @@
             }
         }
 
-        // close the menu element if the target itÂ´s not the menu element or one of its descendants..
+        // close the menu element if the target it´s not the menu element or one of its descendants..
+/*
         content.addEventListener( 'click', function(ev) {
             var target = ev.target;
             if( isOpen && target !== openbtn ) {
                 toggleMenu();
             }
         } );
+*/
     }
 
     function toggleMenu() {
@@ -57,30 +62,16 @@
         isAnimating = true;
         if( isOpen ) {
             classie.remove( bodyEl, '-showSidebar' );
-            // animate path
             setTimeout( function() {
-                // reset path
-                //path.attr( 'd', initialPath );
                 isAnimating = false;
             }, 300 );
+            document.cookie ='sidebar=false; expires=Fri, 3 Aug 2020 20:47:11 UTC; path=/';
         }
         else {
             classie.add( bodyEl, '-showSidebar' );
+            document.cookie ='sidebar=true; expires=Fri, 3 Aug 2020 20:47:11 UTC; path=/';
             // animate path
             isAnimating = false;
-/*
-            var pos = 0,
-                nextStep = function( pos ) {
-                    if( pos > stepsTotal - 1 ) {
-                        isAnimating = false;
-                        return;
-                    }
-                    path.animate( { 'path' : steps[pos] }, pos === 0 ? 400 : 500, pos === 0 ? mina.easein : mina.elastic, function() { nextStep(pos); } );
-                    pos++;
-                };
-
-            nextStep(pos);
-*/
         }
         isOpen = !isOpen;
     }
