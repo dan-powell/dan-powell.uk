@@ -57,6 +57,32 @@ $glide = ServerFactory::create([
 
 /*
 |--------------------------------------------------------------------------
+| 301 Redirects from previous site
+|--------------------------------------------------------------------------
+*/
+
+Route::get('projects', function(){
+    return Redirect::to('/portfolio', 301);
+});
+
+Route::get('projects/echolife', function(){
+    return Redirect::to('/portfolio', 301);
+});
+
+Route::get('projects/narratweet', function(){
+    return Redirect::to('/portfolio', 301);
+});
+
+Route::get('contact', function(){
+    return Redirect::to('/', 301);
+});
+
+Route::get('projects/ignition-theory-portfolio', function(){
+    return Redirect::to('/portfolio', 301);
+});
+
+/*
+|--------------------------------------------------------------------------
 | Image routes
 |--------------------------------------------------------------------------
 |
