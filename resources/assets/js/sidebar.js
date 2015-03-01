@@ -23,6 +23,9 @@
         if (readCookie('sidebar') == 'true' && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 970) {
             classie.add( bodyEl, '-showSidebar' );
             isOpen = true;
+        } else {
+            classie.remove( bodyEl, '-showSidebar' );
+            isOpen = false;
         }
 
     }

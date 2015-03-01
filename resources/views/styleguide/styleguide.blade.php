@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('meta')
+<meta name="robots" content="noindex">
+@stop
+
 @section('main')
 
 	<section class="Section -center -sm">

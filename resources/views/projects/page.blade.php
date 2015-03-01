@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')Projects _show -page @stop
+@section('class')Projects _show -page @stop
+
+@section('meta')
+<title>{{ $page->seo_title }}</title>
+<meta name="description" content="{{ $page->seo_description }}">
+@stop
 
 @section('sidebar-buttons')
     <a href="{{ route('projects.show', $project->slug) }}" class="navButton -back">

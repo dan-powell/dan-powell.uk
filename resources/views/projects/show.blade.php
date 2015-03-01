@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')Projects _show @stop
+@section('meta')
+<title>{{ $project->seo_title }}</title>
+<meta name="description" content="{{ $project->seo_description }}">
+@stop
+
+@section('class')Projects _show @stop
 
 @section('sidebar-buttons')
     <a href="{{ route('projects.index') }}" class="navButton -back">
@@ -10,7 +15,6 @@
 
 @section('main')
     <article>
-
 
 		@if (count($project->sections) > 0)
 	        @foreach($project->sections as $section)
@@ -39,9 +43,7 @@
 
 @section('scripts')
     @parent
-
-
-        @if (isset($project->scripts) && $project->scripts != '')
-	            {!! $project->scripts !!}
-        @endif
+    @if (isset($project->scripts) && $project->scripts != '')
+            {!! $project->scripts !!}
+    @endif
 @stop

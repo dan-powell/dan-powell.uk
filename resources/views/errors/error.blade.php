@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('body-class')System _403 @stop
+@section('class')System _error @stop
 
 @section('sidebar-buttons')
     <a href="{{ url() }}" class="navButton -back">
@@ -14,8 +14,7 @@
 	<section class="Section -lightGrad">
     	<div class="_container -lg -center">
             <div class="Content">
-				<h1 class="pageHeading">Error 403</h1>
-				<h2>Forbidden</h2>
+				<h1 class="pageHeading">General Error</h1>
             </div>
     	</div>
 	</section>

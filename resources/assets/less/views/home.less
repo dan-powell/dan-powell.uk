@@ -63,11 +63,19 @@ body.Static._home {
 			line-height: 1.2;
 			color: rgba(0,0,0,0.4);
 			text-shadow: rgba(255, 255, 255, 1) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+			small {
+    			font-size: 40px;
+    			display: block;
+			}
+
 		}
 
-		@media only screen and (max-width: @screen-sm) {
+		@media only screen and (max-width: @screen-md) {
             ._homeHeading {
 				font-size: 40px;
+				small {
+    			    font-size: 20px;
+			    }
 			}
         }
 

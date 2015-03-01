@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')Static _skills @stop
+@section('meta')
+<title>Skills and experience | Dan Powell</title>
+<meta name="description" content="My Curriculum Vitae, capabilites and employment history.">
+@stop
+
+@section('class')Static _skills @stop
 
 @section('main')
 

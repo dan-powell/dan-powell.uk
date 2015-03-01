@@ -31,8 +31,29 @@
               <priority>0.8</priority>
 
            </url>
-       @endif
+        @endif
+
+        @if(isset($project->pages) && count($project->pages) > 0)
+            @foreach($project->pages as $page)
+                @if (!isset($page->url) || $page->url == '')
+                    <url>
+
+                      <loc>{{ route('projects.page', [$project->slug, $page->slug]) }}</loc>
+
+                      <lastmod>{{ $page->updated_at->toDateString() }}</lastmod>
+
+                      <changefreq>monthly</changefreq>
+
+                      <priority>0.8</priority>
+
+                   </url>
+               @endif
+            @endforeach
+        @endif
 
     @endforeach
+
+
+
 
 </urlset>

@@ -1,6 +1,6 @@
 @include('partials.htmlhead')
 
-<body class="@yield('body-class', 'Base')" ontouchstart="">
+<body class="@yield('class', 'Base') -showSidebar" ontouchstart="">
 
     @include('partials.sidebar')
 

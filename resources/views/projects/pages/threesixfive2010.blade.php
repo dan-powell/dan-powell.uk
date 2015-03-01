@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('body-class')Projects _show -static @stop
+@section('class')Projects _show -static @stop
 
 @section('styles')
     @parent

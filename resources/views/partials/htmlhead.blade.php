@@ -9,12 +9,9 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title></title>
-    <meta name="description" content="">
+    @yield('meta')
     <link type="text/plain" rel="author" href="/humans.txt">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    @yield('meta')
 
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ url() }}/favicons/apple-touch-icon-152x152-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ url() }}/favicons/apple-touch-icon-120x120-precomposed.png">
@@ -38,8 +35,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js?rev=1423329234356" type="text/javascript"></script>
     <script>window.Modernizr || document.write('<script src="{{url()}}/js/vendor/modernizr.js">\x3C/script>')</script>
-
-
 
 
     <script type="text/javascript">

@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')System _403 @stop
+@section('meta')
+<title>Forbidden | Dan Powell</title>
+<meta name="description" content="401 Error - Forbidden">
+@stop
+
+@section('class')System _403 @stop
 
 @section('sidebar-buttons')
     <a href="{{ url() }}" class="navButton -back">

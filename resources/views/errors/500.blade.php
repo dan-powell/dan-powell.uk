@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')System _500 @stop
+@section('meta')
+<title>Internal Error | Dan Powell</title>
+<meta name="description" content="500 Error - Internal Error">
+@stop
+
+@section('class')System _500 @stop
 
 @section('sidebar-buttons')
     <a href="{{ url() }}" class="navButton -back">

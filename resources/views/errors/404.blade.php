@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')System _404 @stop
+@section('meta')
+<title>Not Found | Dan Powell</title>
+<meta name="description" content="404 Error - Resource not found">
+@stop
+
+@section('class')System _404 @stop
 
 @section('sidebar-buttons')
     <a href="{{ url() }}" class="navButton -back">

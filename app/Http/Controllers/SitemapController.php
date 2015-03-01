@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Page;
 
 class SitemapController extends Controller {
 
@@ -35,8 +36,8 @@ class SitemapController extends Controller {
         	],
     	];
 
-        // Projects
-    	$this->pages->projects = Project::orderBy('created_at', 'DESC')->get();
+        // Projects & Project Pages
+    	$this->pages->projects = Project::with('pages')->orderBy('created_at', 'DESC')->get();
 
     }
 

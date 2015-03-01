@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')Static _home @stop
+@section('meta')
+<title>Dan Powell | Website designer, front-end developer from Dorset</title>
+<meta name="description" content="I’m Dan Powell, and I design and develop websites and other digital stuff. Here’s my portfolio of creative work.">
+@stop
+
+@section('class')Static _home @stop
 
 @section('main')
 
@@ -17,7 +22,7 @@
 				        </div>
 			        </div>
 		        	<h1 class="_homeHeading">
-	                	I&rsquo;m Dan Powell
+	                	I&rsquo;m Dan Powell, <small>Designer & Developer</small>
 	            	</h1>
 		        </div>
 

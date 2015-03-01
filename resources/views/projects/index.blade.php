@@ -1,6 +1,11 @@
 @extends('base')
 
-@section('body-class')Projects _index @stop
+@section('meta')
+<title>My Portfolio | Dan Powell</title>
+<meta name="description" content="Here's a selection of my best work.">
+@stop
+
+@section('class')Projects _index @stop
 
 @section('main')
 

@@ -1,7 +1,35 @@
 .Hero {
 
+    &.-upperBorder {
+        box-sizing: border-box;
 
+        margin-top: 60px;
+        border: 60px solid #111;
+        border-radius: 40px 40px 0 0;
 
+        border-bottom-width: 0;
 
+        @media screen and (max-width: @screen-sm) {
+            margin-top: 30px;
+            border-width: 30px;
+            border-radius: 20px 20px 0 0;
+
+            border-bottom-width: 10px;
+        }
+
+        &.-sm {
+            margin-top: 20px;
+            border-width: 20px;
+            border-radius: 15px 15px 0 0;
+
+            border-bottom-width: 0;
+
+            @media screen and (max-width: @screen-sm) {
+                border-bottom-width: 20px;
+                border-radius: 15px;
+            }
+        }
+
+    }
 
 }

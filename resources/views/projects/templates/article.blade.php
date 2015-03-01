@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('body-class')Projects _show -article @stop
+@section('class')Projects _show -article @stop
 
 @section('main')
 
