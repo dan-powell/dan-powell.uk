@@ -25,15 +25,15 @@
                 	<!-- 16:9 crop -->
                 	<source
                 		media="(min-width: 480px)"
-                		srcset="{{ url() }}/img/dan_powell_skills.png,
-                		{{ url() }}/img/dan_powell_skills@2x.png 2x" />
+                		srcset="{{ url() }}/img/img/dan_powell_skills.png?w=1140,
+                		{{ url() }}/img/dan_powell_skills.png?w=2280 2x" />
                 	<!-- square crop -->
                 	<source
-                		srcset="{{ url() }}/img/dan_powell_skills_sm.png,
-                		{{ url() }}/img/dan_powell_skills_sm@2x.png 2x" />
+                		srcset="{{ url() }}/img/img/dan_powell_skills.png?w=400&h=480&fit=crop,
+                		{{ url() }}/img/img/dan_powell_skills.png?w=800&h=940&fit=crop 2x" />
                 	<img
                 		src="{{ url() }}/img/dan_powell_skills.png"
-                		alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
+                		alt="Dan Powell's Skills" />
                 </picture>
 
 	    </div>
