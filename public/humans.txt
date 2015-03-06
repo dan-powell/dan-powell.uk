@@ -1,0 +1,17 @@
+  _____                _____                  _ _ 
+ |  __ \              |  __ \                | | |
+ | |  | | __ _ _ __   | |__) |____      _____| | |
+ | |  | |/ _` | '_ \  |  ___/ _ \ \ /\ / / _ \ | |
+ | |__| | (_| | | | | | |  | (_) \ V  V /  __/ | |
+ |_____/ \__,_|_| |_| |_|   \___/ \_/\_/ \___|_|_|
+
+/* MAIN */
+  Development & Main Design: Dan Powell
+  Github: https://github.com/dan-powell
+  Site: http://dan-powell.uk
+
+/* SITE */
+  Last update: 6/03/2015
+  Doctype: HTML5
+  Framework: Laravel 5
+  IDE: Coda 2.5, Sketch, MAMP Pro
