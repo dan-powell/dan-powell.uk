@@ -182,12 +182,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dan-powell/portfolio.git",
-                "reference": "eb84d2cfb1c577ff84d17de8e0999732aa156d04"
+                "reference": "2974407cbcf7ca1742de20ddfe198dcb3f32e77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dan-powell/portfolio/zipball/eb84d2cfb1c577ff84d17de8e0999732aa156d04",
-                "reference": "eb84d2cfb1c577ff84d17de8e0999732aa156d04",
+                "url": "https://api.github.com/repos/dan-powell/portfolio/zipball/2974407cbcf7ca1742de20ddfe198dcb3f32e77e",
+                "reference": "2974407cbcf7ca1742de20ddfe198dcb3f32e77e",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "DanPowell\\Portfolio\\": "/src"
+                    "DanPowell\\Portfolio\\": "/src/app"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -216,7 +216,7 @@
                 "laravel",
                 "portfolio"
             ],
-            "time": "2015-03-08 21:06:21"
+            "time": "2015-03-09 20:52:28"
         },
         {
             "name": "danielstjules/stringy",

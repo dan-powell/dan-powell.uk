@@ -10,7 +10,7 @@
 		"nesbot/Carbon": "1.13.*",
 		"alfredo-ramos/parsedown-extra-laravel": "~0.2",
 		"barryvdh/laravel-debugbar": "~2.0",
-		"league/glide": "0.4.*",
+		"league/glide": "0.3.*",
 		"dan-powell/portfolio": "dev-master"
 	},
 	"require-dev": {
