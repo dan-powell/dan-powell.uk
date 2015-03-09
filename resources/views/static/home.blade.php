@@ -49,7 +49,7 @@
 
             <h3>Here are some examples of my best work…</h3>
 
-            @include('projects.partials.list')
+            @include('portfolio::partials.list')
 
         </div>
     </section>
@@ -79,5 +79,5 @@
 @stop
 
 @section('sidebar')
-<!--         <p>A vital work full of inspiration from one of the major electronic artists of our decade. Favorite track: Roel Funcken - Vertox Dreaming (remix by Hecq).</p> -->
+
 @stop

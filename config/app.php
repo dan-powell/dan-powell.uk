@@ -147,7 +147,7 @@ return [
 		'App\Providers\RouteServiceProvider',
 
         // Mah custom ones
-        'App\Providers\ComposerServiceProvider',
+        'DanPowell\Portfolio\PortfolioServiceProvider',
 
         // Third Party
 		'AlfredoRamos\ParsedownExtra\ParsedownExtraServiceProvider',

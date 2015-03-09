@@ -2,7 +2,7 @@
     <div class="ProjectList">
     	@foreach($projects as $project)
     	    <div class="_column">
-                @include('projects.partials.thumb', ['project' => $project])
+                @include('portfolio::partials.thumb', ['project' => $project])
     	    </div>
     	@endforeach
     </div>

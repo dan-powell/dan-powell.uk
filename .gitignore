@@ -1,4 +1,5 @@
 /vendor
+/packages
 .env
 
 /node_modules

@@ -40,7 +40,7 @@
                 <div class="ProjectList" id="isotope">
                 	@foreach($projects as $project)
                 	    <div class="_column {{ $project->allTags }}" data-order-type="{{{ $project->allTags }}}" data-order-created="{{{ $project->created_at }}}">
-                            @include('projects.partials.thumb', ['project' => $project])
+                            @include('portfolio::partials.thumb', ['project' => $project])
                 	    </div>
                 	@endforeach
 

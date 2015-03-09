@@ -19,13 +19,6 @@ Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
 Route::get('/sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);
 
 
-Route::get('/portfolio', array('as' => 'projects.index', 'uses' => 'ProjectsController@index'));
-
-Route::get('/portfolio/{slug}', ['as' => 'projects.show', 'uses' => 'ProjectsController@show']);
-
-Route::get('/portfolio/{slug}/{pageSlug}', ['as' => 'projects.page', 'uses' => 'ProjectsController@page']);
-
-
 Route::get('/skills', array('as' => 'static.skills', function()
 {
 	return View::make('static.skills');

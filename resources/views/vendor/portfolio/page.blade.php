@@ -18,7 +18,7 @@
 
         @foreach($page->sections as $section)
 
-            @include('projects.partials.section')
+            @include('partials.section')
 
         @endforeach
 
@@ -26,7 +26,7 @@
 @stop
 
 @section('sidebar')
-    @include('projects.partials.list')
+    @include('partials.list')
 @stop
 
 @section('scripts')

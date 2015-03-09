@@ -19,7 +19,7 @@
 		@if (count($project->sections) > 0)
 	        @foreach($project->sections as $section)
 
-	            @include('projects.partials.section')
+	            @include('portfolio::partials.section')
 
 	        @endforeach
         @else
@@ -38,7 +38,7 @@
 @stop
 
 @section('sidebar')
-    @include('projects.partials.list')
+    @include('portfolio::partials.list')
 @stop
 
 @section('scripts')
