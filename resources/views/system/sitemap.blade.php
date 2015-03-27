@@ -23,7 +23,15 @@
     	</div>
 	</section>
 
-	<section class="Section -light">
+<section class="Section -primary">
+    	<div class="_container -lg -center">
+            <div class="Content">
+
+            </div>
+    	</div>
+	</section>
+
+	<section class="Section">
     	<div class="_container -lg">
             <div class="Content">
 

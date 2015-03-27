@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-use DanPowell\Portfolio\App\Models\Project;
-use DanPowell\Portfolio\App\Models\Page;
+use DanPowell\Portfolio\Models\Project;
+use DanPowell\Portfolio\Models\Page;
 
 class SitemapController extends Controller {
 
