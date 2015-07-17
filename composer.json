@@ -5,9 +5,9 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*",
+		"laravel/framework": "5.1.*",
         "fzaninotto/faker": "1.4.*",
-		"nesbot/Carbon": "1.13.*",
+		"nesbot/Carbon": "1.19.*",
 		"alfredo-ramos/parsedown-extra-laravel": "~0.2",
 		"barryvdh/laravel-debugbar": "~2.0",
 		"league/glide": "0.3.*",
