@@ -176,12 +176,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dan-powell/portfolio.git",
-                "reference": "98913c329e63b6a7ef47d453ef1e436618a8c5dd"
+                "reference": "7b2f97068eafbac0f86a920caaf5a70c7d9d3200"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dan-powell/portfolio/zipball/98913c329e63b6a7ef47d453ef1e436618a8c5dd",
-                "reference": "98913c329e63b6a7ef47d453ef1e436618a8c5dd",
+                "url": "https://api.github.com/repos/dan-powell/portfolio/zipball/7b2f97068eafbac0f86a920caaf5a70c7d9d3200",
+                "reference": "7b2f97068eafbac0f86a920caaf5a70c7d9d3200",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +211,7 @@
                 "laravel",
                 "portfolio"
             ],
-            "time": "2015-07-14 22:41:30"
+            "time": "2015-07-20 18:21:26"
         },
         {
             "name": "danielstjules/stringy",
