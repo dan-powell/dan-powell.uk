@@ -50,7 +50,7 @@ return [
 
         'portfolio' => [
 			'driver' => 'local',
-			'root'   => public_path().'/portfolio',
+			'root'   => public_path().'/portfolio_assets',
 		],
 
 		's3' => [
