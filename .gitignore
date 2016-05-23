@@ -8,3 +8,7 @@
 npm-debug.log
 typescript
 
+.idea
+
+# Frontend
+gulp.env.yaml

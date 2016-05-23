@@ -44,16 +44,16 @@ class Handler extends ExceptionHandler {
                 switch ($e->getStatusCode())
                 {
                     case 401: /* forbidden */
-                        return response()->view('errors.401', [], 401);
+                        return response()->view('public.error.401.error401', [], 401);
                     case 403: /* permission denied */
-                        return response()->view('errors.403', [], 403);
+                        return response()->view('public.error.403.error403', [], 403);
                     case 404: /* not found */
-                        return response()->view('errors.404', [], 404);
+                        return response()->view('public.error.404.error404', [], 404);
                     case 503: /* service unavailable - down for maintenance */
-                        return response()->view('errors.503', [], 503);
+                        return response()->view('public.error.503.error503', [], 503);
                     default:
                         /* internal error */
-                        return response()->view('errors.500', [], 500);
+                        return response()->view('public.error.500.error500', [], 500);
                 }
 
             }
@@ -61,7 +61,7 @@ class Handler extends ExceptionHandler {
             {
                 /* service unavailable - down for maintenance */
                 if($e->getStatusCode() == 503)
-                    return response()->view('errors.503', [], 503);
+                    return response()->view('public.error.503.error503', [], 503);
                 else {
                     return $this->renderHttpException($e);
                 }
@@ -72,7 +72,7 @@ class Handler extends ExceptionHandler {
 		else
 		{
     		if (!config('app.debug')) {
-        		return response()->view('errors.error', [], 500);
+        		return response()->view('public.error.general.errorGeneral', [], 500);
             } else {
 			    return parent::render($request, $e);
             }

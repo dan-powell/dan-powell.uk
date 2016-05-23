@@ -1,4 +1,4 @@
-@extends('base')
+@extends('public.publicBase')
 
 @section('class')Projects _show -static @stop
 
@@ -10,7 +10,7 @@
         display: none;
     }
 
-    .btn {
+    .Button {
         margin-bottom: 20px;
     }
 
@@ -26,16 +26,16 @@
 @section('main')
 
 
-<div class="Section -lightGrad">
-    <div class="_container -md -center">
+<div class="Section Section--lightGrad">
+    <div class="Section-container Section--md Section--center">
     	<div class="Content">
             <h1>All 365 pieces</h1>
     	</div>
  	</div>
 </div>
 
-<div class="Section -primary">
-    <div class="_container -md -center">
+<div class="Section Section--primary">
+    <div class="Section-container Section--md Section--center">
     	<div class="Content">
             <p class="lead">Here's the complete list of all work from <a href="{{ route('projects.show', 'three-six-five') }}">my 365 2010 project</a></p>
     	</div>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="Section">
-    <div class="_container -sm -center">
+    <div class="Section-container Section--sm Section--center">
 
     	<div class="row">
 
@@ -71,12 +71,12 @@
 
                         @if (in_array($month . '-' . $day, $swf))
 
-                        <a href="{{ url() }}/projects/three-six-five/full/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.swf" class="btn -secondary -md">
+                        <a href="{{ url() }}/projects/three-six-five/full/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.swf" class="Button Button--secondary Button--md">
 
                         @else
 
                         <a href="{{ url() }}/projects/three-six-five/full/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.jpg"
-                            data-toggle="lightbox" data-title="{{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}" data-gallery="365" data-parent=".row" class="btn -light -md">
+                            data-toggle="lightbox" data-title="{{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}" data-gallery="365" data-parent=".row" class="Button Button--light Button--md">
 
                         @endif
                             <p class="text-center">
@@ -104,10 +104,8 @@
 @section('scripts')
     @parent
     <script src="{{ url() }}/js/vendor/jquery.min.js?rev=1423329234356" type="text/javascript"></script>
-    <script src="{{ url() }}/js/vendor/jquery.lazyload.min.js?rev=1423329234356" type="text/javascript"></script>
+    <script src="{{ url() }}/js/vendor/jquery.lazyload.js?rev=1423329234356" type="text/javascript"></script>
     <script src="{{ url() }}/js/bootstrap.js?rev=1423329234356" type="text/javascript"></script>
-
-
 
     <script type="text/javascript">
         $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {

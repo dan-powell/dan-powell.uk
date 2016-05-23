@@ -1,4 +1,4 @@
-@extends('base')
+@extends('public.publicBase')
 
 @section('meta')
 <title>My Portfolio | Dan Powell</title>
@@ -9,24 +9,24 @@
 
 @section('main')
 
-    <section class="Section -lightGrad -md">
-        <div class="_container">
+    <section class="Section Section--lightGrad Section--md">
+        <div class="Section-container">
             <h1 class="pageHeading">
                 My Portfolio
             </h1>
         </div>
     </section>
 
-    <section class="Section -primary -md">
-	    <div class="_container -center">
+    <section class="Section Section--primary Section--md">
+	    <div class="Section-container Section--center">
     	    <p>Here are some projects and other things that I've done.</p>
             <!-- <p>View the   most recent        examples of my    illustration        work</p> -->
 
-            <button class="btn" data-filter=".project" onclick="iso.arrange({filter: '*'})">All</button>
+            <button class="Button" data-filter=".project" onclick="iso.arrange({filter: '*'})">All</button>
 
             @if(isset($tags) && count($tags) > 0)
                 @foreach($tags as $tag)
-                    <button class="btn" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">{{{ $tag->title }}}</button>
+                    <button class="Button" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">{{ $tag->title }}</button>
                 @endforeach
             @endif
 
@@ -34,23 +34,23 @@
     </section>
 
     <section class="Section">
-        <div class="_container -center -md">
+        <div class="Section-container Section--center Section--md">
 
             @if(isset($projects) && count($projects) > 0)
                 <div class="ProjectList" id="isotope">
                 	@foreach($projects as $project)
-                	    <div class="_column {{ $project->allTags }}" data-order-type="{{{ $project->allTags }}}" data-order-created="{{{ $project->created_at }}}">
+                	    <div class="ProjectList-column {{ $project->allTags }}" data-order-type="{{ $project->allTags }}" data-order-created="{{ $project->created_at }}">
                             @include('portfolio::partials.thumb', ['project' => $project])
                 	    </div>
                 	@endforeach
 
                 	@if(isset($tags) && count($tags) > 0)
                         @foreach($tags as $tag)
-                            <div class="_column -{{ str_slug($tag->title) }} -type" data-order-type="-{{ str_slug($tag->title) }}" data-order-created="0000">
-                                <a class="Project -divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">
+                            <div class="ProjectList-column ProjectList--{{ str_slug($tag->title) }} ProjectList--type" data-order-type="-{{ str_slug($tag->title) }}" data-order-created="0000">
+                                <a class="Project Project--divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">
                                     <img src="{{ url() }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_symbol.png'" alt="{{{ $project->title }}}"/>
-                                    <div class="_titleWrapper">
-                    	                <h3 class="_title">{{{ $tag->title }}}&nbsp;</h3>
+                                    <div class="Project-titleWrapper">
+                    	                <h3 class="Project-title">{{ $tag->title }}&nbsp;</h3>
                     	            </div>
                                 </a>
                             </div>
@@ -70,7 +70,7 @@
 @stop
 
 @section('scripts')
-    <script src="{{ url() }}/js/projects.js" type="text/javascript"></script>
+    <script src="{{ url() }}/js/portfolio.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         // or with vanilla JS
@@ -80,7 +80,7 @@
 		imagesLoaded( container, function() {
 		  iso = new Isotope( container, {
 		    // options
-		    itemSelector: '._column',
+		    itemSelector: '.ProjectList-column',
             //layoutMode: 'packery'
             //filter: '.image'
 

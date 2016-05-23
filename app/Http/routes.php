@@ -19,24 +19,31 @@ Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
 Route::get('/sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);
 
 
-Route::get('/skills', array('as' => 'static.skills', function()
+Route::get('/skills', array('as' => 'page.skills', function()
 {
-	return View::make('static.skills');
-}));
-
-Route::get('/privacy', array('as' => 'static.privacy', function()
-{
-	return View::make('static.privacy');
+	return View::make('public.page.skills.pageSkills');
 }));
 
 
-Route::get('styleguide/{view?}', function($view = null) {
-    if ($view == null || View::exists('styleguide.guides.' . $view)) {
-        return View::make('styleguide.styleguide', ['view' => $view]);
+Route::get('/experience', array('as' => 'page.experience', function()
+{
+	return View::make('public.page.experience.pageExperience');
+}));
+
+
+Route::get('/privacy', array('as' => 'page.privacy', function()
+{
+	return View::make('public.page.privacy.pagePrivacy');
+}));
+
+
+Route::get('styleguide/{view?}', array('as' => 'styleguide', function($view = null) {
+    if ($view == null || View::exists('public.styleguide.show.styleguide-show-' . $view)) {
+        return View::make('public.styleguide.styleguide-base', ['view' => $view]);
     } else {
         App::abort('404');
     }
-});
+}));
 
 // Setup Glide server
 

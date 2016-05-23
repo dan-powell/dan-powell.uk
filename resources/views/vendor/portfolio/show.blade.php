@@ -1,4 +1,4 @@
-@extends('base')
+@extends('public.publicBase')
 
 @section('meta')
 <title>{{ $project->seo_title }}</title>
@@ -24,8 +24,8 @@
 	        @endforeach
         @else
 
-            <section class="Section -primary">
-		        <div class="_container">
+            <section class="Section Section--primary">
+		        <div class="Section-container">
 		        	<div class="Content">
 		                {!! Markdown::parse($project->markup) !!}
 		        	</div>

@@ -24,14 +24,19 @@ class SitemapController extends Controller {
             	'route' => 'projects.index',
             	'last_modified' => '2015-02-18'
         	],
+			[
+				'title' => 'Experience',
+				'route' => 'page.experience',
+				'last_modified' => '2015-02-18'
+			],
         	[
                 'title' => 'Skills',
-            	'route' => 'static.skills',
+            	'route' => 'page.skills',
             	'last_modified' => '2015-02-18'
         	],
             [
                 'title' => 'Privacy',
-            	'route' => 'static.privacy',
+            	'route' => 'page.privacy',
             	'last_modified' => '2015-02-18'
         	],
     	];
@@ -49,7 +54,7 @@ class SitemapController extends Controller {
 
 	public function show()
 	{
-        return view('system.sitemap')->with(['pages' => $this->pages]);
+        return view('public.sitemap.show.sitemapShow')->with(['pages' => $this->pages]);
 	}
 
 
@@ -60,7 +65,7 @@ class SitemapController extends Controller {
 
 	public function xml()
 	{
-    	$view = view('system.sitemap_xml')->with(['pages' => $this->pages]);
+    	$view = view('public.sitemap.xml.sitemapXml')->with(['pages' => $this->pages]);
         return response($view, '200')->header('Content-Type', 'text/xml');
     }
 

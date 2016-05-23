@@ -1,0 +1,26 @@
+// Reference these styles. This allows us to us their styles without writting superflous code to the final css file
+@import (reference) './bower_components/bootstrap/less/bootstrap.less';
+
+// Import a customised version of the bootstrap variables
+@import 'bootstrapVariables.less';
+
+// There are a couple things that we need to import
+// we use 'multiple' here to allow these files to be imported a second time
+@import (multiple) './bower_components/bootstrap/less/normalize.less';
+@import (multiple) './bower_components/bootstrap/less/scaffolding.less';
+@import (multiple) './bower_components/bootstrap/less/responsive-utilities.less';
+//@import (multiple) './bower_components/bootstrap/less/grid.less';
+//@import (multiple) './bower_components/bootstrap/less/forms.less';
+@import (multiple) './bower_components/bootstrap/less/modals.less';
+@import (multiple) './bower_components/bootstrap/less/close.less';
+
+
+// Third party CSS frameworks
+// If importing vanilla CSS files, use: @import (inline) 'whatever.css';
+//@import (inline) 'bower_components/stuff/whatever.css';
+
+@import (inline) './bower_components/ekko-lightbox/dist/ekko-lightbox.min.css';
+//@import (inline) './bower_components/simpleModal/Source/assets/css/simpleModal.css';
+
+@import 'components/grid.less';
+@import 'components/modal.less';

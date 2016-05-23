@@ -1,11 +1,11 @@
-@extends('base')
+@extends('public.publicBase')
 
 @section('class')Projects _show -article @stop
 
 @section('main')
 
-    <section class="Section -gradient -md">
-        <div class="_container">
+    <section class="Section Section--gradient Section--md">
+        <div class="Section-container">
             <h1 class="pageHeading">
             	@if (isset($project->title) && $project->title != null)
                 {{{ $project->title }}}
@@ -17,22 +17,22 @@
     </section>
 
 	@if (isset($project->hero) && $project->hero != null)
-	<section class="Section -media">
+	<section class="Section Section--media">
 		{{ HTML::image('img/test-hero/' . $project->hero) }}
 	</section>
 	@endif
 
 	@if (isset($project->intro) && $project->intro != null)
-    <section class="Section -hero -md">
-	    <div class="_container Content">
+    <section class="Section Section--hero Section--md">
+	    <div class="Section-container Content">
             {{ Markdown::parse($project->intro) }}
 	    </div>
     </section>
     @endif
 
 	@if (isset($project->body) && $project->body != null)
-    <section class="Section -content -xl">
-        <div class="_container">
+    <section class="Section Section--content Section--xl">
+        <div class="Section-container">
             <article class="Content UserGrid">
 				{{ Markdown::parse($project->body) }}
             </article>
@@ -46,5 +46,5 @@
 @stop
 
 @section('htmlfoot')
-    <script src="{{ url() }}/assets/js/projects.built.min.js" type="text/javascript"></script>
+    <script src="{{ url() }}/js/portfolio.js" type="text/javascript"></script>
 @stop
