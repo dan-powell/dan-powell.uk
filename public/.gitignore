@@ -17,4 +17,9 @@ img/**/.DS_Store
 favicons/**/~
 favicons/**/.DS_Store
 
-
+!css/
+!css/*
+!js/
+!js/*
+!fonts/
+!fonts/*
