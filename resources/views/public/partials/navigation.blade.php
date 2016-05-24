@@ -14,5 +14,8 @@
         <li class="Navigation-item @if(Route::currentRouteName() == 'page.skills')is-active @endif">
             <a href="{{ route('page.skills') }}" class="Navigation-item-link Navigation-item-link--skills">Skills</a>
         </li>
+        <li class="Navigation-item @if(Route::currentRouteName() == 'page.experience')is-active @endif">
+            <a href="{{ route('page.experience') }}" class="Navigation-item-link Navigation-item-link--experience">Experience</a>
+        </li>
     </ul>
 </nav>

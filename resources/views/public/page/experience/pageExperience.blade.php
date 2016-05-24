@@ -1,15 +1,15 @@
 @extends('public.publicBase')
 
 @section('meta')
-    <title>Skills and experience | Dan Powell</title>
-    <meta name="description" content="My Curriculum Vitae, capabilites and employment history.">
+    <title>Experience | Dan Powell</title>
+    <meta name="description" content="My Curriculum Vitae, capabilities and employment history.">
 @stop
 
-@section('class')Static _skills @stop
+@section('class')Page Page--experience @stop
 
 @section('main')
 
-    <section class="Section Section--lightGrad Section--md">
+    <section class="Section Section--md">
         <div class="Section-container">
             <h1 class="pageHeading">
                 My Experience &amp; CV
@@ -17,27 +17,27 @@
         </div>
     </section>
 
-    <section class="Section Section--primaryGrad">
-        <div class="Section-container">
-            <hr class="spacer"/>
+    {{--<section class="Section Section--primaryGrad">--}}
+        {{--<div class="Section-container">--}}
+            {{--<hr class="spacer"/>--}}
 
-            <picture>
-                <!-- 16:9 crop -->
-                <source
-                        media="(min-width: 480px)"
-                        srcset="{{ url() }}/img/img/dan_powell_skills.png?w=1140,
-                		{{ url() }}/img/dan_powell_skills.png?w=2280 2x" />
-                <!-- square crop -->
-                <source
-                        srcset="{{ url() }}/img/img/dan_powell_skills.png?w=400&h=480&fit=crop,
-                		{{ url() }}/img/img/dan_powell_skills.png?w=800&h=940&fit=crop 2x" />
-                <img
-                        src="{{ url() }}/img/dan_powell_skills.png"
-                        alt="Dan Powell's Skills" />
-            </picture>
+            {{--<picture>--}}
+                {{--<!-- 16:9 crop -->--}}
+                {{--<source--}}
+                        {{--media="(min-width: 480px)"--}}
+                        {{--srcset="{{ url() }}/img/img/dan_powell_skills.png?w=1140,--}}
+                		{{--{{ url() }}/img/dan_powell_skills.png?w=2280 2x" />--}}
+                {{--<!-- square crop -->--}}
+                {{--<source--}}
+                        {{--srcset="{{ url() }}/img/img/dan_powell_skills.png?w=400&h=480&fit=crop,--}}
+                		{{--{{ url() }}/img/img/dan_powell_skills.png?w=800&h=940&fit=crop 2x" />--}}
+                {{--<img--}}
+                        {{--src="{{ url() }}/img/dan_powell_skills.png"--}}
+                        {{--alt="Dan Powell's Skills" />--}}
+            {{--</picture>--}}
 
-        </div>
-    </section>
+        {{--</div>--}}
+    {{--</section>--}}
 
     <section class="Section">
 

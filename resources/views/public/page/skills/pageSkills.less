@@ -1,50 +1,168 @@
 .Page {
 
-	&--skills {
+	&&--skills & {
 
-		.fa {
-			.fa-icon();
+		&-grid {
+			display: flex;
+			box-sizing: border-box;
+			flex-wrap: wrap;
+
+			&-item {
+				box-sizing: border-box;
+				width: 50%;
+				padding: 30px;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+
+				&--bg {
+					background: #fff;
+				}
+
+				&--color1 {
+					background: @theme-primary;
+				}
+
+				&--color2 {
+					background: @theme-secondary;
+				}
+
+				&--color3 {
+					background: @theme-tertiary;
+				}
+
+				&--noPadding {
+					padding: 0;
+				}
+
+				&--noPaddingBottom {
+					padding-bottom: 0;
+				}
+
+				&--one {
+					order: 1;
+				}
+
+				&--two {
+					order: 2;
+				}
+
+				&--three {
+					order: 4;
+				}
+
+				&--four {
+					order: 3;
+				}
+
+				&--five {
+					order: 5;
+				}
+
+				&--six {
+					order: 6;
+				}
+
+				&--seven {
+					order: 8;
+				}
+
+				&--eight {
+					order: 7;
+				}
+
+			}
+
+			@media screen and (max-width: @screen-md) {
+
+				&-item {
+
+					width: 100%;
+
+					&--one {
+						order: 1;
+					}
+
+					&--two {
+						order: 2;
+					}
+
+					&--three {
+						order: 3;
+					}
+
+					&--four {
+						order: 4;
+					}
+
+					&--five {
+						order: 5;
+					}
+
+					&--six {
+						order: 6;
+					}
+
+					&--seven {
+						order: 7;
+					}
+
+					&--eight {
+						order: 8;
+					}
+
+				}
+
+
+			}
+
+
+
+			&-content {
+
+				box-sizing: border-box;
+
+				text-align: center;
+
+				&--title {
+					flex: 1;
+
+					h2 {
+						font-size: 36px;
+					}
+
+				}
+
+				&--image {
+					flex: 2;
+				}
+
+				&--text {
+					flex: 2;
+					text-align: left;
+				}
+
+
+			}
+
+
 		}
 
-		.fa-tachometer::before {
-			content: @fa-var-tachometer;
-		}
+	}
 
-		.fa-calendar::before {
-			content: @fa-var-calendar;
-		}
+}
 
-		.fa-compass::before {
-			content: @fa-var-compass;
-		}
+.no-flexboxlegacy .Page.Page--skills .Page {
 
-		.fa-comments-o::before {
-			content: @fa-var-comments-o;
-		}
 
-		.fa-paint-brush::before {
-			content: @fa-var-paint-brush;
-		}
+		&-grid {
+			display: block;
 
-		.fa-star::before {
-			content: @fa-var-star;
-		}
-
-		.fa-star-o::before {
-			content: @fa-var-star-o;
-		}
-
-		.fa-lightbulb-o::before {
-			content: @fa-var-lightbulb-o;
-		}
-
-		.fa-graduation-cap::before {
-			content: @fa-var-graduation-cap;
-		}
-
-		.fa-history::before {
-			content: @fa-var-history;
-		}
+			&-item {
+				width: 100%;
+				display: block;
+			}
 
 	}
 }
