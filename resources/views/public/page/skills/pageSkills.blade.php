@@ -51,7 +51,7 @@
 
 				<div class="Page-grid-item Page-grid-item--bg Page-grid-item--two">
 					<div class="Page-grid-content Page-grid-content--text Page-grid-content--bottom Content">
-						<p>I utilise hand-drawn sketches, concept drawings, wireframes and full multi-page design comprehensives to create effective websites. I work closely with clients and guiding them through the design process from initial meetings to final sign-off.</p>
+						<p>I utilise hand-drawn sketches, concept drawings, wireframes and full multi-page design comprehensives to create effective websites. I work closely with clients, guiding them through the design process from initial meetings to final sign-off.</p>
 						<p>I also take in to consideration things beyond visual style such as usability, user experience and ensuring suitability for the target audience.</p>
 						<p>My applications of choice are currently Sketch & Balsamiq, but I’m also proficient with Photoshop, Illustrator and many other design and prototyping tools.</p>
 					</div>
@@ -69,7 +69,7 @@
 
 				<div class="Page-grid-item Page-grid-item--bg Page-grid-item--four">
 					<div class="Page-grid-content Page-grid-content--text Page-grid-content--bottom Content">
-						<p>I can develop websites by utilising frameworks like Bootstrap & jQuery for fast production, but am also very comfortable building completely from scratch using vanilla HTML, CSS, and Javascript. I also have extensive experience working with CMS themes and template code.</p>
+						<p>I can develop websites by utilising frameworks like Bootstrap & jQuery for fast production, but I am also very comfortable building completely from scratch using vanilla HTML, CSS, and Javascript. I also have extensive experience working with CMS themes and template code.</p>
 						<p>I keep up-to-date with the latest technologies and development methods. I have developed my own toolkit which leverages tools such as Gulp, Post-CSS, and LESS.</p>
 						<p>I am proficient with Angular and work with complex sites based on dynamic client-side interfaces that utilise AJAX and JSON API’s.</p>
 					</div>
@@ -106,7 +106,7 @@
 				<div class="Page-grid-item Page-grid-item--bg Page-grid-item--eight">
 					<div class="Page-grid-content Page-grid-content--text Page-grid-content--bottom Content">
 						<p>Along with all things web-related, I am also familiar with graphic design and have worked on simple branding elements such as logo’s, flyers and business cards, as well as the process involved in getting these to print.</p>
-						<p>Some over things I dabble in include illustration, photography, animation, game design, drawing, painting, video editing/production, faffing about with electronics, and anything else related to digital design.</p>
+						<p>Other things I've been known to dabble in include illustration, photography, animation, game design, drawing, painting, video editing/production, faffing about with electronics, and anything else related to digital design.</p>
 					</div>
 				</div>
 
