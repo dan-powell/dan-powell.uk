@@ -54,60 +54,6 @@
                         <p><strong><span class="fa fa-calendar"></span> Age: {{ Carbon::createFromDate(1986, 9, 7)->age }}</strong></p>
                         <p><strong><span class="fa fa-compass"></span> Location:&nbsp; Dorset, UK</strong></p>
 
-                        <p>
-                            <strong>Photoshop</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                        </p>
-
-                        <p>
-                            <strong>Illustrator</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-
-                        <p>
-                            <strong>HTML5</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-
-                        <p>
-                            <strong>CSS/LESS</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </p>
-
-                        <p>
-                            <strong>Javascript</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star-o"></span>
-                        </p>
-
-                        <p>
-                            <strong>PHP</strong>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star-o"></span>
-                            <span class="fa fa-star-o"></span>
-                        </p>
-
                     </div>
                     <div class="column-third-two">
                         <p>I'm a graphic designer and front-end web developer. My core skill-set lies in developing digital interfaces using web technologies, but I am interested in all areas of digital media. I mostly use open source software and content management systems as a framework and then hand-build custom themes and plugins to produce a bespoke web application. I have experience in many different areas of design; print, interface-design, new media, and photography. I mainly work with vector graphics, but know my way around Photoshop and also dabble in creating illustrations. I believe that my key strength is an ability to quickly learn the skills I need for a particular task. I always try to further my skills and use the latest techniques in my design and development work.</p>
