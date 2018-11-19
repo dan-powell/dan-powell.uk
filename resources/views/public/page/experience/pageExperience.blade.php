@@ -25,14 +25,14 @@
                 {{--<!-- 16:9 crop -->--}}
                 {{--<source--}}
                         {{--media="(min-width: 480px)"--}}
-                        {{--srcset="{{ url() }}/img/img/dan_powell_skills.png?w=1140,--}}
-                		{{--{{ url() }}/img/dan_powell_skills.png?w=2280 2x" />--}}
+                        {{--srcset="{{ url('/') }}/img/img/dan_powell_skills.png?w=1140,--}}
+                		{{--{{ url('/') }}/img/dan_powell_skills.png?w=2280 2x" />--}}
                 {{--<!-- square crop -->--}}
                 {{--<source--}}
-                        {{--srcset="{{ url() }}/img/img/dan_powell_skills.png?w=400&h=480&fit=crop,--}}
-                		{{--{{ url() }}/img/img/dan_powell_skills.png?w=800&h=940&fit=crop 2x" />--}}
+                        {{--srcset="{{ url('/') }}/img/img/dan_powell_skills.png?w=400&h=480&fit=crop,--}}
+                		{{--{{ url('/') }}/img/img/dan_powell_skills.png?w=800&h=940&fit=crop 2x" />--}}
                 {{--<img--}}
-                        {{--src="{{ url() }}/img/dan_powell_skills.png"--}}
+                        {{--src="{{ url('/') }}/img/dan_powell_skills.png"--}}
                         {{--alt="Dan Powell's Skills" />--}}
             {{--</picture>--}}
 
@@ -53,6 +53,60 @@
                         <p><strong><span class="fa fa-tachometer"></span> Lvl. 10 Web Designer</strong></p>
                         <p><strong><span class="fa fa-calendar"></span> Age: {{ Carbon::createFromDate(1986, 9, 7)->age }}</strong></p>
                         <p><strong><span class="fa fa-compass"></span> Location:&nbsp; Dorset, UK</strong></p>
+
+                        <p>
+                            <strong>Photoshop</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </p>
+
+                        <p>
+                            <strong>Illustrator</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </p>
+
+                        <p>
+                            <strong>HTML5</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </p>
+
+                        <p>
+                            <strong>CSS/LESS</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </p>
+
+                        <p>
+                            <strong>Javascript</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                        </p>
+
+                        <p>
+                            <strong>PHP</strong>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </p>
 
                     </div>
                     <div class="column-third-two">

@@ -46,5 +46,5 @@
 @stop
 
 @section('htmlfoot')
-    <script src="{{ url() }}/js/portfolio.js" type="text/javascript"></script>
+    <script src="{{ url('/') }}/js/portfolio.js" type="text/javascript"></script>
 @stop

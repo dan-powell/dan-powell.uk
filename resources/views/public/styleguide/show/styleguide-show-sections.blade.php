@@ -19,7 +19,7 @@
     ...
 &lt;/section&gt;</code>
         <spacer class="-xl"/>
-            <img src="{{ url() }}/img/img/test-hero/hero_2x1_1.jpg?w=1920&h=480&fit=crop"/>
+            <img src="{{ url('/') }}/img/img/test-hero/hero_2x1_1.jpg?w=1920&h=480&fit=crop"/>
         </section>
 
         <section class="Section Section--primary">
@@ -61,7 +61,7 @@
                 {!! Markdown::parse(View::make('public.styleguide.markdown.styleguide-markdown-basic')) !!}
 
     	        <div class="Section-fullWidth">
-    	        <img src="{{ url() }}/img/img/test-hero/hero_2x1_1.jpg?w=1140&h=285&fit=crop" alt="alt text" class=""/>
+    	        <img src="{{ url('/') }}/img/img/test-hero/hero_2x1_1.jpg?w=1140&h=285&fit=crop" alt="alt text" class=""/>
     	        </div>
 
                 {!! Markdown::parse(View::make('public.styleguide.markdown.styleguide-markdown-basic')) !!}

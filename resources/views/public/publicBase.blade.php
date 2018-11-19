@@ -26,7 +26,7 @@
     @yield('styles')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js?rev=1423329234356" type="text/javascript"></script>
-    <script>window.Modernizr || document.write('<script src="{{url()}}/js/vendor/modernizr.js">\x3C/script>')</script>
+    <script>window.Modernizr || document.write('<script src="{{url('/')}}/js/vendor/modernizr.js">\x3C/script>')</script>
 
     <script type="text/javascript">
         WebFontConfig = {
@@ -90,9 +90,9 @@
 
             @yield('sidebar-buttons')
 
-            <a href="{{ url() }}"><h3 class="_logo">DAN POWELL</h3></a>
+            <a href="{{ url('/') }}"><h3 class="_logo">DAN POWELL</h3></a>
 
-        <!-- <img src="{{ url() }}/img/logo_vert.svg" alt="Autumn Rain" class="_logo" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_vert@2x.png'"> -->
+        <!-- <img src="{{ url('/') }}/img/logo_vert.svg" alt="Autumn Rain" class="_logo" onerror="this.onerror=null; this.src='{{ url('/') }}/img/logo_vert@2x.png'"> -->
         </div>
     </aside>
 
@@ -104,19 +104,18 @@
 
         @yield('sidebar-buttons')
 
-        <a href="{{ url() }}"><h3 class="_logo">DAN POWELL</h3></a>
+        <a href="{{ url('/') }}"><h3 class="_logo">DAN POWELL</h3></a>
 
-    <!-- <img src="{{ url() }}/img/logo_vert.svg" alt="Autumn Rain" class="_logo" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_vert@2x.png'"> -->
+    <!-- <img src="{{ url('/') }}/img/logo_vert.svg" alt="Autumn Rain" class="_logo" onerror="this.onerror=null; this.src='{{ url('/') }}/img/logo_vert@2x.png'"> -->
     </aside>
 
     <section class="Base-main" id="js_content">
         @yield('main')
     </section>
 
-    <script src="{{ url() }}/js/public.js" type="text/javascript"></script>
+    <script src="{{ url('/') }}/js/public.js" type="text/javascript"></script>
 
     @yield('scripts')
 
 </body>
 </html>
-

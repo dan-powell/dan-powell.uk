@@ -27,7 +27,7 @@
 		        </div>
 
 		        <div class="Page-heading-column Page-heading-column--left">
-                    <img src="{{ url() }}/img/dan_powell_profile.svg" width="285" class="" onerror="this.onerror=null; this.src='{{ url() }}/img/dan_powell_profile.png'" alt="A Cartoon style profile picture of Dan Powell">
+                    <img src="{{ url('/') }}/img/dan_powell_profile.svg" width="285" class="" onerror="this.onerror=null; this.src='{{ url('/') }}/img/dan_powell_profile.png'" alt="A Cartoon style profile picture of Dan Powell">
 		        </div>
 	        </div>
 

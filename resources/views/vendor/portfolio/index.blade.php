@@ -48,7 +48,7 @@
                         @foreach($tags as $tag)
                             <div class="ProjectList-column ProjectList--{{ str_slug($tag->title) }} ProjectList--type" data-order-type="-{{ str_slug($tag->title) }}" data-order-created="0000">
                                 <a class="Project Project--divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag->title) }}'})">
-                                    <img src="{{ url() }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url() }}/img/logo_symbol.png'" alt="{{{ $project->title }}}"/>
+                                    <img src="{{ url('/') }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url('/') }}/img/logo_symbol.png'" alt="{{{ $project->title }}}"/>
                                     <div class="Project-titleWrapper">
                     	                <h3 class="Project-title">{{ $tag->title }}&nbsp;</h3>
                     	            </div>
@@ -70,7 +70,7 @@
 @stop
 
 @section('scripts')
-    <script src="{{ url() }}/js/portfolio.js" type="text/javascript"></script>
+    <script src="{{ url('/') }}/js/portfolio.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         // or with vanilla JS

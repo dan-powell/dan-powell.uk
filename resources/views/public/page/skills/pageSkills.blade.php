@@ -88,7 +88,7 @@
 				<div class="Page-grid-item Page-grid-item--bg Page-grid-item--six">
 					<div class="Page-grid-content Page-grid-content--text Page-grid-content--bottom Content">
 						<p>Whilst design and front-end development are my primary skills, I am also confident working with back-end code (mainly PHP), and know my way around a database.<p>
-						<p>I have experience setting up and maintaining web-servers running Linux, Apache, Nginx, MySQL & PHP as well as DNS and email configurations.</p>
+						<p>I have experience setting up and maintaining web-servers running Linux, Apache, Nginx, MySQL & PHP as well as simple DNS and email configurations.</p>
 						<p>I am currently developing an eCommerce platform and Content Management System, both of which use the Laravel framework. Additionally, I have worked with and designed relational databases and RESTful API’s for web apps.</p>
 					</div>
 				</div>

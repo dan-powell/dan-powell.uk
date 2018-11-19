@@ -8,7 +8,7 @@
 @section('class')System _403 @stop
 
 @section('sidebar-buttons')
-    <a href="{{ url() }}" class="navButton -back">
+    <a href="{{ url('/') }}" class="navButton -back">
         <span class="sr-only">Back</span>
     </a>
 @stop
@@ -30,7 +30,7 @@
             <a href="#" onclick="window.history.back()" class="Button">
     		    	Go Back
     	    </a>
-	    	<a href="{{ url() }}" class="Button">
+	    	<a href="{{ url('/') }}" class="Button">
 		    	Return Home
 	    	</a>
 	    </div>

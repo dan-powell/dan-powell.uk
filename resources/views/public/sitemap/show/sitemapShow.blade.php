@@ -8,7 +8,7 @@
 @section('class')System _sitemap @stop
 
 @section('sidebar-buttons')
-    <a href="{{ url() }}" class="navButton -back">
+    <a href="{{ url('/') }}" class="navButton -back">
         <span class="sr-only">Back</span>
     </a>
 @stop
