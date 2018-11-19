@@ -1,7 +1,7 @@
 @if(isset($projects) && count($projects) > 0)
     <div class="ProjectList">
     	@foreach($projects as $project)
-    	    <div class="_column">
+    	    <div class="ProjectList-column">
                 @include('portfolio::partials.thumb', ['project' => $project])
     	    </div>
     	@endforeach

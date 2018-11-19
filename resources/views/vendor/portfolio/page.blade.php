@@ -1,4 +1,4 @@
-@extends('base')
+@extends('public.publicBase')
 
 @section('class')Projects _show -page @stop
 
@@ -31,5 +31,5 @@
 
 @section('scripts')
     @parent
-    <script src="{{ url() }}/js/projects.js" type="text/javascript"></script>
+    <script src="{{ url() }}/js/portfolio.js" type="text/javascript"></script>
 @stop

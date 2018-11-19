@@ -8,8 +8,8 @@
 @stop
 
 @if(isset($section->markup) && $section->markup != '')
-    <section class="Section{{(isset($section->section_classes)) ? ' ' . $section->section_classes : ''}}">
-        <div class="{{(isset($section->container_classes)) ? '_container ' . $section->container_classes : ''}}">
+    <section class="Section {{(isset($section->section_classes)) ? ' ' . $section->section_classes : ''}}">
+        <div class="{{(isset($section->container_classes)) ? 'Section-container ' . $section->container_classes : ''}}">
         	<div class="Content">
                 {!! Markdown::parse($section->markup) !!}
         	</div>

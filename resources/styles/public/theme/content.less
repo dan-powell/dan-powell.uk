@@ -1,0 +1,525 @@
+/*  ********* content.less *********
+    ************************************************************************* */
+
+    /* Order of element styles */
+
+    // Body Text
+    // Headings
+    // Lists
+    // Blockquote
+    // Horizontal Rule
+    // Media
+    // Code & Pre
+    // Table
+
+
+/*  ====== Basic Styles ======
+    Global content styles for all basic elements
+    ========================================================================= */
+
+body {
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*  --- Body Text ---
+    ------------------------------------------------------------------------- */
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+    small {}
+
+    strong {}
+
+    &.lead {
+        font-size: 30px;
+        line-height: 1.4;
+        font-weight: 300;
+
+        @media only screen and (max-width: @screen-md) {
+            font-size: 24px;
+        }
+
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 20px;
+        }
+    }
+}
+
+
+a {
+    font-weight: bold;
+    color: @link-color;
+
+    @transition: color .2s ease-in-out, background .2s ease-in-out, border .2s ease-in-out;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out, @transition;
+    transition: transform 0.2s ease-in-out, @transition;
+
+    &:hover {
+        color: darken(@link-color, 20%);
+        text-decoration: none;
+    }
+}
+
+
+/*  --- Headings ---
+    ------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-family: @font-family-serif;
+    color: @heading-color;
+    line-height: 1.4;
+
+    small {
+        display: inline-block;
+        &:before {
+            content: ' ';
+        }
+    }
+
+    a {}
+
+    &.pageHeading {
+        //margin-bottom: 15px;
+        text-align: center;
+        font-size: 64px;
+        line-height: 1.2;
+        color: rgba(0,0,0,0.4);
+
+        text-shadow: rgba(255, 255, 255, 1) 1px 1px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 50px;
+        }
+
+        @media only screen and (max-width: @screen-xs) {
+            font-size: 40px;
+        }
+    }
+
+    &.alt {
+        line-height: 1;
+        color: rgba(0,0,0,0.4);
+        text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
+
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+
+        @media only screen and (max-width: @screen-sm) {
+            font-size: 50px;
+        }
+
+        @media only screen and (max-width: @screen-xs) {
+            font-size: 40px;
+        }
+    }
+}
+
+h1 { font-size: @h1; }
+h2 { font-size: @h2; }
+h3 { font-size: @h3; }
+h4 { font-size: @h4; }
+h5 { font-size: @h5; }
+h6 { font-size: @h6; margin-bottom: 0; }
+
+@media only screen and (max-width: @screen-sm) {
+    h1 { font-size: @h1*0.8; }
+    h2 { font-size: @h2*0.8; }
+    h3 { font-size: @h3*0.8; }
+    h4 { font-size: @h4*0.8; }
+    h5 { font-size: @h5*0.8; }
+    h6 { font-size: @h6*0.8; }
+}
+
+
+/*  --- Lists ---
+    ------------------------------------------------------------------------- */
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: 10px;
+        margin-left: 30px;
+    }
+}
+
+dl {
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/*  --- Blockquote ---
+    ------------------------------------------------------------------------- */
+
+blockquote {
+    display: inline-block;
+    font-family: Georgia, cursive;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 40px;
+    color: #636363;
+    background-image: url('../img/blockquote_open.svg'), url('../img/blockquote_close.svg');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 15px 30px;
+
+    p {
+        margin-bottom: 0 !important;
+    }
+
+    cite {
+        font-style: italic;
+        font-size: 24px;
+        &::before {
+            content: '-- ';
+        }
+    }
+
+    &.pull-quote {
+        margin: 30px;
+        width: 50%;
+        float: right;
+
+        @media screen and (max-width: @screen-sm) {
+            width: 100%;
+        }
+    }
+
+}
+
+
+/*  --- Horizontal Rule ---
+    ------------------------------------------------------------------------- */
+
+hr {
+
+    border-top: rgba(0, 0, 0, 0.2) 2px dotted;
+
+    // Use the spacer to add vertical padding between elements.
+    &.spacer {
+        padding: 0;
+        margin: 0;
+        height: @spacer;
+        width: @spacer;
+        visibility: hidden;
+
+        &.-sm {
+            height: @spacer/2;
+        }
+
+        &.-lg {
+            height: @spacer*2;
+        }
+
+        &.-xl {
+            height: @spacer*3;
+        }
+
+        /*
+        &:last-child,
+        &:first-child {
+            display: none;
+        }
+        */
+    }
+}
+
+
+/*  --- Media ---
+    ------------------------------------------------------------------------- */
+
+img {
+
+    // Make all images responsive by default
+    border: none;
+    max-width: 100%; // Part 1: Set a maximum relative to the parent
+    height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+
+    // Center images
+    &.-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*  --- Code & Pre ---
+    ------------------------------------------------------------------------- */
+
+code {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0px 10px;
+    border-radius: 3px;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+pre code {
+    padding: 10px;
+    padding: 30px 40px;
+    margin: 10px;
+    //border: 1px solid rgba(255, 255, 255, 0.4);
+
+    @shadow: inset rgba(255, 255, 255, 0.6) -1px -1px 1px, inset rgba(0, 0, 0, 0.4) 0 0 6px;
+    .box-shadow(@shadow);
+
+    border-radius: 10px;
+}
+
+
+/*  --- Table ---
+    ------------------------------------------------------------------------- */
+
+table {
+    width: 100%;
+
+    th {
+        background: rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    td {
+
+    }
+}
+
+
+/*  ====== Alternative Content Styles ======
+    Additional content styles for different contexts.
+    Useful for overriding element colours in areas with differing background colours.
+    ========================================================================= */
+
+.contentStyle {
+
+    // Dark text - use on light backgrounds;
+    .dark {
+        @color: rgba(0, 0, 0, .6);
+        color: @color;
+
+        // Body Text
+        p {
+            color: @color;
+        }
+
+        a {
+            color: @link-color;
+            &:hover {
+                color: darken(@link-color, 20%);
+            }
+        }
+
+        // Headings
+        h1, h2, h3, h4, h5, h6 {
+            color: @color;
+            small {
+                color: lighten(@color,80%);
+            }
+            text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
+        }
+
+        // BlockQuote
+        blockquote {
+	        color: @color;
+	    }
+
+        // Horizontal Rule
+        hr {
+            border-top: @color 2px dotted;
+        }
+
+        // Tables
+        table {
+            color: @color;
+        }
+
+    }
+
+    // Light text - use on dark backgrounds;
+    .light {
+        @color: rgba(255, 255, 255, 0.9);
+        color: @color;
+
+        // Body Text
+        p {
+            color: @color;
+        }
+
+        a {
+            color: @link-color;
+            &:hover {
+                color: darken(@link-color, 20%);
+            }
+        }
+
+        // Headings
+        h1, h2, h3, h4, h5, h6 {
+            color: @color;
+            small {
+                color: lighten(@color,80%);
+            }
+        }
+
+        // BlockQuote
+        blockquote {
+	        color: @color;
+	    }
+
+        // Horizontal Rule
+        hr {
+            border-top: rgba(255, 255, 255, 0.2) 2px dotted;
+        }
+
+        // Tables
+        table {
+            color: @color;
+        }
+    }
+
+
+    // Light text - use on dark backgrounds;
+    .white {
+        @color: rgba(255, 255, 255, 0.9);
+        color: @color;
+
+        // Body Text
+        p {
+            color: @color;
+        }
+
+        a {
+            color: @color;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        // Headings
+        h1, h2, h3, h4, h5, h6 {
+            color: @color;
+            small {
+                color: lighten(@color,80%);
+            }
+        }
+
+        // BlockQuote
+        blockquote {
+	        color: @color;
+	    }
+
+        // Horizontal Rule
+        hr {
+            border-top: rgba(255, 255, 255, 0.2) 2px dotted;
+        }
+
+        // Tables
+        table {
+            color: @color;
+        }
+    }
+}
+
+
+/*  ====== Content ======
+    Apply 'Content' class to blocks of content.
+    Useful for user-provided markup (TinyMCE etc.)
+    ========================================================================= */
+
+.Content {
+
+    // .contentStyle > .dark();
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    // Body Text
+
+    p {
+        margin-bottom: 1em;
+        .hyphens();
+    }
+
+    a {
+        display: inline-block;
+        font-weight: bold;
+        position: relative;
+
+        color: darken(@theme-primary, 10%);
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            .scale(0.9);
+            color: @theme-secondary;
+            border-bottom: 1px solid @text-color;
+
+            img {
+                opacity: 0.6;
+            }
+        }
+
+        &:active {
+            .scale(1.4);
+        }
+
+        img {
+            .transition(opacity 0.2s ease-in-out);
+        }
+
+    }
+
+
+
+    // Headings
+    h1, h2, h3, h4, h5 {
+        margin-bottom: 20px;
+    }
+
+    // Lists
+    ul,ol {
+        li {
+            margin-bottom: 10px;
+        }
+        &.list-spaced li {
+            margin-bottom: 27px;
+        }
+    }
+
+    // BlockQuote
+    blockquote {
+        margin-bottom: @spacer;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+
+    }
+
+    @media screen and (max-width:@screen-lg) {
+
+    }
+}
+
+
+

@@ -1,0 +1,88 @@
+.ProjectList {
+
+	text-align: center;
+
+	&-column {
+    	float: left;
+    	width: 25%;
+    	padding: 20px;
+
+    	@media only screen and (max-width: @screen-md) {
+	    	width: 33%;
+            padding: 16px;
+        }
+
+    	@media only screen and (max-width: @screen-sm) {
+	    	width: 50%;
+        	padding: 8px;
+        }
+
+    	@media only screen and (max-width: @screen-xs) {
+        	width: 100%;
+        }
+
+
+        &:nth-child(5n+1) & {
+            .Project {
+                @color: mix(@theme-tertiary, @theme-secondary, 20%);
+                border-color: @color;
+                &::after {
+                    background: rgba(red(@color), green(@color), blue(@color), 0.6);
+                }
+            }
+        }
+
+        &:nth-child(5n+2) {
+            .Project {
+                @color: mix(@theme-tertiary, @theme-secondary, 40%);
+                border-color: @color;
+                &::after {
+                    background: rgba(red(@color), green(@color), blue(@color), 0.6);
+                }
+            }
+        }
+
+        &:nth-child(5n+3) {
+            .Project {
+                @color: mix(@theme-tertiary, @theme-secondary, 60%);
+                border-color: @color;
+                &::after {
+                    background: rgba(red(@color), green(@color), blue(@color), 0.6);
+                }
+            }
+        }
+
+        &:nth-child(5n+4) {
+            .Project {
+                @color: mix(@theme-tertiary, @theme-secondary, 80%);
+                border-color: @color;
+                &::after {
+                    background: rgba(red(@color), green(@color), blue(@color), 0.6);
+                }
+            }
+        }
+
+        &:nth-child(5n+5) {
+            .Project {
+                @color: mix(@theme-tertiary, @theme-secondary, 100%);
+                border-color: @color;
+                &::after {
+                    background: rgba(red(@color), green(@color), blue(@color), 0.6);
+                }
+            }
+        }
+
+        &--type {
+            .Project {
+
+                &-titleWrapper {
+                    opacity: 1;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+	}
+}

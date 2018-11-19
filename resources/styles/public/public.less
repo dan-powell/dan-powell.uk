@@ -1,0 +1,117 @@
+/*    ********* main.less *********
+************************************************************************* */
+// Checkout *root*/frontend-readme.md for more details on compiling this bad boy.
+/*  ====== Frameworks ======
+    ========================================================================= */
+// First, let's *reference* Bootstrap - we'll use all bootstrap classes as mixins to keep file size low.
+@import (reference) 'resources/styles/public/vendor/bootstrap/bootstrapBase.less';
+@import (reference) 'bower_components/fontawesome/less/font-awesome.less';
+// Variables
+@import 'resources/styles/public/theme/variables.less';
+@import 'resources/styles/public/theme/content.less';
+// Some custom utilities (mixins)
+@import 'resources/styles/public/mixins/backgrounds.less';
+@import 'resources/styles/public/utilities/utilities.less';
+/*  ====== Project Theme ======
+    ========================================================================= */
+/*  --- Elements ---
+    ------------------------------------------------------------------------- */
+/*  --- Blocks ---
+    ------------------------------------------------------------------------- */
+@import 'resources/styles/public/components/section.less';
+@import 'resources/styles/public/components/buttons.less';
+@import 'resources/styles/public/components/box.less';
+@import 'resources/styles/public/components/hero.less';
+
+/*  --- Views ---
+    ------------------------------------------------------------------------- */
+
+// Import the fontawesome fonts so we can use them globally
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+  url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+  url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
+  url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
+  //  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Base {
+
+  background: @theme-bg;
+  overflow-x: hidden;
+
+  &-main {
+    padding-left: @sidebar-closed-width;
+
+    /*
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    opacity: 1;
+
+  }
+
+  &-navLogo {
+    visibility: hidden;
+    width: 40%;
+    position: fixed;
+    right: 10%;
+    top: 20%;
+    z-index: -100;
+    opacity: 0;
+    .transition(opacity .3s ease-in);
+  }
+
+  &.has-openSidebar & {
+
+    &-main {
+      /*
+      -webkit-transform: translate(180px,180px);
+      transform: translate(180px,180px);
+      */
+      //opacity: 0.2;
+      padding-left: @sidebar-desktop-width;
+    }
+
+    &-navLogo {
+      z-index: 100;
+      visibility: visible;
+      opacity: 1;
+    }
+
+  }
+
+  @media only screen and (max-width: @sidebar-breakpoint) {
+    &-navLogo {
+      display: none;
+    }
+
+    &-main {
+      padding-left: 0;
+      padding-top: 40px;
+    }
+
+    &.has-openSidebar & {
+      &-main {
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  /* I think we'll skip this for now
+  @media only screen and (min-width: @sidebar-breakpoint) {
+       &.-showSidebar ._main {
+          filter: blur(12px);
+          -webkit-filter: blur(12px);
+      }
+  }
+  */
+}
+
+

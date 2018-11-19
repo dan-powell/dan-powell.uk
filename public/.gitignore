@@ -7,14 +7,19 @@
 !robots.txt
 !humans.txt
 
-!img/
-!img/*
-img/**/~
-img/**/.DS_Store
+
 
 !favicons/
 !favicons/*
 favicons/**/~
 favicons/**/.DS_Store
 
-
+!css/
+!css/*
+!js/
+!js/*
+!fonts/
+!fonts/*
+!img/
+!img/*
+!img/**

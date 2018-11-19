@@ -1,0 +1,106 @@
+# Gulp Tasks
+# ------------------------
+# Tasks are grouped by usage
+# Each task group contains an array of tasks
+# Each of these tasks must have a name, source and destination
+
+tasks:
+
+    # Process Main APP LESS files
+    less_main:
+        -
+            name: "Main CSS"
+            src:
+                - "./resources/styles/public/public.less"
+                - "./resources/views/vendor/**/*.less"
+                - "./resources/views/public/**/*.less"
+            destFolder: "./public/css"
+            dest: "public.css"
+
+    less_plugins:
+        -
+            name: "Plugin CSS"
+            src:
+                - "./resources/styles/public/plugins.less"
+            destFolder: "./public/css"
+            dest: "plugins.css"
+
+    # Concatenate & minify app JS files
+    js_main:
+        -
+            name: "Public JS"
+            src:
+                - "./resources/scripts/vendor/classie.js"
+                - "./resources/scripts/public/sidebar.js"
+                - "./resources/scripts/public/base.js"
+            destFolder: "./public/js"
+            dest: "public.js"
+
+    # Concatenate & minify plugin JS files
+    js_plugins:
+        -
+            name: "Portfolio JS"
+            src:
+                - "./bower_components/isotope/dist/isotope.pkgd.min.js"
+                - "./bower_components/imagesloaded/imagesloaded.pkgd.js"
+                - "./resources/scripts/public/portfolio.js"
+            destFolder: "./public/js"
+            dest: "portfolio.js"
+        -
+            name: "Bootstrap JS"
+            src:
+                - "./bower_components/bootstrap/js/modal.js"
+                - "./bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"
+            destFolder: "./public/js"
+            dest: "bootstrap.js"
+
+    # Copy files from one location to another (Handy for publishing bower components)
+    copy:
+        -
+            name: "JS Vendor Plugins"
+            src:
+                - "./bower_components/jquery/dist/jquery.min.js"
+                - "./bower_components/jquery/dist/jquery.min.map"
+                - "./bower_components/jquery.lazyload/jquery.lazyload.js"
+            dest: "./public/js/vendor"
+
+        -
+            name: "Fonts"
+            src:
+                - "./bower_components/fontawesome/fonts/**"
+            dest: "./public/fonts"
+
+    # Basic cachebusting for static asset URLS
+    cachebust:
+        -   name: "Views"
+            src:
+                - "./resources/views/public/public.blade.php"
+            dest: "./resources/views/public/public.blade.php"
+
+
+# Gulp watch locations
+# ------------------------
+
+watch:
+    -
+        # LESS files
+        files:
+            - "./resources/styles/**/*.less"
+            - "./resources/views/**/*.less"
+        tasks:
+            - "less-main"
+
+    -
+        # JS Files
+        # Note that for speed we don't run the js_plugins task
+        files:
+            - "./resources/scripts/**/*.js"
+        tasks:
+            - "js-main"
+    -
+        # JS Files
+        files:
+            - "./resources/views/**/*.html"
+            - "./resources/views/**/*.php"
+        tasks:
+            - "reload"

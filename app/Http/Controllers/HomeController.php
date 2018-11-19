@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function show()
 	{
-		return view('static.home');
+		return view('public.page.home.pageHome');
 	}
 
 }
