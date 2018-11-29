@@ -11,24 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', function ()
+{
+    return View::make('public.page.home.PageHome');
+}]);
 
 
-Route::get('/skills', array('as' => 'page.skills', function()
+Route::get('/skills', ['as' => 'page.skills', function()
 {
 	return View::make('public.page.skills.pageSkills');
-}));
+}]);
 
 
-Route::get('/experience', array('as' => 'page.experience', function()
+Route::get('/experience', ['as' => 'page.experience', function()
 {
 	return View::make('public.page.experience.pageExperience');
-}));
+}]);
 
 
-Route::get('/privacy', array('as' => 'page.privacy', function()
+Route::get('/privacy', ['as' => 'page.privacy', function()
 {
 	return View::make('public.page.privacy.pagePrivacy');
-}));
+}]);
+
+Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
+Route::get('/sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);

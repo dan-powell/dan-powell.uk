@@ -46,28 +46,6 @@
     				@endforeach
                 </ul>
 
-                <hr class="spacer">
-
-                <h2 class="alt">Portfolio</h2>
-                <ul>
-    				@foreach($pages->projects as $project)
-				        <li>
-				            <a href="{{ (isset($project->url) && $project->url != '') ? $project->url : route('projects.show', $project->slug) }}" class="Button">{{ $project->title }}</a>
-				        </li>
-
-				        @if(isset($project->pages) && count($project->pages) > 0)
-    				        <ul>
-                                @foreach($project->pages as $page)
-        				        <li>
-        				            <a href="{{ (isset($page->url) && $page->url != '') ? $page->url : route('projects.page', [$project->slug, $page->slug]) }}" class="Button">{{ $project->title }} :: {{ $page->title }}</a>
-        				        </li>
-                                @endforeach
-    				        </ul>
-				        @endif
-
-    				@endforeach
-                </ul>
-
             </div>
     	</div>
 	</section>

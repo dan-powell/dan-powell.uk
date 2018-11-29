@@ -6,7 +6,7 @@
 -->
     <ul>
         <li class="Navigation-item @if(Route::currentRouteName() == 'home')is-active @endif">
-            {{-- <a href="{{ route('home') }}" class="Navigation-item-link Navigation-item-link--about">About</a> --}}
+            <a href="{{ route('home') }}" class="Navigation-item-link Navigation-item-link--about">About</a>
         </li>
         <li class="Navigation-item @if(Request::segment(1) == 'portfolio')is-active @endif">
             {{-- <a href="{{ route('projects.index') }}" class="Navigation-item-link Navigation-item-link--portfolio">Portfolio</a> --}}

@@ -49,7 +49,7 @@
 
             <h3>Here are some examples of my best work…</h3>
 
-            @include('portfolio::partials.list')
+            {{-- @include('portfolio::partials.list') --}}
 
         </div>
     </section>
@@ -58,7 +58,7 @@
 	    <div class="Section-container Page-cta">
 		    <div class="Page-cta-column">
 		    	<p class="Page-cta-column-text">view more work in my</p>
-		    	<a href="{{ route('projects.index') }}" class="Button Button--cta">
+		    	<a href="" class="Button Button--cta">
     		    	Portfolio
 		    	</a>
 		    </div>
@@ -69,7 +69,7 @@
 
 		    <div class="Page-cta-column">
 		    	<p class="Page-cta-column-text">check out my skills and</p>
-		    	<a href="{{ route('page.skills') }}" class="Button Button--cta">
+		    	<a href="" class="Button Button--cta">
     		    	Experience
 		    	</a>
 		    </div>
