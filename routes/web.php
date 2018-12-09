@@ -36,3 +36,10 @@ Route::get('/privacy', ['as' => 'page.privacy', function()
 
 Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
 Route::get('/sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);
+
+Route::get('/portfolio', ['as' => 'portfolio.index', 'uses' => 'PortfolioController@index']);
+Route::get('/portfolio/{slug}', ['as' => 'portfolio.show', 'uses' => 'PortfolioController@show']);
+
+
+// Images
+Route::get(config('images.route') . '/{path}', 'ImageController@show')->where('path', '.*');
