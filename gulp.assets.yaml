@@ -12,8 +12,7 @@ tasks:
             name: "Main CSS"
             src:
                 - "./resources/styles/public/public.less"
-                - "./resources/views/vendor/**/*.less"
-                - "./resources/views/public/**/*.less"
+                - "./resources/views/**/*.less"
             destFolder: "./public/css"
             dest: "public.css"
 

@@ -13,26 +13,17 @@
 
 Route::get('/', ['as' => 'home', function ()
 {
-    return View::make('public.page.home.PageHome');
+    return View::make('home.home');
 }]);
 
+// Pages
+foreach(config('content.pages.items') as $key => $item) {
+    Route::get($key, ['as' => 'page.' . $key, function() use ($item)
+    {
+    	return View::make($item['view']);
+    }]);
+}
 
-Route::get('/skills', ['as' => 'page.skills', function()
-{
-	return View::make('public.page.skills.pageSkills');
-}]);
-
-
-Route::get('/experience', ['as' => 'page.experience', function()
-{
-	return View::make('public.page.experience.pageExperience');
-}]);
-
-
-Route::get('/privacy', ['as' => 'page.privacy', function()
-{
-	return View::make('public.page.privacy.pagePrivacy');
-}]);
 
 Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
 Route::get('/sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);

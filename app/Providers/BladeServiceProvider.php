@@ -14,6 +14,7 @@ class BladeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Returns image tag
         Blade::directive('image', function ($expression) {
             $explode = explode(', ', $expression, 2);
             $path = $explode[0];
@@ -30,9 +31,11 @@ class BladeServiceProvider extends ServiceProvider
             return <<<EOT
 <?php echo('<img src="' . app('image')->get($path, $properties) . '" alt="$alt"/>'); ?>
 EOT;
+        });
 
-    //substr($expression, 1, -1)
-
+        // Is the given route active?
+        Blade::if('active', function ($route) {
+            return \Route::currentRouteName() == $route;
         });
     }
 
