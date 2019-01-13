@@ -7,24 +7,35 @@ return [
             'title' => 'About',
             'class' => 'Navigation-item-link--about',
             'route' => 'home',
+            'slug' => null,
             'url' => null,
         ],
         [
             'title' => 'Portfolio',
             'class' => 'Navigation-item-link--portfolio',
             'route' => 'portfolio.index',
+            'slug' => null,
+            'url' => null,
+        ],
+        [
+            'title' => 'Projects',
+            'class' => 'Navigation-item-link--projects',
+            'route' => 'projects.index',
+            'slug' => null,
             'url' => null,
         ],
         [
             'title' => 'Skills',
             'class' => 'Navigation-item-link--skills',
-            'route' => 'page.skills',
+            'route' => 'page',
+            'slug' => 'skills',
             'url' => null,
         ],
         [
             'title' => 'Experience',
             'class' => 'Navigation-item-link--experience',
-            'route' => 'page.experience',
+            'route' => 'page',
+            'slug' => 'experience',
             'url' => null,
         ],
     ],
@@ -45,12 +56,14 @@ return [
     'tertiary' => [
         [
             'title' => 'Privacy',
-            'route' => 'page.privacy',
+            'route' => 'page',
+            'slug' => 'privacy',
             'url' => null,
         ],
         [
             'title' => 'Sitemap',
             'route' => 'sitemap',
+            'slug' => null,
             'url' => null,
         ],
     ]

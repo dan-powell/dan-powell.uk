@@ -1,8 +1,8 @@
-@if(isset($projects) && count($projects) > 0)
+@if(isset($items) && count($items))
     <div class="ProjectList">
-    	@foreach($projects as $project)
+    	@foreach($items as $key => $item)
     	    <div class="ProjectList-column">
-                @include('portfolio::partials.thumb', ['project' => $project])
+                @include('projects.excerpt.thumb', ['item' => $item, 'slug' => $key])
     	    </div>
     	@endforeach
     </div>

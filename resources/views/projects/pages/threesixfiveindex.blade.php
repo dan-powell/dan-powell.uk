@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('class')Projects _show -static @stop
 
@@ -31,7 +31,7 @@
     <div class="Section Section--primary">
         <div class="Section-container Section--md Section--center">
         	<div class="Content">
-                <p class="lead">Here's the complete list of all work from <a href="{{ route('portfolio.show', 'three-six-five') }}">my 365 2010 project</a></p>
+                <p class="lead">Here's the complete list of all work from <a href="{{ route('project.home', '365') }}">my 365 2010 project</a></p>
         	</div>
      	</div>
     </div>
@@ -59,9 +59,9 @@
                     @for ($day = 1; $day <= cal_days_in_month(CAL_GREGORIAN, $month, 2010); $day++)
                         <div class="col-md-2 col-sm-3">
                             @if (in_array($month . '-' . $day, $swf))
-                                <a href="{{ url('/') }}/projects/three-six-five/full/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.swf" class="Button Button--secondary Button--md">
+                                <a href="{{ url(str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.swf') }}" class="Button Button--secondary Button--md">
                             @else
-                                <a href="{{ url('/') }}/projects/three-six-five/full/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.jpg"
+                                <a href="{{ app('image')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg') }}"
                                 data-toggle="lightbox" data-title="{{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}" data-gallery="365" data-parent=".row" class="Button Button--light Button--md">
                             @endif
                                 <p class="text-center">
@@ -69,8 +69,10 @@
                                         {{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}
                                     </strong>
                                 </p>
-                                <img data-original="{{ url('/') }}/projects/three-six-five/thumbs/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.jpg" class="-center js-lazy" width="260" height="120"/>
-                                <noscript><img src="{{ url('/') }}/projects/three-six-five/thumbs/{{ str_pad($month, 2, '0', STR_PAD_LEFT) }}-{{ str_pad($day, 2, '0', STR_PAD_LEFT) }}.jpg" class="-center js-lazy" width="260" height="120"/></noscript>
+                                <img data-original="{{ app('image')->crop('300', '300')->url('all/' . str_pad($month, 2, "0", STR_PAD_LEFT) .'-'. str_pad($day, 2, "0", STR_PAD_LEFT).'.jpg')}}" class="-center js-lazy" width="260" height="120"/>
+                                <noscript>
+                                    <img src="{{ app('image')->crop('300', '300')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) .'-'. str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg')}}" class="-center js-lazy" width="260" height="120"/>
+                                </noscript>
                             </a>
                         </div>
                     @endfor
@@ -82,10 +84,10 @@
 
 @section('scripts')
     @parent
-    <script src="{{ url('/') }}/js/vendor/jquery.min.js?rev=1423329234356" type="text/javascript"></script>
-    <script src="{{ url('/') }}/js/vendor/jquery.lazyload.js?rev=1423329234356" type="text/javascript"></script>
-    <script src="{{ url('/') }}/js/bootstrap.js?rev=1423329234356" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="{{ asset('assets/js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/js/jquery.lazyload.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/js/bootstrap.js') }}" type="text/javascript"></script>
+        <script type="text/javascript">
         $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();

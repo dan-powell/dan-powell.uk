@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('meta')
 <title>Dan Powell | Website designer, front-end developer from Dorset</title>
@@ -27,7 +27,7 @@
 		        </div>
 
 		        <div class="Page-heading-column Page-heading-column--left">
-                    <img src="{{ url('/') }}/img/dan_powell_profile.svg" width="285" class="" onerror="this.onerror=null; this.src='{{ url('/') }}/img/dan_powell_profile.png'" alt="A Cartoon style profile picture of Dan Powell">
+                    <img src="{{ asset('/img/dan_powell_profile.svg') }}" width="285" class="" onerror="this.onerror=null; this.src='{{ url('/img/dan_powell_profile.png') }}'" alt="A Cartoon style profile picture of Dan Powell">
 		        </div>
 	        </div>
 
@@ -49,7 +49,7 @@
 
             <h3>Here are some examples of my best work…</h3>
 
-            @include('portfolio.partials.list')
+            @include('portfolio.list.list')
 
         </div>
     </section>
@@ -69,7 +69,7 @@
 
 		    <div class="Page-cta-column">
 		    	<p class="Page-cta-column-text">check out my skills and</p>
-		    	<a href="{{ route('page.skills') }}" class="Button Button--cta">
+		    	<a href="{{ route('page', 'skills') }}" class="Button Button--cta">
     		    	Experience
 		    	</a>
 		    </div>

@@ -13,15 +13,15 @@
     <link type="text/plain" rel="author" href="/humans.txt">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url('/favicons/apple-touch-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url('/favicons/apple-touch-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ url('/favicons/apple-touch-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ url('/favicons/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('/favicons/apple-touch-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/favicons/apple-touch-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/favicons/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/favicons/apple-touch-icon.png') }}">
     <link rel="shortcut icon" href="{{ url('/favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="64x64" href="{{ url('/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('/favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ url('/css/plugins.css?rev=1423329234356') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url('/css/public.css?rev=1423329234356') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/css/plugins.css?rev=1423329234356') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('/css/public.css?rev=1423329234356') }}" type="text/css">
 
     @yield('styles')
 
@@ -54,7 +54,7 @@
 
 </head>
 
-<body class="Base has-openSidebar @yield('class')" ontouchstart="">
+<body class="Base @yield('class')">
 
     <aside class="Sidebar">
         <div class="_content">
@@ -89,7 +89,7 @@
 
             @yield('sidebar-buttons')
 
-            <a href="{{ url('/') }}"><h3 class="_logo">DAN POWELL</h3></a>
+            <a href="{{ config('app.url') }}"><h3 class="_logo">DAN POWELL</h3></a>
 
         </div>
     </aside>
@@ -102,7 +102,7 @@
 
         @yield('sidebar-buttons')
 
-        <a href="{{ url('/') }}"><h3 class="_logo">DAN POWELL</h3></a>
+        <a href="{{ config('app.url') }}"><h3 class="_logo">DAN POWELL</h3></a>
 
 
     </aside>
@@ -111,7 +111,16 @@
         @yield('main')
     </section>
 
-    <script src="{{ url('/') }}/js/public.js" type="text/javascript"></script>
+    {{-- <script src="{{ asset('js/public.js') }}" type="text/javascript"></script> --}}
+    <script src="{{ asset('js/overlay.js') }}" type="text/javascript"></script>
+    <script>
+        var foo = new Overlay('.Sidebar', '.js_openSidebar', {
+            open: 'false', // Initial state
+            class_open: 'is-open', // Class applied to overlay when active
+            class_open_control: 'is-active', // Class applied to buttons when active
+            class_open_body: 'has-openSidebar' // Class applied to body when active
+        });
+    </script>
 
     @yield('scripts')
 

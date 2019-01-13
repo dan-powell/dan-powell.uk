@@ -34,8 +34,12 @@ EOT;
         });
 
         // Is the given route active?
-        Blade::if('active', function ($route) {
-            return \Route::currentRouteName() == $route;
+        Blade::if('active', function ($route, $slug = null) {
+            if(\Route::currentRouteName() == $route && \Route::input('slug') == $slug) {
+                return true;
+            } else {
+                return false;
+            }
         });
     }
 

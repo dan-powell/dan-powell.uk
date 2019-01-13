@@ -54,6 +54,10 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+
+    'domain' => env('APP_DOMAIN', 'dan-powell.uk'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -169,6 +173,7 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
         App\Providers\BladeServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,

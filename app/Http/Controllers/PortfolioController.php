@@ -2,37 +2,27 @@
 
 class PortfolioController extends Controller {
 
-
     public function __construct()
     {
 
-
     }
-
-
-    /**
-    *   Return the sitemap in HTML for users
-	*
-	*/
 
 	public function index()
 	{
-        return view('portfolio.index')->with([
-            'projects' => collect(array_merge(config('content.portfolio.items'), config('content.projects.items'))),
-            'tags' => collect(config('content.portfolio.tags'))
+        $items = collect(config('content.portfolio.items'));
+        return view('portfolio.index.index')->with([
+            'items' => $items
         ]);
 	}
 
-
-    /**
-    *   Return the sitemap in XML for crawlers
-	*
-	*/
-
 	public function show($slug)
 	{
-        $arr = array_merge(config('content.portfolio.items'), config('content.projects.items'));
-        return view($arr[$slug]['view']);
+        $items = config('content.portfolio.items');
+        if(isset($items[$slug]['view'])) {
+            return view($items[$slug]['view']);
+        } else {
+            abort('404');
+        }
     }
 
 
