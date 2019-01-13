@@ -6,8 +6,8 @@
 -->
     <ul class="Navigation-root">
         @foreach(config('content.navigation.primary') as $item)
-            <li class="Navigation-item @active($item['route'])is-active @endactive">
-                <a href="{{route($item['route'])}}" class="Navigation-item-link {{$item['class']}}">{{$item['title']}}</a>
+            <li class="Navigation-item @active($item['route'], $item['slug'])is-active @endactive">
+                <a href="{{ route($item['route'], $item['slug']) }}" class="Navigation-item-link {{ $item['class'] }}">{{ $item['title'] }}</a>
             </li>
         @endforeach
     </ul>
