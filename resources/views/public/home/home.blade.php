@@ -49,7 +49,7 @@
 
             <h3>Here are some examples of my best work…</h3>
 
-            @include('portfolio.list.list')
+            @include('public.portfolio.list.list')
 
         </div>
     </section>
@@ -75,6 +75,8 @@
 		    </div>
 	    </div>
     </section>
+
+    @include('sidebar.sidebar')
 
 @stop
 

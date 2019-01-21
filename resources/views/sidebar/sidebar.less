@@ -1,0 +1,108 @@
+.Sidebar {
+
+    &-main {
+        position: relative;
+        // z-index: -1;
+        z-index: 999;
+        &-bg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            // width: 100vw;
+            height: 100vh;
+        }
+
+    }
+
+    &-stripe {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 70px;
+        background: #1F1F1F;
+        height: 100vh;
+        z-index: 9999;
+    }
+
+    &.is-open & {
+        &-main {
+            z-index: 9999;
+        }
+    }
+
+}
+
+.Nav {
+    &-root {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &-item {
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        padding: 1px;
+        margin: 0.25em;
+        width: 3em;
+        clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
+        transition: all .2s ease-in;
+        &:hover {
+            width: 30em;
+            .Nav-link {
+                background: #fff;
+            }
+            .Nav-link-icon {
+                fill: #000;
+            }
+            .Nav-link-text {
+                width: 100%;
+            }
+        }
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        background: #000;
+        // position: absolute;
+        // background: #fff;
+        // border: #fff solid 1px;
+        padding: 0.5em 1em;
+        height: 2em;
+        clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
+
+
+        &-text {
+            white-space: nowrap;
+
+
+        }
+        &-icon {
+            flex: 0 0 auto;
+            width: 18px;
+            margin-right: 1em;
+            fill: #fff;
+            stroke-width: 1;
+            stroke: #444;
+            transition: all .2s ease-in-out;
+        }
+
+    }
+}
+
+.has-openSidebar {
+    .Nav {
+        &-item {
+            width: 30em;
+            .Nav-link {
+                background: #fff;
+            }
+            .Nav-link-icon {
+                fill: #000;
+            }
+            .Nav-link-text {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -7,7 +7,6 @@
     list-style: none;
 
     &-intro {
-        padding: 0 @sidebar-padding;
         margin-bottom: 20px;
     }
 
@@ -50,17 +49,15 @@
             display: block;
             //background: rgba(0,0,0,0.2);
 
-            #gradient > .horizontal(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), 75%);
-
-            padding: 10px @sidebar-padding;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), 75%);
 
             &:hover {
-                #gradient > .horizontal(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), 75%);
+                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0), 75%);
             }
 
             &:active,
             &:focus {
-                #gradient > .horizontal(rgba(red(@theme-tertiary), green(@theme-tertiary), blue(@theme-tertiary), 0.4), rgba(red(@theme-tertiary), green(@theme-tertiary), blue(@theme-tertiary), 0), 75%);
+                background: linear-gradient(rgba(red(@theme-tertiary), green(@theme-tertiary), blue(@theme-tertiary), 0.4), rgba(red(@theme-tertiary), green(@theme-tertiary), blue(@theme-tertiary), 0), 75%);
             }
 
             // Icons

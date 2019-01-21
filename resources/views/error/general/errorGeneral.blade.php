@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('class')System _error @stop
 

@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('meta')
 <title>Permission Denied | Dan Powell</title>

@@ -4,8 +4,8 @@
 /*  ====== Frameworks ======
     ========================================================================= */
 // First, let's *reference* Bootstrap - we'll use all bootstrap classes as mixins to keep file size low.
-@import (reference) 'resources/styles/public/vendor/bootstrap/bootstrapBase.less';
-@import (reference) 'bower_components/fontawesome/less/font-awesome.less';
+// @import (reference) 'resources/styles/public/vendor/bootstrap/bootstrapBase.less';
+@import (reference) 'node_modules/font-awesome/less/font-awesome.less';
 // Variables
 @import 'resources/styles/public/theme/variables.less';
 @import 'resources/styles/public/theme/content.less';
@@ -45,15 +45,8 @@
   overflow-x: hidden;
 
   &-main {
-    padding-left: @sidebar-closed-width;
-
-    /*
-    -webkit-overflow-scrolling: touch;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
     opacity: 1;
-
   }
 
   &-navLogo {
@@ -64,18 +57,13 @@
     top: 20%;
     z-index: -100;
     opacity: 0;
-    .transition(opacity .3s ease-in);
+    transition: opacity .3s ease-in;
   }
 
   &.has-openSidebar & {
 
     &-main {
-      /*
-      -webkit-transform: translate(180px,180px);
-      transform: translate(180px,180px);
-      */
-      //opacity: 0.2;
-      // padding-left: @sidebar-desktop-width;
+
     }
 
     &-navLogo {
@@ -85,31 +73,4 @@
     }
 
   }
-
-  @media only screen and (max-width: @sidebar-breakpoint) {
-    &-navLogo {
-      display: none;
-    }
-
-    &-main {
-      padding-left: 0;
-      padding-top: 40px;
-    }
-
-    &.has-openSidebar & {
-      &-main {
-        padding-left: 0;
-      }
-    }
-
-  }
-
-  /* I think we'll skip this for now
-  @media only screen and (min-width: @sidebar-breakpoint) {
-       &.-showSidebar ._main {
-          filter: blur(12px);
-          -webkit-filter: blur(12px);
-      }
-  }
-  */
 }

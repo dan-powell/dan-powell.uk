@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('meta')
 <title>Not Found | Dan Powell</title>

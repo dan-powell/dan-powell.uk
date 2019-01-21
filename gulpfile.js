@@ -29,15 +29,6 @@ try {
     process.exit()
 }
 
-// Load plugin config
-try {
-    var config = jsyaml.load(fs.readFileSync('./gulp.config.yaml', 'utf8'));
-} catch(err) {
-	console.log('There is an error in the CONFIG file.');
-	console.log(err);
-	process.exit()
-}
-
 if(assets == null || typeof assets.tasks == 'undefined' || assets.tasks == null) {
 	console.log('No tasks defined. Please add some to the assets file.');
 	process.exit()
@@ -51,7 +42,8 @@ var gulp		= require('gulp'),
 	concat      = require('gulp-concat'),
 	gulpif 		= require('gulp-if'),
     reveasy     = require("gulp-rev-easy"),
-    postcss     = require('gulp-postcss');
+    postcss     = require('gulp-postcss'),
+	sourcemaps 	= require('gulp-sourcemaps');
 
 
 // Get get post CSS plugins
@@ -69,26 +61,21 @@ var getPostCssPlugins = function(plugins) {
 };
 
 // Load Post-CSS Plugins
-if(typeof config.postCssPlugins != 'undefined' && config.postCssPlugins != null) {
-    var postCssPlugins = getPostCssPlugins(config.postCssPlugins);
+if(typeof assets.config.postCssPlugins != 'undefined' && assets.config.postCssPlugins != null) {
+    var postCssPlugins = getPostCssPlugins(assets.config.postCssPlugins);
 } else {
     var postCssPlugins = [];
 }
 
 // Load local development plugins
 if (env.developmentMode) {
-	var sourcemaps 	= require('gulp-sourcemaps'),
-		filter       	= require('gulp-filter'),
+	var filter       	= require('gulp-filter'),
 		notify      	= require('gulp-notify'),
 		browserSync 	= require('browser-sync')
 } else {
 	// TODO - This is a hacky way of dealing with missing dev dependancies
 	var notify = function() {return true};
 	notify.onError = function() {return true};
-	var sourcemaps = {
-		init : function() {return true},
-		write : function() {return true}
-	},
 	filter = function() {return true};
 	var browserSync = function() {return true};
 	browserSync.reload = function() {return true};
@@ -109,12 +96,12 @@ gulp.task('browser-sync', function() {
 
 gulp.task('less-main', function() {
 
-	if(typeof assets.tasks.less_main == 'undefined' || assets.tasks.less_main == null) {
-    	console.log('No Less tasks defined. Please add some to the assets file.');
-	} else {
+    if(typeof assets.tasks.less_main == 'undefined' || assets.tasks.less_main == null) {
+        console.log('No Less tasks defined. Please add some to the assets file.');
+    } else {
 
         // Loop over all the tasks and run 'em
-		assets.tasks.less_main.forEach(function(task) {
+        assets.tasks.less_main.forEach(function(task) {
 
             // Check if a config is set, use some sensible defaults if not
             if(typeof task.postCssPlugins != 'undefined' && task.postCssPlugins != null) {
@@ -123,20 +110,20 @@ gulp.task('less-main', function() {
                 var postCssPluginsTask = postCssPlugins;
             }
 
-		  	gulp.src(task.src)
-				.pipe(concat(task.dest))
-				.pipe(gulpif(env.developmentMode, plumber({errorHandler: notify.onError(task.name + " Error: <%= error.message %> | Line: <%= error.lineNumber %> | fileName: <%= error.fileName %> | Extract: <%= error.extract %>")}) ))
-				.pipe(gulpif(env.developmentMode, gulpif(env.css.sourceMaps, sourcemaps.init()) ))
-				.pipe(less())
+            gulp.src(task.src)
+				.pipe(gulpif(env.css.sourceMaps, sourcemaps.init() ))
+				.pipe(gulpif(env.developmentMode, plumber({errorHandler: notify.onError(task.name + " Error: <%= error.message %> | Line: <%= error.line %> | Extract: <%= error.extract %>")}) ))
+                .pipe(concat(task.dest))
+                .pipe(less())
                 .pipe(postcss(postCssPluginsTask))
-				.pipe(gulpif(env.developmentMode, gulpif(env.css.sourceMaps, sourcemaps.write('.')) ))
-				.pipe(gulp.dest(task.destFolder))
-				.pipe(gulpif(env.developmentMode, filter('**/*.css') ))
-				.pipe(gulpif(env.developmentMode, notify({ message: task.name + ' Successful' }) ))
-				.pipe(gulpif(env.developmentMode, browserSync.reload({stream:true}) ));
+                .pipe(gulpif(env.css.sourceMaps, sourcemaps.write('.') ))
+                .pipe(gulp.dest(task.destFolder))
+                .pipe(gulpif(env.developmentMode, filter('**/*.css') ))
+                .pipe(gulpif(env.developmentMode, notify({ message: task.name + ' Successful' }) ))
+                .pipe(gulpif(env.developmentMode, browserSync.reload({stream:true}) ));
 
-	  });
-	}
+        });
+    }
 
 });
 
@@ -158,13 +145,13 @@ gulp.task('less-plugins', function() {
             }
 
             gulp.src(task.src)
-				.pipe(concat(task.dest))
+				.pipe(gulpif(env.css.sourceMaps, sourcemaps.init() ))
+                .pipe(concat(task.dest))
                 .pipe(gulpif(env.developmentMode, plumber({errorHandler: notify.onError(task.name + " Error: <%= error.message %> | Line: <%= error.lineNumber %> | fileName: <%= error.fileName %> | Extract: <%= error.extract %>")}) ))
-                .pipe(gulpif(env.developmentMode, gulpif(env.css.sourceMaps, sourcemaps.init()) ))
                 .pipe(less())
                 .pipe(postcss(postCssPluginsTask))
-                .pipe(gulpif(env.developmentMode, gulpif(env.css.sourceMaps, sourcemaps.write('.')) ))
-				.pipe(gulp.dest(task.destFolder))
+                .pipe(gulpif(env.css.sourceMaps, sourcemaps.write('.') ))
+                .pipe(gulp.dest(task.destFolder))
                 .pipe(gulpif(env.developmentMode, filter('**/*.css') ))
                 .pipe(gulpif(env.developmentMode, notify({ message: task.name + ' Successful' }) ))
                 .pipe(gulpif(env.developmentMode, browserSync.reload({stream:true}) ));
@@ -190,17 +177,17 @@ gulp.task('js-main', function() {
 
     		// Check if a config is set, use some sensible defaults if not
     		if(typeof task.uglify == 'undefined') {
-        		var uglifyConfig = config.uglify;
+        		var uglifyConfig = assets.config.uglify;
     		} else {
                 var uglifyConfig = task.uglify;
             }
 
 			gulp.src(task.src)
+				.pipe(gulpif(env.js.sourceMaps, sourcemaps.init() ))
 				.pipe(concat(task.dest))
 				.pipe(gulpif(env.developmentMode, plumber({errorHandler: notify.onError(task.name + " Error: <%= error.message %> | Line: <%= error.lineNumber %> | fileName: <%= error.fileName %> | Extract: <%= error.extract %>")}) ))
-				.pipe(gulpif(env.developmentMode, gulpif(env.js.sourceMaps, sourcemaps.init()) ))
 				.pipe(uglify(uglifyConfig))
-				.pipe(gulpif(env.developmentMode, gulpif(env.js.sourceMaps, sourcemaps.write('.')) ))
+				.pipe(gulpif(env.js.sourceMaps, sourcemaps.write('.') ))
 				.pipe(gulp.dest(task.destFolder))
 				.pipe(gulpif(env.developmentMode, filter('**/*.js') ))
 				.pipe(gulpif(env.developmentMode, notify({ message: task.name + ' Successful' }) ))
@@ -221,17 +208,17 @@ gulp.task('js-plugins', function() {
 
     		// Check if a config is set, use some sensible defaults if not
     		if(typeof task.uglify == 'undefined') {
-        		var uglifyConfig = config.uglify;
+        		var uglifyConfig = assets.config.uglify;
     		} else {
                 var uglifyConfig = task.uglify;
             }
 
 			gulp.src(task.src)
+				.pipe(gulpif(env.js.sourceMaps, sourcemaps.init() ))
 				.pipe(concat(task.dest))
 				.pipe(gulpif(env.developmentMode, plumber({errorHandler: notify.onError(task.name + " Error: <%= error.message %> | Line: <%= error.lineNumber %> | fileName: <%= error.fileName %> | Extract: <%= error.extract %>")}) ))
-				.pipe(gulpif(env.developmentMode, gulpif(env.js.sourceMaps, sourcemaps.init()) ))
 				.pipe(uglify(uglifyConfig))
-				.pipe(gulpif(env.developmentMode, gulpif(env.js.sourceMaps, sourcemaps.write('.')) ))
+				.pipe(gulpif(env.js.sourceMaps, sourcemaps.write('.') ))
 				.pipe(gulp.dest(task.destFolder))
 				.pipe(gulpif(env.developmentMode, filter('**/*.js') ))
 				.pipe(gulpif(env.developmentMode, notify({ message: task.name + ' Successful' }) ))
@@ -317,7 +304,7 @@ gulp.task('rev', function () {
         assets.tasks.cachebust.forEach(function(task) {
             // Check if a config is set, use some sensible defaults if not
             if(typeof task.revEasy == 'undefined') {
-        		task.revEasy = config.revEasy;
+        		task.revEasy = assets.config.revEasy;
     		}
 
             gulp.src(task.src)

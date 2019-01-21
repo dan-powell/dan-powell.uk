@@ -278,9 +278,6 @@ pre code {
     margin: 10px;
     //border: 1px solid rgba(255, 255, 255, 0.4);
 
-    @shadow: inset rgba(255, 255, 255, 0.6) -1px -1px 1px, inset rgba(0, 0, 0, 0.4) 0 0 6px;
-    .box-shadow(@shadow);
-
     border-radius: 10px;
 }
 
@@ -459,7 +456,6 @@ table {
 
     p {
         margin-bottom: 1em;
-        .hyphens();
     }
 
     a {
@@ -471,7 +467,6 @@ table {
         border-bottom: 1px solid transparent;
 
         &:hover {
-            .scale(0.9);
             color: @theme-secondary;
             border-bottom: 1px solid @text-color;
 
@@ -481,11 +476,11 @@ table {
         }
 
         &:active {
-            .scale(1.4);
+
         }
 
         img {
-            .transition(opacity 0.2s ease-in-out);
+            transition: opacity 0.2s ease-in-out;
         }
 
     }
@@ -520,6 +515,3 @@ table {
 
     }
 }
-
-
-

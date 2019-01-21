@@ -1,4 +1,4 @@
-@extends('publicBase')
+@extends('base')
 
 @section('meta')
 <title>Forbidden | Dan Powell</title>

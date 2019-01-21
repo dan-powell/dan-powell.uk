@@ -14,10 +14,10 @@
 // Main website
 Route::domain(config('app.domain'))->group(function () {
 
-    // TODO Chnage from closure to controller?
+    // TODO Change from closure to controller?
     Route::get('/', ['as' => 'home', function ()
     {
-        return View::make('home.home');
+        return View::make('public.home.home');
     }]);
 
     Route::get('sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);

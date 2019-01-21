@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('/css/plugins.css?rev=1423329234356') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/css/public.css?rev=1423329234356') }}" type="text/css">
 
-    @yield('styles')
+    @stack('styles')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js?rev=1423329234356" type="text/javascript"></script>
     <script>window.Modernizr || document.write('<script src="{{url('/')}}/js/vendor/modernizr.js">\x3C/script>')</script>
@@ -42,7 +42,7 @@
         })();
     </script>
 
-    <script>
+    {{-- <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -50,79 +50,20 @@
 
         ga('create', 'UA-20402828-1', 'auto');
         ga('send', 'pageview');
-    </script>
+    </script> --}}
+
+    @stack('head')
 
 </head>
 
 <body class="Base @yield('class')">
 
-    <aside class="Sidebar">
-        <div class="_content">
-            <div class="_inner">
-                <div class="_inner2">
-                    @include('partials.navigation')
-
-                    <div class="_padded">
-
-                        @yield('sidebar')
-
-                        <hr/>
-
-                        @include('partials.nav-social')
-
-                        <hr/>
-
-                        &copy; 2014 - {{ date("Y") }} Dan Powell
-
-                    </div>
-
-                    @include('partials.nav-tertiary')
-
-                </div>
-            </div>
-        </div>
-
-        <div class="_stripe">
-            <button class="js_openSidebar navButton -menu">
-                <span class="sr-only">Open Menu</span>
-            </button>
-
-            @yield('sidebar-buttons')
-
-            <a href="{{ config('app.url') }}"><h3 class="_logo">DAN POWELL</h3></a>
-
-        </div>
-    </aside>
-
-    <aside class="MobileHeader">
-
-        <button class="js_openSidebar navButton">
-            <span class="sr-only">Open Menu</span>
-        </button>
-
-        @yield('sidebar-buttons')
-
-        <a href="{{ config('app.url') }}"><h3 class="_logo">DAN POWELL</h3></a>
-
-
-    </aside>
 
     <section class="Base-main" id="js_content">
         @yield('main')
     </section>
 
-    {{-- <script src="{{ asset('js/public.js') }}" type="text/javascript"></script> --}}
-    <script src="{{ asset('js/overlay.js') }}" type="text/javascript"></script>
-    <script>
-        var foo = new Overlay('.Sidebar', '.js_openSidebar', {
-            open: 'false', // Initial state
-            class_open: 'is-open', // Class applied to overlay when active
-            class_open_control: 'is-active', // Class applied to buttons when active
-            class_open_body: 'has-openSidebar' // Class applied to body when active
-        });
-    </script>
-
-    @yield('scripts')
+    @stack('foot')
 
 </body>
 </html>
