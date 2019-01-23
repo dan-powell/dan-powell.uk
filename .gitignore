@@ -12,3 +12,6 @@ typescript
 
 # Frontend
 gulp.env.yaml
+
+# Deployment
+hosts.yml
