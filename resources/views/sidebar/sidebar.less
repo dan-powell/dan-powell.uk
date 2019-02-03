@@ -1,108 +1,255 @@
+// Variables
+
+@closed-width: 80px;
+@item-width: 15em;
+
+@color-positive: rgba(255,255,255,.65);
+@color-negative: #1F1F1F;
+
+
+// Mixins
+
+.button-icon() {
+    flex: 0 0 auto;
+    width: 2.5em;
+    padding: .5em;
+    fill: transparent;
+    stroke-width: 0.5em;
+    stroke: #fff;
+    background: url('../img/hexagon.svg') center center no-repeat;
+    background-size: 100%;
+    transition: all .2s ease-in-out;
+}
+.button-inner() {
+    position: absolute;
+    display: block;
+    z-index: -1;
+    width: @item-width;
+    left: ~"calc(@{closed-width} - 1px)";
+    padding: .5em 1em;
+    background: @color-negative;
+    transform: translateX(-100%);
+    transition: transform .2s ease-in;
+    transition-delay: .2s;
+    text-align: center;
+    clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
+    // clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
+}
+
+
+// Components
+
 .Sidebar {
 
+    font-size: 26px;
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Roboto Slab', serif;
+    }
+
     &-main {
-        position: relative;
-        // z-index: -1;
-        z-index: 999;
         &-bg {
             position: fixed;
             left: 0;
             top: 0;
             // width: 100vw;
             height: 100vh;
+            z-index: -1;
         }
-
     }
 
-    &-stripe {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 70px;
-        background: #1F1F1F;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: @closed-width;
+    background: @color-negative;
+    height: 100vh;
+    z-index: 9999;
+    border-right: 1px solid #fff;
+
+    transition: all .2s ease-in-out;
+
+    &-button {
+        border: none;
+        background:none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding: 0.25em;
+        position: relative;
+        color: @color-positive;
+        font-weight: 300;
+        outline: none;
+        &-icon {
+            .button-icon();
+            fill: @color-negative;
+            stroke-width: 0;
+            background-image: url('../img/hexagon-fill.svg');
+        }
+        &-inner {
+            .button-inner();
+        }
+        &-text {
+            opacity: 0;
+            transition: opacity .2s ease-out;
+            display:none;
+            &--open {
+                display: block;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover & {
+            &-icon {
+                fill: #fff;
+            }
+            &-inner {
+                transform: translateX(0);
+                transition-delay: 0s;
+            }
+            &-text {
+                opacity: 1;
+                transition-delay: .1s;
+            }
+        }
+    }
+
+    &-home {
+        display: block;
+        transform: rotate(-90deg) translateX(-300%);
+        &-text {
+            white-space: nowrap;
+            color: @color-positive;
+            font-weight: 200;
+            font-size: 1.6em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+    }
+
+    .Nav {
+        &-root,
+        &-sub,
+        &-item {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        &-sub {
+            margin-left: 2.5em;
+            display: none;
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            padding: 0 0.25em;
+            position: relative;
+            color: @color-positive;
+            font-weight: 300;
+            &-inner {
+                .button-inner();
+            }
+            &-text {
+                opacity: 0;
+                transition: opacity .2s ease-out;
+            }
+            &-icon {
+                .button-icon();
+            }
+            &:hover {
+                cursor: pointer;
+                .Nav {
+                    &-link {
+                        &-icon {
+                            fill: #fff;
+                        }
+                        &-inner {
+                            transform: translateX(0);
+                            transition-delay: 0s;
+                        }
+                        &-text {
+                            opacity: 1;
+                            transition-delay: .1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // State
+
+    &.is-open {
+
+        width: 100vw;
         height: 100vh;
-        z-index: 9999;
+        overflow-y: scroll;
+
+        .Nav {
+            &-item {
+                width: 50vw;
+            }
+            &-link {
+                &-icon {
+                    // fill: #000;
+                }
+                &-inner {
+                    transform: translateX(0);
+                    transition-delay: .2s;
+                    position: static;
+                    text-align: left;
+                    width: auto;
+                }
+                &-text {
+                    opacity: 1;
+                    transition-delay: .2s;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background: rgba(255,255,255,0.1);
+                }
+            }
+            &-sub {
+                display: block;
+            }
+        }
     }
 
     &.is-open & {
         &-main {
             z-index: 9999;
         }
+        &-stripe {
+            border-right: transparent;
+        }
+        &-button {
+            &-text {
+                &--open {
+                    display: none;
+                }
+                &--close {
+                    display: block;
+                }
+            }
+        }
+        &-home {
+            display: none;
+        }
     }
-
 }
 
-.Nav {
-    &-root {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    &-item {
-        padding: 0;
-        margin: 0;
-        background: #fff;
-        padding: 1px;
-        margin: 0.25em;
-        width: 3em;
-        clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
-        transition: all .2s ease-in;
-        &:hover {
-            width: 30em;
-            .Nav-link {
-                background: #fff;
-            }
-            .Nav-link-icon {
-                fill: #000;
-            }
-            .Nav-link-text {
-                width: 100%;
-            }
-        }
-    }
-    &-link {
-        display: flex;
-        align-items: center;
-        background: #000;
-        // position: absolute;
-        // background: #fff;
-        // border: #fff solid 1px;
-        padding: 0.5em 1em;
-        height: 2em;
-        clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
-
-
-        &-text {
-            white-space: nowrap;
-
-
-        }
-        &-icon {
-            flex: 0 0 auto;
-            width: 18px;
-            margin-right: 1em;
-            fill: #fff;
-            stroke-width: 1;
-            stroke: #444;
-            transition: all .2s ease-in-out;
-        }
-
-    }
+body {
+    padding-left: @closed-width;
 }
+
+
+ // Root Modifiers
 
 .has-openSidebar {
-    .Nav {
-        &-item {
-            width: 30em;
-            .Nav-link {
-                background: #fff;
-            }
-            .Nav-link-icon {
-                fill: #000;
-            }
-            .Nav-link-text {
-                width: 100%;
-            }
-        }
-    }
+    height: 100vh;
+    overflow-y: hidden;
 }

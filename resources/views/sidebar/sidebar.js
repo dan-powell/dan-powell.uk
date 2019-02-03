@@ -28,7 +28,7 @@
         // });
     }
 
-    var sidebar = new Overlay('.Sidebar', '.js_openSidebar', {
+    var sidebar = new Overlay('.Sidebar', '.js-sidebar', {
         open: 'false', // Initial state
         class_open: 'is-open', // Class applied to overlay when active
         class_open_control: 'is-active', // Class applied to buttons when active
