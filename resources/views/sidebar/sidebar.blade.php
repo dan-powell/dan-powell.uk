@@ -1,172 +1,151 @@
 <aside class="Sidebar">
-
-    <svg class="Sidebar-main-bg" viewBox="0 0 1363 608"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g fill-rule="evenodd" stroke="#1F1F1F" stroke-width="2" fill="#1F1F1F">
-            <polygon opacity="0" points="195.556455 67.8731151 117.704303 67.8731151 78.7782273 0.436557558 117.704303 -67 195.556455 -67 234.48253 0.436557558"></polygon>
-            <polygon opacity="0" points="429.112909 67.8731151 351.260758 67.8731151 312.334682 0.436557558 351.260758 -67 429.112909 -67 468.038985 0.436557558"></polygon>
-            <polygon opacity="0" points="662.669364 67.8731151 584.817212 67.8731151 545.891136 0.436557558 584.817212 -67 662.669364 -67 701.507172 0.436557558"></polygon>
-            <polygon opacity="0" points="896.049283 67.8731151 818.197131 67.8731151 779.271056 0.436557558 818.197131 -67 896.049283 -67 934.975359 0.436557558"></polygon>
-            <polygon opacity="0" points="1129.60574 67.8731151 1051.75359 67.8731151 1012.82751 0.436557558 1051.75359 -67 1129.60574 -67 1168.53181 0.436557558"></polygon>
-            <polygon opacity="0" points="1363.16219 67.8731151 1285.31004 67.8731151 1246.38396 0.436557558 1285.31004 -67 1363.16219 -67 1402 0.436557558"></polygon>
-            <polygon opacity="0" points="0.926075763 0.436557558 78.7782273 0.436557558 117.704303 67.8731151 78.7782273 135.221405 0.926075763 135.221405 -38 67.8731151"></polygon>
-            <polygon opacity="0" points="234.48253 0.436557558 312.334682 0.436557558 351.260758 67.8731151 312.334682 135.221405 234.48253 135.221405 195.556455 67.8731151"></polygon>
-            <polygon opacity="0" points="468.038985 0.436557558 545.891136 0.436557558 584.817212 67.8731151 545.891136 135.221405 468.038985 135.221405 429.112909 67.8731151"></polygon>
-            <polygon opacity="0" points="701.418904 0.436557558 779.271056 0.436557558 818.197131 67.8731151 779.271056 135.221405 701.418904 135.221405 662.492828 67.8731151"></polygon>
-            <polygon opacity="0" points="934.975359 0.436557558 1012.82751 0.436557558 1051.75359 67.8731151 1012.82751 135.221405 934.975359 135.221405 896.049283 67.8731151"></polygon>
-            <polygon opacity="0" points="1168.53181 0.436557558 1246.38396 0.436557558 1285.31004 67.8731151 1246.38396 135.221405 1168.53181 135.221405 1129.60574 67.8731151"></polygon>
-            <polygon opacity="0" points="195.556455 202.657962 117.704303 202.657962 78.7782273 135.221405 117.704303 67.8731151 195.556455 67.8731151 234.48253 135.221405"></polygon>
-            <polygon opacity="0" points="429.112909 202.657962 351.260758 202.657962 312.334682 135.221405 351.260758 67.8731151 429.112909 67.8731151 468.038985 135.221405"></polygon>
-            <polygon opacity="0" points="662.669364 202.657962 584.817212 202.657962 545.891136 135.221405 584.817212 67.8731151 662.669364 67.8731151 701.507172 135.221405"></polygon>
-            <polygon opacity="0" points="896.049283 202.657962 818.197131 202.657962 779.271056 135.221405 818.197131 67.8731151 896.049283 67.8731151 934.975359 135.221405"></polygon>
-            <polygon opacity="0" points="1129.60574 202.657962 1051.75359 202.657962 1012.82751 135.221405 1051.75359 67.8731151 1129.60574 67.8731151 1168.53181 135.221405"></polygon>
-            <polygon opacity="0" points="1363.16219 202.657962 1285.31004 202.657962 1246.38396 135.221405 1285.31004 67.8731151 1363.16219 67.8731151 1402 135.221405"></polygon>
-            <polygon opacity="0" points="0.926075763 135.221405 78.7782273 135.221405 117.704303 202.657962 78.7782273 270.09452 0.926075763 270.09452 -38 202.657962"></polygon>
-            <polygon opacity="0" points="234.48253 135.221405 312.334682 135.221405 351.260758 202.657962 312.334682 270.09452 234.48253 270.09452 195.556455 202.657962"></polygon>
-            <polygon opacity="0" points="468.038985 135.221405 545.891136 135.221405 584.817212 202.657962 545.891136 270.09452 468.038985 270.09452 429.112909 202.657962"></polygon>
-            <polygon opacity="0" points="701.418904 135.221405 779.271056 135.221405 818.197131 202.657962 779.271056 270.09452 701.418904 270.09452 662.492828 202.657962"></polygon>
-            <polygon opacity="0" points="934.975359 135.221405 1012.82751 135.221405 1051.75359 202.657962 1012.82751 270.09452 934.975359 270.09452 896.049283 202.657962"></polygon>
-            <polygon opacity="0" points="1168.53181 135.221405 1246.38396 135.221405 1285.31004 202.657962 1246.38396 270.09452 1168.53181 270.09452 1129.60574 202.657962"></polygon>
-            <polygon opacity="0" points="195.556455 337.531078 117.704303 337.531078 78.7782273 270.09452 117.704303 202.657962 195.556455 202.657962 234.48253 270.09452"></polygon>
-            <polygon opacity="0" points="429.112909 337.531078 351.260758 337.531078 312.334682 270.09452 351.260758 202.657962 429.112909 202.657962 468.038985 270.09452"></polygon>
-            <polygon opacity="0" points="662.669364 337.531078 584.817212 337.531078 545.891136 270.09452 584.817212 202.657962 662.669364 202.657962 701.507172 270.09452"></polygon>
-            <polygon opacity="0" points="896.049283 337.531078 818.197131 337.531078 779.271056 270.09452 818.197131 202.657962 896.049283 202.657962 934.975359 270.09452"></polygon>
-            <polygon opacity="0" points="1129.60574 337.531078 1051.75359 337.531078 1012.82751 270.09452 1051.75359 202.657962 1129.60574 202.657962 1168.53181 270.09452"></polygon>
-            <polygon opacity="0" points="1363.16219 337.531078 1285.31004 337.531078 1246.38396 270.09452 1285.31004 202.657962 1363.16219 202.657962 1402 270.09452"></polygon>
-            <polygon opacity="0" points="0.926075763 270.09452 78.7782273 270.09452 117.704303 337.531078 78.7782273 404.879367 0.926075763 404.879367 -38 337.531078"></polygon>
-            <polygon opacity="0" points="234.48253 270.09452 312.334682 270.09452 351.260758 337.531078 312.334682 404.879367 234.48253 404.879367 195.556455 337.531078"></polygon>
-            <polygon opacity="0" points="468.038985 270.09452 545.891136 270.09452 584.817212 337.531078 545.891136 404.879367 468.038985 404.879367 429.112909 337.531078"></polygon>
-            <polygon opacity="0" points="701.418904 270.09452 779.271056 270.09452 818.197131 337.531078 779.271056 404.879367 701.418904 404.879367 662.492828 337.531078"></polygon>
-            <polygon opacity="0" points="934.975359 270.09452 1012.82751 270.09452 1051.75359 337.531078 1012.82751 404.879367 934.975359 404.879367 896.049283 337.531078"></polygon>
-            <polygon opacity="0" points="1168.53181 270.09452 1246.38396 270.09452 1285.31004 337.531078 1246.38396 404.879367 1168.53181 404.879367 1129.60574 337.531078"></polygon>
-            <polygon opacity="0" points="195.556455 472.315925 117.704303 472.315925 78.7782273 404.879367 117.704303 337.531078 195.556455 337.531078 234.48253 404.879367"></polygon>
-            <polygon opacity="0" points="429.112909 472.315925 351.260758 472.315925 312.334682 404.879367 351.260758 337.531078 429.112909 337.531078 468.038985 404.879367"></polygon>
-            <polygon opacity="0" points="662.669364 472.315925 584.817212 472.315925 545.891136 404.879367 584.817212 337.531078 662.669364 337.531078 701.507172 404.879367"></polygon>
-            <polygon opacity="0" points="896.049283 472.315925 818.197131 472.315925 779.271056 404.879367 818.197131 337.531078 896.049283 337.531078 934.975359 404.879367"></polygon>
-            <polygon opacity="0" points="1129.60574 472.315925 1051.75359 472.315925 1012.82751 404.879367 1051.75359 337.531078 1129.60574 337.531078 1168.53181 404.879367"></polygon>
-            <polygon opacity="0" points="1363.16219 472.315925 1285.31004 472.315925 1246.38396 404.879367 1285.31004 337.531078 1363.16219 337.531078 1402 404.879367"></polygon>
-            <polygon opacity="0" points="0.926075763 404.879367 78.7782273 404.879367 117.704303 472.315925 78.7782273 539.752483 0.926075763 539.752483 -38 472.315925"></polygon>
-            <polygon opacity="0" points="234.48253 404.879367 312.334682 404.879367 351.260758 472.315925 312.334682 539.752483 234.48253 539.752483 195.556455 472.315925"></polygon>
-            <polygon opacity="0" points="468.038985 404.879367 545.891136 404.879367 584.817212 472.315925 545.891136 539.752483 468.038985 539.752483 429.112909 472.315925"></polygon>
-            <polygon opacity="0" points="701.418904 404.879367 779.271056 404.879367 818.197131 472.315925 779.271056 539.752483 701.418904 539.752483 662.492828 472.315925"></polygon>
-            <polygon opacity="0" points="934.975359 404.879367 1012.82751 404.879367 1051.75359 472.315925 1012.82751 539.752483 934.975359 539.752483 896.049283 472.315925"></polygon>
-            <polygon opacity="0" points="1168.53181 404.879367 1246.38396 404.879367 1285.31004 472.315925 1246.38396 539.752483 1168.53181 539.752483 1129.60574 472.315925"></polygon>
-            <polygon opacity="0" points="195.556455 607.18904 117.704303 607.18904 78.7782273 539.752483 117.704303 472.315925 195.556455 472.315925 234.48253 539.752483"></polygon>
-            <polygon opacity="0" points="429.112909 607.18904 351.260758 607.18904 312.334682 539.752483 351.260758 472.315925 429.112909 472.315925 468.038985 539.752483"></polygon>
-            <polygon opacity="0" points="662.669364 607.18904 584.817212 607.18904 545.891136 539.752483 584.817212 472.315925 662.669364 472.315925 701.507172 539.752483"></polygon>
-            <polygon opacity="0" points="896.049283 607.18904 818.197131 607.18904 779.271056 539.752483 818.197131 472.315925 896.049283 472.315925 934.975359 539.752483"></polygon>
-            <polygon opacity="0" points="1129.60574 607.18904 1051.75359 607.18904 1012.82751 539.752483 1051.75359 472.315925 1129.60574 472.315925 1168.53181 539.752483"></polygon>
-            <polygon opacity="0" points="1363.16219 607.18904 1285.31004 607.18904 1246.38396 539.752483 1285.31004 472.315925 1363.16219 472.315925 1402 539.752483"></polygon>
-            <polygon opacity="0" points="1.10261125 539.929018 78.9547628 539.929018 117.880839 607.277308 78.9547628 674.713865 1.10261125 674.713865 -37.8234645 607.277308"></polygon>
-            <polygon opacity="0" points="234.48253 539.752483 312.334682 539.752483 351.260758 607.18904 312.334682 674.53733 234.48253 674.53733 195.556455 607.18904"></polygon>
-            <polygon opacity="0" points="468.038985 539.752483 545.891136 539.752483 584.817212 607.18904 545.891136 674.53733 468.038985 674.53733 429.112909 607.18904"></polygon>
-            <polygon opacity="0" points="701.595439 539.929018 779.447591 539.929018 818.373667 607.277308 779.447591 674.713865 701.595439 674.713865 662.669364 607.277308"></polygon>
-            <polygon opacity="0" points="934.975359 539.752483 1012.82751 539.752483 1051.75359 607.18904 1012.82751 674.53733 934.975359 674.53733 896.049283 607.18904"></polygon>
-            <polygon opacity="0" points="1168.53181 539.752483 1246.38396 539.752483 1285.31004 607.18904 1246.38396 674.53733 1168.53181 674.53733 1129.60574 607.18904"></polygon>
-        </g>
-    </svg>
-
     <div class="Sidebar-stripe">
-        <button class="Sidebar-button js-sidebar">
+        <a href="{{ config('app.url') }}" class="Sidebar-home">
+            <h1 class="Sidebar-home-title">
+                <span class="Sidebar-home-text Sidebar-home-text--dan">Dan</span>
+                <span class="Sidebar-home-text Sidebar-home-text--powell">Powell</span>
+                <span class="Sidebar-home-text Sidebar-home-text--web">Web</span>
+                <span class="Sidebar-home-text Sidebar-home-text--design">Design</span>
+            </h1>
+        </a>
+        <button class="Sidebar-button Sidebar-button--menu js-sidebar">
             <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
-                <use xlink:href="{{ asset('img/navigation.svg#menu') }}"></use>
+                <use xlink:href="{{ asset('img/sidebar/navigation.svg#menu') }}"></use>
             </svg>
             <span class="Sidebar-button-inner">
                 <span class="Sidebar-button-text Sidebar-button-text--open">Open Menu</span>
                 <span class="Sidebar-button-text Sidebar-button-text--close">Close Menu</span>
             </span>
         </button>
-        <nav class="Nav">
-            <ul class="Nav-root">
-                <li class="Nav-item">
-                    <a class="Nav-link" href="">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#home') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">Home / About</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="Nav-item">
-                    <a class="Nav-link" href="">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#design') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">Portfolio</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="Nav-item">
-                    <a class="Nav-link" href="">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#education') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">Experience</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="Nav-item">
-                    <a class="Nav-link" href="">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#work') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">Skills</span>
-                        </span>
-                    </a>
-                    <ul class="Nav-sub">
-                        <li class="Nav-item">
-                            <a class="Nav-link" href="">
-                                <span class="Nav-link-inner">
-                                    <span class="Nav-link-text">Sub menu item</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="Nav-item">
-                            <a class="Nav-link" href="">
-                                <span class="Nav-link-inner">
-                                    <span class="Nav-link-text">Another sub menu item</span>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="Nav-item">
-                    <a class="Nav-link" href="">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#projects') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">Projects</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="Nav-item">
-                    <a class="Nav-link" href="" data-text="A menu link with a really long name to test the design.">
-                        <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                            <use xlink:href="{{ asset('img/navigation.svg#about') }}"></use>
-                        </svg>
-                        <span class="Nav-link-inner">
-                            <span class="Nav-link-text">A menu link with a really long name to test the design.</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <a href="{{ config('app.url') }}" class="Sidebar-home">
-            <h3 class="Sidebar-home-text">Dan Powell</h3>
+        <a class="Sidebar-button" href="{{ config('app.url') }}">
+            <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
+                <use xlink:href="{{ asset('img/sidebar/navigation.svg#home') }}"></use>
+            </svg>
+            <span class="Sidebar-button-inner">
+                <span class="Sidebar-button-text">Home</span>
+            </span>
+        </a>
+        <a class="Sidebar-button" href="{{ config('app.url') }}">
+            <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
+                <use xlink:href="{{ asset('img/sidebar/navigation.svg#return') }}"></use>
+            </svg>
+            <span class="Sidebar-button-inner">
+                <span class="Sidebar-button-text">Projects</span>
+            </span>
         </a>
     </div>
-
-
-    <div class="Sidebar-copy">
-        &copy; 2014 - {{ date("Y") }} Dan Powell
+    <div class="Sidebar-overlay">
+        <div class="Sidebar-nav">
+            <h1 class="Sidebar-title">
+                <span class="Sidebar-title-h1">Dan Powell</span>
+                <span class="Sidebar-title-h2">Web Designer</span>
+            </h1>
+            <nav class="Nav">
+                <ul class="Nav-root">
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="{{ config('app.url') }}">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#home') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">About</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#design') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">Portfolio</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#education') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">Experience</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#work') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">Skills</span>
+                            </span>
+                        </a>
+                        <ul class="Nav-sub">
+                            <li class="Nav-item">
+                                <a class="Nav-link" href="">
+                                    <span class="Nav-link-inner">
+                                        <span class="Nav-link-text">Sub menu item</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="Nav-item">
+                                <a class="Nav-link" href="">
+                                    <span class="Nav-link-inner">
+                                        <span class="Nav-link-text">Another sub menu item</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#projects') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">Projects</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="Nav-item">
+                        <a class="Nav-link" href="" data-text="A menu link with a really long name to test the design.">
+                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
+                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#about') }}"></use>
+                            </svg>
+                            <span class="Nav-link-inner">
+                                <span class="Nav-link-text">A menu link with a really long name to test the design.</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="Sidebar-about">
+            <p class="Sidebar-about-text Sidebar-about-text--more">view some of my</p>
+            <a class="Sidebar-about-link" href="">
+                <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
+                    <use xlink:href="{{ asset('img/sidebar/sidebar.svg#projects') }}"></use>
+                </svg>
+                <span class="Sidebar-about-link-text">Projects</span>
+            </a>
+            <p class="Sidebar-about-text Sidebar-about-text--more">or checkout my code on</p>
+            <a class="Sidebar-about-link" href="">
+                <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
+                    <use xlink:href="{{ asset('img/sidebar/sidebar.svg#github') }}"></use>
+                </svg>
+                <span class="Sidebar-about-link-text">Github</span>
+            </a>
+        </div>
+        <div class="Sidebar-cheeky">
+            <img class="Sidebar-cheeky-img" src="{{ asset('img/sidebar/cheeky.svg') }}"/>
+        </div>
+        <div class="Sidebar-links">
+            <a class="Sidebar-links-item" href="">Sitemap</a>
+            <a class="Sidebar-links-item" href="">Privacy</a>
+            <a class="Sidebar-links-item" href="">Cookies</a>
+        </div>
     </div>
-
-
-
 </aside>
 
 @push('styles')

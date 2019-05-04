@@ -1,30 +1,24 @@
 (function() {
 
     function open_sidebar() {
-        anime({
-            targets: '.Sidebar-main-bg polygon',
-            opacity: [
-                {value: 1, easing: 'easeOutSine', duration: 200},
-            ],
-            direction: 'normal',
-            delay: anime.stagger(100, {grid: [6, 10], from: 'first'})
-        });
+        // anime({
+        //     targets: '.Sidebar-main-bg polygon',
+        //     opacity: [
+        //         {value: 1, easing: 'easeOutSine', duration: 200},
+        //     ],
+        //     direction: 'normal',
+        //     delay: anime.stagger(50, {grid: [6, 10], from: 'first'})
+        // });
     }
 
     function close_sidebar() {
-        anime({
-            targets: '.Sidebar-main-bg polygon',
-            opacity: [
-                {value: 0, easing: 'easeOutSine', duration: 200},
-            ],
-            direction: 'normal',
-            delay: anime.stagger(100, {grid: [6, 10], from: 'last'})
-        });
         // anime({
-        //     targets: '.Sidebar-main-bg path',
-        //     easing: 'easeInOutQuad',
-        //     strokeDashoffset: [anime.setDashoffset],
-        //     duration: 10000
+        //     targets: '.Sidebar-main-bg polygon',
+        //     opacity: [
+        //         {value: 0, easing: 'easeOutSine', duration: 200},
+        //     ],
+        //     direction: 'normal',
+        //     delay: anime.stagger(50, {grid: [6, 10], from: 'last'})
         // });
     }
 
