@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="Nav-item">
-                        <a class="Nav-link" href="">
+                        <a class="Nav-link" href="{{ route('portfolio.index') }}">
                             <svg class="Nav-link-icon" viewBox="0 0 512 512">
                                 <use xlink:href="{{ asset('img/sidebar/navigation.svg#design') }}"></use>
                             </svg>
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li class="Nav-item">
-                        <a class="Nav-link" href="">
+                        <a class="Nav-link" href="{{ route('page', 'experience') }}">
                             <svg class="Nav-link-icon" viewBox="0 0 512 512">
                                 <use xlink:href="{{ asset('img/sidebar/navigation.svg#education') }}"></use>
                             </svg>
@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li class="Nav-item">
-                        <a class="Nav-link" href="">
+                        <a class="Nav-link" href="{{ route('page', 'skills') }}">
                             <svg class="Nav-link-icon" viewBox="0 0 512 512">
                                 <use xlink:href="{{ asset('img/sidebar/navigation.svg#work') }}"></use>
                             </svg>
@@ -99,7 +99,7 @@
                         </ul>
                     </li>
                     <li class="Nav-item">
-                        <a class="Nav-link" href="">
+                        <a class="Nav-link" href="{{ route('projects.index') }}">
                             <svg class="Nav-link-icon" viewBox="0 0 512 512">
                                 <use xlink:href="{{ asset('img/sidebar/navigation.svg#projects') }}"></use>
                             </svg>
@@ -142,16 +142,8 @@
         </div>
         <div class="Sidebar-links">
             <a class="Sidebar-links-item" href="">Sitemap</a>
-            <a class="Sidebar-links-item" href="">Privacy</a>
-            <a class="Sidebar-links-item" href="">Cookies</a>
+            <a class="Sidebar-links-item" href="{{ route('page', 'privacy') }}">Privacy</a>
+            <a class="Sidebar-links-item" href="{{ route('page', 'cookies') }}">Cookies</a>
         </div>
     </div>
 </aside>
-
-@push('styles')
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}" type="text/css">
-@endpush
-
-@push('foot')
-    <script src="{{ asset('js/sidebar.js') }}"></script>
-@endpush

@@ -3,17 +3,17 @@
 return [
     'items' => [
         'skills' => [
-            'view' => 'page.skills.pageSkills',
+            'view' => 'main.page.skills',
             'updated_at' => '',
             'items' => []
         ],
         'experience' => [
-            'view' => 'page.experience.pageExperience',
+            'view' => 'main.page.experience',
             'updated_at' => '',
             'items' => []
         ],
         'privacy' => [
-            'view' => 'page.privacy.pagePrivacy',
+            'view' => 'main.page.privacy',
             'updated_at' => '',
             'items' => []
         ],

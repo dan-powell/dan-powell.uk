@@ -1,15 +1,15 @@
-<?php
-
-namespace App\Http\Composers;
+<?php namespace App\Http\Composers;
 
 use Illuminate\View\View;
+
+use App\Repositories\PortfolioRepository;
 
 class PortfolioListComposer
 {
 
-    public function __construct()
+    public function __construct(PortfolioRepository $portfolioRepository)
     {
-
+        $this->portfolioRepo = $portfolioRepository;
     }
 
     /**
@@ -20,6 +20,6 @@ class PortfolioListComposer
      */
     public function compose(View $view)
     {
-        $view->with('items', config('content.portfolio.items'));
+        $view->with('items', $this->portfolioRepo->all());
     }
 }

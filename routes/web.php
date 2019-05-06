@@ -14,30 +14,48 @@
 // Main website
 Route::domain(config('app.domain'))->group(function () {
 
-    // TODO Change from closure to controller?
-    Route::get('/', ['as' => 'home', function ()
-    {
-        return View::make('public.home.home');
-    }]);
+    Route::get('/', [
+        'as' => 'home',
+        'uses' => 'Main\HomeController@show'
+    ]);
 
-    Route::get('sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
-    Route::get('sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xml']);
+    Route::get('sitemap', [
+        'as' => 'sitemap',
+        'uses' => 'SitemapController@show'
+    ]);
 
-    Route::get('portfolio', ['as' => 'portfolio.index', 'uses' => 'PortfolioController@index']);
-    Route::get('portfolio/{slug}', ['as' => 'portfolio.show', 'uses' => 'PortfolioController@show']);
+    Route::get('sitemap.xml', [
+        'as' => 'sitemap.xml',
+        'uses' => 'SitemapController@xml'
+    ]);
 
-    Route::get('projects', ['as' => 'projects.index', 'uses' => 'ProjectController@index']);
+    Route::get('portfolio', [
+        'as' => 'portfolio.index',
+        'uses' => 'Main\PortfolioController@index'
+    ]);
+
+    Route::get('portfolio/{slug}', [
+        'as' => 'portfolio.show',
+        'uses' => 'Main\PortfolioController@show'
+    ]);
+
+    Route::get('projects', [
+        'as' => 'projects.index',
+        'uses' => 'Main\ProjectController@index'
+    ]);
 
     // Pages (must be placed last)
-    Route::get('/{slug}', ['as' => 'page', 'uses' => 'PageController@show']);
-
+    Route::get('{slug}', [
+        'as' => 'page',
+        'uses' => 'Main\PageController@show'
+    ]);
 
 });
 
 // Projects are on sub-domains
 Route::domain('{project}.' . config('app.domain'))->name('project.')->group(function () {
 
-    Route::get('/', ['as' => 'home', 'uses' => 'ProjectController@show']);
+    Route::get('/', ['as' => 'home', 'uses' => 'Project\ProjectController@show']);
 
 
     // TODO implement individual sitemaps for projects
@@ -46,10 +64,10 @@ Route::domain('{project}.' . config('app.domain'))->name('project.')->group(func
 
     Route::get(config('images.route') . '/{path}', 'ImageController@project')->where('path', '.*');
 
-    Route::get('assets/{path}', 'ProjectController@asset')->where('path', '.*');
+    Route::get('assets/{path}', 'Project\ProjectController@asset')->where('path', '.*');
 
     // Project Pages (must be placed last)
-    Route::get('/{slug}', ['as' => 'page', 'uses' => 'ProjectController@page']);
+    Route::get('/{slug}', ['as' => 'page', 'uses' => 'Project\ProjectController@page']);
 
 });
 

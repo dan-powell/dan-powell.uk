@@ -11,24 +11,28 @@ tasks:
         -
             name: "Main CSS"
             src:
-                - "./resources/styles/public/public.less"
-                - "./resources/views/public/**/*.less"
+                - "./resources/styles/main/variables.less"
+                - "./resources/styles/main/elements.less"
+                - "./resources/styles/main/base.less"
+                - "./resources/styles/main/mixins.less"
+                - "./resources/styles/main/utilities.less"
+                - "./resources/styles/main/**/*.less"
             destFolder: "./public/css"
-            dest: "public.css"
+            dest: "main.css"
         -
             name: "Sidebar CSS"
             src:
-                - "./resources/views/sidebar/**/*.less"
+                - "./resources/styles/sidebar/**/*.less"
             destFolder: "./public/css"
             dest: "sidebar.css"
 
     less_plugins:
-        -
-            name: "Plugin CSS"
-            src:
-                - "./resources/styles/public/plugins.less"
-            destFolder: "./public/css"
-            dest: "plugins.css"
+        # -
+        #     name: "Plugin CSS"
+        #     src:
+        #         - "./resources/styles/main/plugins.less"
+        #     destFolder: "./public/css"
+        #     dest: "plugins.css"
 
     # Concatenate & minify app JS files
     js_main:
