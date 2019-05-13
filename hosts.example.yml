@@ -1,0 +1,4 @@
+host:
+  stage: production
+  deploy_path: ~/
+  branch: production
