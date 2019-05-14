@@ -1,0 +1,62 @@
+.PortfolioExcerpt {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &-inner {
+        clip-path: polygon(50% 0%, 75% 12.5%, 100% 25%, 100% 50%, 100% 75%, 75% 87.5%, 50% 100%, 25% 87.5%, 0% 75%, 0% 50%, 0% 25%, 25% 12.5%);
+        transition: all .2s ease-in-out;
+        transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        will-change: clip-path;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(red(@theme-secondary), green(@theme-secondary), blue(@theme-secondary), 0.6);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        // text-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+        // font-size: 2em;
+        // font-family: @font-family-serif;
+        z-index: 10;
+        padding: 10%;
+        transition: all .2s ease-out;
+        transform: rotate(30deg);
+        color: rgba(255,255,255,1);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover & {
+        &-inner {
+            // transform: rotate(-15deg);
+            // clip-path: polygon(50% 0%, 70% 17.5%, 100% 25%, 90% 50%, 100% 75%, 70% 82.5%, 50% 100%, 30% 82.5%, 0% 75%, 10% 50%, 0% 25%, 30% 17.5%);
+            clip-path: polygon(50% 0%, 80% 7.5%, 100% 25%, 95% 50%, 100% 75%, 80% 92.5%, 50% 100%, 20% 92.5%, 0% 75%, 5% 50%, 0% 25%, 20% 7.5%);
+        }
+        &-title {
+            transform: rotate(0deg);
+        }
+    }
+
+}

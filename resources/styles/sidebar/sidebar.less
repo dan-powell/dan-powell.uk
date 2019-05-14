@@ -10,15 +10,13 @@
 
 @color-background: #1a1a1a;
 
-@import url('https://fonts.googleapis.com/css?family=Caveat|Roboto+Slab:300,400');
-
 .Sidebar {
 
     font-size: 20px;
 
     overflow: hidden;
     position: relative;
-    z-index: 999999;
+    z-index: 99999;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,7 +25,7 @@
 
     * {
         box-sizing: border-box;
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Aldrich', serif;
         margin: 0;
         padding: 0;
         border: 0;
@@ -49,16 +47,23 @@
         }
     }
 
+    hr {
+        margin: 1em 0;
+        border-bottom: 1px solid fade(@color-positive, 50%);
+    }
+
     &-stripe {
         position: fixed;
         left: 0;
         top: 0;
+        display: flex;
+        flex-direction: column;
         width: @sidebar-width;
         background: @color-background;
         height: 100vh;
         z-index: 9999;
         border-right: 1px solid @color-positive;
-
+        padding: 0.25em;
         transition: all .2s ease-in-out;
 
     }
@@ -68,7 +73,7 @@
         height: 100vh;
         // padding: 1em 1em 1em ~"calc(@{sidebar-width} + 1em)";
         padding: 0 0 3em @sidebar-width;
-        width: 100vw;
+        min-width: 700px;
         left: 0;
         top: 0;
         background: @color-background;
@@ -85,7 +90,7 @@
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
 
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 0;
         will-change: transform, opacity;
         transition-property: transform, opacity;
@@ -182,8 +187,9 @@
     }
 
     &-home {
+        margin-top: auto;
         display: block;
-        padding: 0.2em;
+        // padding: 0.1em;
         &:hover  {
             background: rgba(255,255,255,0.1);
         }
@@ -221,6 +227,9 @@
         grid-area: nav;
         margin: 0 auto;
         padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &-title {
@@ -314,8 +323,8 @@
 
     .Nav {
 
-        display: inline-block;
-        margin-left: auto;
+        // display: inline-block;
+        // margin-left: auto;
 
         &-root,
         &-sub,
@@ -404,8 +413,8 @@ body {
  // Root Modifiers
 
 .has-openSidebar {
-    height: 100vh;
-    overflow-y: hidden;
+    // height: 100vh;
+    // overflow-y: hidden;
 }
 
 @media screen and (max-width: 1023px) {
@@ -417,9 +426,17 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        padding-left: 0;
+        padding-top: @sidebar-height-sm;
+    }
+    body.has-openSidebar {
+        height: 100vh;
+        overflow-y: hidden;
+    }
     .Sidebar {
         &-stripe {
-            display: flex;
+            flex-direction: row;
             justify-content: flex-end;
             width: 100vw;
             height: @sidebar-height-sm / 2;
@@ -432,9 +449,11 @@ body {
         }
         &-overlay {
             padding: @sidebar-height-sm 0 3em 0;
+            width: 100vw;
         }
         &-home {
             margin-right: auto;
+            margin-bottom: auto;
             &-text {
                 display: inline;
                 font-size: 1em;
@@ -491,9 +510,6 @@ body {
         &-links {
             text-align: center;
         }
-    }
-    body {
-        padding-left: 0;
     }
 }
 

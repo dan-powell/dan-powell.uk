@@ -19,19 +19,8 @@
 
     @stack('styles')
 
-    <script type="text/javascript">
-        WebFontConfig = {
-            google: { families: [ 'Caveat', 'Roboto:400,300,700:latin', 'Roboto+Slab:400,700:latin' ] }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="//fonts.googleapis.com/css?family=Caveat|Aldrich|@stack('fonts')" rel="stylesheet">
 
     {{-- <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,33 +34,57 @@
 
     @stack('head')
 
+    <script defer src="{{ asset('js/sidebar.js') }}"></script>
+
 </head>
 
-{{-- @section('navigation')
-    <hr/>
-    <h2 class="Sidebar-title">
-        <span class="Sidebar-title-h2">More stuff by me</span>
-    </h2>
+@section('title', 'Dan Powell')
+@section('subtitle', 'Web Designer')
+
+@section('buttons')
+    @component('sidebar.components.button')
+        @slot('url', url('/'))
+        @slot('icon', asset('img/sidebar/navigation.svg#home'))
+        @slot('label', 'Home')
+    @endcomponent
+@endsection
+
+@section('navigation')
     @component('sidebar.components.navigation')
         @component('sidebar.components.item')
-            @slot('url', route('home'))
+            @slot('url', url('/'))
             @slot('icon', asset('img/sidebar/navigation.svg#home'))
-            @slot('label', 'My Website')
+            @slot('label', 'Home')
+        @endcomponent
+        @component('sidebar.components.item')
+            @slot('url', route('portfolio.index'))
+            @slot('icon', asset('img/sidebar/navigation.svg#design'))
+            @slot('label', 'Portfolio')
         @endcomponent
         @component('sidebar.components.item')
             @slot('url', route('projects.index'))
-            @slot('icon', asset('img/sidebar/navigation.svg#design'))
-            @slot('label', 'More Projects')
+            @slot('icon', asset('img/sidebar/navigation.svg#projects'))
+            @slot('label', 'Projects')
+        @endcomponent
+        @component('sidebar.components.item')
+            @slot('url', route('page', 'experience'))
+            @slot('icon', asset('img/sidebar/navigation.svg#education'))
+            @slot('label', 'Experience')
+        @endcomponent
+        @component('sidebar.components.item')
+            @slot('url', route('page', 'skills'))
+            @slot('icon', asset('img/sidebar/navigation.svg#work') )
+            @slot('label', 'Skills')
         @endcomponent
     @endcomponent
-@endsection --}}
+@endsection
 
 <body class="Base @yield('class')">
     @include('sidebar.sidebar')
     <section class="Base-main" id="js_content">
         @yield('main')
     </section>
-    <script src="{{ asset('js/sidebar.js') }}"></script>
+
     @stack('foot')
 </body>
 </html>

@@ -32,20 +32,18 @@
 						<h3><a href="#otherstuff">Some Other Stuff</a></h3>
 					</div>
 				</div>
-
 				<div class="Page-grid-item Page-grid-item--noPadding">
 					<div class="Page-grid-content Page-grid-content--imageBottom">
-						<img src="{{ url('img/skills/skills-zombie.png') }}"/>
+						<img src="{{ app('image')->url('main/skills-zombie.png') }}"/>
 					</div>
 				</div>
-
 				<div class="Page-grid-item Page-grid-item--color3 Page-grid-item--one" id="webdesign">
 					<div class="Page-grid-content Page-grid-content--title">
 						<h2>Website Design</h2>
 					</div>
 
 					<div class="Page-grid-content Page-grid-content--image">
-						<img src="{{ url('img/skills/website-design.png') }}"/>
+						<img src="{{ app('image')->url('main/website-design.png') }}"/>
 					</div>
 				</div>
 
@@ -63,7 +61,7 @@
 					</div>
 
 					<div class="Page-grid-content Page-grid-content--image">
-						<img src="{{ url('img/skills/front-end-development.png') }}"/>
+						<img src="{{ app('image')->url('main/front-end-development.png') }}"/>
 					</div>
 				</div>
 
@@ -81,7 +79,7 @@
 					</div>
 
 					<div class="Page-grid-content Page-grid-content--image">
-						<img src="{{ url('img/skills/back-end-development.png') }}"/>
+						<img src="{{ app('image')->url('main/back-end-development.png') }}"/>
 					</div>
 				</div>
 
@@ -99,7 +97,7 @@
 					</div>
 
 					<div class="Page-grid-content Page-grid-content--imageBottom">
-						<img src="{{ url('img/skills/a-few-other-things.png') }}"/>
+						<img src="{{ app('image')->url('main/a-few-other-things.png') }}"/>
 					</div>
 				</div>
 

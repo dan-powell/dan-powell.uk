@@ -1,13 +1,6 @@
+
 <aside class="Sidebar">
     <div class="Sidebar-stripe">
-        <a href="{{ config('app.url') }}" class="Sidebar-home">
-            <h1 class="Sidebar-home-title">
-                <span class="Sidebar-home-text Sidebar-home-text--dan">Dan</span>
-                <span class="Sidebar-home-text Sidebar-home-text--powell">Powell</span>
-                <span class="Sidebar-home-text Sidebar-home-text--web">Web</span>
-                <span class="Sidebar-home-text Sidebar-home-text--design">Design</span>
-            </h1>
-        </a>
         <button class="Sidebar-button Sidebar-button--menu js-sidebar">
             <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
                 <use xlink:href="{{ asset('img/sidebar/navigation.svg#menu') }}"></use>
@@ -17,109 +10,25 @@
                 <span class="Sidebar-button-text Sidebar-button-text--close">Close Menu</span>
             </span>
         </button>
-        <a class="Sidebar-button" href="{{ config('app.url') }}">
-            <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
-                <use xlink:href="{{ asset('img/sidebar/navigation.svg#home') }}"></use>
-            </svg>
-            <span class="Sidebar-button-inner">
-                <span class="Sidebar-button-text">Home</span>
-            </span>
-        </a>
-        <a class="Sidebar-button" href="{{ config('app.url') }}">
-            <svg class="Sidebar-button-icon" viewBox="0 0 512 512">
-                <use xlink:href="{{ asset('img/sidebar/navigation.svg#return') }}"></use>
-            </svg>
-            <span class="Sidebar-button-inner">
-                <span class="Sidebar-button-text">Projects</span>
-            </span>
+        @yield('buttons')
+        <a href="{{ config('app.url') }}" class="Sidebar-home">
+            <h1 class="Sidebar-home-title">
+                <span class="Sidebar-home-text Sidebar-home-text--dan">Dan</span>
+                <span class="Sidebar-home-text Sidebar-home-text--powell">Powell</span>
+                <span class="Sidebar-home-text Sidebar-home-text--web">Web</span>
+                <span class="Sidebar-home-text Sidebar-home-text--design">Design</span>
+            </h1>
         </a>
     </div>
     <div class="Sidebar-overlay">
         <div class="Sidebar-nav">
             <h1 class="Sidebar-title">
-                <span class="Sidebar-title-h1">Dan Powell</span>
-                <span class="Sidebar-title-h2">Web Designer</span>
+                <span class="Sidebar-title-h1">@yield('title', 'Dan Powell')</span>
+                @hasSection('subtitle')
+                    <span class="Sidebar-title-h2">@yield('subtitle')</span>
+                @endif
             </h1>
-            <nav class="Nav">
-                <ul class="Nav-root">
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="{{ config('app.url') }}">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#home') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">About</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="{{ route('portfolio.index') }}">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#design') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">Portfolio</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="{{ route('page', 'experience') }}">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#education') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">Experience</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="{{ route('page', 'skills') }}">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#work') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">Skills</span>
-                            </span>
-                        </a>
-                        <ul class="Nav-sub">
-                            <li class="Nav-item">
-                                <a class="Nav-link" href="">
-                                    <span class="Nav-link-inner">
-                                        <span class="Nav-link-text">Sub menu item</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="Nav-item">
-                                <a class="Nav-link" href="">
-                                    <span class="Nav-link-inner">
-                                        <span class="Nav-link-text">Another sub menu item</span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="{{ route('projects.index') }}">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#projects') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">Projects</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="Nav-item">
-                        <a class="Nav-link" href="" data-text="A menu link with a really long name to test the design.">
-                            <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                                <use xlink:href="{{ asset('img/sidebar/navigation.svg#about') }}"></use>
-                            </svg>
-                            <span class="Nav-link-inner">
-                                <span class="Nav-link-text">A menu link with a really long name to test the design.</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            @yield('navigation')
         </div>
         <div class="Sidebar-about">
             <p class="Sidebar-about-text Sidebar-about-text--more">view some of my</p>

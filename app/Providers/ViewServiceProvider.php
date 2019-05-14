@@ -17,11 +17,12 @@ class ViewServiceProvider extends ServiceProvider
 
         View::composer(
             ['main.page.home'],
-            'App\Http\Composers\PortfolioListComposer'
+            'App\Http\Composers\PortfolioComposer'
         );
 
         View::composer(
-            'main.projects.list', 'App\Http\Composers\ProjectsListComposer'
+            ['main.page.home'],
+            'App\Http\Composers\ProjectsComposer'
         );
     }
 

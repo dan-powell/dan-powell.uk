@@ -37,12 +37,14 @@
 
                 <h2 class="alt">Pages</h2>
                 <ul>
-    				@foreach($pages->static as $page)
-    				    @if($page['title'] != '')
+    				@foreach($pages as $slug => $page)
+    				    @isset($page['name'])
     				        <li>
-    				            <a href="{{ route($page['route']) }}" class="Button">{{ $page['title'] }}</a>
+    				            <a href="{{ route('page', $slug) }}" class="Button">
+                                    {{ $page['name'] }}
+                                </a>
     				        </li>
-    				    @endif
+    				    @endisset
     				@endforeach
                 </ul>
 

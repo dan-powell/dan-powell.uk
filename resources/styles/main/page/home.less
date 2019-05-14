@@ -50,21 +50,21 @@
 						display: block;
 						padding: 20px 60px 30px 60px;
 						text-align: center;
-						font-family: Georgia, Times, "Times New Roman", serif;
+						font-family: @font-family-serif;
 						font-style: italic;
 						font-size: 40px;
 						line-height: 1.1;
-						color: rgba(0, 0, 0, 0.4);
+						color: rgba(0, 0, 0, 0.6);
 					}
 				}
 
 			}
 
 			&-homeHeading {
-				font-size: 56px;
+				font-size: 64px;
 				line-height: 1.2;
-				color: rgba(0, 0, 0, 0.4);
-				text-shadow: rgba(255, 255, 255, 1) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+				color: rgba(0, 0, 0, 0.6);
+                font-family: @font-family-serif;
 				small {
 					font-size: 40px;
 					display: block;
@@ -151,20 +151,23 @@
 
 			font-size: 56px;
 			line-height: 1.2;
-			color: rgba(0, 0, 0, 0.5);
-			text-shadow: rgba(255, 255, 255, 0.4) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+			color: rgba(0, 0, 0, 0.7);
 
 			&-text {
 				display: block;
 
 				&--one {
 					font-size: 48px;
+                    font-family: @font-family-serif;
 				}
 				&--two {
 					font-size: 96px;
+                    text-transform: uppercase;
+                    text-shadow: rgba(255, 255, 255, 0.4) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
 				}
 				&--three {
 					font-size: 42px;
+                    font-family: @font-family-serif;
 				}
 
 				@media only screen and (max-width: @screen-xs) {
@@ -225,4 +228,3 @@
 
 	}
 }
-

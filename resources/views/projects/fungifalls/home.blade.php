@@ -1,4 +1,4 @@
-@extends('projects.base')
+@extends('projects.fungifalls.base')
 
 @section('meta')
     <title>Fungi Falls by Dan Powell</title>

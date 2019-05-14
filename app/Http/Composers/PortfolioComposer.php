@@ -4,7 +4,7 @@ use Illuminate\View\View;
 
 use App\Repositories\PortfolioRepository;
 
-class PortfolioListComposer
+class PortfolioComposer
 {
 
     public function __construct(PortfolioRepository $portfolioRepository)
@@ -20,6 +20,6 @@ class PortfolioListComposer
      */
     public function compose(View $view)
     {
-        $view->with('items', $this->portfolioRepo->all());
+        $view->with('portfolio', $this->portfolioRepo->featured());
     }
 }

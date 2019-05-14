@@ -35,6 +35,14 @@ class PortfolioRepository
         return $this->all()->except($this->lead()->keys());
     }
 
+    public function featured()
+	{
+        $featured = $this->all()->only(config('content.portfolio.featured'));
+        return $featured->sortBy(function($model, $key){
+            return array_search($key, config('content.portfolio.featured'));
+        });
+    }
+
     public function except($key)
 	{
         return $this->all()->except($key);

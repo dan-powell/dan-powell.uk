@@ -10,7 +10,7 @@
         <div class="Section-container ">
             <div class="Content">
                 <h1 class="pageHeading">Kudu Travel</h1>
-                <h2>A new website for Kudu Travel, designed by me at <a href="http://webbedfeet.uk" rel="nofollow" target="_blank">Webbed Feet UK</a></h2>
+                <p class="lead">A new website for Kudu Travel, designed by me at <a href="http://webbedfeet.uk" rel="nofollow" target="_blank">Webbed Feet UK</a></p>
             </div>
         </div>
     </section>
@@ -34,7 +34,7 @@
             <div class="Content">
                 <h2>A modern design</h2>
                 <p>The previous Kudu Travel website was looking dated and it’s level of usability was not on par with the needs of it’s audience. At Webbed Feet UK, we took on board the needs of the people looking at the site—it’s intended audience—and created a much improved design that can be seen on their new website.</p>
-                The effectiveness of the new design has led to an impressive bounce rate reduction of 96%
+                <blockquote>The effectiveness of the new design has led to an impressive bounce rate reduction of 96%</blockquote>
                 <p>The primary audience tended to be of an older generation<sup id="fnref1:1"><a class="footnote-ref" href="#fn:1">1</a></sup> , and as such the most important thing was to keep the website design clear and easy to use. The content for the website is very text-heavy, so we made sure to pay extra attention to the typography.</p>
                 <div class="footnotes">
                     <hr>

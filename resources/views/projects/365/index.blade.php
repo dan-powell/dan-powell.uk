@@ -1,4 +1,4 @@
-@extends('projects.base')
+@extends('projects.365.base')
 
 @section('class', 'Projects _show -static')
 
@@ -12,12 +12,6 @@
             margin-bottom: 20px;
         }
     </style>
-@stop
-
-@section('sidebar-buttons')
-    <a href="{{ route('portfolio.show', 'three-six-five') }}" class="navButton -back">
-        <span class="sr-only">Back</span>
-    </a>
 @stop
 
 @section('main')

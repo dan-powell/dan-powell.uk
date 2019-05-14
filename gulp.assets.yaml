@@ -48,8 +48,8 @@ tasks:
             name: "Sidebar JS"
             src:
                 - "./node_modules/animejs/lib/anime.min.js"
-                - "./resources/scripts/overlay.js"
-                - "./resources/views/sidebar/sidebar.js"
+                - "./resources/scripts/sidebar/overlay.js"
+                - "./resources/scripts/sidebar/sidebar.js"
             destFolder: "./public/js"
             dest: "sidebar.js"
 

@@ -33,32 +33,39 @@
 	    <div class="Section-container Section--center">
 		    <h2 class="Page-intro">
 		    	<span class="Page-intro-text Page-intro-text--one">I design and build</span>
-				<span class="Page-intro-text Page-intro-text--two">WEBSITES</span>
-				<span class="Page-intro-text Page-intro-text--three">& other digital stuff</span>
+				<span class="Page-intro-text Page-intro-text--two">websites</span>
+				<span class="Page-intro-text Page-intro-text--three">&amp; other digital stuff</span>
 		    </h2>
 	    </div>
     </section>
+    @if(count($portfolio))
+        <section class="Section Section--lightGrad Section--md Section--projects">
+            <div class="Section-container">
+                <h3><a href="{{ route('portfolio.index') }}">My Portfolio</a></h3>
+                @include('main.portfolio.list', ['items' => $portfolio])
+            </div>
+        </section>
+    @endif
     <section class="Section Section--lightGrad Section--md Section--projects">
         <div class="Section-container">
-            <h3>Here are some examples of my best work…</h3>
-            @include('main.portfolio.list')
+            <h3><a href="{{ route('projects.index') }}">My Projects</a></h3>
+            @include('main.project.list', ['items' => $projects])
         </div>
     </section>
     <section class="Section Section--primary Section--cta Section--md">
 	    <div class="Section-container Page-cta">
+            <p>Checkout my</p>
+            <div class="Page-cta-column">
+                <a href="{{ route('page', 'experience') }}" class="Button Button--cta">
+                    Experience
+                </a>
+            </div>
+            <div class="Page-cta-column Page-cta-column--middle">
+                and
+            </div>
 		    <div class="Page-cta-column">
-		    	<p class="Page-cta-column-text">view more work in my</p>
-		    	<a href="{{ route('portfolio.index') }}" class="Button Button--cta">
-    		    	Portfolio
-		    	</a>
-		    </div>
-		    <div class="Page-cta-column Page-cta-column--middle">
-    		     <p>or</p>
-		    </div>
-		    <div class="Page-cta-column">
-		    	<p class="Page-cta-column-text">check out my skills and</p>
-		    	<a href="{{ route('page', 'experience') }}" class="Button Button--cta">
-    		    	Experience
+		    	<a href="{{ route('page', 'skills') }}" class="Button Button--cta">
+    		    	Skills
 		    	</a>
 		    </div>
 	    </div>

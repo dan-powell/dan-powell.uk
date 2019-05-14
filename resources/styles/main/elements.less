@@ -1,6 +1,7 @@
+// Reset
 * {
     box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
+    font-family: @font-family;
     margin: 0;
     padding: 0;
     border: 0;
@@ -59,9 +60,9 @@ h5,
 h6 {
     margin: 0 0 10px;
     padding: 0;
-    font-family: @font-family-serif;
     color: @heading-color;
     line-height: 1.4;
+    font-family: @font-family-heading;
 
     small {
         display: inline-block;
@@ -176,10 +177,10 @@ dl {
     ------------------------------------------------------------------------- */
 blockquote {
     display: inline-block;
-    font-family: Georgia, cursive;
-    font-style: italic;
-    font-size: 32px;
-    line-height: 40px;
+    font-family: @font-family-serif;
+    font-style: normal;
+    font-size: 3em;
+    line-height: 1.2;
     color: #636363;
     background-image: url('../img/blockquote_open.svg'), url("../img/blockquote_close.svg");
     background-position: left top, right bottom;

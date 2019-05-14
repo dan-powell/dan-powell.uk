@@ -1,4 +1,4 @@
-@extends('projects.base')
+@extends('projects.365.base')
 
 @section('meta')
     <title>Three Six Five Twenty Ten by Dan Powell</title>
@@ -15,12 +15,6 @@
             background: url("{!! app('image')->url('heading_bg.jpg') !!}") !important;
         }
     </style>
-@stop
-
-@section('sidebar-buttons')
-    <a href="{{ route('portfolio.index') }}" class="navButton -back">
-        <span class="sr-only">Back</span>
-    </a>
 @stop
 
 @section('main')
