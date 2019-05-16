@@ -7,6 +7,7 @@ return [
 
     'route' => 'image', // Route prefix
     'storage' => 'images', // Storage disk
+    'cache' => 'image_cache', // Cache disk
 
     'quality' => '90', // Default quality
 

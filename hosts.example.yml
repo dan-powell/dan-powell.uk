@@ -1,4 +1,8 @@
-host:
+example.com:
   stage: production
-  deploy_path: ~/
+  deploy_path: ~/www/production
   branch: production
+staging.example.com:
+  stage: staging
+  deploy_path: ~/www/staging
+  branch: staging

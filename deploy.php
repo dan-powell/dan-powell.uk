@@ -10,49 +10,48 @@ set('application', 'dan-powell.uk');
 set('repository', 'git@github.com:dan-powell/dan-powell.uk.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', true);
 
-// Shared files/dirs between deploys 
+// Shared files/dirs between deploys
 add('shared_files', []);
 add('shared_dirs', [
     'public/projects',
     'public/js/vendor'
 ]);
 
-// Writable dirs by web server 
+// Writable dirs by web server
 add('writable_dirs', []);
-
 
 // Hosts
 inventory('hosts.yml');
 
 set('default_stage', 'staging');
 
-    
 // Tasks
 task('files:pull', function () {
-	download('storage/images/', 'storage/images');
-	download('storage/project_images/', 'storage/project_images');
-	download('storage/project_assets/', 'storage/project_assets');
+	download(get('deploy_path') . '/shared/storage/images/', 'storage/images');
+	download(get('deploy_path') . '/shared/storage/project_images/', 'storage/project_images');
+	download(get('deploy_path') . '/shared/storage/project_assets/', 'storage/project_assets');
 })->desc('Copies server files to local.');
 
 task('files:push', function () {
-	upload('storage/images/', 'storage/images');
-	upload('storage/project_images/', 'storage/project_images');
-	upload('storage/project_assets/', 'storage/project_assets');
+	upload('storage/images/', get('deploy_path') . '/shared/storage/images');
+	upload('storage/project_images/', get('deploy_path') . '/shared/storage/project_images');
+	upload('storage/project_assets/', get('deploy_path') . '/shared/storage/project_assets');
 })->desc('Copies local files to server.');
 
 task('files:sync', function () {
-	download('storage/images/', 'storage/images', ['options' => ['--delete']]);
-	download('storage/project_images/', 'storage/project_images', ['options' => ['--delete']);
-	download('storage/project_assets/', 'storage/project_assets', ['options' => ['--delete']);
+	download(get('deploy_path') . '/shared/storage/images/', 'storage/images', ['options' => ['--delete']]);
+	download(get('deploy_path') . '/shared/storage/project_images/', 'storage/project_images', ['options' => ['--delete']]);
+	download(get('deploy_path') . '/shared/storage/project_assets/', 'storage/project_assets', ['options' => ['--delete']]);
 })->desc('Removes local files that do not exist server-side.');
 
 task('files:clean', function () {
-	if(get('stage') != 'staging' && askConfirmation('This is a destructive command. Proceed?')) {
-		download('storage/images/', 'storage/images', ['options' => ['--delete']]);
-		download('storage/project_images/', 'storage/project_images', ['options' => ['--delete']);
-		download('storage/project_assets/', 'storage/project_assets', ['options' => ['--delete']);
+    $ask = askConfirmation('This is a destructive command. Proceed?');
+	if($ask) {
+		upload('storage/images/', get('deploy_path') . '/shared/storage/images', ['options' => ['--delete']]);
+		upload('storage/project_images/', get('deploy_path') . '/shared/storage/project_images', ['options' => ['--delete']]);
+		upload('storage/project_assets/', get('deploy_path') . '/shared/storage/project_assets', ['options' => ['--delete']]);
 	}
 })->desc('Removes server-side files that do not exist locally.');
 

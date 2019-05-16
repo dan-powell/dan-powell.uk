@@ -31,7 +31,7 @@ class ImageFlushCache extends Command
     public function __construct(Storage $storage)
     {
         parent::__construct();
-        $this->filesystem = $storage::disk(config('images.storage'));
+        $this->filesystem = $storage::disk(config('images.cache'));
     }
 
     /**
@@ -41,8 +41,11 @@ class ImageFlushCache extends Command
      */
     public function handle()
     {
-        $this->filesystem->deleteDirectory('.cache');
-        if(!$this->filesystem->exists('.cache')) {
+        $folders = $this->filesystem->allDirectories('.');
+        foreach($folders as $folder) {
+            $this->filesystem->deleteDirectory($folder);
+        }
+        if(!$this->filesystem->exists('.')) {
             $this->info('Image cache flushed.');
         } else {
             $this->warn('Image cache folder could not be removed.');

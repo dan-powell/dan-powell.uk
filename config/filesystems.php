@@ -63,5 +63,10 @@ return [
             'root' => storage_path('project_assets'),
         ],
 
+        'image_cache' => [
+            'driver' => 'local',
+            'root' => storage_path('framework/images'),
+        ],
+
     ],
 ];
