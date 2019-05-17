@@ -77,10 +77,11 @@
         left: 0;
         top: 0;
         background: @color-background;
+        border-right: 1px solid @color-positive;
 
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: 1fr auto auto;
         grid-gap: 0;
         grid-template-areas:
             "nav aside-top"
@@ -248,7 +249,7 @@
     }
 
     &-links {
-        grid-area: aside-top;
+        grid-area: aside-bottom;
         text-align: right;
         padding: 1em;
         &-item {
@@ -264,7 +265,7 @@
     }
 
     &-cheeky {
-        grid-area: aside-middle;
+        grid-area: aside-top;
         display: flex;
         &-img {
             margin-left: auto;
@@ -272,7 +273,7 @@
     }
 
     &-about {
-        grid-area: aside-bottom;
+        grid-area: aside-middle;
         padding: 1em;
         text-align: center;
         &-text {
@@ -355,6 +356,7 @@
                 transition-delay: .2s;
                 text-align: center;
                 clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
+                font-size: 1.6em;
             }
             &-text {
                 transition: opacity .2s ease-out;
