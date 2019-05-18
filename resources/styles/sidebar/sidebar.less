@@ -25,7 +25,7 @@
 
     * {
         box-sizing: border-box;
-        font-family: 'Aldrich', serif;
+        font-family: 'Nunito', serif;
         margin: 0;
         padding: 0;
         border: 0;
@@ -61,52 +61,137 @@
         width: @sidebar-width;
         background: @color-background;
         height: 100vh;
-        z-index: 9999;
+        z-index: 99999;
         border-right: 1px solid @color-positive;
-        padding: 0.25em;
+        // padding: 0.25em;
         transition: all .2s ease-in-out;
-
     }
 
     &-overlay {
         position: fixed;
         height: 100vh;
         // padding: 1em 1em 1em ~"calc(@{sidebar-width} + 1em)";
-        padding: 0 0 3em @sidebar-width;
-        min-width: 700px;
+        width: 100%;
+        max-width: 700px;
         left: 0;
         top: 0;
-        background: @color-background;
-        border-right: 1px solid @color-positive;
+        // background: @color-background;
+        border-right: 1px solid transparent;
+        padding: 0 0 0 @sidebar-width;
 
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: 1fr auto auto;
-        grid-gap: 0;
-        grid-template-areas:
-            "nav aside-top"
-            "nav aside-middle"
-            "nav aside-bottom";
-
-        overflow-y: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
 
         transform: translateX(-100%);
-        opacity: 0;
+        opacity: 1;
         will-change: transform, opacity;
         transition-property: transform, opacity;
-        transition-duration: 0.3s;
+        transition-duration: 0s;
+        transition-delay: 1.5s;
         transition-timing-function: cubic-bezier(.7,0,1,.3);
+
+        &-inner {
+            position: relative;
+            min-height: 100%;
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 1fr auto auto;
+            grid-gap: 0;
+            grid-template-areas:
+                "nav aside-top"
+                "nav aside-middle"
+                "nav aside-bottom";
+
+        }
+
+        &-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            polygon {
+                opacity: 0;
+                fill: @color-background;
+                stroke-width: 2;
+                stroke: darken(@color-background,0%);
+            }
+        }
+    }
+
+    &-nav {
+        opacity: 0;
+        transition: opacity .2s;
+        transition-delay: 0s;
+    }
+
+    &-about {
+        opacity: 0;
+        transition: opacity .2s;
+        transition-delay: 0s;
+    }
+
+    &-cheeky {
+        opacity: 0;
+        transition: opacity .2s;
+        transition-delay: 0s;
+    }
+
+    &-links {
+        opacity: 0;
+        transition: opacity .2s;
+        transition-delay: 0s;
+    }
+
+    &.is-open & {
+
+        &-overlay {
+            overflow-y: auto;
+            transform: translateX(0);
+            opacity: 1;
+            transition-property: transform, border-color;
+            transition-duration: 0s, .2s;
+            transition-delay: 0s, 1s;
+            transition-timing-function: cubic-bezier(0,.7,.3,1);
+            border-color: @color-positive;
+        }
+
+        &-nav {
+            opacity: 1;
+            transition-delay: 0.25s;
+        }
+
+        &-about {
+            opacity: 1;
+            transition-delay: 0.75s;
+        }
+
+        &-cheeky {
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+
+        &-links {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+
+
     }
 
     &-button {
         border: none;
-        background:none;
+        background: @color-background;
         width: 100%;
         display: flex;
         align-items: center;
-        padding: 0 0.25em;
-        position: relative;
+        padding: 0.25em 0.25em 0 0.25em;
+        // position: relative;
         color: @color-positive;
         font-weight: 300;
         outline: none;
@@ -114,32 +199,41 @@
             flex: 0 0 auto;
             font-size: 1.2em;
             width: 2.5em;
+            height: 2.5em;
             padding: .5em;
             margin: 0 auto;
             stroke-width: 0.5em;
-            stroke: @color-positive;
-            fill: transparent;
+            stroke: transparent;
+            fill: @color-positive;
             background: url('../img/sidebar/hexagon.svg') center center no-repeat;
             background-size: 100%;
             transition: all .2s ease-in-out;
-            background-image: url('../img/sidebar/hexagon.svg');
+            &-inner {
+                height: 1em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
         }
         &-inner {
             position: absolute;
             display: block;
             z-index: -1;
-            // width: @item-width;
             left: @sidebar-width;
-            padding: .5em 1em .5em 1.5em;
-            background: lighten(@color-negative, 6%);
+            padding: 0.75em 2em 0.75em 1em;
+            // background: linear-gradient(90deg, fade(@color-background, 100%) 50%, fade(@color-background, 0%));
+            background: @color-negative;
             opacity: 0;
-            transform: translateX(-60%);
+            transform: translateX(-100%);
             transition: transform .2s ease-in, opacity .2s ease-in;
             text-align: center;
-            // clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
+            clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
             // clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
-            clip-path: polygon(1em 0, 100% 0, 100% 50%, 100% 100%, 1em 100%, 1px 50%);
-            border: 1px solid @color-positive;
+            // clip-path: polygon(1em 0, 100% 0, 100% 50%, 100% 100%, 1em 100%, 1px 50%);
+            @border: 1px solid fade(@color-positive, 75%);
+            border-top: @border;
+            border-bottom: @border;
             // box-shadow: rgba(255,255,255,0.8) 4px 4px 10px;
         }
         &-text {
@@ -158,7 +252,8 @@
         }
         &:hover & {
             &-icon {
-                fill: @color-positive;
+                fill: transparent;
+                stroke: @color-positive;
             }
             &-inner {
                 transform: translateX(0);
@@ -178,7 +273,19 @@
                 fill: @color-negative;
                 stroke-width: 0;
                 background-image: url('../img/sidebar/hexagon-fill.svg');
+                position: relative;
+                display: flex;
+                align-items: center;
+                span {
+                    display: block;
+                    height: 4px;
+                    width: 1em;
+                    background: @color-negative;
+                    transition: .25s ease-in-out;
+                    transform-origin: center center;
+                }
             }
+
         }
         &--menu:hover & {
             &-icon {
@@ -187,10 +294,36 @@
         }
     }
 
+    &.is-open & {
+
+        &-button {
+            &-text {
+                &--open {
+                    display: none;
+                }
+                &--close {
+                    display: block;
+                }
+            }
+            &-icon {
+                &-ham:nth-child(1) {
+                    -webkit-transform: translateY(0.33em) rotate(-45deg);
+                }
+                &-ham:nth-child(2) {
+                    opacity: 0;
+                }
+                &-ham:nth-child(3) {
+                    -webkit-transform: translateY(-0.33em) rotate(45deg);
+                }
+            }
+        }
+    }
+
+
     &-home {
         margin-top: auto;
         display: block;
-        // padding: 0.1em;
+        padding: 0.25em;
         &:hover  {
             background: rgba(255,255,255,0.1);
         }
@@ -348,9 +481,10 @@
             position: relative;
             color: @color-positive;
             font-weight: 300;
+            opacity: 0.1;
             &-inner {
                 display: block;
-                padding: .5em 1em;
+                padding: .5em;
                 background: @color-negative;
                 transition: transform .2s ease-in;
                 transition-delay: .2s;
@@ -365,15 +499,18 @@
                 flex: 0 0 auto;
                 width: 2.5em;
                 padding: .5em;
-                fill: transparent;
+                fill: @color-positive;
                 stroke-width: 0.5em;
-                stroke: @color-positive;;
+                stroke: transparent;
                 background: url('../img/sidebar/hexagon.svg') center center no-repeat;
                 background-size: 100%;
                 transition: all .2s ease-in-out;
             }
             &:hover {
-
+                .Nav-link-icon {
+                    fill: transparent;
+                    stroke: @color-positive;
+                }
             }
         }
     }
@@ -385,26 +522,6 @@
 
     }
 
-    &.is-open & {
-
-        &-overlay {
-            transform: translateX(0);
-            opacity: 1;
-            transition-duration: .7s;
-            transition-timing-function: cubic-bezier(0,.7,.3,1);
-        }
-
-        &-button {
-            &-text {
-                &--open {
-                    display: none;
-                }
-                &--close {
-                    display: block;
-                }
-            }
-        }
-    }
 }
 
 body {
@@ -421,7 +538,7 @@ body {
 
 @media screen and (max-width: 1023px) {
     .Sidebar {
-        &-overlay {
+        &-overlay-inner {
             display: block;
         }
     }
@@ -450,8 +567,12 @@ body {
             transition: all .2s ease-in-out;
         }
         &-overlay {
-            padding: @sidebar-height-sm 0 3em 0;
             width: 100vw;
+            padding: @sidebar-height-sm/2 0 0 0;
+            border-right: 0;
+            &-inner {
+                padding: 0 0 3em 0;
+            }
         }
         &-home {
             margin-right: auto;
@@ -470,10 +591,11 @@ body {
             }
         }
         &-button {
-            // flex: 1 1 auto;s
+            padding-top: 0;
             display: block;
             width: auto;
             height: @sidebar-height-sm;
+            background: none;
             &-inner {
                 display: none;
             }

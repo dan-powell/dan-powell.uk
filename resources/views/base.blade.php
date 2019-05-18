@@ -20,7 +20,7 @@
     @stack('styles')
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="//fonts.googleapis.com/css?family=Caveat|Aldrich|@stack('fonts')" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Caveat|Nunito|@stack('fonts')" rel="stylesheet">
 
     {{-- <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,3 +1,3 @@
 @extends('base')
 
-@push('fonts', 'Aldrich|Caveat|Lato:300,400,700')
+@push('fonts', 'Lato:300,400,700')
