@@ -5,7 +5,7 @@
     <meta name="description" content="My Curriculum Vitae, capabilities and employment history.">
 @stop
 
-@section('class')Page Page--experience @stop
+@push('class', 'Page Page--experience')
 
 @section('main')
     <section class="Section Section--md">
@@ -21,7 +21,6 @@
                 <h1>Daniel Powell <small>(BA Hons)</small></h1>
                 <div class="row">
                     <div class="column-third">
-                        <p><strong><span class="fa fa-tachometer"></span> Lvl. 10 Web Designer</strong></p>
                         <p><strong><span class="fa fa-calendar"></span> Age: {{ Carbon::createFromDate(1986, 9, 7)->age }}</strong></p>
                         <p><strong><span class="fa fa-compass"></span> Location:&nbsp; Dorset, UK</strong></p>
                     </div>
@@ -58,7 +57,7 @@
                         <h4>Web Designer<br>
                             <em>April 2009 - Sept 2010</em></h4>
                         <p>During the final years of studying for my degree, I attempted to freelance as a website designer and developer. I worked for a number of small clients and businesses, developing dynamic websites for them.</p>
-                        <p>This was my trial by fire. Whilst I was burned and few times, I wouldn’t take the experience back. Freelancing expanded my boundaries and is where I really found myself as a designer. I was made aware of what it truly means to work within the creative industry.</p>
+                        <p>This was my trial by fire. Whilst I was burned a few times, I wouldn’t take the experience back. Freelancing expanded my boundaries and is where I really found myself as a designer. I was made aware of what it truly means to work within the creative industry.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -85,8 +84,4 @@
             </article>
         </div>
     </section>
-@stop
-
-@section('sidebar')
-
 @stop

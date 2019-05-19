@@ -2,10 +2,10 @@
 
 @section('meta')
 <title>Skills | Dan Powell website designer</title>
-<meta name="description" content="">
+<meta name="description" content="I utilise hand-drawn sketches, concept drawings, wireframes and full multi-page design comprehensives to create effective websites.">
 @stop
 
-@section('class')Page Page--skills @stop
+@push('class', 'Page Page--skills')
 
 @section('main')
 

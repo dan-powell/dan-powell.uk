@@ -3,9 +3,9 @@
 @section('meta')
 <title>Dan Powell | Website designer, front-end developer</title>
 <meta name="description" content="I’m Dan Powell, and I design and develop websites and other digital stuff. Here’s my portfolio of creative work.">
-@stop
+@endsection
 
-@section('class', 'Page Page--home')
+@push('class', 'Page Page--home')
 
 @section('main')
     <section class="Section Section--lightGrad">
@@ -40,28 +40,24 @@
     </section>
     @if(count($portfolio))
         <section class="Section Section--lightGrad Section--md Section--projects">
-            <div class="Section-container">
-                <h3><a href="{{ route('portfolio.index') }}">My Portfolio</a></h3>
+            <div class="Section-container Section--center">
+                <h3 class="Section-title"><a href="{{ route('portfolio.index') }}">Work</a></h3>
                 @include('main.portfolio.list', ['items' => $portfolio])
             </div>
         </section>
     @endif
     <section class="Section Section--lightGrad Section--md Section--projects">
-        <div class="Section-container">
-            <h3><a href="{{ route('projects.index') }}">My Projects</a></h3>
+        <div class="Section-container Section--center">
+            <h3><a href="{{ route('projects.index') }}">Projects</a></h3>
             @include('main.project.list', ['items' => $projects])
         </div>
     </section>
     <section class="Section Section--primary Section--cta Section--md">
 	    <div class="Section-container Page-cta">
-            <p>Checkout my</p>
             <div class="Page-cta-column">
                 <a href="{{ route('page', 'experience') }}" class="Button Button--cta">
                     Experience
                 </a>
-            </div>
-            <div class="Page-cta-column Page-cta-column--middle">
-                and
             </div>
 		    <div class="Page-cta-column">
 		    	<a href="{{ route('page', 'skills') }}" class="Button Button--cta">
@@ -70,4 +66,4 @@
 		    </div>
 	    </div>
     </section>
-@stop
+@endsection

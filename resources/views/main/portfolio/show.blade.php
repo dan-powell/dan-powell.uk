@@ -1,6 +1,6 @@
 @extends('main.base')
 
-@section('class', 'Projects _show -static')
+@push('class', 'Projects _show -static')
 
 @section('buttons')
     @parent
@@ -13,7 +13,17 @@
 
 @section('main')
     @yield('content')
-    <code>
-        {{ $items->toJson() }}
-    </code>
+
+    @if(count($items))
+        <section class="Section Section--primary Section--md">
+            <div class="Section-container Section--center">
+                <h3>Other work I have completed</h3>
+            </div>
+        </section>
+        <section class="Section  Section--lightGrad Section--lg Section--center">
+            <div class="Section-container">
+                @include('main.portfolio.list', ['items' => $items])
+            </div>
+        </section>
+    @endif
 @endsection

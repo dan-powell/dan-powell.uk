@@ -26,20 +26,23 @@
             &-inner {
                 display: block;
                 padding: .3em .5em;
-                // background: @color-negative;
                 transition: transform .2s ease-in;
                 transition-delay: .2s;
-                text-align: center;
-                // clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
                 font-size: 1.6em;
             }
-            &-text {
+            &-label {
                 transition: opacity .2s ease-out;
+            }
+            &-description {
+                display: block;
+                font-family: "caveat", cursive;
+                font-size: 0.8em;
+                text-transform: lowercase;
             }
             &-icon {
                 flex: 0 0 auto;
-                width: 2.5em;
-                padding: .5em;
+                width: 3.5em;
+                padding: .75em;
                 fill: @color-positive;
                 stroke-width: 0.5em;
                 stroke: transparent;
@@ -47,18 +50,24 @@
                 background-size: 100%;
                 transition: all .2s ease-in-out;
             }
+            &:focus,
             &:hover {
                 .Nav-link-icon {
                     fill: transparent;
                     stroke: @color-positive;
                 }
-                .Nav-link-text {
+                .Nav-link-label {
                     stroke: @color-primary;
+                    text-decoration: none;
                 }
             }
         }
         @media screen and (max-width: 480px) {
             &-link {
+                &-icon {
+                    width: 2.5em;
+                    padding: .5em;
+                }
                 &-inner {
                     font-size: 1.2em;
                 }

@@ -17,12 +17,14 @@ return [
             ],
             'navigation' => [
                 [
-                    'route' => 'projects.show',
-                    'slug' => '365'
+                    'label' => 'About 365',
+                    'url' => ['project.home', ['365']],
+                    'icon' => 'img/sidebar/navigation.svg#home'
                 ],
                 [
-                    'route' => '365.projects.page',
-                    'slug' => 'index'
+                    'label' => 'Gallery of Work',
+                    'url' => ['project.page', ['365','index']],
+                    'icon' => 'img/sidebar/navigation.svg#design'
                 ]
             ]
         ],
@@ -31,10 +33,22 @@ return [
             'thumb' => 'projects/fungifalls/thumb.jpg',
             'prefix' => 'fungifalls',
             'view' => 'projects.fungifalls.home',
-            'items' => [],
             'created_at' => '2015-07-14 00:00:00',
             'updated_at' => '2015-07-14 00:00:00',
-            'tags' => ['project']
+            'tags' => ['project'],
+            'items' => [],
+            'navigation' => [
+                [
+                    'label' => 'About Fungi Falls',
+                    'url' => ['project.home', ['fungifalls']],
+                    'icon' => 'img/sidebar/navigation.svg#home'
+                ],
+                [
+                    'label' => 'Play the Game',
+                    'url' => 'assets/index.html',
+                    'icon' => 'img/sidebar/navigation.svg#design'
+                ]
+            ]
         ],
     ],
 

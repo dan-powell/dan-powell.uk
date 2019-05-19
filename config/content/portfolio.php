@@ -3,30 +3,31 @@
 return [
     'lead' => [
         'kudu-travel',
+        'character-creations',
     ],
     'featured' => [
         'kudu-travel',
         // 'character-creations',
     ],
     'items' => [
-        // 'character-creations' => [
-        //     'name' => 'Character Creations',
-        //     'thumb' => 'portfolio/character-creations/thumb.png',
-        //     'description' => '',
-        //     'view' => 'main.portfolio.show.kudutravel',
-        //     'items' => [],
-        //     'created_at' => '2015-02-27',
-        //     'updated_at' => '2015-02-27'
-        // ],
-        // 'gjs-landscapes' => [
-        //     'name' => 'GJS Landscapes',
-        //     'thumb' => 'portfolio/gjs-landscapes/thumb.png',
-        //     'description' => '',
-        //     'view' => 'main.portfolio.show.kudutravel',
-        //     'items' => [],
-        //     'created_at' => '2015-02-27',
-        //     'updated_at' => '2015-02-27'
-        // ],
+        'character-creations' => [
+            'name' => 'Character Creations',
+            'thumb' => 'portfolio/character-creations/thumb.png',
+            'description' => '',
+            'view' => 'main.portfolio.show.kudutravel',
+            'items' => [],
+            'created_at' => '2015-02-27',
+            'updated_at' => '2015-02-27'
+        ],
+        'gjs-landscapes' => [
+            'name' => 'GJS Landscapes',
+            'thumb' => 'portfolio/gjs-landscapes/thumb.png',
+            'description' => '',
+            'view' => 'main.portfolio.show.kudutravel',
+            'items' => [],
+            'created_at' => '2015-02-27',
+            'updated_at' => '2015-02-27'
+        ],
         'kudu-travel' => [
             'name' => 'Kudu Travel',
             'thumb' => 'portfolio/kudu-travel/thumb.jpg',

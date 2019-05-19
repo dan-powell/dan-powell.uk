@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     @yield('meta')
-    <link type="text/plain" rel="author" href="{{ url('humans.txt') }}">
+    <link type="text/plain" rel="author" href="{{ asset('humans.txt') }}">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('favicons/apple-touch-icon-144x144.png') }}">
@@ -14,26 +14,15 @@
     <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('favicon.ico') }}">
 
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/plugins.css?rev=1423329234356') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/main.css?rev=1423329234356') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css">
 
     @stack('styles')
 
-    <script type="text/javascript">
-        WebFontConfig = {
-            google: { families: [ 'Caveat', 'Roboto:400,300,700:latin', 'Roboto+Slab:400,700:latin' ] }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="//fonts.googleapis.com/css?family=Caveat|Nunito|@stack('fonts')" rel="stylesheet">
 
-    {{-- <script>
+    <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -41,37 +30,24 @@
 
         ga('create', 'UA-20402828-1', 'auto');
         ga('send', 'pageview');
-    </script> --}}
+    </script>
 
     @stack('head')
 
+    <script defer src="{{ asset('js/sidebar.js') }}"></script>
+
 </head>
 
-{{-- @section('navigation')
-    <hr/>
-    <h2 class="Sidebar-title">
-        <span class="Sidebar-title-h2">More stuff by me</span>
-    </h2>
-    @component('sidebar.components.navigation')
-        @component('sidebar.components.item')
-            @slot('url', route('home'))
-            @slot('icon', asset('img/sidebar/navigation.svg#home'))
-            @slot('label', 'My Website')
-        @endcomponent
-        @component('sidebar.components.item')
-            @slot('url', route('projects.index'))
-            @slot('icon', asset('img/sidebar/navigation.svg#design'))
-            @slot('label', 'More Projects')
-        @endcomponent
-    @endcomponent
-@endsection --}}
+@section('title', 'Dan Powell')
+@section('subtitle', 'Web Designer')
 
-<body class="Base @yield('class')">
+<body class="@stack('class')">
     @include('sidebar.sidebar')
-    <section class="Base-main" id="js_content">
-        @yield('main')
-    </section>
-    <script src="{{ asset('js/sidebar.js') }}"></script>
+
+    @yield('main')
+
     @stack('foot')
+
+    @stack('script')
 </body>
 </html>

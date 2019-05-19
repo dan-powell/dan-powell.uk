@@ -2,41 +2,39 @@
 
 return [
     // Primary Pages
-    'primary' => [
+    'main' => [
         [
-            'title' => 'About',
-            'class' => 'Navigation-item-link--about',
-            'route' => 'home',
-            'slug' => null,
-            'url' => null,
+            'label' => 'Home',
+            'icon' => 'img/sidebar/navigation.svg#home',
+            'url' => 'https://github.com/dan-powell',
         ],
         [
-            'title' => 'Portfolio',
-            'class' => 'Navigation-item-link--portfolio',
-            'route' => 'portfolio.index',
-            'slug' => null,
-            'url' => null,
+            'label' => 'Portfolio',
+            'description' => 'My work',
+            'icon' => 'img/sidebar/navigation.svg#design',
+            'url' => ['portfolio.index'],
+            // 'items' => [
+            //     [
+            //         'label' => 'Portfolio',
+            //         // 'icon' => 'img/sidebar/navigation.svg#design',
+            //         'url' => ['portfolio.index'],
+            //     ]
+            // ],
         ],
         [
-            'title' => 'Projects',
-            'class' => 'Navigation-item-link--projects',
-            'route' => 'projects.index',
-            'slug' => null,
-            'url' => null,
+            'label' => 'Projects',
+            'icon' => 'img/sidebar/navigation.svg#projects',
+            'url' => ['projects.index'],
         ],
         [
-            'title' => 'Skills',
-            'class' => 'Navigation-item-link--skills',
-            'route' => 'page',
-            'slug' => 'skills',
-            'url' => null,
+            'label' => 'Experience',
+            'icon' => 'img/sidebar/navigation.svg#education',
+            'url' => ['page', 'experience'],
         ],
         [
-            'title' => 'Experience',
-            'class' => 'Navigation-item-link--experience',
-            'route' => 'page',
-            'slug' => 'experience',
-            'url' => null,
+            'label' => 'Skills',
+            'icon' => 'img/sidebar/navigation.svg#work',
+            'url' => ['page', 'skills'],
         ],
     ],
     'secondary' => [

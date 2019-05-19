@@ -118,15 +118,3 @@
         </div>
     </section>
 @stop
-
-@section('scripts')
-    @parent
-    {{-- <script src="/js/vendor/jquery.min.js?rev=1423329234356" type="text/javascript"></script>
-    <script src="/js/bootstrap.js?rev=1423329234356" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    </script> --}}
-@stop

@@ -10,8 +10,8 @@
                 </div>
             </div>
             <span class="Sidebar-button-inner">
-                <span class="Sidebar-button-text Sidebar-button-text--open">Open Menu</span>
-                <span class="Sidebar-button-text Sidebar-button-text--close">Close Menu</span>
+                <span class="Sidebar-button-label Sidebar-button-label--open">Open Menu</span>
+                <span class="Sidebar-button-label Sidebar-button-label--close">Close Menu</span>
             </span>
         </button>
         @yield('buttons')

@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="67px" height="58px" viewBox="0 0 67 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>sub</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="sub" stroke="#E2DACC">
-            <polyline id="Path-2" points="33.5047866 1.66600406 33.5047866 30.6660041 66.5047866 30.6660041"></polyline>
-        </g>
+<svg width="70px" height="60px" viewBox="0 0 70 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="sub" stroke-width="1" stroke="#E2DACC" fill="none" >
+        <polyline id="Path-2" points="40 10 40 30 50 30"></polyline>
     </g>
 </svg>

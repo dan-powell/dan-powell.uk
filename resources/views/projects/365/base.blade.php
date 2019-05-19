@@ -5,16 +5,14 @@
 
 @section('navigation')
     @component('sidebar.components.navigation')
-        @component('sidebar.components.item')
-            @slot('url', route('project.home', ['365']))
-            @slot('icon', asset('img/sidebar/navigation.svg#home'))
-            @slot('label', 'About 365')
-        @endcomponent
-        @component('sidebar.components.item')
-            @slot('url', route('project.page', ['365','index']))
-            @slot('icon', asset('img/sidebar/navigation.svg#design'))
-            @slot('label', 'Gallery of Work')
-        @endcomponent
+        @foreach(config('content.projects.items.365.navigation') as $item)
+            @component('sidebar.components.item')
+                @slot('url', $item['url'] ?? null)
+                @slot('icon', $item['icon'] ?? null)
+                @slot('label', $item['label'] ?? null)
+                @slot('description', $item['description'] ?? null)
+                @slot('items', $item['items'] ?? null)
+            @endcomponent
+        @endforeach
     @endcomponent
-    @parent
 @endsection

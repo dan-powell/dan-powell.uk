@@ -14,7 +14,7 @@
                 {value: 1, easing: 'easeOutSine', duration: 200},
             ],
             translateX: [
-                {value: '-10%', easing: 'easeOutSine', duration: 200},
+                {value: '-2em', easing: 'easeOutSine', duration: 200},
             ],
             delay: anime.stagger(50, {grid: [4, 10], from: 'first'})
         });
@@ -33,7 +33,7 @@
                 {value: 0, easing: 'easeOutSine', duration: 200},
             ],
             translateX: [
-                {value: '-20%', easing: 'easeOutSine', duration: 200},
+                {value: '-4em', easing: 'easeOutSine', duration: 200},
             ],
             delay: anime.stagger(50, {grid: [4, 10], from: 'last'})
         });

@@ -1,19 +1,25 @@
 <li class="Nav-item">
-    <a class="Nav-link" href="{{ $url }}">
+    <a class="Nav-link" href="{{ is_array($url) ? route($url[0], $url[1] ?? null, $url[2] ?? null) : url($url) }}">
         @isset($icon)
             <svg class="Nav-link-icon" viewBox="0 0 512 512">
-                <use xlink:href="{{ $icon }}"></use>
+                <use xlink:href="{{ asset($icon) }}"></use>
             </svg>
         @endisset
         <span class="Nav-link-inner">
-            <span class="Nav-link-text">{{ $label }}</span>
+            <p class="Nav-link-label">{{ $label }}</p>
+            @isset($description)
+                <small class="Nav-link-description">{{ $description }}</small>
+            @endif
         </span>
         @isset($items)
             <ul class="Nav-sub">
                 @foreach($items as $item)
                     @component('sidebar.components.item')
-                        @slot('url',  $item['url'])
-                        @slot('label', $item['label'])
+                        @slot('url', $item['url'] ?? null)
+                        @slot('icon', $item['icon'] ?? null)
+                        @slot('label', $item['label'] ?? null)
+                        @slot('description', $item['description'] ?? null)
+                        @slot('items', $item['items'] ?? null)
                     @endcomponent
                 @endforeach
             </ul>
