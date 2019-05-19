@@ -22,7 +22,8 @@ tasks:
         -
             name: "Sidebar CSS"
             src:
-                - "./resources/styles/sidebar/**/*.less"
+                - "./resources/styles/sidebar/sidebar.less"
+                - "./resources/styles/sidebar/navigation.less"
             destFolder: "./public/css"
             dest: "sidebar.css"
 

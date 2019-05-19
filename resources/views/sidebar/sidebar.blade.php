@@ -95,13 +95,13 @@
                     <span class="Sidebar-about-link-text">Github</span>
                 </a>
             </div>
-            <div class="Sidebar-cheeky">
-                <img class="Sidebar-cheeky-img" src="{{ asset('img/sidebar/cheeky.svg') }}"/>
-            </div>
             <div class="Sidebar-links">
                 <a class="Sidebar-links-item" href="">Sitemap</a>
                 <a class="Sidebar-links-item" href="{{ route('page', 'privacy') }}">Privacy</a>
                 <a class="Sidebar-links-item" href="{{ route('page', 'cookies') }}">Cookies</a>
+            </div>
+            <div class="Sidebar-cheeky">
+                <img src="{{ asset('/img/dan_powell_profile.svg') }}" class="Sidebar-cheeky-img" onerror="this.onerror=null; this.src='{{ asset('/img/dan_powell_profile.png') }}'" alt="A Cartoon style profile picture of Dan Powell">
             </div>
         </div>
     </div>
