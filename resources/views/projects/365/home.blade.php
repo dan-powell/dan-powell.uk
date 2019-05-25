@@ -5,28 +5,19 @@
     <meta name="description" content="I decided to challenge myself to create a single piece of creative work every day for a whole year.">
 @stop
 
-@section('class', 'Projects _show -static')
-
-@section('styles')
-    @parent
-    <style type="text/css">
-        .Heading {
-            background-color: #88543B;
-            background: url("{!! app('image')->url('heading_bg.jpg') !!}") !important;
-        }
-    </style>
-@stop
+@push('class', 'Projects _show -static')
 
 @section('main')
-	<section class="Section Heading Section--dark Section--center">
+	<section class="Section Section--dark Section--center" style="background-color: #88543B;
+    background: url('{!! asset(app('image')->url('heading_bg.jpg')) !!}');">
         <div class="Section-container Section--xl Section--center ">
         	<div class="Content">
-                <img alt="365 2010" src="{!! app('image')->url('heading.png') !!}"><h2>Three Six Five Twenty Ten</h2>
+                <img alt="365 2010" src="{!! asset(app('image')->url('heading.png')) !!}"><h2>Three Six Five Twenty Ten</h2>
         	</div>
      	</div>
     </section>
 	<section class="Section Section--primary">
-        <div class="Section-container Section--lg Section--center ">
+        <div class="Section-container Section--lg Section--center">
         	<div class="Content">
                 <h1>365 pieces of creative work in a single year</h1>
         	</div>
@@ -73,16 +64,4 @@
         	</div>
      	</div>
     </section>
-@stop
-
-@section('scripts')
-    @parent
-    <script src="{{ asset('assets/js/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/bootstrap.js') }}" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-    </script>
 @stop

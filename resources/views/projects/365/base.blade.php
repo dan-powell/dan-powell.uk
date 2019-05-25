@@ -16,3 +16,11 @@
         @endforeach
     @endcomponent
 @endsection
+
+@push('style')
+    <link rel="stylesheet" href="{{ mix('css/projects/365.css') }}" type="text/css">
+@endpush
+
+@push('script')
+    <script defer src="{{ mix('js/projects/365.js') }}"></script>
+@endpush

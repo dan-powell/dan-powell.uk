@@ -19,21 +19,13 @@ class ProjectController extends Controller {
         $this->projectRepo = $projectRepository;
     }
 
-	public function index()
-	{
-        return view('main.project.index')->with([
-            'projects' => $this->projectRepo->all(),
-            'tags' => $this->projectRepo->tags()
-        ]);
-	}
-
     public function show($slug)
 	{
         $item = $this->projectRepo->find($slug);
         if(isset($item['view'])) {
             return view($item['view'])->with([]);
         } else {
-            abort('404');
+            return redirect()->route('home');
         }
     }
 

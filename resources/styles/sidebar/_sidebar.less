@@ -83,10 +83,7 @@
         transform: translateX(-100%);
         opacity: 1;
         will-change: transform, opacity;
-        transition-property: transform, opacity;
-        transition-duration: 0s;
-        transition-delay: 1.5s;
-        transition-timing-function: cubic-bezier(.7,0,1,.3);
+        transition: transform 0s 1.5s, opacity 0s 1.5s, border-color 2s 1s;
 
         &-inner {
             position: relative;
@@ -122,26 +119,22 @@
     }
     &-title {
         opacity: 0;
-        transition: opacity .2s ease-in;
-        transition-delay: 0s;
+        transition: opacity .2s ease-in 0s;
     }
     &-about {
         opacity: 0;
-        transition: opacity .3s ease-in;
-        transition-delay: 0s;
+        transition: opacity .3s ease-in 0s;
     }
     &-links {
         opacity: 0;
-        transition: opacity .3s ease-in;
-        transition-delay: 0s;
+        transition: opacity .3s ease-in 0s;
     }
     &-cheeky {
         overflow: hidden;
         &-img {
             opacity: 0;
             transform: translateY(50%);
-            transition: opacity .3s ease-in, transform .3s ease-in;
-            transition-delay: 0s;
+            transition: opacity .3s ease-in 0s, transform .3s ease-in 0s;
         }
     }
     &.is-open & {
@@ -149,10 +142,7 @@
             overflow-y: auto;
             transform: translateX(0);
             opacity: 1;
-            transition-property: transform, border-color;
-            transition-duration: 0s, .2s;
-            transition-delay: 0s, 1s;
-            transition-timing-function: cubic-bezier(0,.7,.3,1);
+            transition: transform 0s 0s, opacity 0s 0s, border-color 2s 1s;
         }
         &-title {
             opacity: 1;
@@ -196,7 +186,7 @@
             stroke-width: 0.5em;
             stroke: transparent;
             fill: @color-positive;
-            background: url('../img/sidebar/hexagon.svg') center center no-repeat;
+            background: url('/img/sidebar/hexagon.svg') center center no-repeat;
             background-size: 100%;
             transition: all .2s ease-in-out;
             &-inner {
@@ -263,7 +253,7 @@
             &-icon {
                 fill: @color-negative;
                 stroke-width: 0;
-                background-image: url('../img/sidebar/hexagon-fill.svg');
+                background-image: url('/img/sidebar/hexagon-fill.svg');
                 position: relative;
                 display: flex;
                 align-items: center;
@@ -425,7 +415,7 @@
                 flex: 1 1 auto;
                 // stroke-width: 0.5em;
                 stroke: #fff;
-                // background: url('../img/sidebar/hexagon.svg') center center no-repeat;
+                // background: url('/img/sidebar/hexagon.svg') center center no-repeat;
                 background-size: 100%;
                 transition: all .2s ease-in-out;
                 fill: @color-positive;
@@ -540,7 +530,7 @@ body {
             &-icon {
                 fill: @color-positive;
                 stroke: transparent;
-                background-image: url('../img/sidebar/hexagon-fill-negative-bottom-stroke.svg');
+                background-image: url('/img/sidebar/hexagon-fill-negative-bottom-stroke.svg');
             }
             &--menu {
                 order: 999;

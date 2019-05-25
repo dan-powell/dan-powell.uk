@@ -1,3 +1,6 @@
+import {} from "./overlay";
+import anime from 'animejs/lib/anime.es.js';
+
 (function() {
 
     function open_sidebar() {

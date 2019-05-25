@@ -1,30 +1,15 @@
-// .Base {
-//     background: @theme-bg;
-//     overflow-x: hidden;
-//
-//     &-main {
-//         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
-//         opacity: 1;
-//     }
-//
-//     &-navLogo {
-//         visibility: hidden;
-//         width: 40%;
-//         position: fixed;
-//         right: 10%;
-//         top: 20%;
-//         z-index: -100;
-//         opacity: 0;
-//         transition: opacity 0.3s ease-in;
-//     }
-//
-//     &.has-openSidebar & {
-//         &-main {}
-//
-//         &-navLogo {
-//             z-index: 100;
-//             visibility: visible;
-//             opacity: 1;
-//         }
-//     }
-// }
+@import "_variables.less";
+@import "_mixins.less";
+@import "_utilities.less";
+
+@import "page/_home.less";
+@import "page/_experience.less";
+@import "page/_skills.less";
+
+@import "portfolio/_excerpt.less";
+@import "portfolio/_excerpt_lead.less";
+@import "portfolio/_list.less";
+@import "portfolio/_list_stack.less";
+
+@import "project/_excerpt.less";
+@import "project/_list.less";

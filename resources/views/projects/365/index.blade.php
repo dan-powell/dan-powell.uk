@@ -1,18 +1,6 @@
 @extends('projects.365.base')
 
-@section('class', 'Projects _show -static')
-
-@section('styles')
-    @parent
-    <style>
-        .js-lazy {
-            display: none;
-        }
-        .Button {
-            margin-bottom: 20px;
-        }
-    </style>
-@stop
+@push('class', 'Projects _show -static')
 
 @section('main')
     <div class="Section Section--lightGrad">
@@ -32,7 +20,7 @@
     <div class="Section">
         <div class="Section-container Section--sm Section--center">
 
-        	<div class="row">
+        	<div class="row js-lightbox">
             	@php
                 	$swf = [
                         "2-9",
@@ -53,19 +41,23 @@
                     @for ($day = 1; $day <= cal_days_in_month(CAL_GREGORIAN, $month, 2010); $day++)
                         <div class="col-md-2 col-sm-3">
                             @if (in_array($month . '-' . $day, $swf))
-                                <a href="{{ url(str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.swf') }}" class="Button Button--secondary Button--md">
+                                <a href="{{ asset('assets/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.swf') }}" class="Button Button--secondary Button--md">
                             @else
-                                <a href="{{ app('image')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg') }}"
-                                data-toggle="lightbox" data-title="{{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}" data-gallery="365" data-parent=".row" class="Button Button--light Button--md">
+                                <a href="{{ asset(app('image')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '-' . str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg')) }}"
+                                data-title="{{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}" class="Button Button--light Button--md">
                             @endif
                                 <p class="text-center">
                                     <strong>
                                         {{ Carbon::createFromDate(2010, $month, $day)->format('jS \\of F') }}
                                     </strong>
                                 </p>
-                                <img data-original="{{ app('image')->crop('300', '300')->url('all/' . str_pad($month, 2, "0", STR_PAD_LEFT) .'-'. str_pad($day, 2, "0", STR_PAD_LEFT).'.jpg')}}" class="-center js-lazy" width="260" height="120"/>
+                                <img
+                                    data-src="{{ asset(app('image')->crop('300', '300')->url('all/' . str_pad($month, 2, "0", STR_PAD_LEFT) .'-'. str_pad($day, 2, "0", STR_PAD_LEFT).'.jpg'))}}"
+                                    class="-center lazy"
+                                    src="{{ asset(app('image')->crop('300', '300')->url('holding.png')) }}"
+                                        />
                                 <noscript>
-                                    <img src="{{ app('image')->crop('300', '300')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) .'-'. str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg')}}" class="-center js-lazy" width="260" height="120"/>
+                                    <img src="{{ asset(app('image')->crop('150', '150')->url('all/' . str_pad($month, 2, '0', STR_PAD_LEFT) .'-'. str_pad($day, 2, '0', STR_PAD_LEFT) . '.jpg')) }}"/>
                                 </noscript>
                             </a>
                         </div>
@@ -74,20 +66,4 @@
         	</div>
         </div>
     </div>
-@stop
-
-@section('scripts')
-    @parent
-    <script src="{{ asset('assets/js/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/jquery.lazyload.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/bootstrap.js') }}" type="text/javascript"></script>
-        <script type="text/javascript">
-        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-            event.preventDefault();
-            $(this).ekkoLightbox();
-        });
-        $("img.js-lazy").show().lazyload({
-            effect : "fadeIn"
-        });
-    </script>
 @stop

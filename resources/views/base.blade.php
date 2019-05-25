@@ -13,11 +13,9 @@
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css">
-
-    @stack('styles')
+    <link rel="stylesheet" href="{{ mix('css/base.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ mix('css/sidebar.css') }}" type="text/css">
+    @stack('style')
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="//fonts.googleapis.com/css?family=Caveat|Nunito|@stack('fonts')" rel="stylesheet">
@@ -34,7 +32,10 @@
 
     @stack('head')
 
-    <script defer src="{{ asset('js/sidebar.js') }}"></script>
+    <script defer src="{{ mix('js/manifest.js') }}"></script>
+    <script defer src="{{ mix('js/vendor.js') }}"></script>
+    <script defer src="{{ mix('js/sidebar.js') }}"></script>
+    @stack('script')
 
 </head>
 
@@ -70,6 +71,5 @@
 
     @stack('foot')
 
-    @stack('script')
 </body>
 </html>

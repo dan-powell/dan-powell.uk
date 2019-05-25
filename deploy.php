@@ -14,10 +14,7 @@ set('git_tty', true);
 
 // Shared files/dirs between deploys
 add('shared_files', []);
-add('shared_dirs', [
-    'public/projects',
-    'public/js/vendor'
-]);
+add('shared_dirs', []);
 
 // Writable dirs by web server
 add('writable_dirs', []);
