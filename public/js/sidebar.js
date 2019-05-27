@@ -490,7 +490,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!****************************************************!*\
   !*** multi ./resources/scripts/sidebar/sidebar.js ***!
   \****************************************************/
@@ -502,4 +502,4 @@ module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resource
 
 /***/ })
 
-},[[2,"/js/manifest","/js/vendor"]]]);
+},[[3,"/js/manifest","/js/vendor"]]]);

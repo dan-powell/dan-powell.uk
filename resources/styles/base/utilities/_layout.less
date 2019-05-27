@@ -1,0 +1,24 @@
+.u-grid {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+        flex: 0 1 auto;
+    }
+}
+// Clear floats like a boss
+.u-clearfix {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+img.u-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

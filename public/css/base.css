@@ -1,350 +1,6 @@
 /*  ====== Theme Variables ======
     Unique to this project
     ========================================================================= */
-/*  ********* utilities.less *********
-    A bunch of useful classes designed to be re-used
-    ************************************************************************* */
-/*  --- Floats and layout ---
-    ------------------------------------------------------------------------- */
-.float-right {
-  float: right;
-}
-.float-left {
-  float: left;
-}
-.clear {
-  clear: both;
-}
-/*  --- Use to hide or display items depending on JS support ---
-    ------------------------------------------------------------------------- */
-.no-js-show {
-  display: none !important;
-}
-.no-js .no-js-hide {
-  display: none !important;
-}
-.no-js .no-js-show {
-  display: block !important;
-}
-/*  --- Text Style Utilities ---
-    ------------------------------------------------------------------------- */
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
-* {
-  box-sizing: border-box;
-  font-family: 'Lato', serif;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  line-height: 1;
-  vertical-align: baseline;
-}
-body {
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-}
-/*  --- Body Text ---
-    ------------------------------------------------------------------------- */
-p {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-p.lead {
-  font-size: 30px;
-  line-height: 1.4;
-  font-weight: 300;
-}
-@media only screen and (max-width: 1024px) {
-  p.lead {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 640px) {
-  p.lead {
-    font-size: 20px;
-  }
-}
-a {
-  font-weight: bold;
-  color: #ed913d;
-  transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-a:hover {
-  color: #b35e11;
-  text-decoration: none;
-}
-/*  --- Headings ---
-    ------------------------------------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 10px;
-  padding: 0;
-  color: #ed913d;
-  line-height: 1.4;
-  font-family: 'Nunito', serif;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-  display: inline-block;
-  font-family: 'Nunito', serif;
-}
-h1 small:before,
-h2 small:before,
-h3 small:before,
-h4 small:before,
-h5 small:before,
-h6 small:before {
-  content: ' ';
-}
-h1 span,
-h2 span,
-h3 span,
-h4 span,
-h5 span,
-h6 span {
-  font-family: 'Nunito', serif;
-}
-h1.pageHeading,
-h2.pageHeading,
-h3.pageHeading,
-h4.pageHeading,
-h5.pageHeading,
-h6.pageHeading {
-  text-align: center;
-  font-size: 64px;
-  line-height: 1.2;
-  color: rgba(0, 0, 0, 0.4);
-  text-shadow: #ffffff 1px 1px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
-}
-@media only screen and (max-width: 640px) {
-  h1.pageHeading,
-  h2.pageHeading,
-  h3.pageHeading,
-  h4.pageHeading,
-  h5.pageHeading,
-  h6.pageHeading {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h1.pageHeading,
-  h2.pageHeading,
-  h3.pageHeading,
-  h4.pageHeading,
-  h5.pageHeading,
-  h6.pageHeading {
-    font-size: 40px;
-  }
-}
-h1.alt,
-h2.alt,
-h3.alt,
-h4.alt,
-h5.alt,
-h6.alt {
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.4);
-  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-}
-@media only screen and (max-width: 640px) {
-  h1.alt,
-  h2.alt,
-  h3.alt,
-  h4.alt,
-  h5.alt,
-  h6.alt {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  h1.alt,
-  h2.alt,
-  h3.alt,
-  h4.alt,
-  h5.alt,
-  h6.alt {
-    font-size: 40px;
-  }
-}
-h1 {
-  font-size: 45.6976px;
-}
-h2 {
-  font-size: 35.152px;
-}
-h3 {
-  font-size: 27.04px;
-}
-h4 {
-  font-size: 20.8px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 16px;
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 640px) {
-  h1 {
-    font-size: 36.55808px;
-  }
-  h2 {
-    font-size: 28.1216px;
-  }
-  h3 {
-    font-size: 21.632px;
-  }
-  h4 {
-    font-size: 16.64px;
-  }
-  h5 {
-    font-size: 12.8px;
-  }
-  h6 {
-    font-size: 12.8px;
-  }
-}
-/*  --- Lists ---
-    ------------------------------------------------------------------------- */
-ul {
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  margin-bottom: 10px;
-  margin-left: 30px;
-}
-dl dt {
-  font-weight: bold;
-}
-dl dd {
-  margin-bottom: 10px;
-}
-/*  --- Blockquote ---
-    ------------------------------------------------------------------------- */
-blockquote {
-  display: inline-block;
-  font-family: 'Caveat' Georgia serif;
-  font-style: normal;
-  font-size: 3em;
-  line-height: 1.2;
-  color: #636363;
-  background-image: url('/img/blockquote_open.svg'), url("/img/blockquote_close.svg");
-  background-position: left top, right bottom;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 15px 30px;
-}
-blockquote p {
-  margin-bottom: 0 !important;
-}
-blockquote cite {
-  font-style: italic;
-  font-size: 24px;
-}
-blockquote cite::before {
-  content: '-- ';
-}
-blockquote.pull-quote {
-  margin: 30px;
-  width: 50%;
-  float: right;
-}
-@media screen and (max-width: 640px) {
-  blockquote.pull-quote {
-    width: 100%;
-  }
-}
-/*  --- Horizontal Rule ---
-    ------------------------------------------------------------------------- */
-hr {
-  border-top: rgba(0, 0, 0, 0.2) 2px dotted;
-}
-hr.spacer {
-  padding: 0;
-  margin: 0;
-  height: 30px;
-  width: 30px;
-  visibility: hidden;
-  /*
-        &:last-child,
-        &:first-child {
-            display: none;
-        }
-        */
-}
-hr.spacer.-sm {
-  height: 15px;
-}
-hr.spacer.-lg {
-  height: 60px;
-}
-hr.spacer.-xl {
-  height: 90px;
-}
-/*  --- Media ---
-    ------------------------------------------------------------------------- */
-img {
-  border: none;
-  max-width: 100%;
-  height: auto;
-}
-img.-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*  --- Code & Pre ---
-    ------------------------------------------------------------------------- */
-code {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0 10px;
-  border-radius: 3px;
-  white-space: pre-wrap;
-  text-align: left;
-}
-pre code {
-  padding: 30px 40px;
-  margin: 10px;
-  border-radius: 10px;
-}
-/*  --- Table ---
-    ------------------------------------------------------------------------- */
-table {
-  width: 100%;
-}
-table th {
-  background: rgba(0, 0, 0, 0.2);
-  text-align: left;
-}
-table td,
-table th {
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
 /*  ====== Alternative Content Styles ======
     Additional content styles for different contexts.
     Useful for overriding element colours in areas with differing background colours.
@@ -506,20 +162,266 @@ table th {
 .Content blockquote {
   margin-bottom: 30px;
 }
+.u-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.u-grid > * {
+  flex: 0 1 auto;
+}
+.u-clearfix:before,
+.u-clearfix:after {
+  content: " ";
+  display: table;
+}
+.u-clearfix:after {
+  clear: both;
+}
+img.u-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*  ********* utilities.less *********
+    A bunch of useful classes designed to be re-used
+    ************************************************************************* */
+.u-heading {
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: #ffffff 1px 1px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+}
+.u-heading--alt {
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+.u-lead {
+  font-size: 1.4em;
+  line-height: 1.2;
+  font-weight: 300;
+}
+/*  --- Text Style Utilities ---
+    ------------------------------------------------------------------------- */
+.u-left {
+  text-align: left;
+}
+.u-center {
+  text-align: center;
+}
+.u-right {
+  text-align: right;
+}
+/*  --- Use to hide or display items depending on JS support ---
+    ------------------------------------------------------------------------- */
+.no-js-show {
+  display: none !important;
+}
+.no-js .no-js-hide {
+  display: none !important;
+}
+.no-js .no-js-show {
+  display: block !important;
+}
+/*  --- Text Style Utilities ---
+    ------------------------------------------------------------------------- */
+.u-left {
+  text-align: left;
+}
+.u-center {
+  text-align: center;
+}
+.u-right {
+  text-align: right;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1;
+  vertical-align: baseline;
+}
+body {
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  background: #EFEBE5;
+}
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+a {
+  font-weight: bold;
+  color: #ed913d;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+a:hover {
+  color: #b35e11;
+  text-decoration: none;
+}
+/*  --- Headings ---
+    ------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em 0;
+  color: #ed913d;
+  line-height: 1.4;
+  font-family: 'Nunito', serif;
+}
+h1 {
+  font-size: 45.6976px;
+}
+h2 {
+  font-size: 35.152px;
+}
+h3 {
+  font-size: 27.04px;
+}
+h4 {
+  font-size: 20.8px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 16px;
+}
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 36.55808px;
+  }
+  h2 {
+    font-size: 28.1216px;
+  }
+  h3 {
+    font-size: 21.632px;
+  }
+  h4 {
+    font-size: 16.64px;
+  }
+  h5 {
+    font-size: 12.8px;
+  }
+  h6 {
+    font-size: 12.8px;
+  }
+}
+/*  --- Lists ---
+    ------------------------------------------------------------------------- */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd {
+  margin-bottom: 10px;
+}
+/*  --- Blockquote ---
+    ------------------------------------------------------------------------- */
+blockquote {
+  display: inline-block;
+  font-family: 'Caveat', Georgia, serif;
+  font-style: normal;
+  font-size: 3em;
+  line-height: 1.2;
+  color: #636363;
+  background-image: url('/img/blockquote_open.svg'), url('/img/blockquote_close.svg');
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 15px 30px;
+}
+blockquote p {
+  margin-bottom: 0 !important;
+}
+blockquote cite {
+  font-style: italic;
+  font-size: 24px;
+}
+blockquote cite::before {
+  content: '-- ';
+}
+/*  --- Horizontal Rule ---
+    ------------------------------------------------------------------------- */
+hr {
+  border-top: rgba(0, 0, 0, 0.2) 2px dotted;
+}
+hr.spacer {
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  visibility: hidden;
+}
+hr.spacer.-sm {
+  height: 15px;
+}
+hr.spacer.-lg {
+  height: 60px;
+}
+hr.spacer.-xl {
+  height: 90px;
+}
+/*  --- Media ---
+    ------------------------------------------------------------------------- */
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+/*  --- Code & Pre ---
+    ------------------------------------------------------------------------- */
+code {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 10px;
+  border-radius: 3px;
+  white-space: pre-wrap;
+  text-align: left;
+}
+pre code {
+  padding: 30px 40px;
+  margin: 10px;
+  border-radius: 10px;
+}
+/*  --- Table ---
+    ------------------------------------------------------------------------- */
+table {
+  width: 100%;
+}
+table th {
+  background: rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 .Box {
   display: block;
   padding: 20px;
   background: #FFEFEF;
   box-shadow: #ffffff -1px -1px 1px, rgba(0, 0, 0, 0.4) 1px 1px 1px;
   border-radius: 10px;
-}
-.Box:before,
-.Box:after {
-  content: " ";
-  display: table;
-}
-.Box:after {
-  clear: both;
 }
 .Button,
 .Content .Button {
@@ -819,14 +721,6 @@ table th {
     border-bottom-width: 20px;
     border-radius: 15px;
   }
-}
-.Section:before,
-.Section:after {
-  content: " ";
-  display: table;
-}
-.Section:after {
-  clear: both;
 }
 .Section--sm {
   padding: 22.5px;

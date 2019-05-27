@@ -19,12 +19,12 @@ return [
                 [
                     'label' => 'About 365',
                     'url' => ['project.home', ['365']],
-                    'icon' => 'img/sidebar/navigation.svg#home'
+                    'icon' => 'img/sidebar/icons.svg#home'
                 ],
                 [
                     'label' => 'Gallery of Work',
                     'url' => ['project.page', ['365','index']],
-                    'icon' => 'img/sidebar/navigation.svg#design'
+                    'icon' => 'img/sidebar/icons.svg#design'
                 ]
             ]
         ],
@@ -41,12 +41,12 @@ return [
                 [
                     'label' => 'About Fungi Falls',
                     'url' => ['project.home', ['fungifalls']],
-                    'icon' => 'img/sidebar/navigation.svg#home'
+                    'icon' => 'img/sidebar/icons.svg#home'
                 ],
                 [
                     'label' => 'Play the Game',
                     'url' => 'assets/index.html',
-                    'icon' => 'img/sidebar/navigation.svg#design'
+                    'icon' => 'img/sidebar/icons.svg#design'
                 ]
             ]
         ],

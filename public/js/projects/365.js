@@ -1283,76 +1283,16 @@ baguettebox_js_src_baguetteBox_js__WEBPACK_IMPORTED_MODULE_1___default.a.run('.j
 
 /***/ }),
 
-/***/ "./resources/styles/base/base.less":
-/*!*****************************************!*\
-  !*** ./resources/styles/base/base.less ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/styles/main/base.less":
-/*!*****************************************!*\
-  !*** ./resources/styles/main/base.less ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/styles/projects/365/base.less":
-/*!*************************************************!*\
-  !*** ./resources/styles/projects/365/base.less ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/styles/projects/fungifalls/base.less":
-/*!********************************************************!*\
-  !*** ./resources/styles/projects/fungifalls/base.less ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/styles/sidebar/base.less":
-/*!********************************************!*\
-  !*** ./resources/styles/sidebar/base.less ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/scripts/projects/365/base.js ./resources/styles/base/base.less ./resources/styles/main/base.less ./resources/styles/sidebar/base.less ./resources/styles/projects/365/base.less ./resources/styles/projects/fungifalls/base.less ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
+/***/ 1:
+/*!******************************************************!*\
+  !*** multi ./resources/scripts/projects/365/base.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/projects/365/base.js */"./resources/scripts/projects/365/base.js");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/base/base.less */"./resources/styles/base/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/main/base.less */"./resources/styles/main/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/sidebar/base.less */"./resources/styles/sidebar/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/365/base.less */"./resources/styles/projects/365/base.less");
-module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.less */"./resources/styles/projects/fungifalls/base.less");
+module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/projects/365/base.js */"./resources/scripts/projects/365/base.js");
 
 
 /***/ })
 
-},[[0,"/js/manifest"]]]);
+},[[1,"/js/manifest"]]]);

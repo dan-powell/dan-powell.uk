@@ -5,8 +5,6 @@
 	@lg: @spacer*2;
 	@xl: @spacer*3;
 
-    .clearfix();
-
     // Sizes
     &--sm {
         padding: @sm;
@@ -24,12 +22,10 @@
         padding: @xl;
         //padding-bottom: @xl;
     }
-
     &--sidesOnly {
         padding-top: 0;
         padding-bottom: 0;
     }
-
     &--topOnly {
         padding-left: 0;
         padding-right: 0;
@@ -37,24 +33,20 @@
     }
 
     // Backgrounds
-
     &--dark,
     &-container&--dark {
 	    #background > .dark();
          .contentStyle > .light();
     }
-
     &--light,
     &-container&--light {
 	    #background  > .light();
 	    .contentStyle > .dark();
     }
-
     &--content,
     &-container&--content {
 	    #background > .light();
     }
-
     &--lightGrad,
     &-container&--lightGrad {
 	    #background > .lightGradient();
@@ -62,13 +54,11 @@
         	#background > .animatedGradientvert();
         }
     }
-
     &--primary,
     &-container&--primary {
 	    #background > .primary();
         .contentStyle > .light();
     }
-
     &--primaryGrad,
     &-container&--primaryGrad {
 	    #background > .primaryGradient();
@@ -76,13 +66,11 @@
         	#background > .animatedGradientvert();
         }
     }
-
     &--secondary,
     &-container&--secondary {
 	    #background > .secondary();
 	     .contentStyle > .light();
     }
-
     &--secondaryGrad,
     &-container&--secondaryGrad {
 	    #background > .secondaryGradient();
@@ -91,19 +79,12 @@
         	#background > .animatedGradientvert();
         }
     }
-
     &--tertiary,
     &-container&--tertiary {
 	    #background > .tertiary();
 	     .contentStyle > .white();
     }
-
-
-
-
-
     // Extras
-
     &--center,
     &-container&--center {
         text-align: center;
@@ -111,65 +92,43 @@
             display: inline-block;
         }
     }
-
     &--rounded,
     &-container&--rounded {
 		border-radius: 30px;
     }
-
-
-
 	// Components
-
     &-container {
         max-width: 960px;
         margin-left: auto;
         margin-right: auto;
-
-
         &--sm {
             padding: @sm;
             &-fullWidth {
                 margin: @sm -(@sm);
             }
         }
-
         &--md {
             padding: @md;
             &-fullWidth {
                 margin: @md -(@md);
             }
         }
-
         &--lg {
             padding: @lg;
             &-fullWidth {
                 margin: @lg -(@lg);
             }
         }
-
         &--xl {
             padding: @xl;
             &-fullWidth {
                 margin: @xl -(@xl);
             }
         }
-
     }
 
-
-
-
-
-
     // Let's set some different padding sizes
-
-
-
-
-
     @media only screen and (max-width: @screen-md) {
-
 	    &&--xl,
 	    &-container&--xl {
             padding: @lg;
@@ -177,38 +136,24 @@
                 margin: @lg -(@lg);
             }
         }
-
 	}
-
-
-
     @media only screen and (max-width: @screen-sm) {
-
         &&--lg,
         &-container&--lg {
             padding: @md;
-
             &-fullWidth {
                 margin: @md -(@md);
             }
-
         }
-
         &&--xl,
         &-container&--xl {
             padding: @lg;
-
-
             &-fullWidth {
                 margin: @lg -(@lg);
             }
         }
-
     }
-
-
     @media only screen and (max-width: @screen-xs) {
-
         &&--lg,
         &-container&--lg {
             padding: @md;
@@ -217,7 +162,6 @@
                 margin: @md -(@md);
             }
         }
-
         &&--xl,
         &-container&--xl {
             padding: @md;
@@ -227,6 +171,4 @@
             }
         }
     }
-
-
 }

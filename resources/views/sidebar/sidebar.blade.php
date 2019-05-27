@@ -26,7 +26,7 @@
     </div>
     <div class="Sidebar-overlay">
         <div class="Sidebar-overlay-inner">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="Sidebar-overlay-bg" viewBox="0 0 545 1010" preserveAspectRatio="xMaxYMax slice">
+            <svg class="Sidebar-overlay-bg" viewBox="0 0 545 1010" preserveAspectRatio="xMaxYMax slice">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <polygon points="0 0 77 0 116 67 77 135 0 135 -39 67"></polygon>
                     <polygon points="0 135 77 135 116 202 77 270 0 270 -39 202"></polygon>
@@ -83,14 +83,14 @@
                 <p class="Sidebar-about-text Sidebar-about-text--more">view some of my</p>
                 <a class="Sidebar-about-link" href="">
                     <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
-                        <use xlink:href="{{ asset('img/sidebar/sidebar.svg#projects') }}"></use>
+                        <use xlink:href="{{ asset('img/sidebar/icons.svg#projects') }}"></use>
                     </svg>
                     <span class="Sidebar-about-link-text">Projects</span>
                 </a>
                 <p class="Sidebar-about-text Sidebar-about-text--more">or checkout my code on</p>
                 <a class="Sidebar-about-link" href="">
                     <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
-                        <use xlink:href="{{ asset('img/sidebar/sidebar.svg#github') }}"></use>
+                        <use xlink:href="{{ asset('img/sidebar/icons.svg#github') }}"></use>
                     </svg>
                     <span class="Sidebar-about-link-text">Github</span>
                 </a>

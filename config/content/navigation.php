@@ -5,35 +5,35 @@ return [
     'main' => [
         [
             'label' => 'Home',
-            'icon' => 'img/sidebar/navigation.svg#home',
+            'icon' => 'img/sidebar/icons.svg#home',
             'url' => 'https://github.com/dan-powell',
         ],
         [
             'label' => 'Portfolio',
             'description' => 'My work',
-            'icon' => 'img/sidebar/navigation.svg#design',
+            'icon' => 'img/sidebar/icons.svg#design',
             'url' => ['portfolio.index'],
-            // 'items' => [
-            //     [
-            //         'label' => 'Portfolio',
-            //         // 'icon' => 'img/sidebar/navigation.svg#design',
-            //         'url' => ['portfolio.index'],
-            //     ]
-            // ],
+            'items' => [
+                [
+                    'label' => 'Portfolio',
+                    // 'icon' => 'img/sidebar/icons.svg#design',
+                    'url' => ['portfolio.index'],
+                ]
+            ],
         ],
         [
             'label' => 'Projects',
-            'icon' => 'img/sidebar/navigation.svg#projects',
+            'icon' => 'img/sidebar/icons.svg#projects',
             'url' => ['projects.index'],
         ],
         [
             'label' => 'Experience',
-            'icon' => 'img/sidebar/navigation.svg#education',
+            'icon' => 'img/sidebar/icons.svg#education',
             'url' => ['page', 'experience'],
         ],
         [
             'label' => 'Skills',
-            'icon' => 'img/sidebar/navigation.svg#work',
+            'icon' => 'img/sidebar/icons.svg#work',
             'url' => ['page', 'skills'],
         ],
     ],

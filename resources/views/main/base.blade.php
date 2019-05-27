@@ -5,3 +5,7 @@
 @push('style')
     <link rel="stylesheet" href="{{ mix('css/main.css') }}" type="text/css">
 @endpush
+
+@push('script')
+    <script defer src="{{ mix('js/main.js') }}"></script>
+@endpush

@@ -28,6 +28,7 @@
     "dependencies": {
         "animejs": "^3.0.1",
         "baguettebox.js": "^1.11.0",
+        "tornis": "^0.1.3",
         "vanilla-lazyload": "^12.0.0"
     }
 }

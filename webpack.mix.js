@@ -24,7 +24,8 @@ mix.less('resources/styles/base/base.less', 'public/css/base.css')
 
     });
 
-mix.js('resources/scripts/projects/365/base.js', 'public/js/projects/365.js')
+mix.js('resources/scripts/main/base.js', 'public/js/main.js')
+    .js('resources/scripts/projects/365/base.js', 'public/js/projects/365.js')
     .js('resources/scripts/projects/fungifalls/base.js', 'public/js/projects/fungifalls.js')
     .js('resources/scripts/sidebar/sidebar.js', 'public/js')
     .extract(['animejs']);
