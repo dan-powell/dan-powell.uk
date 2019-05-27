@@ -16,9 +16,9 @@ import anime from 'animejs/lib/anime.es.js';
             opacity: [
                 {value: 1, easing: 'easeOutSine', duration: 200},
             ],
-            translateX: [
-                {value: '-2em', easing: 'easeOutSine', duration: 200},
-            ],
+            // translateX: [
+            //     {value: '-2em', easing: 'easeOutSine', duration: 200},
+            // ],
             delay: anime.stagger(50, {grid: [4, 10], from: 'first'})
         });
     }
@@ -35,9 +35,9 @@ import anime from 'animejs/lib/anime.es.js';
             opacity: [
                 {value: 0, easing: 'easeOutSine', duration: 200},
             ],
-            translateX: [
-                {value: '-4em', easing: 'easeOutSine', duration: 200},
-            ],
+            // translateX: [
+            //     {value: '-4em', easing: 'easeOutSine', duration: 200},
+            // ],
             delay: anime.stagger(50, {grid: [4, 10], from: 'last'})
         });
     }

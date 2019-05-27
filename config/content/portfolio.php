@@ -7,7 +7,8 @@ return [
     ],
     'featured' => [
         'kudu-travel',
-        // 'character-creations',
+        'character-creations',
+        'gjs-landscapes'
     ],
     'items' => [
         'character-creations' => [

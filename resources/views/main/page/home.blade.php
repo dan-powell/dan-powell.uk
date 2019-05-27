@@ -56,19 +56,16 @@
         </svg>
     </section>
     @if(count($portfolio))
-        <section class="Section Section--lightGrad Section--md Section--projects">
-            <div class="Section-container Section--center">
-                <h3 class="Section-title"><a href="{{ route('portfolio.index') }}">Work</a></h3>
-                @include('main.portfolio.list', ['items' => $portfolio])
-            </div>
+        <section class="Home-portfolio">
+            @include('main.portfolio.list_hero', ['items' => $portfolio])
         </section>
     @endif
-    <section class="Section Section--lightGrad Section--md Section--projects">
-        <div class="Section-container Section--center">
+    @if(count($projects))
+        <section class="Home-projects">
             <h3><a href="{{ route('projects.index') }}">Projects</a></h3>
             @include('main.project.list', ['items' => $projects])
-        </div>
-    </section>
+        </section>
+    @endif
     <section class="Section Section--primary Section--cta Section--md">
 	    <div class="Section-container Page-cta">
             <div class="Page-cta-column">

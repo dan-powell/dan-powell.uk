@@ -1,26 +1,44 @@
+.Home {
+    &-portfolio {
+        padding: 2em;
+    }
+}
+
 .HomeIntro {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    max-width: 1680px;
     padding-top: 2em;
+    background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
     &-speech {
         flex: 0 1 auto;
         order: 2;
         align-self: flex-start;
+        animation: slideInFromTop 1s ease-in-out .4s 1;
+        animation-fill-mode: both;
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
         &-inner {
             display: block;
             margin: 0 auto;
             padding: 1em;
-            background: url('/img/home/speech.svg') left bottom no-repeat;
+            background: url("/img/home/speech.svg") left bottom no-repeat;
             background-size: 50%;
         }
         &-bubble {
             display: inline-block;
             background: #fff;
             border-radius: 100%;
-            padding: 1em;
-            box-shadow: rgba(0, 0, 0, 0.2) 4px 0px 3px;
+            padding: .5em 1em;
+            box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
             font-family: @font-family-serif;
             text-align: center;
             line-height: 1;
@@ -30,11 +48,24 @@
     }
     &-heading {
         flex: 1 1 auto;
+        max-width: 620px;
         order: 3;
-        padding: 1em;
+        padding: 1.2em 0.5em;
         margin: 0;
         text-align: center;
-        font-size: 4em;
+        font-size: 3.2em;
+        animation: slideInFromRight 1s ease-in-out .2s 1;
+        animation-fill-mode: both;
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
         &-sub {
             font-size: 0.8em;
             display: block;
@@ -45,18 +76,58 @@
         flex: 1 1 25%;
         max-width: 320px;
         order: 1;
+        animation: slideInFromBottom 1s ease-in-out .6s 1;
+        animation-fill-mode: both;
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
         &-img {
             display: block;
+        }
+    }
+    @media screen and (max-width: @screen-md) {
+        &-heading {
+            font-size: 2.8em;
+        }
+    }
+    @media screen and (max-width: @screen-sm) {
+        padding-top: 0em;
+        flex-direction: column;
+        &-speech {
+            flex: 0 1 auto;
+            order: 2;
+            align-self: flex-end;
+        }
+        &-heading {
+            flex: 1 1 100%;
+            order: 1;
+            padding: 0.5em;
+            align-self: center;
+        }
+        &-wave {
+            flex: 1 1 100%;
+            align-self: flex-start;
+            order: 3;
         }
     }
 }
 .HomeAbout {
     position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 6em;
     text-align: center;
     &-inner {
         position: relative;
         z-index: 6;
+        height: 100%;
     }
     &-bg {
         position: absolute;
@@ -66,187 +137,34 @@
         height: 100%;
     }
     &-heading {
-        font-size: 56px;
-        line-height: 1.2;
+        font-size: 6em;
+        line-height: 1;
         color: #fff;
     }
-	&-text {
-		display: block;
-		&--one {
-			font-size: 48px;
+    &-text {
+        display: block;
+        &--one {
+            font-size: 0.4em;
             font-family: @font-family-heading;
-		}
-		&--two {
-			font-size: 96px;
+        }
+        &--two {
             text-transform: uppercase;
-            // text-shadow: rgba(255, 255, 255, 0.4) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
             font-family: @font-family-heading;
-		}
-		&--three {
-			font-size: 42px;
+            padding: 0.2em 0;
+        }
+        &--three {
+            font-size: 0.4em;
             font-family: @font-family-heading;
-		}
-		@media only screen and (max-width: @screen-xs) {
-			&--one { font-size: 24px; }
-			&--two { font-size: 48px; }
-			&--three { font-size: 22px; }
-		}
-	}
-}
-
-
-.Page {
-	&&--home & {
-		&-heading {
-			position: relative;
-			clear:both;
-			img {
-				vertical-align: top;
-			}
-			// &-column {
-			// 	&--left {
-			// 		float: left;
-			// 		width: 35%;
-			// 		margin-top: 16px;
-			// 		bottom: 0;
-			// 		position: absolute;
-			// 		img {
-			// 			float: right;
-			// 		}
-			// 	}
-			// 	&--right {
-			// 		width: 60%;
-			// 		margin-left: 40%;
-			// 		float: right;
-			// 	}
-			// }
-			&-speech {
-				position: relative;
-				background: url('/img/speech_bubble.png') left bottom no-repeat;
-				margin-bottom: @spacer;
-				&-bubble {
-					display: inline-block;
-					background: #fff;
-					border-radius: 0 0 100% 100%;
-					//padding: 30px;
-					padding-top: 150px;
-					margin-top: -150px;
-					box-shadow: rgba(0, 0, 0, 0.2) 4px 0px 3px;
-					&-speech {
-						display: block;
-						padding: 20px 60px 30px 60px;
-						text-align: center;
-						font-family: @font-family-serif;
-						font-size: 40px;
-						line-height: 1.1;
-						color: rgba(0, 0, 0, 0.6);
-					}
-				}
-			}
-			&-homeHeading {
-				font-size: 64px;
-				line-height: 1.2;
-				color: rgba(0, 0, 0, 0.6);
-                font-family: @font-family-serif;
-				small {
-					font-size: 40px;
-					display: block;
-				}
-			}
-			@media only screen and (max-width: @screen-md) {
-				&-homeHeading {
-					font-size: 40px;
-					small {
-						font-size: 20px;
-					}
-				}
-			}
-			@media only screen and (max-width: @screen-xs) {
-				&-column {
-					float: none;
-					padding-left: 20px;
-					padding-right: 20px;
-					text-align: center;
-					&--left {
-						width: 100%;
-						position: relative;
-						img {
-							float: none;
-							display: inline-block;
-						}
-					}
-					&--right {
-						width: 100%;
-						margin-left: 0;
-					}
-				}
-				&-speechWrapper {
-					position: relative;
-					background: none;
-					margin-bottom: @spacer/2;
-
-					&-speechBubble {
-						width: 100%;
-					}
-				}
-                &-speech {
-                    background: url('/img/speech_bubble.png') 30% bottom no-repeat;
-                }
-				&-homeHeading {
-					font-size: 34px;
-				}
-			}
-		}
-		&-cta {
-			display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-			&-column {
-				float: left;
-				flex: 1 1 auto;
-                text-align: center;
-				&--middle {
-					width: 10%;
-					padding: 0 12px;
-				}
-			}
-			@media only screen and (max-width: @screen-xs) {
-				&-column {
-					flex: 1 1 100%;
-
-					&--middle {
-						width: 100%;
-					}
-				}
-			}
-		}
-		&-intro {
-			font-size: 56px;
-			line-height: 1.2;
-			color: rgba(0, 0, 0, 1);
-			&-text {
-				display: block;
-				&--one {
-					font-size: 48px;
-                    font-family: @font-family-heading;
-				}
-				&--two {
-					font-size: 96px;
-                    text-transform: uppercase;
-                    // text-shadow: rgba(255, 255, 255, 0.4) 2px 2px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
-                    font-family: @font-family-heading;
-				}
-				&--three {
-					font-size: 42px;
-                    font-family: @font-family-heading;
-				}
-				@media only screen and (max-width: @screen-xs) {
-					&--one { font-size: 24px; }
-					&--two { font-size: 48px; }
-					&--three { font-size: 22px; }
-				}
-			}
-		}
-	}
+        }
+    }
+    @media screen and (max-width: @screen-md) {
+        &-heading {
+            font-size: 4em;
+        }
+    }
+    @media screen and (max-width: @screen-sm) {
+        &-heading {
+            font-size: 3em;
+        }
+    }
 }

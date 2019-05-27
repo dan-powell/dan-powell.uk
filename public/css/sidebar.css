@@ -89,6 +89,12 @@
   stroke-width: 2;
   stroke: #1a1a1a;
 }
+@media screen and (min-height: 900px) {
+  .Sidebar-overlay-bg polygon {
+    -webkit-transform: translateX(-2em);
+            transform: translateX(-2em);
+  }
+}
 .Sidebar-title {
   opacity: 0;
   transition: opacity 0.2s ease-in 0s;
@@ -379,10 +385,6 @@
 }
 body {
   padding-left: 80px;
-}
-.has-openSidebar {
-  height: 100vh;
-  overflow-y: hidden;
 }
 @media screen and (max-width: 1023px) {
   .Sidebar-overlay-inner {

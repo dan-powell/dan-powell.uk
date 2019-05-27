@@ -1,59 +1,9 @@
 import anime from 'animejs/lib/anime.es.js';
-import {
-   watchViewport,
-   unwatchViewport,
-   getViewportState
- } from 'tornis';
 
+// Home
 (function() {
 
-    var targets = document.querySelectorAll('.Home-intro-bg polygon');
-    console.log(targets);
-
-    function getrandomelement() {
-        return targets[Math.floor(Math.random()*targets.length)];;
-    }
-    console.log(getrandomelement());
-
-    // let timerId = setInterval(() => animate(), 1000);
-
-    function animate() {
-        anime({
-            targets: getrandomelement(),
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 1500,
-            delay: function(el, i) { return i * 250 },
-            direction: 'alternate',
-            loop: true
-        });
-    }
-
-    // define a watched function, to be run on each update
-    const updateValues = ({ size, scroll, mouse, orientation }) => {
-        if (mouse.changed) {
-            for(let i = 0; i < targets.length; i++) {
-                targets[i].style.transform = 'translateX(' + ((mouse.x - size.x / 2) +i) + 'px) translateY(' + ((mouse.y - size.y / 2) +i) + 'px)';
-            }
-        }
-    };
-
-    watchViewport(updateValues, false);
-
-    console.log(getViewportState());
-
-    // anime({
-    //     targets: '.Home-intro-bg polyline',
-    //     strokeDashoffset: [anime.setDashoffset, 0],
-    //     easing: 'linear',
-    //     duration: 1500,
-    //     delay: anime.stagger(1000, {grid: [4, 10], from: 'first'}),
-    //     direction: 'alternate',
-    //     loop: true
-    // });
-
-
-
+    // BG Animation
     anime({
         targets: '.HomeAbout-bg circle',
         loop: true,
@@ -69,11 +19,33 @@ import {
             {value: 10, easing: 'easeOutSine', duration: 200},
             {value: 0, easing: 'easeOutSine', duration: 200},
         ],
-        delay: anime.stagger(100, {from: 'center', start: 3000, easing: 'easeOutQuad'})
+        delay: anime.stagger(100, {from: 'center', start: 0, easing: 'easeOutQuad'})
     });
 
+    // Animate items when visible
 
+    // Check is IntersectionObserver is supported
+    if ('IntersectionObserver' in window)
+    {
+        let body = document.getElementsByTagName('body');
+        body[0].classList.add('supports-observer');
+    };
 
+    // Setup the observer
+    const intersectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');
+            }
+        });
+    });
 
+    // Get the items to animate
+    const elements = document.querySelectorAll(['.PortfolioExcerpt','.ProjectExcerpt']);
+
+    // Fire up the observer
+    elements.forEach((element) => intersectionObserver.observe(element));
 
 })();

@@ -6,7 +6,7 @@ return [
         [
             'label' => 'Home',
             'icon' => 'img/sidebar/icons.svg#home',
-            'url' => 'https://github.com/dan-powell',
+            'url' => '/',
         ],
         [
             'label' => 'Portfolio',

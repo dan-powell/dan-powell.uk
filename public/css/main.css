@@ -1,31 +1,59 @@
-/*  ====== Theme Variables ======
-    Unique to this project
-    ========================================================================= */
+.Home-portfolio {
+  padding: 2em;
+}
 .HomeIntro {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  max-width: 1680px;
   padding-top: 2em;
+  background: linear-gradient(0deg, #ffffff, rgba(255, 255, 255, 0));
 }
 .HomeIntro-speech {
   flex: 0 1 auto;
   order: 2;
   align-self: flex-start;
+  -webkit-animation: slideInFromTop 1s ease-in-out 0.4s 1;
+          animation: slideInFromTop 1s ease-in-out 0.4s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 .HomeIntro-speech-inner {
   display: block;
   margin: 0 auto;
   padding: 1em;
-  background: url('/img/home/speech.svg') left bottom no-repeat;
+  background: url("/img/home/speech.svg") left bottom no-repeat;
   background-size: 50%;
 }
 .HomeIntro-speech-bubble {
   display: inline-block;
   background: #fff;
   border-radius: 100%;
-  padding: 1em;
-  box-shadow: rgba(0, 0, 0, 0.2) 4px 0px 3px;
+  padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
   font-family: 'Caveat', Georgia, serif;
   text-align: center;
   line-height: 1;
@@ -34,11 +62,40 @@
 }
 .HomeIntro-heading {
   flex: 1 1 auto;
+  max-width: 620px;
   order: 3;
-  padding: 1em;
+  padding: 1.2em 0.5em;
   margin: 0;
   text-align: center;
-  font-size: 4em;
+  font-size: 3.2em;
+  -webkit-animation: slideInFromRight 1s ease-in-out 0.2s 1;
+          animation: slideInFromRight 1s ease-in-out 0.2s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 .HomeIntro-heading-sub {
   font-size: 0.8em;
@@ -49,18 +106,74 @@
   flex: 1 1 25%;
   max-width: 320px;
   order: 1;
+  -webkit-animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+          animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 .HomeIntro-wave-img {
   display: block;
 }
+@media screen and (max-width: 1024px) {
+  .HomeIntro-heading {
+    font-size: 2.8em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .HomeIntro {
+    padding-top: 0em;
+    flex-direction: column;
+  }
+  .HomeIntro-speech {
+    flex: 0 1 auto;
+    order: 2;
+    align-self: flex-end;
+  }
+  .HomeIntro-heading {
+    flex: 1 1 100%;
+    order: 1;
+    padding: 0.5em;
+    align-self: center;
+  }
+  .HomeIntro-wave {
+    flex: 1 1 100%;
+    align-self: flex-start;
+    order: 3;
+  }
+}
 .HomeAbout {
   position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 6em;
   text-align: center;
 }
 .HomeAbout-inner {
   position: relative;
   z-index: 6;
+  height: 100%;
 }
 .HomeAbout-bg {
   position: absolute;
@@ -70,171 +183,34 @@
   height: 100%;
 }
 .HomeAbout-heading {
-  font-size: 56px;
-  line-height: 1.2;
+  font-size: 6em;
+  line-height: 1;
   color: #fff;
 }
 .HomeAbout-text {
   display: block;
 }
 .HomeAbout-text--one {
-  font-size: 48px;
+  font-size: 0.4em;
   font-family: 'Nunito', serif;
 }
 .HomeAbout-text--two {
-  font-size: 96px;
   text-transform: uppercase;
   font-family: 'Nunito', serif;
+  padding: 0.2em 0;
 }
 .HomeAbout-text--three {
-  font-size: 42px;
+  font-size: 0.4em;
   font-family: 'Nunito', serif;
 }
-@media only screen and (max-width: 480px) {
-  .HomeAbout-text--one {
-    font-size: 24px;
-  }
-  .HomeAbout-text--two {
-    font-size: 48px;
-  }
-  .HomeAbout-text--three {
-    font-size: 22px;
+@media screen and (max-width: 1024px) {
+  .HomeAbout-heading {
+    font-size: 4em;
   }
 }
-.Page.Page--home .Page-heading {
-  position: relative;
-  clear: both;
-}
-.Page.Page--home .Page-heading img {
-  vertical-align: top;
-}
-.Page.Page--home .Page-heading-speech {
-  position: relative;
-  background: url('/img/speech_bubble.png') left bottom no-repeat;
-  margin-bottom: 30px;
-}
-.Page.Page--home .Page-heading-speech-bubble {
-  display: inline-block;
-  background: #fff;
-  border-radius: 0 0 100% 100%;
-  padding-top: 150px;
-  margin-top: -150px;
-  box-shadow: rgba(0, 0, 0, 0.2) 4px 0px 3px;
-}
-.Page.Page--home .Page-heading-speech-bubble-speech {
-  display: block;
-  padding: 20px 60px 30px 60px;
-  text-align: center;
-  font-family: 'Caveat', Georgia, serif;
-  font-size: 40px;
-  line-height: 1.1;
-  color: rgba(0, 0, 0, 0.6);
-}
-.Page.Page--home .Page-heading-homeHeading {
-  font-size: 64px;
-  line-height: 1.2;
-  color: rgba(0, 0, 0, 0.6);
-  font-family: 'Caveat', Georgia, serif;
-}
-.Page.Page--home .Page-heading-homeHeading small {
-  font-size: 40px;
-  display: block;
-}
-@media only screen and (max-width: 1024px) {
-  .Page.Page--home .Page-heading-homeHeading {
-    font-size: 40px;
-  }
-  .Page.Page--home .Page-heading-homeHeading small {
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .Page.Page--home .Page-heading-column {
-    float: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-  }
-  .Page.Page--home .Page-heading-column--left {
-    width: 100%;
-    position: relative;
-  }
-  .Page.Page--home .Page-heading-column--left img {
-    float: none;
-    display: inline-block;
-  }
-  .Page.Page--home .Page-heading-column--right {
-    width: 100%;
-    margin-left: 0;
-  }
-  .Page.Page--home .Page-heading-speechWrapper {
-    position: relative;
-    background: none;
-    margin-bottom: 15px;
-  }
-  .Page.Page--home .Page-heading-speechWrapper-speechBubble {
-    width: 100%;
-  }
-  .Page.Page--home .Page-heading-speech {
-    background: url('/img/speech_bubble.png') 30% bottom no-repeat;
-  }
-  .Page.Page--home .Page-heading-homeHeading {
-    font-size: 34px;
-  }
-}
-.Page.Page--home .Page-cta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.Page.Page--home .Page-cta-column {
-  float: left;
-  flex: 1 1 auto;
-  text-align: center;
-}
-.Page.Page--home .Page-cta-column--middle {
-  width: 10%;
-  padding: 0 12px;
-}
-@media only screen and (max-width: 480px) {
-  .Page.Page--home .Page-cta-column {
-    flex: 1 1 100%;
-  }
-  .Page.Page--home .Page-cta-column--middle {
-    width: 100%;
-  }
-}
-.Page.Page--home .Page-intro {
-  font-size: 56px;
-  line-height: 1.2;
-  color: #000000;
-}
-.Page.Page--home .Page-intro-text {
-  display: block;
-}
-.Page.Page--home .Page-intro-text--one {
-  font-size: 48px;
-  font-family: 'Nunito', serif;
-}
-.Page.Page--home .Page-intro-text--two {
-  font-size: 96px;
-  text-transform: uppercase;
-  font-family: 'Nunito', serif;
-}
-.Page.Page--home .Page-intro-text--three {
-  font-size: 42px;
-  font-family: 'Nunito', serif;
-}
-@media only screen and (max-width: 480px) {
-  .Page.Page--home .Page-intro-text--one {
-    font-size: 24px;
-  }
-  .Page.Page--home .Page-intro-text--two {
-    font-size: 48px;
-  }
-  .Page.Page--home .Page-intro-text--three {
-    font-size: 22px;
+@media screen and (max-width: 640px) {
+  .HomeAbout-heading {
+    font-size: 3em;
   }
 }
 .Page.Page--skills .Page-grid {
@@ -357,9 +333,8 @@
   position: relative;
 }
 .PortfolioExcerpt-inner {
-  -webkit-clip-path: polygon(50% 0%, 75% 12.5%, 100% 25%, 100% 50%, 100% 75%, 75% 87.5%, 50% 100%, 25% 87.5%, 0% 75%, 0% 50%, 0% 25%, 25% 12.5%);
-          clip-path: polygon(50% 0%, 75% 12.5%, 100% 25%, 100% 50%, 100% 75%, 75% 87.5%, 50% 100%, 25% 87.5%, 0% 75%, 0% 50%, 0% 25%, 25% 12.5%);
-  transition: all 0.2s ease-in-out;
+  -webkit-clip-path: polygon(0% 50%, 12.5% 75%, 25% 100%, 50% 100%, 75% 100%, 87.5% 75%, 100% 50%, 87.5% 25%, 75% 0%, 50% 0%, 25% 0%, 12.5% 25%);
+          clip-path: polygon(0% 50%, 12.5% 75%, 25% 100%, 50% 100%, 75% 100%, 87.5% 75%, 100% 50%, 87.5% 25%, 75% 0%, 50% 0%, 25% 0%, 12.5% 25%);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   will-change: clip-path;
 }
@@ -389,20 +364,35 @@
   z-index: 10;
   padding: 10%;
   transition: all 0.2s ease-out;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
   color: #ffffff;
 }
 .PortfolioExcerpt:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .PortfolioExcerpt:hover .PortfolioExcerpt-inner {
-  -webkit-clip-path: polygon(50% 0%, 80% 7.5%, 100% 25%, 95% 50%, 100% 75%, 80% 92.5%, 50% 100%, 20% 92.5%, 0% 75%, 5% 50%, 0% 25%, 20% 7.5%);
-          clip-path: polygon(50% 0%, 80% 7.5%, 100% 25%, 95% 50%, 100% 75%, 80% 92.5%, 50% 100%, 20% 92.5%, 0% 75%, 5% 50%, 0% 25%, 20% 7.5%);
+  -webkit-clip-path: polygon(0% 50%, 5% 80%, 25% 100%, 50% 100%, 75% 100%, 95% 80%, 100% 50%, 95% 20%, 75% 0%, 50% 0%, 25% 0%, 5% 20%);
+          clip-path: polygon(0% 50%, 5% 80%, 25% 100%, 50% 100%, 75% 100%, 95% 80%, 100% 50%, 95% 20%, 75% 0%, 50% 0%, 25% 0%, 5% 20%);
 }
 .PortfolioExcerpt:hover .PortfolioExcerpt-title {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+.supports-observer .PortfolioExcerpt {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  transition: opacity 1s ease-in-out, -webkit-transform 1s ease-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+.supports-observer .PortfolioExcerpt.is-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .PortfolioExcerptLead {
   display: block;
@@ -487,6 +477,42 @@
 .PortfolioStack-item:nth-child(2n) .PortfolioExcerptLead-inner {
   justify-content: flex-start;
 }
+.PortfolioListHero {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 0;
+  grid-template-areas: "heading heading one" "three two one" "three more more";
+}
+.PortfolioListHero-heading {
+  grid-area: heading;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+.PortfolioListHero-more {
+  grid-area: more;
+  margin: auto;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.PortfolioListHero-item {
+  margin: auto;
+}
+.PortfolioListHero-item--1 {
+  grid-area: two;
+}
+.PortfolioListHero-item--2 {
+  margin-top: 0;
+  grid-area: one;
+}
+.PortfolioListHero-item--3 {
+  margin-bottom: 0;
+  grid-area: three;
+}
 .ProjectExcerpt {
   display: block;
   overflow: hidden;
@@ -539,6 +565,19 @@
 .ProjectExcerpt:hover .ProjectExcerpt-title {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+.supports-observer .ProjectExcerpt {
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+.supports-observer .ProjectExcerpt.is-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .ProjectList {
   text-align: center;

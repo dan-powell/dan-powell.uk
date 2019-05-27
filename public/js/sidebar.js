@@ -430,11 +430,9 @@ __webpack_require__.r(__webpack_exports__);
         easing: 'easeOutSine',
         duration: 200
       }],
-      translateX: [{
-        value: '-2em',
-        easing: 'easeOutSine',
-        duration: 200
-      }],
+      // translateX: [
+      //     {value: '-2em', easing: 'easeOutSine', duration: 200},
+      // ],
       delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"].stagger(50, {
         grid: [4, 10],
         from: 'first'
@@ -458,11 +456,9 @@ __webpack_require__.r(__webpack_exports__);
         easing: 'easeOutSine',
         duration: 200
       }],
-      translateX: [{
-        value: '-4em',
-        easing: 'easeOutSine',
-        duration: 200
-      }],
+      // translateX: [
+      //     {value: '-4em', easing: 'easeOutSine', duration: 200},
+      // ],
       delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"].stagger(50, {
         grid: [4, 10],
         from: 'last'
