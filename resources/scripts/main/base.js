@@ -22,6 +22,31 @@ import anime from 'animejs/lib/anime.es.js';
         delay: anime.stagger(100, {from: 'center', start: 0, easing: 'easeOutQuad'})
     });
 
+
+
+    anime({
+        targets: ['.HomeAbout-bg rect', '.HomeAbout-bg path', '.HomeAbout-bg tspan'],
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: function(el, i) { return i * 250 },
+        direction: 'alternate',
+        loop: true
+    });
+
+    anime({
+        targets: ['.HomeAbout-bg tspan'],
+        opacity: [
+            // {value: 0, easing: 'linear', duration: 1000},
+            {value: 1, easing: 'linear', duration: 1000},
+        ],
+        easing: 'easeInOutSine',
+        duration: 1500,
+        delay: 5000,
+        loop: false
+    });
+
+
     // Animate items when visible
 
     // Check is IntersectionObserver is supported

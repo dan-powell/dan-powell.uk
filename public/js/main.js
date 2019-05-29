@@ -49,6 +49,30 @@ __webpack_require__.r(__webpack_exports__);
       start: 0,
       easing: 'easeOutQuad'
     })
+  });
+  Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    targets: ['.HomeAbout-bg rect', '.HomeAbout-bg path', '.HomeAbout-bg tspan'],
+    strokeDashoffset: [animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: function delay(el, i) {
+      return i * 250;
+    },
+    direction: 'alternate',
+    loop: true
+  });
+  Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    targets: ['.HomeAbout-bg tspan'],
+    opacity: [// {value: 0, easing: 'linear', duration: 1000},
+    {
+      value: 1,
+      easing: 'linear',
+      duration: 1000
+    }],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: 5000,
+    loop: false
   }); // Animate items when visible
   // Check is IntersectionObserver is supported
 

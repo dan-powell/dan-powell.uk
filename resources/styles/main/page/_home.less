@@ -30,7 +30,7 @@
             display: block;
             margin: 0 auto;
             padding: 1em;
-            background: url("/img/home/speech.svg") left bottom no-repeat;
+            background: url('/img/home/speech.svg') left bottom no-repeat;
             background-size: 50%;
         }
         &-bubble {
@@ -120,10 +120,11 @@
     position: relative;
     min-height: 50vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 6em;
-    text-align: center;
+    text-align: left;
+    background: linear-gradient(saturate(lighten(rgba(red(@theme-primary), green(@theme-primary), blue(@theme-primary), 1), 15%), 20%), rgba(red(@theme-primary), green(@theme-primary), blue(@theme-primary), 1));
     &-inner {
         position: relative;
         z-index: 6;

@@ -45,7 +45,7 @@
   display: block;
   margin: 0 auto;
   padding: 1em;
-  background: url("/img/home/speech.svg") left bottom no-repeat;
+  background: url('/img/home/speech.svg') left bottom no-repeat;
   background-size: 50%;
 }
 .HomeIntro-speech-bubble {
@@ -165,10 +165,11 @@
   position: relative;
   min-height: 50vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 6em;
-  text-align: center;
+  text-align: left;
+  background: linear-gradient(#ffb878, #ed913d);
 }
 .HomeAbout-inner {
   position: relative;
