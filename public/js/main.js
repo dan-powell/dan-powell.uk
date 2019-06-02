@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
     loop: false,
     autoplay: false,
     complete: function complete(anim) {
-      hero[0].play();
+      hero[2].play();
     }
   }); // Add children
 
@@ -117,7 +117,7 @@ __webpack_require__.r(__webpack_exports__);
     easing: 'easeInOutSine',
     delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(200),
     duration: 400
-  }, 3000).add({
+  }, 2000).add({
     targets: ['.HomeHeroBg-two'],
     scale: [0.8, 1],
     rotate: [-10, 10],
@@ -128,13 +128,52 @@ __webpack_require__.r(__webpack_exports__);
     opacity: [1, 0],
     duration: 2000,
     easing: 'easeInOutSine'
+  }, "-=2000"); // Define the timeline
+
+  hero[2] = animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    loop: false,
+    autoplay: false,
+    complete: function complete(anim) {
+      hero[0].play();
+    }
+  }); // Add children
+
+  hero[2].add({
+    targets: ['.HomeHeroBg-three .HomeHeroBg-boxes .box'],
+    strokeDashoffset: [animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].setDashoffset, 0],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(400),
+    duration: 2000
+  }).add({
+    targets: ['.HomeHeroBg-three .HomeHeroBg-content > g'],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(600),
+    duration: 400
+  }, 3000).add({
+    targets: ['.HomeHeroBg-three .HomeHeroBg-labels > g'],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(200),
+    duration: 400
+  }, 2000).add({
+    targets: ['.HomeHeroBg-three'],
+    scale: [0.8, 1],
+    rotate: [-10, 10],
+    duration: 6000,
+    easing: 'easeInQuad'
+  }, 0).add({
+    targets: ['.HomeHeroBg-three'],
+    opacity: [1, 0],
+    duration: 2000,
+    easing: 'easeInOutSine'
   }, "-=2000");
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  hero[getRandomInt(2)].play(); // Animate items when visible
+  hero[getRandomInt(3)].play(); // Animate items when visible
   // Check is IntersectionObserver is supported
 
   if ('IntersectionObserver' in window) {

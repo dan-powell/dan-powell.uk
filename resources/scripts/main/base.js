@@ -77,7 +77,7 @@ import anime from 'animejs/lib/anime.es.js';
         loop: false,
         autoplay: false,
         complete: function(anim) {
-            hero[0].play();
+            hero[2].play();
         }
     });
     // Add children
@@ -102,7 +102,7 @@ import anime from 'animejs/lib/anime.es.js';
         easing: 'easeInOutSine',
         delay: anime.stagger(200),
         duration: 400,
-    }, 3000)
+    }, 2000)
     .add({
         targets: ['.HomeHeroBg-two'],
         scale: [0.8,1],
@@ -118,12 +118,56 @@ import anime from 'animejs/lib/anime.es.js';
     }, "-=2000");
 
 
+    // Define the timeline
+    hero[2] = anime.timeline({
+        loop: false,
+        autoplay: false,
+        complete: function(anim) {
+            hero[0].play();
+        }
+    });
+    // Add children
+    hero[2]
+    .add({
+        targets: ['.HomeHeroBg-three .HomeHeroBg-boxes .box'],
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(400),
+        duration: 2000,
+    })
+    .add({
+        targets: ['.HomeHeroBg-three .HomeHeroBg-content > g'],
+        opacity: [0,1],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(600),
+        duration: 400,
+    }, 3000)
+    .add({
+        targets: ['.HomeHeroBg-three .HomeHeroBg-labels > g'],
+        opacity: [0,1],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(200),
+        duration: 400,
+    }, 2000)
+    .add({
+        targets: ['.HomeHeroBg-three'],
+        scale: [0.8,1],
+        rotate: [-10,10],
+        duration: 6000,
+        easing: 'easeInQuad',
+    }, 0)
+    .add({
+        targets: ['.HomeHeroBg-three'],
+        opacity: [1,0],
+        duration: 2000,
+        easing: 'easeInOutSine',
+    }, "-=2000");
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    hero[getRandomInt(2)].play();
+    hero[getRandomInt(3)].play();
 
 
 
