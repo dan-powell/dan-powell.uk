@@ -283,19 +283,18 @@
   display: block;
 }
 .Sidebar-home-text--dan {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 16px;
 }
 .Sidebar-home-text--powell {
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 16px;
   padding-bottom: 0.2em;
-  border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
 }
 .Sidebar-home-text--web {
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 16px;
 }
 .Sidebar-home-text--design {
+  font-weight: 300;
   font-size: 16px;
 }
 .Sidebar-nav {
