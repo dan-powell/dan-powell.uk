@@ -50,30 +50,91 @@ __webpack_require__.r(__webpack_exports__);
       easing: 'easeOutQuad'
     })
   });
-  Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    targets: ['.HomeAbout-bg rect', '.HomeAbout-bg path', '.HomeAbout-bg tspan'],
+  var hero = []; // Define the timeline
+
+  hero[0] = animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    loop: false,
+    autoplay: false,
+    complete: function complete(anim) {
+      hero[1].play();
+    }
+  }); // Add children
+
+  hero[0].add({
+    targets: ['.HomeHeroBg-one .box'],
     strokeDashoffset: [animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].setDashoffset, 0],
     easing: 'easeInOutSine',
-    duration: 1500,
-    delay: function delay(el, i) {
-      return i * 250;
-    },
-    direction: 'alternate',
-    loop: true
-  });
-  Object(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    targets: ['.HomeAbout-bg tspan'],
-    opacity: [// {value: 0, easing: 'linear', duration: 1000},
-    {
-      value: 1,
-      easing: 'linear',
-      duration: 1000
-    }],
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(400),
+    duration: 2000
+  }).add({
+    targets: ['.HomeHeroBg-one .fill', '.HomeHeroBg-one .line'],
+    opacity: [0, 1],
     easing: 'easeInOutSine',
-    duration: 1500,
-    delay: 5000,
-    loop: false
-  }); // Animate items when visible
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(200),
+    duration: 400
+  }, 0).add({
+    targets: ['.HomeHeroBg-one .HomeHeroBg-labels > g'],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(200),
+    duration: 400
+  }, 3000).add({
+    targets: ['.HomeHeroBg-one'],
+    scale: [0.6, 1],
+    rotate: [-10, 10],
+    duration: 7000,
+    easing: 'easeInQuad'
+  }, 0).add({
+    targets: ['.HomeHeroBg-one'],
+    opacity: [1, 0],
+    duration: 2000,
+    easing: 'easeInOutSine'
+  }, "-=2000"); // Define the timeline
+
+  hero[1] = animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    loop: false,
+    autoplay: false,
+    complete: function complete(anim) {
+      hero[0].play();
+    }
+  }); // Add children
+
+  hero[1].add({
+    targets: ['.HomeHeroBg-two .HomeHeroBg-boxes .box'],
+    strokeDashoffset: [animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].setDashoffset, 0],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(400),
+    duration: 2000
+  }).add({
+    targets: ['.HomeHeroBg-two .HomeHeroBg-icons > g'],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(600),
+    duration: 400
+  }, 0).add({
+    targets: ['.HomeHeroBg-two .HomeHeroBg-labels > g'],
+    opacity: [0, 1],
+    easing: 'easeInOutSine',
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].stagger(200),
+    duration: 400
+  }, 3000).add({
+    targets: ['.HomeHeroBg-two'],
+    scale: [0.8, 1],
+    rotate: [-10, 10],
+    duration: 6000,
+    easing: 'easeInQuad'
+  }, 0).add({
+    targets: ['.HomeHeroBg-two'],
+    opacity: [1, 0],
+    duration: 2000,
+    easing: 'easeInOutSine'
+  }, "-=2000");
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+  hero[getRandomInt(2)].play(); // Animate items when visible
   // Check is IntersectionObserver is supported
 
   if ('IntersectionObserver' in window) {

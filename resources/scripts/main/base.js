@@ -24,27 +24,107 @@ import anime from 'animejs/lib/anime.es.js';
 
 
 
-    anime({
-        targets: ['.HomeAbout-bg rect', '.HomeAbout-bg path', '.HomeAbout-bg tspan'],
+
+    var hero = []
+    // Define the timeline
+    hero[0] = anime.timeline({
+        loop: false,
+        autoplay: false,
+        complete: function(anim) {
+            hero[1].play();
+        }
+    });
+    // Add children
+    hero[0]
+    .add({
+        targets: ['.HomeHeroBg-one .box'],
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function(el, i) { return i * 250 },
-        direction: 'alternate',
-        loop: true
-    });
-
-    anime({
-        targets: ['.HomeAbout-bg tspan'],
-        opacity: [
-            // {value: 0, easing: 'linear', duration: 1000},
-            {value: 1, easing: 'linear', duration: 1000},
-        ],
+        delay: anime.stagger(400),
+        duration: 2000,
+    })
+    .add({
+        targets: ['.HomeHeroBg-one .fill', '.HomeHeroBg-one .line'],
+        opacity: [0,1],
         easing: 'easeInOutSine',
-        duration: 1500,
-        delay: 5000,
-        loop: false
+        delay: anime.stagger(200),
+        duration: 400,
+    }, 0)
+    .add({
+        targets: ['.HomeHeroBg-one .HomeHeroBg-labels > g'],
+        opacity: [0,1],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(200),
+        duration: 400,
+    }, 3000)
+    .add({
+        targets: ['.HomeHeroBg-one'],
+        scale: [0.6,1],
+        rotate: [-10,10],
+        duration: 7000,
+        easing: 'easeInQuad',
+    }, 0)
+    .add({
+        targets: ['.HomeHeroBg-one'],
+        opacity: [1,0],
+        duration: 2000,
+        easing: 'easeInOutSine',
+    }, "-=2000");
+
+
+    // Define the timeline
+    hero[1] = anime.timeline({
+        loop: false,
+        autoplay: false,
+        complete: function(anim) {
+            hero[0].play();
+        }
     });
+    // Add children
+    hero[1]
+    .add({
+        targets: ['.HomeHeroBg-two .HomeHeroBg-boxes .box'],
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(400),
+        duration: 2000,
+    })
+    .add({
+        targets: ['.HomeHeroBg-two .HomeHeroBg-icons > g'],
+        opacity: [0,1],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(600),
+        duration: 400,
+    }, 0)
+    .add({
+        targets: ['.HomeHeroBg-two .HomeHeroBg-labels > g'],
+        opacity: [0,1],
+        easing: 'easeInOutSine',
+        delay: anime.stagger(200),
+        duration: 400,
+    }, 3000)
+    .add({
+        targets: ['.HomeHeroBg-two'],
+        scale: [0.8,1],
+        rotate: [-10,10],
+        duration: 6000,
+        easing: 'easeInQuad',
+    }, 0)
+    .add({
+        targets: ['.HomeHeroBg-two'],
+        opacity: [1,0],
+        duration: 2000,
+        easing: 'easeInOutSine',
+    }, "-=2000");
+
+
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    hero[getRandomInt(2)].play();
+
 
 
     // Animate items when visible

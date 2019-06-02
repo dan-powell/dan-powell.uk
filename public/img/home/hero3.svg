@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="830px" height="721px" viewBox="0 0 830 721" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>hero3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="67" width="280" height="150"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="border" stroke="#010101" stroke-width="20" x="287" y="42" width="300" height="620" rx="40"></rect>
+        <g id="boxes" transform="translate(297.000000, 63.000000)">
+            <rect id="Rectangle-2-Copy-11" stroke="#010101" stroke-width="3" x="212.5" y="1.5" width="57" height="57"></rect>
+            <g id="Rectangle-2-Copy-38">
+                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#010101" stroke-width="3" x="1.5" y="68.5" width="277" height="147"></rect>
+            </g>
+            <rect id="Rectangle-2-Copy-39" stroke="#010101" stroke-width="3" x="9.5" y="1.5" width="197" height="57"></rect>
+            <rect id="Rectangle-2-Copy-40" stroke="#010101" stroke-width="3" x="21.5" y="421.5" width="112" height="77"></rect>
+            <rect id="Rectangle-2-Copy-42" stroke="#010101" stroke-width="3" x="21.5" y="512.5" width="112" height="77"></rect>
+            <rect id="Rectangle-2-Copy-41" stroke="#010101" stroke-width="3" x="146.5" y="421.5" width="112" height="77"></rect>
+            <rect id="Rectangle-2-Copy-43" stroke="#010101" stroke-width="3" x="146.5" y="512.5" width="112" height="77"></rect>
+        </g>
+        <g id="icons" transform="translate(525.000000, 80.000000)" stroke="#000000" stroke-width="6" stroke-linecap="square">
+            <path d="M0.590909091,2.68965517 L24.9547151,2.68965517" id="Line"></path>
+            <path d="M0.590909091,12.5517241 L24.9547151,12.5517241" id="Line-Copy"></path>
+            <path d="M0.590909091,23.3103448 L24.9547151,23.3103448" id="Line-Copy-2"></path>
+        </g>
+        <g id="content" transform="translate(316.000000, 300.000000)" stroke="#000000">
+            <path d="M0.708870712,65.5 L152,65.5" id="Line-Copy-18" stroke-width="15"></path>
+            <path d="M0.708870712,156.5 L242,156.5" id="Line-Copy-13" stroke-width="15"></path>
+            <path d="M0.708870712,36.5 L152,36.5" id="Line-Copy-19" stroke-width="15"></path>
+            <path d="M0.708870712,97.5 L242,97.5" id="Line-Copy-20" stroke-width="15"></path>
+            <path d="M0.708870712,126.5 L242,126.5" id="Line-Copy-21" stroke-width="15"></path>
+            <path d="M0.708870712,7.5 L152,7.5" id="Line-Copy-22" stroke-width="15"></path>
+            <rect id="Rectangle-Copy" stroke-width="10" x="169" y="5" width="67" height="65"></rect>
+        </g>
+        <g id="labels" transform="translate(145.000000, 37.000000)">
+            <g id="Group-14" transform="translate(0.000000, 5.000000)">
+                <path d="M88.2716271,33.9381314 L80.9863409,41.5513351 L99.9238409,43.1450851 L89.9980596,32.4146164 C89.9980596,55.38432 84.4033349,69.5692331 76.2190337,78.1507509" id="Path-2-Copy-17" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(88.071437, 55.282684) rotate(-271.000000) translate(-88.071437, -55.282684) "></path>
+                <text id="logo" transform="translate(26.971611, 23.871859) rotate(19.000000) translate(-26.971611, -23.871859) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="4.47161065" y="41.3718585">logo</tspan>
+                </text>
+            </g>
+            <g id="Group-12" transform="translate(470.000000, 274.000000)">
+                <path d="M25.3566743,56.0226819 L18.0713881,63.6358855 L37.0088881,65.2296355 L27.0831069,54.4991668 C27.0831069,77.4688704 21.4883821,91.6537835 13.304081,100.235301" id="Path-2-Copy-21" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(25.156485, 77.367234) scale(-1, 1) rotate(-255.000000) translate(-25.156485, -77.367234) "></path>
+                <text id="body-text" transform="translate(81.273019, 35.034358) rotate(19.000000) translate(-81.273019, -35.034358) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="25.2730193" y="52.5343579">body text</tspan>
+                </text>
+            </g>
+            <g id="Group-11" transform="translate(477.000000, 514.000000)">
+                <path d="M25.8846132,-4.39763847 L18.599327,3.21556521 L37.536827,4.80931521 L27.6110458,-5.92115354 C27.6110458,17.0485501 22.016321,31.2334632 13.8320199,39.814981" id="Path-2-Copy-15" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(25.684423, 16.946914) rotate(-78.000000) translate(-25.684423, -16.946914) "></path>
+                <text id="portfolio-items-copy-2" transform="translate(63.500000, 68.727379) rotate(-18.000000) translate(-63.500000, -68.727379) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="9" y="68.7273793">portfolio </tspan>
+                    <tspan x="26.622" y="103.727379">items</tspan>
+                </text>
+            </g>
+            <g id="Group-15" transform="translate(3.000000, 151.000000)">
+                <path d="M95.1483606,-4.65172911 L87.8630744,2.96147457 L106.800574,4.55522457 L96.8747932,-6.17524418 C96.8747932,16.7944594 91.2800684,30.9793726 83.0957673,39.5608903" id="Path-2-Copy-18" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(94.948171, 16.692823) scale(-1, 1) rotate(-103.000000) translate(-94.948171, -16.692823) "></path>
+                <text id="hero-image" transform="translate(46.078838, 46.810889) rotate(30.000000) translate(-46.078838, -46.810889) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="18.9468383" y="46.8108891">hero</tspan>
+                    <tspan x="13.0788383" y="81.8108891">image</tspan>
+                </text>
+            </g>
+            <g id="Group-13" transform="translate(470.000000, 0.000000)">
+                <path d="M23.657224,26.6884302 L16.3719378,34.3016339 L35.3094378,35.8953839 L25.3836566,25.1649152 C25.3836566,48.1346188 19.7889318,62.3195319 11.6046307,70.9010497" id="Path-2-Copy-19" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(23.457034, 48.032982) scale(-1, 1) rotate(-267.000000) translate(-23.457034, -48.032982) "></path>
+                <text id="menu-button" transform="translate(100.161147, 46.441444) rotate(19.000000) translate(-100.161147, -46.441444) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="69.151147" y="46.4414445">menu</tspan>
+                    <tspan x="59.161147" y="81.4414445">button</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

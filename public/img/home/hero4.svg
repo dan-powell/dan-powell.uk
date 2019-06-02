@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="830px" height="720px" viewBox="0 0 830 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>hero4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="head" transform="translate(172.000000, 127.000000)" fill="#8D8D8D">
+            <ellipse id="Oval-2-Copy-3" cx="255" cy="253" rx="255" ry="200"></ellipse>
+            <polygon id="Triangle-2-Copy" points="451.725798 0 331 72.024905 464.720589 140.515473"></polygon>
+            <polygon id="Triangle-2-Copy-2" points="58.9947902 0 179.720589 72.024905 46 140.515473"></polygon>
+        </g>
+        <ellipse id="snout" stroke="#979797" fill="#DFDFDF" cx="427.046875" cy="470.021101" rx="158.046875" ry="77.6119403"></ellipse>
+        <g id="eyebrows" transform="translate(257.000000, 287.000000)" stroke="#000000" stroke-width="5" fill="#D8D8D8">
+            <ellipse id="Oval-2-Copy" cx="296.84375" cy="17.3559707" rx="39.84375" ry="17.3559707"></ellipse>
+            <ellipse id="Oval-2-Copy-2" cx="39.84375" cy="21.3559707" rx="39.84375" ry="17.3559707"></ellipse>
+        </g>
+        <g id="eyes" transform="translate(275.000000, 336.000000)" fill="#000000">
+            <ellipse id="Oval-3" cx="21.9140625" cy="22.0287321" rx="21.9140625" ry="22.0287321"></ellipse>
+            <ellipse id="Oval-3-Copy" cx="275.914062" cy="22.0287321" rx="21.9140625" ry="22.0287321"></ellipse>
+        </g>
+        <g id="ears" transform="translate(248.000000, 162.000000)" stroke-width="6" stroke="#FFFFFF" fill="#D8D8D8">
+            <polygon id="Triangle-2-Copy" points="351.230052 -3.79451043e-14 283 40.7059891 358.574259 79.4144926"></polygon>
+            <polygon id="Triangle-2-Copy-2" points="7.15984577 1 73.6771256 40.6841506 0 78.4209584"></polygon>
+        </g>
+        <path d="M382.544199,501.292112 C382.544199,522.591401 385.515578,540.238847 410.067892,543.182036 C434.620207,546.125226 467.137063,499.266491 467.137063,499.266491 C467.137063,499.266491 446.198194,499.266491 427.696687,487.324157 C416.301554,495.510266 382.544199,501.292112 382.544199,501.292112 Z" id="tongue" fill="#7D7D7D"></path>
+        <g id="mouth" transform="translate(308.000000, 455.000000)" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M120,1.25488137 L120,32.5051967 C120,32.5051967 137.3289,45.341818 174.330858,45.2591255 C211.332816,45.176433 238.485105,7.32096979 238.485105,7.32096979" id="Path-4"></path>
+            <path d="M118.485105,0.136938419 L118.485105,31.3872538 C118.485105,31.3872538 101.156205,44.2238751 64.1542471,44.1411825 C27.1522891,44.05849 0,6.20302684 0,6.20302684" id="Path-4"></path>
+        </g>
+        <ellipse id="nose" fill="#000000" cx="426.78125" cy="445.736708" rx="55.78125" ry="29.8507463"></ellipse>
+        <g id="labels" transform="translate(38.000000, 55.000000)">
+            <g id="Group-27" transform="translate(313.000000, 0.000000)">
+                <path d="M153.978968,69.7919818 L146.693682,77.4051855 L165.631182,78.9989355 L155.705401,68.2684668 C155.705401,91.2381704 150.110676,105.423084 141.926375,114.004601" id="Path-2-Copy-13" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(153.778778, 91.136534) rotate(-220.000000) translate(-153.778778, -91.136534) "></path>
+                <path d="M61.1428567,38.458924 L53.8575705,58.4340367 L72.7950705,62.6156319 L62.8692893,34.4616074 C62.8692893,94.7282754 57.2745645,131.945884 49.0902634,154.461607" id="Path-2-Copy-5" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(60.942667, 94.461607) scale(-1, 1) rotate(-254.000000) translate(-60.942667, -94.461607) "></path>
+                <text id="listeners" transform="translate(148.918890, 33.221308) rotate(19.000000) translate(-148.918890, -33.221308) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="97.9188901" y="50.7213076">listeners</tspan>
+                </text>
+            </g>
+            <g id="Group-24" transform="translate(305.000000, 491.000000)">
+                <path d="M33.1481143,3.69007363 L25.8628281,11.3032773 L44.8003281,12.8970273 L34.8745469,2.16655856 C34.8745469,25.1362622 29.2798221,39.3211753 21.095521,47.9026931" id="Path-2-Copy-7" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(32.947925, 25.034626) scale(-1, 1) rotate(-401.000000) translate(-32.947925, -25.034626) "></path>
+                <text id="blep" font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="0" y="86">blep</tspan>
+                </text>
+            </g>
+            <g id="Group-24-Copy" transform="translate(460.000000, 462.000000)">
+                <path d="M21.6531945,4.40246938 L14.3679083,12.0156731 L33.3054083,13.6094231 L23.3796271,2.87895431 C23.3796271,25.8486579 17.7849023,40.0335711 9.60060118,48.6150888" id="Path-2-Copy-7" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(21.453005, 25.747022) scale(-1, 1) rotate(-331.000000) translate(-21.453005, -25.747022) "></path>
+                <text id="borker" transform="translate(67.970478, 52.758991) rotate(-29.000000) translate(-67.970478, -52.758991) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="27.9704778" y="70.2589912">borker</tspan>
+                </text>
+            </g>
+            <g id="Group-25" transform="translate(79.000000, 303.000000)">
+                <path d="M87.1804483,27.9950522 L97.7598734,39.6348644 L99.4412996,24.1803053 L87.132298,28.0691971 C162.040158,45.7503281 215.703491,131.399053 217.294143,168.311453" id="Path-2-Copy-14" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(152.213221, 96.245879) scale(-1, 1) rotate(-33.000000) translate(-152.213221, -96.245879) "></path>
+                <text id="booper" transform="translate(43.518186, 140.569301) rotate(19.000000) translate(-43.518186, -140.569301) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="3.51818573" y="158.069301">booper</tspan>
+                </text>
+            </g>
+            <g id="Group-26" transform="translate(0.000000, 242.000000)">
+                <path d="M158.662453,14.0714646 L153.261404,32.0127022 L167.300985,35.7685255 L159.942368,10.4811566 C159.942368,64.611445 155.79464,98.0395402 149.727094,118.262702" id="Path-2-Copy-11" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(158.514039, 64.371929) rotate(-276.000000) translate(-158.514039, -64.371929) "></path>
+                <text id="peeper-one" transform="translate(47.627149, 46.418165) rotate(19.000000) translate(-47.627149, -46.418165) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="9.62714858" y="46.4181649">peeper</tspan>
+                    <tspan x="26.9611486" y="81.4181649">one</tspan>
+                </text>
+            </g>
+            <g id="Group-23" transform="translate(548.000000, 341.000000)">
+                <path d="M2.36650225,3.34041667 L14.7194147,19.089725 L25.3443779,8.00425102 L2.27373675e-13,0 C45.905088,32.0678386 72.0557597,55.8036278 85.9906638,73.5366781" id="Path-2-Copy-12" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <text id="peeper-two" transform="translate(112.845092, 87.379912) rotate(-53.000000) translate(-112.845092, -87.379912) " font-family="Caveat-Regular, Caveat" font-size="36" font-weight="normal" line-spacing="35" fill="#000000">
+                    <tspan x="74.8450923" y="87.3799123">peeper</tspan>
+                    <tspan x="90.8650923" y="122.379912">two</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
