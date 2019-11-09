@@ -56,8 +56,9 @@
             @component('sidebar.components.item')
                 @slot('url', $item['url'] ?? null)
                 @slot('icon', $item['icon'] ?? null)
+                @slot('prefix', $item['prefix'] ?? null)
                 @slot('label', $item['label'] ?? null)
-                @slot('description', $item['description'] ?? null)
+                @slot('suffix', $item['suffix'] ?? null)
                 @slot('items', $item['items'] ?? null)
             @endcomponent
         @endforeach

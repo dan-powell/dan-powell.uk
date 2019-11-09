@@ -9,19 +9,21 @@ return [
             'url' => '/',
         ],
         [
+            'prefix' => 'Professional',
             'label' => 'Portfolio',
-            'description' => 'My work',
+            'suffix' => null,
             'icon' => 'img/sidebar/icons.svg#design',
             'url' => ['portfolio.index'],
-            'items' => [
-                [
-                    'label' => 'Portfolio',
-                    // 'icon' => 'img/sidebar/icons.svg#design',
-                    'url' => ['portfolio.index'],
-                ]
-            ],
+            // 'items' => [
+            //     [
+            //         'label' => 'Portfolio',
+            //         // 'icon' => 'img/sidebar/icons.svg#design',
+            //         'url' => ['portfolio.index'],
+            //     ]
+            // ],
         ],
         [
+            'prefix' => 'Personal',
             'label' => 'Projects',
             'icon' => 'img/sidebar/icons.svg#projects',
             'url' => ['projects.index'],

@@ -71,5 +71,7 @@ Route::domain('{project}.' . config('app.domain'))->name('project.')->group(func
 
 });
 
+Route::get('assets/{path}', 'Main\AssetController@asset')->where('path', '.*');
+
 // Images (works on any domain)
 Route::get(config('images.route') . '/{path}', 'ImageController@show')->where('path', '.*');

@@ -32,6 +32,7 @@ return [
         'kudu-travel' => [
             'name' => 'Kudu Travel',
             'thumb' => 'portfolio/kudu-travel/thumb.jpg',
+            'logo' => 'assets/portfolio/kudu-travel/logo.svg',
             'description' => 'Kudu Travel is a tour company with a strong emphasis on walking, local culture, history and nature.',
             'view' => 'main.portfolio.show.kudutravel',
             'items' => [],

@@ -6,9 +6,12 @@
             </svg>
         @endisset
         <span class="Nav-link-inner">
+            @isset($prefix)
+                <small class="Nav-link-description">{{ $prefix }}</small>
+            @endif
             <p class="Nav-link-label">{{ $label }}</p>
-            @isset($description)
-                <small class="Nav-link-description">{{ $description }}</small>
+            @isset($suffix)
+                <small class="Nav-link-description">{{ $suffix }}</small>
             @endif
         </span>
         @isset($items)
@@ -17,8 +20,9 @@
                     @component('sidebar.components.item')
                         @slot('url', $item['url'] ?? null)
                         @slot('icon', $item['icon'] ?? null)
+                        @slot('prefix', $item['prefix'] ?? null)
                         @slot('label', $item['label'] ?? null)
-                        @slot('description', $item['description'] ?? null)
+                        @slot('suffix', $item['suffix'] ?? null)
                         @slot('items', $item['items'] ?? null)
                     @endcomponent
                 @endforeach

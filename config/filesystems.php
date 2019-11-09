@@ -53,6 +53,11 @@ return [
             'root' => storage_path('images'),
         ],
 
+        'assets' => [
+            'driver' => 'local',
+            'root' => storage_path('assets'),
+        ],
+
         'project_images' => [
             'driver' => 'local',
             'root' => storage_path('project_images'),

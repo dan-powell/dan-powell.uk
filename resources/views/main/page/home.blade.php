@@ -21,16 +21,7 @@
             <img class="HomeIntro-wave-img" src="{{ asset('/img/dan_powell_profile.svg') }}" alt="A Cartoon style profile picture of Dan Powell">
         </div>
     </section>
-    <section class="HomeHero">
-        <div class="HomeHero-inner">
-		    <h2 class="HomeHero-heading">
-		    	<span class="HomeHero-text HomeHero-text--one">I design and build</span>
-				<span class="HomeHero-text HomeHero-text--two">websites</span>
-				<span class="HomeHero-text HomeHero-text--three">&amp; other stuff&hellip;</span>
-		    </h2>
-	    </div>
-        @include('main.page.home_hero')
-    </section>
+    @include('main.page.home_hero')
     @if(count($portfolio))
         <section class="Home-portfolio">
             @include('main.portfolio.list_hero', ['items' => $portfolio])
