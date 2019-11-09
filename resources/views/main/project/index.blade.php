@@ -25,7 +25,7 @@
 
             @if(isset($tags) && count($tags) > 0)
                 @foreach($tags as $tag)
-                    <button class="Button" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag['name']) }}'})">{{ $tag['name'] }}</button>
+                    <button class="Button" data-filter=".project" onclick="iso.arrange({filter: '.-{{ Str::slug($tag['name']) }}'})">{{ $tag['name'] }}</button>
                 @endforeach
             @endif
 
@@ -45,8 +45,8 @@
 
                 	@if(isset($tags) && count($tags) > 0)
                         @foreach($tags as $tag)
-                            <div class="ProjectList-column ProjectList--{{ str_slug($tag['name']) }} ProjectList--type" data-order-type="-{{ str_slug($tag['name']) }}" data-order-created="0000">
-                                <a class="Project Project--divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ str_slug($tag['name']) }}'})">
+                            <div class="ProjectList-column ProjectList--{{ Str::slug($tag['name']) }} ProjectList--type" data-order-type="-{{ Str::slug($tag['name']) }}" data-order-created="0000">
+                                <a class="Project Project--divider" data-filter=".project" onclick="iso.arrange({filter: '.-{{ Str::slug($tag['name']) }}'})">
                                     <img src="{{ url('/') }}/img/logo_symbol.svg" onerror="this.onerror=null; this.src='{{ url('/') }}/img/logo_symbol.png'" alt="{{ $project['name'] }}"/>
                                     <div class="Project-titleWrapper">
                     	                <h3 class="Project-title">{{ $tag['name'] }}&nbsp;</h3>
