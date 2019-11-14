@@ -2,18 +2,23 @@
     Additional content styles for different contexts.
     Useful for overriding element colours in areas with differing background colours.
     ========================================================================= */
+
 .contentStyle .dark {
   color: rgba(0, 0, 0, 0.6);
 }
+
 .contentStyle .dark p {
   color: rgba(0, 0, 0, 0.6);
 }
+
 .contentStyle .dark a {
   color: #ed913d;
 }
+
 .contentStyle .dark a:hover {
   color: #b35e11;
 }
+
 .contentStyle .dark h1,
 .contentStyle .dark h2,
 .contentStyle .dark h3,
@@ -23,6 +28,7 @@
   color: rgba(0, 0, 0, 0.6);
   text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
 }
+
 .contentStyle .dark h1 small,
 .contentStyle .dark h2 small,
 .contentStyle .dark h3 small,
@@ -31,27 +37,35 @@
 .contentStyle .dark h6 small {
   color: rgba(204, 204, 204, 0.6);
 }
+
 .contentStyle .dark blockquote {
   color: rgba(0, 0, 0, 0.6);
 }
+
 .contentStyle .dark hr {
   border-top: rgba(0, 0, 0, 0.6) 2px dotted;
 }
+
 .contentStyle .dark table {
   color: rgba(0, 0, 0, 0.6);
 }
+
 .contentStyle .light {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .light p {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .light a {
   color: #ed913d;
 }
+
 .contentStyle .light a:hover {
   color: #b35e11;
 }
+
 .contentStyle .light h1,
 .contentStyle .light h2,
 .contentStyle .light h3,
@@ -60,6 +74,7 @@
 .contentStyle .light h6 {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .light h1 small,
 .contentStyle .light h2 small,
 .contentStyle .light h3 small,
@@ -68,27 +83,35 @@
 .contentStyle .light h6 small {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .light blockquote {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .light hr {
   border-top: rgba(255, 255, 255, 0.2) 2px dotted;
 }
+
 .contentStyle .light table {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white p {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white a {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white a:hover {
   text-decoration: none;
 }
+
 .contentStyle .white h1,
 .contentStyle .white h2,
 .contentStyle .white h3,
@@ -97,6 +120,7 @@
 .contentStyle .white h6 {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white h1 small,
 .contentStyle .white h2 small,
 .contentStyle .white h3 small,
@@ -105,25 +129,32 @@
 .contentStyle .white h6 small {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white blockquote {
   color: rgba(255, 255, 255, 0.9);
 }
+
 .contentStyle .white hr {
   border-top: rgba(255, 255, 255, 0.2) 2px dotted;
 }
+
 .contentStyle .white table {
   color: rgba(255, 255, 255, 0.9);
 }
+
 /*  ====== Content ======
     Apply 'Content' class to blocks of content.
     Useful for user-provided markup (TinyMCE etc.)
     ========================================================================= */
+
 .Content > *:last-child {
   margin-bottom: 0;
 }
+
 .Content p {
   margin-bottom: 1em;
 }
+
 .Content a {
   display: inline-block;
   font-weight: bold;
@@ -131,16 +162,20 @@
   color: #e27715;
   border-bottom: 1px solid transparent;
 }
+
 .Content a:hover {
   color: #4D78C9;
   border-bottom: 1px solid #333;
 }
+
 .Content a:hover img {
   opacity: 0.6;
 }
+
 .Content a img {
   transition: opacity 0.2s ease-in-out;
 }
+
 .Content h1,
 .Content h2,
 .Content h3,
@@ -148,94 +183,119 @@
 .Content h5 {
   margin-bottom: 20px;
 }
+
 .Content ol li,
 .Content ul li {
   margin-bottom: 10px;
 }
+
 .Content ol.list-spaced li,
 .Content ul.list-spaced li {
   margin-bottom: 27px;
 }
+
 .Content blockquote {
   margin-bottom: 1em;
 }
+
 .u-grid {
   display: flex;
   flex-wrap: wrap;
 }
+
 .u-grid > * {
   flex: 0 1 auto;
 }
+
 .u-clearfix:before,
 .u-clearfix:after {
   content: " ";
   display: table;
 }
+
 .u-clearfix:after {
   clear: both;
 }
+
 img.u-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/*  ********* utilities.less *********
+
+/*  ********* utilities *********
     A bunch of useful classes designed to be re-used
     ************************************************************************* */
+
 .u-heading {
   text-align: center;
   font-size: 2em;
   line-height: 1.2;
   color: rgba(0, 0, 0, 0.4);
-  text-shadow: #ffffff 1px 1px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
+  text-shadow: white 1px 1px 1px, rgba(0, 0, 0, 0.2) -1px -1px 1px;
 }
+
 .u-heading--alt {
   line-height: 1;
   color: rgba(0, 0, 0, 0.4);
   text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
+
 .u-lead {
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: 300;
 }
+
 /*  --- Text Style Utilities ---
     ------------------------------------------------------------------------- */
+
 .u-left {
   text-align: left;
 }
+
 .u-center {
   text-align: center;
 }
+
 .u-right {
   text-align: right;
 }
+
 /*  --- Use to hide or display items depending on JS support ---
     ------------------------------------------------------------------------- */
+
 .no-js-show {
   display: none !important;
 }
+
 .no-js .no-js-hide {
   display: none !important;
 }
+
 .no-js .no-js-show {
   display: block !important;
 }
+
 /*  --- Text Style Utilities ---
     ------------------------------------------------------------------------- */
+
 .u-left {
   text-align: left;
 }
+
 .u-center {
   text-align: center;
 }
+
 .u-right {
   text-align: right;
 }
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -243,6 +303,7 @@ img.u-center {
   line-height: 1;
   vertical-align: baseline;
 }
+
 body {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -250,33 +311,40 @@ body {
   color: #333;
   font-size: 20px;
 }
+
 @media screen and (max-width: 1024px) {
   body {
     font-size: 18px;
   }
 }
+
 @media screen and (max-width: 640px) {
   body {
     font-size: 16px;
   }
 }
+
 p {
   margin: 0;
   padding: 0;
   line-height: 1.4;
 }
+
 a {
   font-weight: bold;
   color: #ed913d;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
+
 a:hover {
   color: #b35e11;
   text-decoration: none;
 }
+
 /*  --- Headings ---
     ------------------------------------------------------------------------- */
+
 h1,
 h2,
 h3,
@@ -285,92 +353,117 @@ h5,
 h6 {
   color: #555;
   line-height: 1.4;
-  font-family: 'Nunito', serif;
+  font-family: "Nunito", serif;
 }
+
 h1 {
   font-size: 51.4098px;
 }
+
 h2 {
   font-size: 39.546px;
 }
+
 h3 {
   font-size: 30.42px;
 }
+
 h4 {
   font-size: 23.4px;
 }
+
 h5 {
   font-size: 18px;
 }
+
 h6 {
   font-size: 18px;
 }
+
 @media only screen and (max-width: 640px) {
   h1 {
     font-size: 41.12784px;
   }
+
   h2 {
     font-size: 31.6368px;
   }
+
   h3 {
     font-size: 24.336px;
   }
+
   h4 {
     font-size: 18.72px;
   }
+
   h5 {
     font-size: 14.4px;
   }
+
   h6 {
     font-size: 14.4px;
   }
 }
+
 /*  --- Lists ---
     ------------------------------------------------------------------------- */
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 ul li {
   margin-bottom: 0.5em;
   margin-left: 1em;
 }
+
 dl dt {
   font-weight: bold;
 }
+
 dl dd {
   margin-bottom: 10px;
 }
+
 /*  --- Blockquote ---
     ------------------------------------------------------------------------- */
+
 blockquote {
   display: inline-block;
-  font-family: 'Caveat', Georgia, serif;
+  font-family: "Caveat", Georgia, serif;
   font-style: normal;
   font-size: 3em;
   line-height: 1.2;
   color: #636363;
-  background-image: url('/img/blockquote_open.svg'), url('/img/blockquote_close.svg');
+  background-image: url("/img/blockquote_open.svg"), url("/img/blockquote_close.svg");
   background-position: left top, right bottom;
   background-repeat: no-repeat;
   margin: 0;
   padding: 15px 30px;
 }
+
 blockquote p {
   margin-bottom: 0 !important;
 }
+
 blockquote cite {
   font-style: italic;
   font-size: 24px;
 }
+
 blockquote cite::before {
-  content: '-- ';
+  content: "-- ";
 }
+
 /*  --- Horizontal Rule ---
     ------------------------------------------------------------------------- */
+
 hr {
   border-top: rgba(0, 0, 0, 0.2) 2px dotted;
 }
+
 hr.spacer {
   padding: 0;
   margin: 0;
@@ -378,25 +471,32 @@ hr.spacer {
   width: 1em;
   visibility: hidden;
 }
+
 hr.spacer.-sm {
   height: 0.5em;
 }
+
 hr.spacer.-lg {
   height: 2em;
 }
+
 hr.spacer.-xl {
   height: 3em;
 }
+
 /*  --- Media ---
     ------------------------------------------------------------------------- */
+
 img {
   display: block;
   border: none;
   max-width: 100%;
   height: auto;
 }
+
 /*  --- Code & Pre ---
     ------------------------------------------------------------------------- */
+
 code {
   display: inline-block;
   color: rgba(255, 255, 255, 0.8);
@@ -406,22 +506,28 @@ code {
   white-space: pre-wrap;
   text-align: left;
 }
+
 pre code {
   padding: 30px 40px;
   margin: 10px;
   border-radius: 10px;
 }
+
 /*  --- Table ---
     ------------------------------------------------------------------------- */
+
 table {
   width: 100%;
 }
+
 table th {
   background: rgba(0, 0, 0, 0.2);
   text-align: left;
 }
+
 table td,
 table th {
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+

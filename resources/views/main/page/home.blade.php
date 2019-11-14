@@ -22,18 +22,18 @@
         </div>
     </section>
     @include('main.page.home_hero')
-    @if(count($portfolio))
+    {{-- @if(count($portfolio))
         <section class="Home-portfolio">
             @include('main.portfolio.list_hero', ['items' => $portfolio])
         </section>
-    @endif
+    @endif --}}
     {{-- @if(count($projects))
         <section class="Home-projects">
             <h3><a href="{{ route('projects.index') }}">Projects</a></h3>
             @include('main.project.list', ['items' => $projects])
         </section>
     @endif --}}
-    {{-- <section class="Section Section--primary Section--cta Section--md">
+    {{-- <section class="Section Section--primary Section--cta Section--md" style="padding: 4em;">
 	    <div class="Section-container Page-cta">
             <div class="Page-cta-column">
                 <a href="{{ route('page', 'experience') }}" class="Button Button--cta">

@@ -1,7 +1,7 @@
 // Reset
 * {
     box-sizing: border-box;
-    font-family: @font-family;
+    font-family: $font-family;
     margin: 0;
     padding: 0;
     border: 0;
@@ -12,14 +12,14 @@
 body {
     text-rendering: optimizelegibility; // Fix the character spacing for headings
     -webkit-font-smoothing: antialiased;
-    background: @theme-bg;
-    color: @text-color;
-    font-size: @font-size-base-lg;
-    @media screen and (max-width: @screen-md) {
-        font-size: @font-size-base-md;
+    background: $theme-bg;
+    color: $text-color;
+    font-size: $font-size-base-lg;
+    @media screen and (max-width: $screen-md) {
+        font-size: $font-size-base-md;
     }
-    @media screen and (max-width: @screen-sm) {
-        font-size: @font-size-base-sm;
+    @media screen and (max-width: $screen-sm) {
+        font-size: $font-size-base-sm;
     }
 }
 p {
@@ -29,35 +29,35 @@ p {
 }
 a {
     font-weight: bold;
-    color: @link-color;
+    color: $link-color;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     &:hover {
-        color: darken(@link-color, 20%);
+        color: darken($link-color, 20%);
         text-decoration: none;
     }
 }
 /*  --- Headings ---
     ------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-    color: @heading-color;
+    color: $heading-color;
     line-height: 1.4;
-    font-family: @font-family-heading;
+    font-family: $font-family-heading;
 }
-h1 { font-size: @h1; }
-h2 { font-size: @h2; }
-h3 { font-size: @h3; }
-h4 { font-size: @h4; }
-h5 { font-size: @h5; }
-h6 { font-size: @h6; }
+h1 { font-size: $h1; }
+h2 { font-size: $h2; }
+h3 { font-size: $h3; }
+h4 { font-size: $h4; }
+h5 { font-size: $h5; }
+h6 { font-size: $h6; }
 
-@media only screen and (max-width: @screen-sm) {
-    h1 { font-size: @h1*0.8; }
-    h2 { font-size: @h2*0.8; }
-    h3 { font-size: @h3*0.8; }
-    h4 { font-size: @h4*0.8; }
-    h5 { font-size: @h5*0.8; }
-    h6 { font-size: @h6*0.8; }
+@media only screen and (max-width: $screen-sm) {
+    h1 { font-size: $h1*0.8; }
+    h2 { font-size: $h2*0.8; }
+    h3 { font-size: $h3*0.8; }
+    h4 { font-size: $h4*0.8; }
+    h5 { font-size: $h5*0.8; }
+    h6 { font-size: $h6*0.8; }
 }
 
 /*  --- Lists ---
@@ -83,7 +83,7 @@ dl {
     ------------------------------------------------------------------------- */
 blockquote {
     display: inline-block;
-    font-family: @font-family-serif;
+    font-family: $font-family-serif;
     font-style: normal;
     font-size: 3em;
     line-height: 1.2;
@@ -112,20 +112,20 @@ hr {
     &.spacer {
         padding: 0;
         margin: 0;
-        height: @spacer;
-        width: @spacer;
+        height: $spacer;
+        width: $spacer;
         visibility: hidden;
 
         &.-sm {
-            height: @spacer/2;
+            height: $spacer/2;
         }
 
         &.-lg {
-            height: @spacer*2;
+            height: $spacer*2;
         }
 
         &.-xl {
-            height: @spacer*3;
+            height: $spacer*3;
         }
     }
 }

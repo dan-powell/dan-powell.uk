@@ -15,11 +15,11 @@ if (mix.inProduction()) {
     mix.version();
 }
 
-mix.less('resources/styles/base/base.less', 'public/css/base.css')
-    .less('resources/styles/main/base.less', 'public/css/main.css')
-    .less('resources/styles/sidebar/base.less', 'public/css/sidebar.css')
-    .less('resources/styles/projects/365/base.less', 'public/css/projects/365.css')
-    .less('resources/styles/projects/fungifalls/base.less', 'public/css/projects/fungifalls.css')
+mix.sass('resources/styles/base/base.scss', 'public/css/base.css')
+    .sass('resources/styles/main/base.scss', 'public/css/main.css')
+    .sass('resources/styles/sidebar/base.scss', 'public/css/sidebar.css')
+    .sass('resources/styles/projects/365/base.scss', 'public/css/projects/365.css')
+    .sass('resources/styles/projects/fungifalls/base.scss', 'public/css/projects/fungifalls.css')
     .options({
 
     });

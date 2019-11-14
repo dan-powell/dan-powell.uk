@@ -1,6 +1,6 @@
 .Page {
 
-	&&--skills & {
+	&--skills & {
 
 		&-grid {
 			display: flex;
@@ -21,15 +21,15 @@
 				}
 
 				&--color1 {
-					background: @theme-primary;
+					background: $theme-primary;
 				}
 
 				&--color2 {
-					background: @theme-secondary;
+					background: $theme-secondary;
 				}
 
 				&--color3 {
-					background: @theme-tertiary;
+					background: $theme-tertiary;
 				}
 
 				&--noPadding {
@@ -74,7 +74,7 @@
 
 			}
 
-			@media screen and (max-width: @screen-md) {
+			@media screen and (max-width: $screen-md) {
 
 				&-item {
 

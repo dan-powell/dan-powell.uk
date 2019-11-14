@@ -1,5 +1,28 @@
 @if(isset($items) && count($items))
 <div class="PortfolioListHero">
+
+    <h2 style="width: 100%; text-align: center; padding: 1em; color: #fff;">Portfolio Items</h2>
+
+    @foreach($items as $key => $item)
+        <div class="PortfolioListHero-item PortfolioListHero-item--{{$loop->iteration}}">
+            @include('main.portfolio.excerpt', ['item' => $item, 'slug' => $key])
+        </div>
+    @endforeach
+    @foreach($items as $key => $item)
+        <div class="PortfolioListHero-item PortfolioListHero-item--{{$loop->iteration}}">
+            @include('main.portfolio.excerpt', ['item' => $item, 'slug' => $key])
+        </div>
+    @endforeach
+    @foreach($items as $key => $item)
+        <div class="PortfolioListHero-item PortfolioListHero-item--{{$loop->iteration}}">
+            @include('main.portfolio.excerpt', ['item' => $item, 'slug' => $key])
+        </div>
+    @endforeach
+    @foreach($items as $key => $item)
+        <div class="PortfolioListHero-item PortfolioListHero-item--{{$loop->iteration}}">
+            @include('main.portfolio.excerpt', ['item' => $item, 'slug' => $key])
+        </div>
+    @endforeach
     @foreach($items as $key => $item)
         <div class="PortfolioListHero-item PortfolioListHero-item--{{$loop->iteration}}">
             @include('main.portfolio.excerpt', ['item' => $item, 'slug' => $key])

@@ -13,6 +13,7 @@ return [
     'items' => [
         'character-creations' => [
             'name' => 'Character Creations',
+            'sub' => 'Website Design & Development',
             'thumb' => 'portfolio/character-creations/thumb.png',
             'description' => '',
             'view' => 'main.portfolio.show.kudutravel',

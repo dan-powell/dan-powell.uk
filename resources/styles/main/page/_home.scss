@@ -39,7 +39,7 @@
             border-radius: 100%;
             padding: .5em 1em;
             box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
             text-align: center;
             line-height: 1;
             color: rgba(0, 0, 0, 0.6);
@@ -69,7 +69,7 @@
         &-sub {
             font-size: 0.8em;
             display: block;
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
         }
     }
     &-wave {
@@ -90,12 +90,12 @@
             display: block;
         }
     }
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: $screen-md) {
         &-heading {
             font-size: 2.8em;
         }
     }
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: $screen-sm) {
         padding-top: 0em;
         flex-direction: column;
         &-speech {
@@ -120,7 +120,7 @@
     position: relative;
     padding: 3em;
     text-align: left;
-    background: linear-gradient(saturate(lighten(rgba(red(@theme-primary), green(@theme-primary), blue(@theme-primary), 1), 15%), 20%), rgba(red(@theme-primary), green(@theme-primary), blue(@theme-primary), 1));
+    background: linear-gradient(saturate(lighten(rgba(red($theme-primary), green($theme-primary), blue($theme-primary), 1), 15%), 20%), rgba(red($theme-primary), green($theme-primary), blue($theme-primary), 1));
     overflow: hidden;
     &-container {
         max-width: 1280px;
@@ -150,19 +150,19 @@
         display: block;
         &--one {
             font-size: 0.6em;
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
         }
         &--two {
             text-transform: uppercase;
-            font-family: @font-family-heading;
+            font-family: $font-family-heading;
             padding-top: 0.1em;
         }
         &--three {
             font-size: 0.6em;
-            font-family: @font-family-serif;
+            font-family: $font-family-serif;
         }
     }
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: $screen-md) {
         &-container {
             flex-wrap: wrap;
         }
@@ -170,7 +170,7 @@
             font-size: 4em;
         }
     }
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: $screen-sm) {
         &-heading {
             font-size: 3em;
         }

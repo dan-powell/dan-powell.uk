@@ -5,18 +5,18 @@
 .contentStyle {
     // Dark text - use on light backgrounds;
     .dark {
-        @color: rgba(0, 0, 0, .6);
-        color: @color;
+        $color: rgba(0, 0, 0, .6);
+        color: $color;
         // Body Text
         p {
-            color: @color;
+            color: $color;
         }
 
         a {
-            color: @link-color;
+            color: $link-color;
 
             &:hover {
-                color: darken(@link-color, 20%);
+                color: darken($link-color, 20%);
             }
         }
         // Headings
@@ -26,40 +26,40 @@
         h4,
         h5,
         h6 {
-            color: @color;
+            color: $color;
 
             small {
-                color: lighten(@color,80%);
+                color: lighten($color,80%);
             }
             text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
         }
         // BlockQuote
         blockquote {
-            color: @color;
+            color: $color;
         }
         // Horizontal Rule
         hr {
-            border-top: @color 2px dotted;
+            border-top: $color 2px dotted;
         }
         // Tables
         table {
-            color: @color;
+            color: $color;
         }
     }
     // Light text - use on dark backgrounds;
     .light {
-        @color: rgba(255, 255, 255, 0.9);
-        color: @color;
+        $color: rgba(255, 255, 255, 0.9);
+        color: $color;
         // Body Text
         p {
-            color: @color;
+            color: $color;
         }
 
         a {
-            color: @link-color;
+            color: $link-color;
 
             &:hover {
-                color: darken(@link-color, 20%);
+                color: darken($link-color, 20%);
             }
         }
         // Headings
@@ -69,15 +69,15 @@
         h4,
         h5,
         h6 {
-            color: @color;
+            color: $color;
 
             small {
-                color: lighten(@color,80%);
+                color: lighten($color,80%);
             }
         }
         // BlockQuote
         blockquote {
-            color: @color;
+            color: $color;
         }
         // Horizontal Rule
         hr {
@@ -85,20 +85,20 @@
         }
         // Tables
         table {
-            color: @color;
+            color: $color;
         }
     }
     // Light text - use on dark backgrounds;
     .white {
-        @color: rgba(255, 255, 255, 0.9);
-        color: @color;
+        $color: rgba(255, 255, 255, 0.9);
+        color: $color;
         // Body Text
         p {
-            color: @color;
+            color: $color;
         }
 
         a {
-            color: @color;
+            color: $color;
 
             &:hover {
                 text-decoration: none;
@@ -111,15 +111,15 @@
         h4,
         h5,
         h6 {
-            color: @color;
+            color: $color;
 
             small {
-                color: lighten(@color,80%);
+                color: lighten($color,80%);
             }
         }
         // BlockQuote
         blockquote {
-            color: @color;
+            color: $color;
         }
         // Horizontal Rule
         hr {
@@ -127,7 +127,7 @@
         }
         // Tables
         table {
-            color: @color;
+            color: $color;
         }
     }
 }
@@ -149,12 +149,12 @@
         display: inline-block;
         font-weight: bold;
         position: relative;
-        color: darken(@theme-primary, 10%);
+        color: darken($theme-primary, 10%);
         border-bottom: 1px solid transparent;
 
         &:hover {
-            color: @theme-secondary;
-            border-bottom: 1px solid @text-color;
+            color: $theme-secondary;
+            border-bottom: 1px solid $text-color;
 
             img {
                 opacity: 0.6;
@@ -188,8 +188,8 @@
     }
     // BlockQuote
     blockquote {
-        margin-bottom: @spacer;
+        margin-bottom: $spacer;
     }
-    @media screen and (max-width: @screen-sm) {}
-    @media screen and (max-width:@screen-lg) {}
+    @media screen and (max-width: $screen-sm) {}
+    @media screen and (max-width:$screen-lg) {}
 }

@@ -1,4 +1,9 @@
 <a href="{{ route('portfolio.show', $slug) }}" class="PortfolioExcerpt">
+    <img
+        srcset="{{ app('image')->blur(20)->crop(800, 700)->url($item['thumb']) }} 2x"
+        src="{{ app('image')->blur(20)->crop(400, 350)->url($item['thumb']) }}"
+        alt="{{ $item['name'] }}"
+        class="PortfolioExcerpt-blur"/>
     @if(isset($marker) && !empty($marker))
         <div class="PortfolioExcerpt-marker">
             {{!! $marker !!}}
@@ -15,6 +20,7 @@
         @endif
         <h3 class="PortfolioExcerpt-title">
             {{ $item['name'] }}
+            {{ $item['sub'] ?? ''}}
         </h3>
     </div>
 </a>

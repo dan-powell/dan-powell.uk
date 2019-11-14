@@ -1,16 +1,16 @@
 // Variables
 
-@sidebar-width: 80px;
-@sidebar-height-sm: 62px;
+$sidebar-width: 80px;
+$sidebar-height-sm: 62px;
 
-@overlay-width: 600px;
+$overlay-width: 600px;
 
-@color-primary: #DC8E33;
+$color-primary: #DC8E33;
 
-@color-positive: #E2DACC;
-@color-negative: #1a1a1a;
+$color-positive: #E2DACC;
+$color-negative: #1a1a1a;
 
-@color-background: #1a1a1a;
+$color-background: #1a1a1a;
 
 .Sidebar {
 
@@ -20,7 +20,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    color: @color-positive;
+    color: $color-positive;
 
     * {
         box-sizing: border-box;
@@ -39,16 +39,16 @@
 
     a {
         text-decoration: none;
-        color: @color-positive;
+        color: $color-positive;
         transition: all .2s ease-in-out;
         &:hover {
-            color: @color-primary;
+            color: $color-primary;
         }
     }
 
     hr {
         margin: 1em 0;
-        border-bottom: 1px solid fade(@color-positive, 50%);
+        border-bottom: 1px solid fade($color-positive, 50%);
     }
 
     &-stripe {
@@ -57,11 +57,11 @@
         top: 0;
         display: flex;
         flex-direction: column;
-        width: @sidebar-width;
-        background: @color-background;
+        width: $sidebar-width;
+        background: $color-background;
         height: 100vh;
         z-index: 99999;
-        border-right: 1px solid @color-positive;
+        border-right: 1px solid $color-positive;
     }
 
     &-overlay {
@@ -70,11 +70,11 @@
         height: 100vh;
 
         width: 100%;
-        max-width: @overlay-width;
+        max-width: $overlay-width;
         left: 0;
         top: 0;
 
-        padding: 0 0 0 @sidebar-width;
+        padding: 0 0 0 $sidebar-width;
 
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
@@ -111,9 +111,9 @@
             z-index: -1;
             polygon {
                 opacity: 0;
-                fill: @color-background;
+                fill: $color-background;
                 stroke-width: 2;
-                stroke: darken(@color-background,0%);
+                stroke: darken($color-background,0%);
                 @media screen and (min-height: 900px) {
                     transform: translateX(-2em);
                 }
@@ -170,13 +170,13 @@
 
     &-button {
         border: none;
-        background: @color-background;
+        background: $color-background;
         width: 100%;
         display: flex;
         align-items: center;
         padding: 0.25em 0.25em 0 0.25em;
         // position: relative;
-        color: @color-positive;
+        color: $color-positive;
         font-weight: 300;
         outline: none;
         &-icon {
@@ -188,7 +188,7 @@
             margin: 0 auto;
             stroke-width: 0.5em;
             stroke: transparent;
-            fill: @color-positive;
+            fill: $color-positive;
             background: url('/img/sidebar/hexagon.svg') center center no-repeat;
             background-size: 100%;
             transition: all .2s ease-in-out;
@@ -204,24 +204,24 @@
             position: absolute;
             display: block;
             z-index: -1;
-            left: @sidebar-width;
+            left: $sidebar-width;
             padding: 0.75em 2em 0.75em 1em;
-            // background: linear-gradient(90deg, fade(@color-background, 100%) 50%, fade(@color-background, 0%));
-            background: @color-negative;
+            // background: linear-gradient(90deg, fade($color-background, 100%) 50%, fade($color-background, 0%));
+            background: $color-negative;
             opacity: 0;
             transform: translateX(-100%);
             transition: transform .2s ease-in, opacity .2s ease-in;
             text-align: center;
-            clip-path: polygon(0 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 0 100%);
+            clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 0 100%);
             // clip-path: polygon(1em 0, ~"calc(100% - 1em)" 0, 100% 50%, ~"calc(100% - 1em)" 100%, 1em 100%, 0 50%);
             // clip-path: polygon(1em 0, 100% 0, 100% 50%, 100% 100%, 1em 100%, 1px 50%);
-            @border: 1px solid fade(@color-positive, 75%);
-            border-top: @border;
-            border-bottom: @border;
+            $border: 1px solid fade($color-positive, 75%);
+            border-top: $border;
+            border-bottom: $border;
             // box-shadow: rgba(255,255,255,0.8) 4px 4px 10px;
         }
         &-label {
-            color: @color-positive;
+            color: $color-positive;
             white-space: nowrap;
             font-size: 1.2em;
             &--open {
@@ -237,7 +237,7 @@
         &:hover & {
             &-icon {
                 fill: transparent;
-                stroke: @color-positive;
+                stroke: $color-positive;
             }
             &-inner {
                 transform: translateX(0);
@@ -254,7 +254,7 @@
         }
         &--menu & {
             &-icon {
-                fill: @color-negative;
+                fill: $color-negative;
                 stroke-width: 0;
                 background-image: url('/img/sidebar/hexagon-fill.svg');
                 position: relative;
@@ -264,7 +264,7 @@
                     display: block;
                     height: 4px;
                     width: 1em;
-                    background: @color-negative;
+                    background: $color-negative;
                     transition: .25s ease-in-out;
                     transform-origin: center center;
                 }
@@ -273,7 +273,7 @@
         }
         &--menu:hover & {
             &-icon {
-                fill: @color-negative;
+                fill: $color-negative;
             }
         }
     }
@@ -312,7 +312,7 @@
             background: rgba(255,255,255,0.1);
         }
         &-title {
-            color: @color-positive;
+            color: $color-positive;
             line-height: 1;
             padding: 0;
             margin: 0;
@@ -353,7 +353,7 @@
     &-title {
         font-size: 2em;
         margin: 0 0 1em 0;
-        color: @color-primary;
+        color: $color-primary;
         &-h1 {
             display: block;
             font-size: 1.6em;
@@ -376,7 +376,7 @@
             font-weight: 300;
             transition: all .2s ease-in-out;
             &:hover {
-                color: @color-primary;
+                color: $color-primary;
             }
         }
     }
@@ -421,7 +421,7 @@
                 // background: url('/img/sidebar/hexagon.svg') center center no-repeat;
                 background-size: 100%;
                 transition: all .2s ease-in-out;
-                fill: @color-positive;
+                fill: $color-positive;
             }
             &-text {
                 flex: 0 1 auto;
@@ -430,7 +430,7 @@
             }
             &:hover & {
                 &-icon {
-                    fill: @color-primary;
+                    fill: $color-primary;
                 }
             }
         }
@@ -446,7 +446,7 @@
 }
 
 body {
-    padding-left: @sidebar-width;
+    padding-left: $sidebar-width;
 }
 
 
@@ -481,7 +481,7 @@ body {
 @media screen and (max-width: 768px) {
     body {
         padding-left: 0;
-        padding-top: @sidebar-height-sm;
+        padding-top: $sidebar-height-sm;
     }
     body.has-openSidebar {
         height: 100vh;
@@ -492,15 +492,15 @@ body {
             flex-direction: row;
             justify-content: flex-end;
             width: 100vw;
-            height: @sidebar-height-sm / 2;
+            height: $sidebar-height-sm / 2;
 
             border-right: 0;
-            border-bottom: 1px solid @color-positive;
+            border-bottom: 1px solid $color-positive;
             padding: 0 .5em;
         }
         &-overlay {
             width: 100vw;
-            padding: @sidebar-height-sm/2 0 0 0;
+            padding: $sidebar-height-sm/2 0 0 0;
             &-inner {
 
             }
@@ -525,13 +525,13 @@ body {
             padding-top: 0;
             display: block;
             width: auto;
-            height: @sidebar-height-sm;
+            height: $sidebar-height-sm;
             background: none;
             &-inner {
                 display: none;
             }
             &-icon {
-                fill: @color-positive;
+                fill: $color-positive;
                 stroke: transparent;
                 background-image: url('/img/sidebar/hexagon-fill-negative-bottom-stroke.svg');
             }

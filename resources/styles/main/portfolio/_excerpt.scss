@@ -3,6 +3,22 @@
     overflow: hidden;
     position: relative;
 
+    // background-image: linear-gradient(45deg, #22B682 0%, #4979D3 66%);
+    background: #4979D3;
+    &-blur {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // padding: 0.1em;
+        // opacity: 0.25;
+        // background-color: #555;
+        // background: #4979D3;
+        mix-blend-mode: soft-light;
+        // border: 2px solid #fff;
+        // filter: blur(5px);
+    }
+
     &-marker {
         position: absolute;
         width: 100%;
@@ -22,7 +38,7 @@
         //     height: 100%;
         //     left: 0;
         //     top: 0;
-        //     background: rgba(red(@theme-secondary), green(@theme-secondary), blue(@theme-secondary), 0.6);
+        //     background: rgba(red($theme-secondary), green($theme-secondary), blue($theme-secondary), 0.6);
         // }
 
         background-size: cover;
@@ -30,14 +46,15 @@
 
     &-bg {
         width: 100%;
-        opacity: 0.5;
+        // opacity: 0.5;
         transition: all .2s ease-in-out;
     }
 
     &-logo {
+        display: none;
         position: absolute;
-        top: ~"calc(50% - 4em)";
-        left: ~"calc(50% - 4em)";
+        top: calc(50% - 4em);
+        left: calc(50% - 4em);
         width: 8em;
 
         animation-name: spin;
@@ -59,7 +76,7 @@
         opacity: 0;
         position: absolute;
         width: 100%;
-        background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.8);
         bottom: 0;
         padding: 1em;
         text-align: center;
@@ -87,7 +104,7 @@
         }
     }
 
-    @media screen and (max-width: @screen-md) {
+    @media screen and (max-width: $screen-md) {
         &-marker {
             opacity: 0;
         }

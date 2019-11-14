@@ -202,9 +202,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/styles/base/base.less":
+/***/ "./resources/styles/base/base.scss":
 /*!*****************************************!*\
-  !*** ./resources/styles/base/base.less ***!
+  !*** ./resources/styles/base/base.scss ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -213,9 +213,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/styles/main/base.less":
+/***/ "./resources/styles/main/base.scss":
 /*!*****************************************!*\
-  !*** ./resources/styles/main/base.less ***!
+  !*** ./resources/styles/main/base.scss ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -224,9 +224,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/styles/projects/365/base.less":
+/***/ "./resources/styles/projects/365/base.scss":
 /*!*************************************************!*\
-  !*** ./resources/styles/projects/365/base.less ***!
+  !*** ./resources/styles/projects/365/base.scss ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -235,9 +235,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/styles/projects/fungifalls/base.less":
+/***/ "./resources/styles/projects/fungifalls/base.scss":
 /*!********************************************************!*\
-  !*** ./resources/styles/projects/fungifalls/base.less ***!
+  !*** ./resources/styles/projects/fungifalls/base.scss ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -246,9 +246,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/styles/sidebar/base.less":
+/***/ "./resources/styles/sidebar/base.scss":
 /*!********************************************!*\
-  !*** ./resources/styles/sidebar/base.less ***!
+  !*** ./resources/styles/sidebar/base.scss ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -259,17 +259,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 0:
 /*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/scripts/main/base.js ./resources/styles/base/base.less ./resources/styles/main/base.less ./resources/styles/sidebar/base.less ./resources/styles/projects/365/base.less ./resources/styles/projects/fungifalls/base.less ***!
+  !*** multi ./resources/scripts/main/base.js ./resources/styles/base/base.scss ./resources/styles/main/base.scss ./resources/styles/sidebar/base.scss ./resources/styles/projects/365/base.scss ./resources/styles/projects/fungifalls/base.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/base.js */"./resources/scripts/main/base.js");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/base/base.less */"./resources/styles/base/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/main/base.less */"./resources/styles/main/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/sidebar/base.less */"./resources/styles/sidebar/base.less");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/365/base.less */"./resources/styles/projects/365/base.less");
-module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.less */"./resources/styles/projects/fungifalls/base.less");
+__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/base/base.scss */"./resources/styles/base/base.scss");
+__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/main/base.scss */"./resources/styles/main/base.scss");
+__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/sidebar/base.scss */"./resources/styles/sidebar/base.scss");
+__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/365/base.scss */"./resources/styles/projects/365/base.scss");
+module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.scss */"./resources/styles/projects/fungifalls/base.scss");
 
 
 /***/ })

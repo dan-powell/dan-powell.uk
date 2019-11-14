@@ -1,6 +1,6 @@
 .PortfolioExcerptLead {
 
-    @corner: 2em;
+    $corner: 2em;
 
     display: block;
     overflow: hidden;
@@ -14,7 +14,7 @@
             width: 100%;
             left: 0;
             top: 0;
-            background-color: fade(@theme-secondary, 50%);
+            background-color: fade($theme-secondary, 50%);
         }
         display: flex;
         align-items: center;
@@ -37,16 +37,16 @@
 
         max-width: 320px;
 
-        background: @theme-bg;
+        background: $theme-bg;
         clip-path: polygon(
-            @corner 0,
-            ~"calc(100% - @{corner})" 0,
-            100% @corner,
-            100% ~"calc(100% - @{corner})",
-            ~"calc(100% - @{corner})" 100%,
-            @corner 100%,
-            0 ~"calc(100% - @{corner})",
-            0 @corner);
+            $corner 0,
+            calc(100% - $corner) 0,
+            100% $corner,
+            100% calc(100% - $corner),
+            calc(100% - $corner) 100%,
+            $corner 100%,
+            0 calc(100% - $corner),
+            0 $corner);
 
         text-align: center;
 
@@ -76,11 +76,11 @@
             transform: scale(1.1);
         }
         &-main {
-            clip-path: polygon(~"calc(100% - @{corner})" @corner, ~"calc(100% - @{corner})" 0, 100% 50%, 100% 50%, ~"calc(100% - @{corner})" 100%, ~"calc(100% - @{corner})" ~"calc(100% - @{corner})", 0 ~"calc(100% - @{corner})", 0 @corner);
+            clip-path: polygon(calc(100% - $corner) $corner, calc(100% - $corner) 0, 100% 50%, 100% 50%, calc(100% - $corner) 100%, calc(100% - $corner) calc(100% - corner), 0 calc(100% - $corner), 0 $corner);
         }
     }
 
-    @media screen and (max-width: @screen-sm) {
+    @media screen and (max-width: $screen-sm) {
         flex-wrap: wrap;
         &-image {
             flex: 1 1 100%;
