@@ -1,8 +1,14 @@
 .u-grid {
     display: flex;
-    flex-wrap: wrap;
+    // margin-left: -$spacer;
+    // margin-right: -$spacer;
+    // overflow-x: hidden;
     > * {
-        flex: 0 1 auto;
+        flex: 1 1 100%;
+        padding: $spacer;
+    }
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
     }
 }
 // Clear floats like a boss

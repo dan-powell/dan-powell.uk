@@ -8,7 +8,11 @@ class ProjectRepository
 
     public function __construct()
     {
-        $this->items = collect(config('content.projects.items'));
+        $items = collect(config('content.projects.items'));
+        $this->items = $items->map(function ($item, $key) {
+            $item['slug'] = $key;
+            return $item;
+        });
         $this->tags = collect(config('content.projects.tags'));
     }
 

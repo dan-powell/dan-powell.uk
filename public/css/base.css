@@ -195,16 +195,22 @@
 }
 
 .Content blockquote {
-  margin-bottom: 1em;
+  margin-bottom: 30px;
 }
 
 .u-grid {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .u-grid > * {
-  flex: 0 1 auto;
+  flex: 1 1 100%;
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .u-grid {
+    flex-wrap: wrap;
+  }
 }
 
 .u-clearfix:before,
@@ -278,37 +284,22 @@ img.u-center {
   display: block !important;
 }
 
-/*  --- Text Style Utilities ---
-    ------------------------------------------------------------------------- */
-
-.u-left {
-  text-align: left;
-}
-
-.u-center {
-  text-align: center;
-}
-
-.u-right {
-  text-align: right;
-}
-
 * {
   box-sizing: border-box;
-  font-family: "Lato", serif;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  line-height: 1;
-  vertical-align: baseline;
 }
 
 body {
+  font-size: 100%;
+  line-height: 1;
+  vertical-align: baseline;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   background: #EFEBE5;
   color: #333;
+  font-family: "Lato", serif;
   font-size: 20px;
 }
 
@@ -467,21 +458,21 @@ hr {
 hr.spacer {
   padding: 0;
   margin: 0;
-  height: 1em;
-  width: 1em;
+  height: 30px;
+  width: 30px;
   visibility: hidden;
 }
 
 hr.spacer.-sm {
-  height: 0.5em;
+  height: 15px;
 }
 
 hr.spacer.-lg {
-  height: 2em;
+  height: 60px;
 }
 
 hr.spacer.-xl {
-  height: 3em;
+  height: 90px;
 }
 
 /*  --- Media ---

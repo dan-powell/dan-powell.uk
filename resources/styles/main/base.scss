@@ -2,7 +2,11 @@
 @import "mixins";
 @import "utilities";
 
-@import "page/home";
+@import "home/intro";
+@import "home/hero";
+@import "home/project";
+@import "home/calltoaction";
+
 @import "page/experience";
 @import "page/skills";
 

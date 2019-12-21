@@ -1,0 +1,106 @@
+.HomeCallToAction {
+    background: linear-gradient(90deg, $theme-tertiary, $theme-secondary);
+    padding: 2em;
+    &-container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > * {
+            flex: 1 1 auto;
+            text-align: center;
+        }
+    }
+    &-button {
+        display: inline-block;
+        margin: .5em;
+        padding: 0.5em 1em;
+        background: #fff;
+        font-size: 1.8rem;
+        font-family: $font-family-heading;
+        position: relative;
+
+        &-icon {
+            font-size: 2em;
+            display: block;
+            position: absolute;
+            z-index: 10;
+            top: -.5em;
+            left: -3em;
+            padding: .25em;
+            fill: $theme-tertiary;
+            background: #fff;
+
+            &:before,
+            &:after {
+              content: "";
+              top: 0;
+              position: absolute;
+              border-top: .8em solid transparent;
+              border-bottom: .8em solid transparent;
+            }
+            &:before {
+                left: 100%;
+                border-left: .8em solid #fff;
+            }
+            &:after {
+                right: 100%;
+                border-right: .8em solid #fff;
+            }
+        }
+
+        &-svg {
+            width: 1em;
+        }
+
+        &:before,
+        &:after {
+          content: "";
+          top: 0;
+          position: absolute;
+          border-top: 1.01em solid transparent;
+          border-bottom: 1.01em solid transparent;
+        }
+
+        &:before {
+            left: 100%;
+            border-left: .8em solid #fff;
+        }
+
+        &:after {
+            right: 100%;
+            border-right: .8em solid #fff;
+        }
+
+        &--primary {
+            color: $theme-tertiary;
+        }
+        &--primary & {
+            &-svg {
+                fill: $theme-tertiary;
+            }
+        }
+        &--secondary {
+            color: $theme-secondary;
+        }
+        &--secondary & {
+            &-svg {
+                fill: $theme-secondary;
+            }
+        }
+    }
+    @media screen and (max-width: $screen-sm) {
+        background: linear-gradient(180deg, $theme-tertiary, $theme-secondary);
+        &-container {
+            flex-wrap: wrap;
+            > * {
+                flex: 1 1 100%;
+            }
+        }
+        &-button {
+
+        }
+    }
+}

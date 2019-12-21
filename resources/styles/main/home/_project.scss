@@ -1,0 +1,74 @@
+.HomeProject {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    &-speech {
+        flex: 0 1 auto;
+        order: 2;
+        align-self: center;
+        animation: slideInFromTop 1s ease-in-out .4s 1;
+        animation-fill-mode: both;
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        &-inner {
+            display: block;
+            margin: 0 auto;
+            padding: 1em;
+            background: url('/img/home/speech.svg') left bottom no-repeat;
+            background-size: 50% 50%;
+        }
+        &-bubble {
+            display: inline-block;
+            background: #fff;
+            border-radius: 100%;
+            padding: .5em 1em;
+            box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
+            font-family: $font-family-serif;
+            text-align: center;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 2.5em;
+        }
+    }
+    &-point{
+        flex: 1 1 25%;
+        max-width: 320px;
+        order: 1;
+        animation: slideInFromBottom 1s ease-in-out .6s 1;
+        animation-fill-mode: both;
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        &-img {
+            display: block;
+        }
+    }
+    @media screen and (max-width: $screen-sm) {
+        padding-top: 0em;
+        flex-direction: column;
+        &-speech {
+            flex: 0 1 auto;
+            order: 2;
+            align-self: flex-end;
+        }
+        &-point {
+            flex: 1 1 100%;
+            align-self: flex-start;
+            order: 3;
+        }
+    }
+}

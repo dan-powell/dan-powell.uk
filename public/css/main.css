@@ -1,19 +1,158 @@
 .HomeIntro {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: "wave speech heading";
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  padding-top: 2em;
+  min-height: 40vh;
+}
+
+.HomeIntro-wave {
+  grid-area: wave;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-top: 2em;
+}
+
+.HomeIntro-wave-img {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+}
+
+.HomeIntro-speech {
+  grid-area: speech;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.HomeIntro-speech-inner {
+  display: block;
+  padding: 1em;
+}
+
+.HomeIntro-speech-bubble {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+
+.HomeIntro-heading {
+  grid-area: heading;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2em 0.5em;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .HomeIntro {
+    grid-template-areas: "speech heading" "wave heading";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+  }
+
+  .HomeIntro-speech {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HomeIntro {
+    grid-template-areas: "heading" "speech" "wave";
+    grid-template-columns: 1fr;
+  }
+
+  .HomeIntro-wave-img {
+    padding-right: 3rem;
+  }
+
+  .HomeIntro-speech {
+    justify-content: center;
+  }
+}
+
+.HomeIntro {
   background: linear-gradient(0deg, white, rgba(255, 255, 255, 0));
 }
 
 .HomeIntro-speech {
-  flex: 0 1 auto;
-  order: 2;
-  align-self: flex-start;
   -webkit-animation: slideInFromTop 1s ease-in-out 0.4s 1;
           animation: slideInFromTop 1s ease-in-out 0.4s 1;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+}
+
+.HomeIntro-speech-inner {
+  background: url("/img/home/speech.svg") left bottom no-repeat;
+  background-size: 50%;
+}
+
+.HomeIntro-speech-bubble {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
+  font-family: "Caveat", Georgia, serif;
+  text-align: center;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 4rem;
+}
+
+.HomeIntro-title {
+  text-align: center;
+  font-size: 3.6rem;
+  -webkit-animation: slideInFromRight 1s ease-in-out 0.2s 1;
+          animation: slideInFromRight 1s ease-in-out 0.2s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.HomeIntro-title-sub {
+  display: block;
+  font-size: 0.8em;
+  font-family: "Caveat", Georgia, serif;
+}
+
+.HomeIntro-wave {
+  -webkit-animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+          animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@media screen and (max-width: 1280px) {
+  .HomeIntro-title {
+    font-size: 3rem;
+  }
+
+  .HomeIntro-speech-bubble {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .HomeIntro-title {
+    font-size: 2.8rem;
+  }
+
+  .HomeIntro-speech-inner {
+    background-image: url("/img/home/speech3.svg");
+    background-position: center bottom;
+    background-size: 25%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HomeIntro-title {
+    font-size: 2.2rem;
+  }
+
+  .HomeIntro-title-sub {
+    font-size: 1em;
+  }
 }
 
 @-webkit-keyframes slideInFromTop {
@@ -44,39 +183,28 @@
   }
 }
 
-.HomeIntro-speech-inner {
-  display: block;
-  margin: 0 auto;
-  padding: 1em;
-  background: url("/img/home/speech.svg") left bottom no-repeat;
-  background-size: 50%;
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
-.HomeIntro-speech-bubble {
-  display: inline-block;
-  background: #fff;
-  border-radius: 100%;
-  padding: 0.5em 1em;
-  box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
-  font-family: "Caveat", Georgia, serif;
-  text-align: center;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 3em;
-}
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
 
-.HomeIntro-heading {
-  flex: 1 1 auto;
-  max-width: 620px;
-  order: 3;
-  padding: 1.2em 0.5em;
-  margin: 0;
-  text-align: center;
-  font-size: 3.2em;
-  -webkit-animation: slideInFromRight 1s ease-in-out 0.2s 1;
-          animation: slideInFromRight 1s ease-in-out 0.2s 1;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes slideInFromRight {
@@ -107,85 +235,9 @@
   }
 }
 
-.HomeIntro-heading-sub {
-  font-size: 0.8em;
-  display: block;
-  font-family: "Caveat", Georgia, serif;
-}
-
-.HomeIntro-wave {
-  flex: 1 1 25%;
-  max-width: 320px;
-  order: 1;
-  -webkit-animation: slideInFromBottom 1s ease-in-out 0.6s 1;
-          animation: slideInFromBottom 1s ease-in-out 0.6s 1;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-@-webkit-keyframes slideInFromBottom {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-  }
-
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-.HomeIntro-wave-img {
-  display: block;
-}
-
-@media screen and (max-width: 1024px) {
-  .HomeIntro-heading {
-    font-size: 2.8em;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .HomeIntro {
-    padding-top: 0em;
-    flex-direction: column;
-  }
-
-  .HomeIntro-speech {
-    flex: 0 1 auto;
-    order: 2;
-    align-self: flex-end;
-  }
-
-  .HomeIntro-heading {
-    flex: 1 1 100%;
-    order: 1;
-    padding: 0.5em;
-    align-self: center;
-  }
-
-  .HomeIntro-wave {
-    flex: 1 1 100%;
-    align-self: flex-start;
-    order: 3;
-  }
-}
-
 .HomeHero {
   position: relative;
-  padding: 3em;
+  padding: 3rem;
   text-align: left;
   background: linear-gradient(#ffb878, #ed913d);
   overflow: hidden;
@@ -202,18 +254,18 @@
 }
 
 .HomeHero-inner {
-  flex: 1 1 50%;
+  flex: 1 1 55%;
   position: relative;
   z-index: 6;
   height: 100%;
 }
 
 .HomeHero-bg {
-  flex: 1 1 50%;
+  flex: 1 1 45%;
 }
 
 .HomeHero-heading {
-  font-size: 6em;
+  font-size: 6rem;
   line-height: 1;
   color: #fff;
 }
@@ -238,19 +290,266 @@
   font-family: "Caveat", Georgia, serif;
 }
 
+@media screen and (max-width: 1280px) {
+  .HomeHero-heading {
+    font-size: 5rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
-  .HomeHero-container {
-    flex-wrap: wrap;
+  .HomeHero {
+    padding: 2rem;
+  }
+
+  .HomeHero-inner {
+    flex: 1 1 45%;
+  }
+
+  .HomeHero-bg {
+    flex: 1 1 55%;
   }
 
   .HomeHero-heading {
-    font-size: 4em;
+    font-size: 4rem;
   }
 }
 
 @media screen and (max-width: 640px) {
+  .HomeHero {
+    padding: 2rem;
+  }
+
+  .HomeHero-container {
+    flex-wrap: wrap;
+  }
+
+  .HomeHero-inner {
+    flex: 1 1 100%;
+  }
+
+  .HomeHero-bg {
+    flex: 1 1 100%;
+  }
+
   .HomeHero-heading {
-    font-size: 3em;
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .HomeHero {
+    padding: 1rem;
+  }
+}
+
+.HomeProject {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(0deg, white, rgba(255, 255, 255, 0));
+}
+
+.HomeProject-speech {
+  flex: 0 1 auto;
+  order: 2;
+  align-self: center;
+  -webkit-animation: slideInFromTop 1s ease-in-out 0.4s 1;
+          animation: slideInFromTop 1s ease-in-out 0.4s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.HomeProject-speech-inner {
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+  background: url("/img/home/speech.svg") left bottom no-repeat;
+  background-size: 50% 50%;
+}
+
+.HomeProject-speech-bubble {
+  display: inline-block;
+  background: #fff;
+  border-radius: 100%;
+  padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 0 3px;
+  font-family: "Caveat", Georgia, serif;
+  text-align: center;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2.5em;
+}
+
+.HomeProject-point {
+  flex: 1 1 25%;
+  max-width: 320px;
+  order: 1;
+  -webkit-animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+          animation: slideInFromBottom 1s ease-in-out 0.6s 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.HomeProject-point-img {
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  .HomeProject {
+    padding-top: 0em;
+    flex-direction: column;
+  }
+
+  .HomeProject-speech {
+    flex: 0 1 auto;
+    order: 2;
+    align-self: flex-end;
+  }
+
+  .HomeProject-point {
+    flex: 1 1 100%;
+    align-self: flex-start;
+    order: 3;
+  }
+}
+
+.HomeCallToAction {
+  background: linear-gradient(90deg, #5AC49F, #4D78C9);
+  padding: 2em;
+}
+
+.HomeCallToAction-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HomeCallToAction-container > * {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.HomeCallToAction-button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: #fff;
+  font-size: 1.8rem;
+  font-family: "Nunito", serif;
+  position: relative;
+}
+
+.HomeCallToAction-button-icon {
+  font-size: 2em;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: -0.5em;
+  left: -3em;
+  padding: 0.25em;
+  fill: #5AC49F;
+  background: #fff;
+}
+
+.HomeCallToAction-button-icon:before,
+.HomeCallToAction-button-icon:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  border-top: 0.8em solid transparent;
+  border-bottom: 0.8em solid transparent;
+}
+
+.HomeCallToAction-button-icon:before {
+  left: 100%;
+  border-left: 0.8em solid #fff;
+}
+
+.HomeCallToAction-button-icon:after {
+  right: 100%;
+  border-right: 0.8em solid #fff;
+}
+
+.HomeCallToAction-button-svg {
+  width: 1em;
+}
+
+.HomeCallToAction-button:before,
+.HomeCallToAction-button:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  border-top: 1.01em solid transparent;
+  border-bottom: 1.01em solid transparent;
+}
+
+.HomeCallToAction-button:before {
+  left: 100%;
+  border-left: 0.8em solid #fff;
+}
+
+.HomeCallToAction-button:after {
+  right: 100%;
+  border-right: 0.8em solid #fff;
+}
+
+.HomeCallToAction-button--primary {
+  color: #5AC49F;
+}
+
+.HomeCallToAction-button--primary .HomeCallToAction-button-svg {
+  fill: #5AC49F;
+}
+
+.HomeCallToAction-button--secondary {
+  color: #4D78C9;
+}
+
+.HomeCallToAction-button--secondary .HomeCallToAction-button-svg {
+  fill: #4D78C9;
+}
+
+@media screen and (max-width: 640px) {
+  .HomeCallToAction {
+    background: linear-gradient(180deg, #5AC49F, #4D78C9);
+  }
+
+  .HomeCallToAction-container {
+    flex-wrap: wrap;
+  }
+
+  .HomeCallToAction-container > * {
+    flex: 1 1 100%;
   }
 }
 
@@ -405,7 +704,6 @@
   display: block;
   overflow: hidden;
   position: relative;
-  background: #4979D3;
 }
 
 .PortfolioExcerpt-blur {

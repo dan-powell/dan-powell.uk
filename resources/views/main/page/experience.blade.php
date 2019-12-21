@@ -5,22 +5,20 @@
     <meta name="description" content="My Curriculum Vitae, capabilities and employment history.">
 @stop
 
-@push('class', 'Page Page--experience')
+@push('class', 'PageExperience')
 
 @section('main')
-    <section class="Section Section--md">
-        <div class="Section-container">
-            <h1 class="pageHeading">
-                My Experience &amp; CV
-            </h1>
-        </div>
-    </section>
-    <section class="Section">
+
+    <h1 class="pageHeading">
+        My Experience &amp; CV
+    </h1>
+
+    <section class="Container">
         <div class="Section-container Section--light Section--lg">
-            <article class="Content UserGrid">
+            <article class="Content">
                 <h1>Daniel Powell <small>(BA Hons)</small></h1>
-                <div class="row">
-                    <div class="column-third">
+                <div class="Grid-row">
+                    <div class="Grid-column Grid-column--">
                         <p><strong><span class="fa fa-calendar"></span> Age: {{ Carbon::createFromDate(1986, 9, 7)->age }}</strong></p>
                         <p><strong><span class="fa fa-compass"></span> Location:&nbsp; Dorset, UK</strong></p>
                     </div>
@@ -29,13 +27,13 @@
                         <p>I have worked within the design industry for a number of years and have experience with taking a project from brief or concept through to production, as well as working directly with clients. Freelancing and running my own business has given me great experience not only in the creative side of things but also in the day-to-day running of a small business. I regularly work with proposals, contracts and briefs, so I understand the importance of developing strong processes for creative projects.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="column-half">
+                <div class="u-grid">
+                    <div>
                         <h2><span class="fa fa-lightbulb-o"></span> Vision</h2>
                         <p>I believe that the web has and will have a profoundly positive impact on our society. I wish to be a part of the development of an open internet that allows cheap education and communication, the cornerstones of modern society.</p>
                         <p>My passion is to make gorgeous websites that are not just pretty, but well built and communicate effectively with their audience. I love creating things that people can actually use and enjoy. I want to create aesthetic experiences that enrich our lives and facilitate personal growth.</p>
                     </div>
-                    <div class="column-half">
+                    <div>
                         <h2><span class="fa fa-graduation-cap"></span> Education</h2>
                         <p><span style="font-size: 1.25em;">Bachelor of Arts (BA Hons) Digital Media Production</span><br>
                             Arts University College Bournemouth 2010</p>

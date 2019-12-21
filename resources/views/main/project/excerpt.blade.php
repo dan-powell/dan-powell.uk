@@ -1,4 +1,4 @@
-<a href="{{ route('project.home', $slug) }}" class="ProjectExcerpt">
+<a href="{{ route('project.home', $item['slug']) }}" class="ProjectExcerpt">
     <div class="ProjectExcerpt-inner">
         <img
             srcset="{{ app('image')->crop(700, 800)->url($item['thumb']) }} 2x"

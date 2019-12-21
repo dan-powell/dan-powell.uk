@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/js/main"],{
 
-/***/ "./resources/scripts/main/base.js":
-/*!****************************************!*\
-  !*** ./resources/scripts/main/base.js ***!
-  \****************************************/
+/***/ "./resources/scripts/main/_home.js":
+/*!*****************************************!*\
+  !*** ./resources/scripts/main/_home.js ***!
+  \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
- // Home
+
 
 (function () {
   // BG Animation
@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   hero[getRandomInt(3)].play(); // Animate items when visible
-  // Check is IntersectionObserver is supported
+  // Check if IntersectionObserver is supported
 
   if ('IntersectionObserver' in window) {
     var body = document.getElementsByTagName('body');
@@ -199,6 +199,20 @@ __webpack_require__.r(__webpack_exports__);
     return intersectionObserver.observe(element);
   });
 })();
+
+/***/ }),
+
+/***/ "./resources/scripts/main/base.js":
+/*!****************************************!*\
+  !*** ./resources/scripts/main/base.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
+
 
 /***/ }),
 
@@ -258,13 +272,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/scripts/main/base.js ./resources/styles/base/base.scss ./resources/styles/main/base.scss ./resources/styles/sidebar/base.scss ./resources/styles/projects/365/base.scss ./resources/styles/projects/fungifalls/base.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/scripts/main/base.js ./resources/scripts/main/_home.js ./resources/styles/base/base.scss ./resources/styles/main/base.scss ./resources/styles/sidebar/base.scss ./resources/styles/projects/365/base.scss ./resources/styles/projects/fungifalls/base.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/base.js */"./resources/scripts/main/base.js");
+__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/_home.js */"./resources/scripts/main/_home.js");
 __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/base/base.scss */"./resources/styles/base/base.scss");
 __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/main/base.scss */"./resources/styles/main/base.scss");
 __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/sidebar/base.scss */"./resources/styles/sidebar/base.scss");

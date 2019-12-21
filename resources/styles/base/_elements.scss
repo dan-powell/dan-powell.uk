@@ -1,19 +1,19 @@
 // Reset
 * {
     box-sizing: border-box;
-    font-family: $font-family;
     margin: 0;
     padding: 0;
     border: 0;
+}
+body {
     font-size: 100%;
     line-height: 1;
     vertical-align: baseline;
-}
-body {
     text-rendering: optimizelegibility; // Fix the character spacing for headings
     -webkit-font-smoothing: antialiased;
     background: $theme-bg;
     color: $text-color;
+    font-family: $font-family;
     font-size: $font-size-base-lg;
     @media screen and (max-width: $screen-md) {
         font-size: $font-size-base-md;
