@@ -1,0 +1,58 @@
+.ProjectSingle {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &-inner {
+        clip-path: polygon(10% 50%, 30% 87.5%, 70% 87.5%, 90% 50%, 70% 12.5%, 30% 12.5%);
+        transition: all .3s ease-in-out;
+        will-change: clip-path;
+        background-size: cover;
+    }
+    &-bg {
+        width: 100%;
+        transition: all .2s ease-in-out;
+    }
+    &-logo {
+        display: none;
+        position: absolute;
+        top: calc(50% - 4em);
+        left: calc(50% - 4em);
+        width: 8em;
+    }
+    &-title {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        bottom: 0;
+        padding: 1em;
+        text-align: center;
+        transition: all .2s ease-out;
+        color: rgba(255,255,255,1);
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover & {
+        &-inner {
+            clip-path: polygon(0% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%, 0% 0%);
+        }
+        &-title {
+            opacity: 1;
+        }
+        &-bg {
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: $screen-md) {
+        &-inner {
+            clip-path: polygon(0% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%, 0% 0%);
+        }
+        &-title {
+            opacity: 1;
+        }
+        &-bg {
+            opacity: 1;
+        }
+    }
+}

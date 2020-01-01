@@ -1,4 +1,4 @@
-<a href="{{ route('portfolio.show', $slug) }}" class="PortfolioExcerpt">
+<a href="{{ route('portfolio.show', $item['slug']) }}" class="PortfolioExcerpt">
     <img
         srcset="{{ app('image')->blur(20)->crop(800, 700)->url($item['thumb']) }} 2x"
         src="{{ app('image')->blur(20)->crop(400, 350)->url($item['thumb']) }}"

@@ -1,4 +1,5 @@
 @import "variables";
+@import "animations";
 @import "mixins";
 @import "utilities";
 
@@ -10,11 +11,6 @@
 @import "page/experience";
 @import "page/skills";
 
-@import "portfolio/excerpt";
-@import "portfolio/excerpt_lead";
-@import "portfolio/list";
-@import "portfolio/list_stack";
-@import "portfolio/list_hero";
-
 @import "project/excerpt";
+@import "project/single";
 @import "project/list";

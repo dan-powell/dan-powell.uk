@@ -1,0 +1,37 @@
+
+// animation-name: spin;
+// animation-timing-function: linear;
+// animation-iteration-count: infinite;
+// animation-duration: 5s;
+
+@keyframes spin {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+// animation: slideInFromBottom 1s ease-in-out .6s 1;
+// animation-fill-mode: both;
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
