@@ -7,5 +7,5 @@
 @endpush
 
 @push('script')
-    <script defer src="{{ mix('js/main.js') }}"></script>
+    <script src="{{ mix('js/main.js') }}"></script>
 @endpush

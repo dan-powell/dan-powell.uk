@@ -1,9 +1,9 @@
 @extends('main.base')
 
-@section('meta')
+@push('head')
 <title>Dan Powell | Website designer, front-end developer</title>
 <meta name="description" content="I’m Dan Powell, and I design and develop websites and other digital stuff. Here’s my portfolio of creative work.">
-@endsection
+@endpush
 
 @push('class', 'Home')
 

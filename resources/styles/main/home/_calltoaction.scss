@@ -8,6 +8,7 @@
         margin-left: auto;
         margin-right: auto;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         > * {
@@ -29,11 +30,11 @@
         display: inline-flex;
         align-items: center;
         text-transform: uppercase;
-        // border-radius: 0 .5em .5em 0;
+        border-radius: 1em 0 0 1em;
         &-icon {
             display: block;
             margin-right: 0.5em;
-            margin-left: -0.25em;
+            // margin-left: -0.25em;
             max-height: 1em;
         }
         &-svg {
@@ -41,7 +42,7 @@
             max-height: 1em;
             transition: all .2s ease-in-out;
         }
-        &:before,
+        // &:before,
         &:after {
           content: "";
           top: 0;
@@ -50,14 +51,14 @@
           border-bottom: 1em solid transparent;
           transition: all .2s ease-in-out;
         }
-        &:before {
-            right: 100%;
-            border-right: .8em solid #fff;
-        }
+        // &:before {
+        //     right: 100%;
+        //     border-right: .8em solid #fff;
+        // }
         &:after {
             left: 100%;
             border-left: .8em solid #fff;
-            transform: translateX(0.25em);
+            // transform: translateX(0.25em);
         }
         &--primary {
             color: $theme-tertiary;
@@ -68,9 +69,17 @@
             }
         }
         &--secondary {
-            color: $theme-secondary;
+            color: mix($theme-tertiary, $theme-secondary, 50%);
         }
         &--secondary & {
+            &-svg {
+                fill: mix($theme-tertiary, $theme-secondary, 50%);
+            }
+        }
+        &--tertiary {
+            color: $theme-secondary;
+        }
+        &--tertiary & {
             &-svg {
                 fill: $theme-secondary;
             }
@@ -80,9 +89,9 @@
             $fade: .25;
             background: rgba($color-white, $fade);
             color: $color-positive;
-            &:before {
-                border-right-color: rgba($color-white, $fade);
-            }
+            // &:before {
+            //     border-right-color: rgba($color-white, $fade);
+            // }
             &:after {
                 border-left-color: rgba($color-white, $fade);
                 transform: translateX(0.5em);
@@ -97,16 +106,20 @@
         }
 
     }
+    @media screen and (max-width: $screen-lg) {
+        &-button {
+            font-size: 1.6rem;
+        }
+    }
     @media screen and (max-width: $screen-sm) {
         background: linear-gradient(180deg, $theme-tertiary, $theme-secondary);
         &-container {
-            flex-wrap: wrap;
             > * {
                 flex: 1 1 100%;
             }
         }
         &-button {
-
+            display: flex;
         }
     }
 }

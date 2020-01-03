@@ -114,7 +114,7 @@
     @media screen and (max-width: $screen-sm) {
         &-character {
             &-img {
-                transform: rotateZ(10deg) translateY(1.5em);
+                transform: rotateZ(10deg) translateY(1.5em) translateX(-0.5em);
             }
         }
     }

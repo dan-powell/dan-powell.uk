@@ -24,7 +24,7 @@ mix.sass('resources/styles/base/base.scss', 'public/css/base.css')
 
     });
 
-mix.js(['resources/scripts/main/base.js', 'resources/scripts/main/_home.js'], 'public/js/main.js')
+mix.js(['resources/scripts/main/base.js', 'resources/scripts/main/_home.js', 'resources/scripts/main/_projects.js'], 'public/js/main.js')
     .js('resources/scripts/projects/365/base.js', 'public/js/projects/365.js')
     .js('resources/scripts/projects/fungifalls/base.js', 'public/js/projects/fungifalls.js')
     .js('resources/scripts/sidebar/sidebar.js', 'public/js')

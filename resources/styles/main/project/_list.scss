@@ -1,25 +1,23 @@
 .ProjectList {
-
-	text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // padding-bottom: 10%;
-
 	&-item {
-    	flex: 1 1 auto;
-        max-width: 33.3%;
-    	padding: 20px;
-        // margin-bottom: -10%;
-
-    	@media only screen and (max-width: $screen-md) {
-            max-width: 50%;
-        	padding: 8px;
-        }
-
-    	@media only screen and (max-width: $screen-xs) {
-        	max-width: none;
-        }
-
+        padding: 3rem 0;
 	}
+    @media screen and (max-width: $screen-md) {
+        &-item {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+    	}
+    }
+    @media screen and (max-width: $screen-sm) {
+        &-item {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+    	}
+    }
+    @media screen and (max-width: $screen-xs) {
+        &-item {
+            padding-top: 0;
+            padding-bottom: 0;
+    	}
+    }
 }
