@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'created_at' => '2011-01-01 00:00:00',
+    'updated_at' => '2020-02-17 00:00:00',
     'navigation' => [
         [
             'label' => 'About 365',

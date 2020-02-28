@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'created_at' => '2015-07-14 00:00:00',
+    'updated_at' => '2020-02-17 00:00:00',
     'view' => 'projects.fungifalls.home',
     'navigation' => [
         [
