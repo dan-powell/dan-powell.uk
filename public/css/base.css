@@ -1,201 +1,14 @@
-/*  ====== Alternative Content Styles ======
-    Additional content styles for different contexts.
-    Useful for overriding element colours in areas with differing background colours.
-    ========================================================================= */
-
-.contentStyle .dark {
-  color: rgba(0, 0, 0, 0.6);
+.u-container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contentStyle .dark p {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.contentStyle .dark a {
-  color: #ed913d;
-}
-
-.contentStyle .dark a:hover {
-  color: #b35e11;
-}
-
-.contentStyle .dark h1,
-.contentStyle .dark h2,
-.contentStyle .dark h3,
-.contentStyle .dark h4,
-.contentStyle .dark h5,
-.contentStyle .dark h6 {
-  color: rgba(0, 0, 0, 0.6);
-  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
-}
-
-.contentStyle .dark h1 small,
-.contentStyle .dark h2 small,
-.contentStyle .dark h3 small,
-.contentStyle .dark h4 small,
-.contentStyle .dark h5 small,
-.contentStyle .dark h6 small {
-  color: rgba(204, 204, 204, 0.6);
-}
-
-.contentStyle .dark blockquote {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.contentStyle .dark hr {
-  border-top: rgba(0, 0, 0, 0.6) 2px dotted;
-}
-
-.contentStyle .dark table {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.contentStyle .light {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .light p {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .light a {
-  color: #ed913d;
-}
-
-.contentStyle .light a:hover {
-  color: #b35e11;
-}
-
-.contentStyle .light h1,
-.contentStyle .light h2,
-.contentStyle .light h3,
-.contentStyle .light h4,
-.contentStyle .light h5,
-.contentStyle .light h6 {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .light h1 small,
-.contentStyle .light h2 small,
-.contentStyle .light h3 small,
-.contentStyle .light h4 small,
-.contentStyle .light h5 small,
-.contentStyle .light h6 small {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .light blockquote {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .light hr {
-  border-top: rgba(255, 255, 255, 0.2) 2px dotted;
-}
-
-.contentStyle .light table {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white p {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white a {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white a:hover {
-  text-decoration: none;
-}
-
-.contentStyle .white h1,
-.contentStyle .white h2,
-.contentStyle .white h3,
-.contentStyle .white h4,
-.contentStyle .white h5,
-.contentStyle .white h6 {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white h1 small,
-.contentStyle .white h2 small,
-.contentStyle .white h3 small,
-.contentStyle .white h4 small,
-.contentStyle .white h5 small,
-.contentStyle .white h6 small {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white blockquote {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contentStyle .white hr {
-  border-top: rgba(255, 255, 255, 0.2) 2px dotted;
-}
-
-.contentStyle .white table {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/*  ====== Content ======
-    Apply 'Content' class to blocks of content.
-    Useful for user-provided markup (TinyMCE etc.)
-    ========================================================================= */
-
-.Content > *:last-child {
-  margin-bottom: 0;
-}
-
-.Content p {
-  margin-bottom: 1em;
-}
-
-.Content a {
-  display: inline-block;
-  font-weight: bold;
-  position: relative;
-  color: #e27715;
-  border-bottom: 1px solid transparent;
-}
-
-.Content a:hover {
-  color: #4D78C9;
-  border-bottom: 1px solid #333;
-}
-
-.Content a:hover img {
-  opacity: 0.6;
-}
-
-.Content a img {
-  transition: opacity 0.2s ease-in-out;
-}
-
-.Content h1,
-.Content h2,
-.Content h3,
-.Content h4,
-.Content h5 {
-  margin-bottom: 20px;
-}
-
-.Content ol li,
-.Content ul li {
-  margin-bottom: 10px;
-}
-
-.Content ol.list-spaced li,
-.Content ul.list-spaced li {
-  margin-bottom: 27px;
-}
-
-.Content blockquote {
-  margin-bottom: 30px;
+@media screen and (max-width: 1210px) {
+  .u-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .u-grid {
@@ -284,11 +97,55 @@ img.u-center {
   display: block !important;
 }
 
+.u-content a:active {
+  text-decoration: none;
+}
+
+.u-content p {
+  margin-bottom: 1em;
+}
+
+.u-content p small {
+  margin-bottom: 1em;
+}
+
+.u-content h1,
+.u-content h2,
+.u-content h3,
+.u-content h4,
+.u-content h5,
+.u-content h6 {
+  margin-bottom: 1rem;
+}
+
+.u-content p:last-child,
+.u-content h1:last-child,
+.u-content h2:last-child,
+.u-content h3:last-child,
+.u-content h4:last-child,
+.u-content h5:last-child,
+.u-content h6:last-child {
+  margin-bottom: 0;
+}
+
+.u-content--lg {
+  font-size: 1.3em;
+}
+
+.u-content--sm {
+  font-size: 0.9em;
+}
+
+.u-content--xs {
+  font-size: 0.8em;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -346,53 +203,27 @@ h6 {
 }
 
 h1 {
-  font-size: 51.4098px;
+  font-size: 2.0736em;
 }
 
 h2 {
-  font-size: 39.546px;
+  font-size: 1.728em;
 }
 
 h3 {
-  font-size: 30.42px;
+  font-size: 1.44em;
 }
 
 h4 {
-  font-size: 23.4px;
+  font-size: 1.2em;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 1em;
 }
 
 h6 {
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 640px) {
-  h1 {
-    font-size: 41.12784px;
-  }
-
-  h2 {
-    font-size: 31.6368px;
-  }
-
-  h3 {
-    font-size: 24.336px;
-  }
-
-  h4 {
-    font-size: 18.72px;
-  }
-
-  h5 {
-    font-size: 14.4px;
-  }
-
-  h6 {
-    font-size: 14.4px;
-  }
+  font-size: 1em;
 }
 
 /*  --- Lists ---
@@ -413,7 +244,7 @@ dl dt {
 }
 
 dl dd {
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
 }
 
 /*  --- Blockquote ---
@@ -423,14 +254,14 @@ blockquote {
   display: inline-block;
   font-family: "Caveat", Georgia, serif;
   font-style: normal;
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 1.2;
   color: #636363;
   background-image: url("/img/blockquote_open.svg"), url("/img/blockquote_close.svg");
   background-position: left top, right bottom;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 15px 30px;
+  padding: 0.5em 1em;
 }
 
 blockquote p {
@@ -439,7 +270,7 @@ blockquote p {
 
 blockquote cite {
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 blockquote cite::before {
@@ -451,26 +282,6 @@ blockquote cite::before {
 
 hr {
   border-top: rgba(0, 0, 0, 0.2) 2px dotted;
-}
-
-hr.spacer {
-  padding: 0;
-  margin: 0;
-  height: 30px;
-  width: 30px;
-  visibility: hidden;
-}
-
-hr.spacer.-sm {
-  height: 15px;
-}
-
-hr.spacer.-lg {
-  height: 60px;
-}
-
-hr.spacer.-xl {
-  height: 90px;
 }
 
 /*  --- Media ---
@@ -496,7 +307,8 @@ code {
   text-align: left;
 }
 
-pre code {
+pre,
+code {
   padding: 30px 40px;
   margin: 10px;
   border-radius: 10px;

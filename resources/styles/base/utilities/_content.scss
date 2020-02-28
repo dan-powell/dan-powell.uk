@@ -1,192 +1,44 @@
-/*  ====== Alternative Content Styles ======
-    Additional content styles for different contexts.
-    Useful for overriding element colours in areas with differing background colours.
-    ========================================================================= */
-.contentStyle {
-    // Dark text - use on light backgrounds;
-    .dark {
-        $color: rgba(0, 0, 0, .6);
-        color: $color;
-        // Body Text
-        p {
-            color: $color;
-        }
 
-        a {
-            color: $link-color;
+// The content utility is mainly used for areas where a user can add content.
+// It provides nice styles for basic content elements like text and images.
+// This allows us to have user-friendly styles for certain areas without having them apply to the page as a whole.
 
-            &:hover {
-                color: darken($link-color, 20%);
-            }
-        }
-        // Headings
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: $color;
-            small {
-                color: lighten($color,80%);
-            }
-            text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px, rgba(0, 0, 0, 0.1) -1px -1px 1px;
-        }
-        // BlockQuote
-        blockquote {
-            color: $color;
-        }
-        // Horizontal Rule
-        hr {
-            border-top: $color 2px dotted;
-        }
-        // Tables
-        table {
-            color: $color;
-        }
+.u-content {
+
+    a:active {
+        text-decoration: none;
     }
-    // Light text - use on dark backgrounds;
-    .light {
-        $color: rgba(255, 255, 255, 0.9);
-        color: $color;
-        // Body Text
-        p {
-            color: $color;
-        }
 
-        a {
-            color: $link-color;
-
-            &:hover {
-                color: darken($link-color, 20%);
-            }
-        }
-        // Headings
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: $color;
-            small {
-                color: lighten($color,80%);
-            }
-        }
-        // BlockQuote
-        blockquote {
-            color: $color;
-        }
-        // Horizontal Rule
-        hr {
-            border-top: rgba(255, 255, 255, 0.2) 2px dotted;
-        }
-        // Tables
-        table {
-            color: $color;
-        }
-    }
-    // Light text - use on dark backgrounds;
-    .white {
-        $color: rgba(255, 255, 255, 0.9);
-        color: $color;
-        // Body Text
-        p {
-            color: $color;
-        }
-
-        a {
-            color: $color;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-        // Headings
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: $color;
-            small {
-                color: lighten($color,80%);
-            }
-        }
-        // BlockQuote
-        blockquote {
-            color: $color;
-        }
-        // Horizontal Rule
-        hr {
-            border-top: rgba(255, 255, 255, 0.2) 2px dotted;
-        }
-        // Tables
-        table {
-            color: $color;
-        }
-    }
-}
-/*  ====== Content ======
-    Apply 'Content' class to blocks of content.
-    Useful for user-provided markup (TinyMCE etc.)
-    ========================================================================= */
-.Content {
-    // .contentStyle > .dark();
-    > *:last-child {
-        margin-bottom: 0;
-    }
-    // Body Text
     p {
         margin-bottom: 1em;
-    }
-
-    a {
-        display: inline-block;
-        font-weight: bold;
-        position: relative;
-        color: darken($theme-primary, 10%);
-        border-bottom: 1px solid transparent;
-
-        &:hover {
-            color: $theme-secondary;
-            border-bottom: 1px solid $text-color;
-
-            img {
-                opacity: 0.6;
-            }
-        }
-
-        &:active {}
-
-        img {
-            transition: opacity 0.2s ease-in-out;
+        small {
+            margin-bottom: 1em;
         }
     }
-    // Headings
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        margin-bottom: 20px;
-    }
-    // Lists
-    ol,
-    ul {
-        li {
-            margin-bottom: 10px;
-        }
 
-        &.list-spaced li {
-            margin-bottom: 27px;
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1rem;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        &:last-child {
+            margin-bottom: 0;
         }
     }
-    // BlockQuote
-    blockquote {
-        margin-bottom: $spacer;
-    }
-    @media screen and (max-width: $screen-sm) {}
-    @media screen and (max-width:$screen-lg) {}
+
+}
+
+// We declare modifiers here rather than nested under .u-content so they can be used as mixins.
+// (LESS is'nt clever enough to auto-concat the nested name structure when addressing the mixin).
+
+.u-content--lg {
+    font-size: 1.3em;
+}
+
+.u-content--sm {
+    font-size: 0.9em;
+}
+
+.u-content--xs {
+    font-size: 0.8em;
 }

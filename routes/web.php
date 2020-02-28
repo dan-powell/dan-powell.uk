@@ -29,15 +29,15 @@ Route::domain(config('app.domain'))->group(function () {
         'uses' => 'SitemapController@xml'
     ]);
 
-    Route::get('portfolio', [
-        'as' => 'portfolio.index',
-        'uses' => 'Main\PortfolioController@index'
-    ]);
-
-    Route::get('portfolio/{slug}', [
-        'as' => 'portfolio.show',
-        'uses' => 'Main\PortfolioController@show'
-    ]);
+    // Route::get('portfolio', [
+    //     'as' => 'portfolio.index',
+    //     'uses' => 'Main\PortfolioController@index'
+    // ]);
+    //
+    // Route::get('portfolio/{slug}', [
+    //     'as' => 'portfolio.show',
+    //     'uses' => 'Main\PortfolioController@show'
+    // ]);
 
     Route::get('projects', [
         'as' => 'projects.index',
@@ -52,10 +52,15 @@ Route::domain(config('app.domain'))->group(function () {
 
 });
 
+// Custom Project controller example
+// Route::domain('projectname.' . config('app.domain'))->name('projectname.')->group(function () {
+//     Route::get('slug', ['as' => 'name', 'uses' => 'ProjectName\ProjectNameController@method']);
+// });
+
 // Projects are on sub-domains
 Route::domain('{project}.' . config('app.domain'))->name('project.')->group(function () {
 
-    Route::get('/', ['as' => 'home', 'uses' => 'Project\ProjectController@show']);
+    Route::get('/', ['as' => 'home', 'uses' => 'Project\ProjectController@home']);
 
 
     // TODO implement individual sitemaps for projects
@@ -70,6 +75,8 @@ Route::domain('{project}.' . config('app.domain'))->name('project.')->group(func
     Route::get('/{slug}', ['as' => 'page', 'uses' => 'Project\ProjectController@page']);
 
 });
+
+
 
 Route::get('assets/{path}', 'Main\AssetController@asset')->where('path', '.*');
 

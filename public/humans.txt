@@ -1,4 +1,4 @@
-  _____                _____                  _ _ 
+  _____                _____                  _ _
  |  __ \              |  __ \                | | |
  | |  | | __ _ _ __   | |__) |____      _____| | |
  | |  | |/ _` | '_ \  |  ___/ _ \ \ /\ / / _ \ | |
@@ -15,3 +15,6 @@
   Doctype: HTML5
   Framework: Laravel 5
   IDE: Coda 2.5, Sketch, MAMP Pro
+
+/* THIRD PARTY CREDITS */
+gallery icon by Alice Design from the Noun Project

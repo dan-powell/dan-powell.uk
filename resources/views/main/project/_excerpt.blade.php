@@ -1,5 +1,5 @@
 <div class="ProjectExcerpt">
-    <a href="{{ route('project.home', $item['slug']) }}" class="ProjectExcerpt-link"></a>
+    <a href="{{ is_array($item['url']) ? route($item['url'][0], $item['url'][1] ?? null) : url($item['url']) }}" class="ProjectExcerpt-link"></a>
     <div class="ProjectExcerpt-inner">
         <div class="ProjectExcerpt-thumb">
             <img

@@ -81,27 +81,19 @@
             </div>
             <div class="Sidebar-about">
                 <p class="Sidebar-about-text Sidebar-about-text--more">view some of my</p>
-                <a class="Sidebar-about-link" href="">
+                <a class="Sidebar-about-link" href="{{ route(config('content.sidebar.links.projects')[0]) }}">
                     <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
                         <use xlink:href="{{ asset('img/sidebar/icons.svg#projects') }}"></use>
                     </svg>
                     <span class="Sidebar-about-link-text">Projects</span>
                 </a>
                 <p class="Sidebar-about-text Sidebar-about-text--more">or checkout my code on</p>
-                <a class="Sidebar-about-link" href="">
+                <a class="Sidebar-about-link" href="{{ url(config('content.sidebar.links.github')) }}">
                     <svg class="Sidebar-about-link-icon" viewBox="0 0 512 512">
                         <use xlink:href="{{ asset('img/sidebar/icons.svg#github') }}"></use>
                     </svg>
                     <span class="Sidebar-about-link-text">Github</span>
                 </a>
-            </div>
-            <div class="Sidebar-links">
-                <a class="Sidebar-links-item" href="">Sitemap</a>
-                <a class="Sidebar-links-item" href="{{ route('page', 'privacy') }}">Privacy</a>
-                <a class="Sidebar-links-item" href="{{ route('page', 'cookies') }}">Cookies</a>
-            </div>
-            <div class="Sidebar-cheeky">
-                {{-- <img src="{{ asset('/img/dan_powell_profile.svg') }}" class="Sidebar-cheeky-img" onerror="this.onerror=null; this.src='{{ asset('/img/dan_powell_profile.png') }}'" alt="A Cartoon style profile picture of Dan Powell"> --}}
             </div>
         </div>
     </div>

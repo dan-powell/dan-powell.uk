@@ -288,10 +288,10 @@ __webpack_require__.r(__webpack_exports__);
         width: '75px',
         'z-index': 2
       }
-    } // Adjust the CSS selector to match the container where
-    // you set up your image gallery
+    }
+  }; // Adjust the CSS selector to match the container where
+  // you set up your image gallery
 
-  };
   var filterizr = new filterizr__WEBPACK_IMPORTED_MODULE_0___default.a('.filtr-container', options);
 })();
 
@@ -373,14 +373,14 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/base.js */"./resources/scripts/main/base.js");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/_home.js */"./resources/scripts/main/_home.js");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/main/_projects.js */"./resources/scripts/main/_projects.js");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/base/base.scss */"./resources/styles/base/base.scss");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/main/base.scss */"./resources/styles/main/base.scss");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/sidebar/base.scss */"./resources/styles/sidebar/base.scss");
-__webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/365/base.scss */"./resources/styles/projects/365/base.scss");
-module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.scss */"./resources/styles/projects/fungifalls/base.scss");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/scripts/main/base.js */"./resources/scripts/main/base.js");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/scripts/main/_home.js */"./resources/scripts/main/_home.js");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/scripts/main/_projects.js */"./resources/scripts/main/_projects.js");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/base/base.scss */"./resources/styles/base/base.scss");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/main/base.scss */"./resources/styles/main/base.scss");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/sidebar/base.scss */"./resources/styles/sidebar/base.scss");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/365/base.scss */"./resources/styles/projects/365/base.scss");
+module.exports = __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.scss */"./resources/styles/projects/fungifalls/base.scss");
 
 
 /***/ })

@@ -19,11 +19,16 @@ class ProjectController extends Controller {
         $this->projectRepo = $projectRepository;
     }
 
-    public function show($slug)
+    public function home($project)
 	{
-        $item = $this->projectRepo->find($slug);
-        if(isset($item['view'])) {
-            return view($item['view'])->with([]);
+        $config = config('projects.' . $project);
+        if(!isset($config)) {
+            abort('404');
+        }
+        if(isset($config['view'])) {
+            return view($config['view'])->with([
+                'sidebar' => config('projects.' . $project . '.sidebar')
+            ]);
         } else {
             return redirect()->route('home');
         }
@@ -31,13 +36,14 @@ class ProjectController extends Controller {
 
     public function page($project, $page)
 	{
-        $items = config('content.projects.items');
-        if(isset($items[$project]['view'])) {
-            if(isset($items[$project]['items'][$page]['view'])) {
-                return view($items[$project]['items'][$page]['view']);
-            } else {
-                abort('404');
-            }
+        $routes = config('projects.' . $project . '.routes');
+        if(!isset($routes)) {
+            abort('404');
+        }
+        if(isset($routes[$page]['view'])) {
+            return view($routes[$page]['view'])->with([
+                'sidebar' => config('projects.' . $project . '.routes.' . $page . '.sidebar')
+            ]);
         } else {
             abort('404');
         }

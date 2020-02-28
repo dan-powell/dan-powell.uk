@@ -78,16 +78,19 @@
             opacity: 0;
         }
     }
-
-    // @media screen and (max-width: $screen-md) {
-    //     &-inner {
-    //         clip-path: circle(100%);
-    //     }
-    //     &-title {
-    //         opacity: 1;
-    //     }
-    //     &-bg {
-    //         opacity: 1;
-    //     }
-    // }
+    @media screen and (max-width: $screen-xs) {
+        cursor: pointer;
+        &::after {
+          border-color: transparent;
+        }
+        &-inner {
+          clip-path: circle(100%);
+        }
+        &-title {
+          opacity: 1;
+        }
+        &-bg {
+          opacity: 1;
+        }
+    }
 }

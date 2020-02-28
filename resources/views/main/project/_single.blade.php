@@ -1,4 +1,4 @@
-<a href="{{ route('project.home', $item['slug']) }}" class="ProjectSingle">
+<a href="{{ is_array($item['url']) ? route($item['url'][0], $item['url'][1] ?? null) : url($item['url']) }}" class="ProjectSingle">
     <div class="ProjectSingle-inner">
         <img
             srcset="{{ app('image')->crop(800, 800)->url($item['thumb']) }} 2x"

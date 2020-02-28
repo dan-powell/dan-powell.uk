@@ -4,34 +4,16 @@ class ProjectRepository
 {
 
     private $items;
-    private $tags;
 
     public function __construct()
     {
-        $items = collect(config('content.projects.items'));
-        $this->items = $items->map(function ($item, $key) {
-            $item['slug'] = $key;
-            return $item;
-        });
-        $this->tags = collect(config('content.projects.tags'));
+        $this->items = collect(config('content.projects.items'));
     }
 
 	public function all()
 	{
         return $this->items->sortBy('created_at');
 	}
-
-    public function tags()
-	{
-        return $this->tags;
-	}
-
-    public function find($key)
-    {
-        if(isset($this->items[$key])) {
-            return $this->items[$key];
-        }
-    }
 
 	public function lead()
 	{

@@ -22,8 +22,7 @@ class ProjectController extends Controller {
 	public function index()
 	{
         return view('main.project.index')->with([
-            'projects' => $this->projectRepo->all(),
-            'tags' => $this->projectRepo->tags()
+            'projects' => $this->projectRepo->all()
         ]);
 	}
 

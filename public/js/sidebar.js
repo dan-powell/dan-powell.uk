@@ -493,7 +493,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/sidebar/sidebar.js */"./resources/scripts/sidebar/sidebar.js");
+module.exports = __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/scripts/sidebar/sidebar.js */"./resources/scripts/sidebar/sidebar.js");
 
 
 /***/ })

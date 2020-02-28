@@ -7,10 +7,10 @@
                         <use xlink:href="{{ asset('img/sidebar/icons.svg#projects') }}"></use>
                     </svg>
                 </span>
-                Projects
+                More Projects
             </a>
         </div>
-        <div class="HomeCallToAction-column">
+        {{-- <div class="HomeCallToAction-column">
             <a href="{{ route('page', 'experience') }}" class="HomeCallToAction-button HomeCallToAction-button--secondary">
                 <span class="HomeCallToAction-button-icon">
                     <svg class="HomeCallToAction-button-svg" viewBox="0 0 512 512">
@@ -29,6 +29,6 @@
                 </span>
                 Skills
             </a>
-        </div>
+        </div> --}}
     </div>
 </section>

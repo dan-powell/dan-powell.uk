@@ -62,13 +62,10 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   opacity: 1;
   will-change: transform, opacity;
-  transition: opacity 0s 1.5s, border-color 2s 1s, -webkit-transform 0s 1.5s;
   transition: transform 0s 1.5s, opacity 0s 1.5s, border-color 2s 1s;
-  transition: transform 0s 1.5s, opacity 0s 1.5s, border-color 2s 1s, -webkit-transform 0s 1.5s;
 }
 
 .Sidebar-overlay-inner {
@@ -102,8 +99,7 @@
 
 @media screen and (min-height: 900px) {
   .Sidebar-overlay-bg polygon {
-    -webkit-transform: translateX(-2em);
-            transform: translateX(-2em);
+    transform: translateX(-2em);
   }
 }
 
@@ -128,21 +124,15 @@
 
 .Sidebar-cheeky-img {
   opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  transition: opacity 0.3s ease-in 0s, -webkit-transform 0.3s ease-in 0s;
+  transform: translateY(50%);
   transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s;
-  transition: opacity 0.3s ease-in 0s, transform 0.3s ease-in 0s, -webkit-transform 0.3s ease-in 0s;
 }
 
 .Sidebar.is-open .Sidebar-overlay {
   overflow-y: auto;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
-  transition: opacity 0s 0s, border-color 2s 1s, -webkit-transform 0s 0s;
   transition: transform 0s 0s, opacity 0s 0s, border-color 2s 1s;
-  transition: transform 0s 0s, opacity 0s 0s, border-color 2s 1s, -webkit-transform 0s 0s;
 }
 
 .Sidebar.is-open .Sidebar-title {
@@ -162,8 +152,7 @@
 
 .Sidebar.is-open .Sidebar-cheeky-img {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
   transition-delay: 0.2s;
 }
 
@@ -210,11 +199,8 @@
   padding: 0.75em 2em 0.75em 1em;
   background: #1a1a1a;
   opacity: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  transition: opacity 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  transform: translateX(-100%);
   transition: transform 0.2s ease-in, opacity 0.2s ease-in;
-  transition: transform 0.2s ease-in, opacity 0.2s ease-in, -webkit-transform 0.2s ease-in;
   text-align: center;
   -webkit-clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 0 100%);
           clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 0 100%);
@@ -246,8 +232,7 @@
 }
 
 .Sidebar-button:hover .Sidebar-button-inner {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -276,8 +261,7 @@
   width: 1em;
   background: #1a1a1a;
   transition: 0.25s ease-in-out;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform-origin: center center;
 }
 
 .Sidebar-button--menu:hover .Sidebar-button-icon {
@@ -593,9 +577,7 @@ body {
 .Sidebar .Nav-link-inner {
   display: block;
   padding: 0.3em 0.5em;
-  transition: -webkit-transform 0.2s ease-in 0.2s;
   transition: transform 0.2s ease-in 0.2s;
-  transition: transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
   font-size: 1.6em;
 }
 

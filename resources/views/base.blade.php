@@ -14,7 +14,9 @@
     <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('favicon.ico') }}">
 
     <link rel="stylesheet" href="{{ mix('css/base.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ mix('css/sidebar.css') }}" type="text/css">
+    @if(!isset($sidebar) || isset($sidebar) && $sidebar == true)
+        <link rel="stylesheet" href="{{ mix('css/sidebar.css') }}" type="text/css">
+    @endif
     @stack('style')
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -34,7 +36,9 @@
 
     <script defer src="{{ mix('js/manifest.js') }}"></script>
     <script defer src="{{ mix('js/vendor.js') }}"></script>
-    <script defer src="{{ mix('js/sidebar.js') }}"></script>
+    @if(!isset($sidebar) || isset($sidebar) && $sidebar == true)
+        <script defer src="{{ mix('js/sidebar.js') }}"></script>
+    @endif
     @stack('script')
 
 </head>
@@ -52,7 +56,7 @@
 
 @section('navigation')
     @component('sidebar.components.navigation')
-        @foreach(config('content.navigation.main') as $item)
+        @foreach(config('content.sidebar.navigation') as $item)
             @component('sidebar.components.item')
                 @slot('url', $item['url'] ?? null)
                 @slot('icon', $item['icon'] ?? null)
@@ -66,7 +70,9 @@
 @endsection
 
 <body class="@stack('class')">
-    @include('sidebar.sidebar')
+    @if(!isset($sidebar) || isset($sidebar) && $sidebar == true)
+        @include('sidebar.sidebar')
+    @endif
 
     @yield('main')
 
