@@ -48,7 +48,7 @@
 
 @section('buttons')
     @component('sidebar.components.button')
-        @slot('url', '/')
+        @slot('url', route('home'))
         @slot('icon', 'img/sidebar/icons.svg#home')
         @slot('label', 'Home')
     @endcomponent

@@ -48,6 +48,7 @@ $container-width: 1024px;
     &-img {
         $ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         overflow: hidden;
+        position: relative;
         clip-path: circle(50%);
         transition: all .2s ease-in-out;
         transition: all .3s $ease-bounce;

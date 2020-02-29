@@ -919,6 +919,7 @@
 
 .ProjectExcerpt-img {
   overflow: hidden;
+  position: relative;
   -webkit-clip-path: circle(50%);
           clip-path: circle(50%);
   transition: all 0.2s ease-in-out;
@@ -1316,5 +1317,31 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+}
+
+.Error-layout {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Error-container {
+  max-width: 970px;
+  text-align: center;
+  padding: 2em;
+}
+
+.Error-button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid #ed913d;
+}
+
+.Error-button--primary {
+  background: #ed913d;
+  color: #eee;
 }
 

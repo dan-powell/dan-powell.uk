@@ -19,11 +19,6 @@ Route::domain(config('app.domain'))->group(function () {
         'uses' => 'Main\HomeController@show'
     ]);
 
-    Route::get('sitemap', [
-        'as' => 'sitemap',
-        'uses' => 'SitemapController@show'
-    ]);
-
     Route::get('sitemap.xml', [
         'as' => 'sitemapindex.xmlindex',
         'uses' => 'SitemapController@xmlindex'
@@ -67,9 +62,6 @@ Route::domain('{project}.' . config('app.domain'))->name('project.')->group(func
 
     Route::get('/', ['as' => 'home', 'uses' => 'Project\ProjectController@home']);
 
-
-    // TODO implement individual sitemaps for projects
-    // Route::get('sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@show']);
     Route::get('sitemap.xml', ['as' => 'sitemap.xml', 'uses' => 'SitemapController@xmlproject']);
 
     Route::get(config('images.route') . '/{path}', 'ImageController@project')->where('path', '.*');

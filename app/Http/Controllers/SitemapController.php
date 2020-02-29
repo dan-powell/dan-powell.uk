@@ -14,15 +14,6 @@ class SitemapController extends Controller {
     }
 
     /**
-    *   Return the sitemap in HTML for users
-	*
-	*/
-	public function show()
-	{
-        return view('sitemap.show')->with(['pages' => $this->pages]);
-	}
-
-    /**
     *   Return the sitemap in XML for crawlers
 	*
 	*/
