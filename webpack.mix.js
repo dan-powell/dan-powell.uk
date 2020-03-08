@@ -20,17 +20,24 @@ mix.sass('resources/styles/base/base.scss', 'public/css/base.css')
     .sass('resources/styles/sidebar/base.scss', 'public/css/sidebar.css')
     .sass('resources/styles/projects/365/base.scss', 'public/css/projects/365.css')
     .sass('resources/styles/projects/fungifalls/base.scss', 'public/css/projects/fungifalls.css')
+    .sass('resources/styles/projects/pico8/base.scss', 'public/css/projects/pico8.css')
     .options({
 
     });
 
 mix.js(['resources/scripts/main/base.js', 'resources/scripts/main/_home.js', 'resources/scripts/main/_projects.js'], 'public/js/main.js')
     .js('resources/scripts/projects/fungifalls/base.js', 'public/js/projects/fungifalls.js')
+    .js('resources/scripts/projects/pico8/base.js', 'public/js/projects/pico8.js')
     .js(['node_modules/waypoints/lib/noframework.waypoints.js', 'node_modules/waypoints/lib/shortcuts/inview.js', 'resources/scripts/projects/365/base.js'], 'public/js/projects/365.js')
     .js('resources/scripts/sidebar/sidebar.js', 'public/js')
     .extract(['animejs']);
 
 mix.browserSync({
     proxy: process.env.APP_DOMAIN,
+    open: false,
+});
+
+mix.browserSync({
+    proxy: 'pico8.dan-powell.test',
     open: false,
 });

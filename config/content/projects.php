@@ -3,6 +3,15 @@
 return [
     'items' => [
         [
+            'name' => 'PICO-8 Games',
+            'sub' => null,
+            'description' => '<p>A collection of games I\'ve created for the PICO-8 virtual console</p>',
+            'thumb' => 'projects/pico8/thumb.gif',
+            'created_at' => '2015-02-29 00:00:00',
+            'updated_at' => '2020-02-29 00:00:00',
+            'url' => ['project.home', ['pico8']],
+        ],
+        [
             'name' => '365 2010',
             'sub' => '365 pieces of creative work in a single year',
             'description' => '<p>At the end of 2009 I decided to challenge myself with a new-years resolution — to create a single piece of creative work every day for a whole year.</p>',

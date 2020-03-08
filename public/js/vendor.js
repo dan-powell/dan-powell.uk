@@ -1293,7 +1293,7 @@ anime.random = function (min, max) { return Math.floor(Math.random() * (max - mi
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************!*\
   !*** multi animejs ***!
   \*********************/

@@ -12,7 +12,7 @@ class ProjectRepository
 
 	public function all()
 	{
-        return $this->items->sortBy('created_at');
+        return $this->items->sortByDesc('updated_at');
 	}
 
 	public function lead()

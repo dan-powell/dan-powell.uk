@@ -355,6 +355,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/styles/projects/pico8/base.scss":
+/*!***************************************************!*\
+  !*** ./resources/styles/projects/pico8/base.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/styles/sidebar/base.scss":
 /*!********************************************!*\
   !*** ./resources/styles/sidebar/base.scss ***!
@@ -367,9 +378,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/scripts/main/base.js ./resources/scripts/main/_home.js ./resources/scripts/main/_projects.js ./resources/styles/base/base.scss ./resources/styles/main/base.scss ./resources/styles/sidebar/base.scss ./resources/styles/projects/365/base.scss ./resources/styles/projects/fungifalls/base.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/scripts/main/base.js ./resources/scripts/main/_home.js ./resources/scripts/main/_projects.js ./resources/styles/base/base.scss ./resources/styles/main/base.scss ./resources/styles/sidebar/base.scss ./resources/styles/projects/365/base.scss ./resources/styles/projects/fungifalls/base.scss ./resources/styles/projects/pico8/base.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -380,7 +391,8 @@ __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/ba
 __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/main/base.scss */"./resources/styles/main/base.scss");
 __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/sidebar/base.scss */"./resources/styles/sidebar/base.scss");
 __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/365/base.scss */"./resources/styles/projects/365/base.scss");
-module.exports = __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.scss */"./resources/styles/projects/fungifalls/base.scss");
+__webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/fungifalls/base.scss */"./resources/styles/projects/fungifalls/base.scss");
+module.exports = __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/styles/projects/pico8/base.scss */"./resources/styles/projects/pico8/base.scss");
 
 
 /***/ })
