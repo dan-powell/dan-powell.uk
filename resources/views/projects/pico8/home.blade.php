@@ -20,8 +20,6 @@
             </div>
         </div>
         <img class="Header-img" alt="PICO-8 Games" src="{{ asset('assets/hero_3x2.gif') }}">
-        {{-- <div class="Header-graphic">
-        </div> --}}
     </header>
     <section class="Games" id="a-games">
         <div class="Games-list">

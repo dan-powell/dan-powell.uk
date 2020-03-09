@@ -52,24 +52,29 @@ return [
                 [
                     'formats' => [
                         [
+                            'file' => 'assets/borkanoid_preview1.webm',
+                            'mime' => 'video/webm',
+                            'codecs' => 'vp9,vorbis'
+                        ],
+                        [
                             'file' => 'assets/borkanoid_preview1.mp4',
                             'mime' => 'video/mp4',
                             'codecs' => null
                         ],
-                        [
-                            'file' => 'assets/borkanoid_preview1.ogv',
-                            'mime' => 'video/ogg',
-                            'codecs' => null
-                        ],
-                        [
-                            'file' => 'assets/borkanoid_preview1.webm',
-                            'mime' => 'video/webm',
-                            'codecs' => 'vp9,vorbis'
-                        ]
+                        // [
+                        //     'file' => 'assets/borkanoid_preview1.ogv',
+                        //     'mime' => 'video/ogg',
+                        //     'codecs' => null
+                        // ],
                     ]
                 ],
                 [
                     'formats' => [
+                        [
+                            'file' => 'assets/borkanoid_preview2.webm',
+                            'mime' => 'video/webm',
+                            'codecs' => 'vp9,vorbis'
+                        ],
                         [
                             'file' => 'assets/borkanoid_preview2.mp4',
                             'mime' => 'video/mp4',
@@ -80,11 +85,6 @@ return [
                             'mime' => 'video/ogg',
                             'codecs' => null
                         ],
-                        [
-                            'file' => 'assets/borkanoid_preview2.webm',
-                            'mime' => 'video/webm',
-                            'codecs' => 'vp9,vorbis'
-                        ]
                     ]
                 ]
             ]

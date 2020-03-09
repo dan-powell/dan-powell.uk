@@ -1,5 +1,6 @@
 .Home {
     overflow-x: hidden;
+    padding-top: 0;
 }
 
 .Header {
@@ -55,11 +56,21 @@
         object-position: 0 50%; /* positioned top left of the content box */
     }
     @media screen and (max-width: $screen-md) {
-        flex-wrap: wrap;
+        display: block;
+        // flex-wrap: wrap;
+        position: relative;
         &-intro {
             flex: 1 1 auto;
+            position: relative;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
         }
-        &-graphic {
+        &-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
             flex: 1 1 100%;
         }
         &-title {
@@ -224,6 +235,11 @@
         }
         &-cart { order: 2 }
         &-description { order: 1 }
+    }
+    @media screen and (max-width: $screen-md) {
+        &-cart {
+            z-index: 20;
+        }
     }
     @media screen and (max-width: $screen-sm) {
         &-inner {
