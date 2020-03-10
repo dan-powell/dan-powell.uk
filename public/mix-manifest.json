@@ -1,15 +1,15 @@
 {
-    "/js/main.js": "/js/main.js",
-    "/css/base.css": "/css/base.css",
-    "/css/main.css": "/css/main.css",
-    "/css/sidebar.css": "/css/sidebar.css",
-    "/css/projects/365.css": "/css/projects/365.css",
-    "/css/projects/fungifalls.css": "/css/projects/fungifalls.css",
-    "/css/projects/pico8.css": "/css/projects/pico8.css",
-    "/js/manifest.js": "/js/manifest.js",
-    "/js/projects/365.js": "/js/projects/365.js",
-    "/js/projects/fungifalls.js": "/js/projects/fungifalls.js",
-    "/js/projects/pico8.js": "/js/projects/pico8.js",
-    "/js/sidebar.js": "/js/sidebar.js",
-    "/js/vendor.js": "/js/vendor.js"
+    "/js/manifest.js": "/js/manifest.js?id=7db827d654313dce4250",
+    "/js/vendor.js": "/js/vendor.js?id=e96ac147c36eb98148f5",
+    "/js/main.js": "/js/main.js?id=95ff6ddfa1a6cd48ec25",
+    "/css/base.css": "/css/base.css?id=486c0cc3d8206533c47a",
+    "/css/main.css": "/css/main.css?id=fae36cda1e29695a88b8",
+    "/css/sidebar.css": "/css/sidebar.css?id=2bf59739e5b1f6d73b29",
+    "/css/projects/365.css": "/css/projects/365.css?id=f833c1b1d69ce1de89d0",
+    "/css/projects/fungifalls.css": "/css/projects/fungifalls.css?id=561cc70bcef15abf7fce",
+    "/css/projects/pico8.css": "/css/projects/pico8.css?id=acc7424b70d3a38eb62c",
+    "/js/projects/365.js": "/js/projects/365.js?id=cfce7fd9015cdf078941",
+    "/js/projects/fungifalls.js": "/js/projects/fungifalls.js?id=78e0fbf3f1974cbd44d6",
+    "/js/projects/pico8.js": "/js/projects/pico8.js?id=ac9eaaed32292448241e",
+    "/js/sidebar.js": "/js/sidebar.js?id=1af9196c4de7109c3715"
 }

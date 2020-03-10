@@ -36,8 +36,3 @@ mix.browserSync({
     proxy: process.env.APP_DOMAIN,
     open: false,
 });
-
-mix.browserSync({
-    proxy: 'pico8.dan-powell.test',
-    open: false,
-});
