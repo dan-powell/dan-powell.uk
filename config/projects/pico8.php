@@ -50,6 +50,7 @@ return [
             // 'about' => 'borkanoid',
             'previews' => [
                 [
+                    'poster' => 'assets/borkanoid_preview1.gif',
                     'formats' => [
                         [
                             'file' => 'assets/borkanoid_preview1.webm',
@@ -61,14 +62,15 @@ return [
                             'mime' => 'video/mp4',
                             'codecs' => null
                         ],
-                        // [
-                        //     'file' => 'assets/borkanoid_preview1.ogv',
-                        //     'mime' => 'video/ogg',
-                        //     'codecs' => null
-                        // ],
+                        [
+                            'file' => 'assets/borkanoid_preview1.ogv',
+                            'mime' => 'video/ogg',
+                            'codecs' => null
+                        ],
                     ]
                 ],
                 [
+                    'poster' => 'assets/borkanoid_preview2.gif',
                     'formats' => [
                         [
                             'file' => 'assets/borkanoid_preview2.webm',
