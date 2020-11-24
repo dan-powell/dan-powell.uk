@@ -54,15 +54,15 @@
                                 </div>
                                 @if(isset($cart['previews']))
                                     <div class="Game-previews">
-                                        @foreach($cart['previews'] as $preview)
-                                            <video class="Game-video" autoplay loop muted playsinline>
-                                            @if(isset($cart['previews']))
-                                                @foreach($preview['formats'] as $format)
-                                                    <source src="{{ asset($format['file']) }}" type="{{ $format['mime'] ?? '' }}" codecs="{{ $format['codecs'] ?? '' }}">
-                                                @endforeach
-                                            @endif
-                                            </video>
-                                        @endforeach
+                                        @if(isset($cart['previews']))
+                                            @foreach($cart['previews'] as $preview)
+                                                <video class="Game-video" autoplay loop muted playsinline  poster="{{ $preview['poster'] }}">
+                                                    @foreach($preview['formats'] as $format)
+                                                        <source src="{{ asset($format['file']) }}" type="{{ $format['mime'] ?? '' }}" codecs="{{ $format['codecs'] ?? '' }}">
+                                                    @endforeach
+                                                </video>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 @endif
                             </div>
