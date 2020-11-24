@@ -5,6 +5,7 @@ var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
 });
 
+
 let waypoints = document.getElementsByClassName('js-waypoint');
 for(let i=0; i<waypoints.length; i++) {
     new Waypoint.Inview({
@@ -23,6 +24,6 @@ for(let i=0; i<waypoints.length; i++) {
 }
 
 const lightbox = GLightbox({
-    selector: 'js-lightbox',
+    selector: '.js-lightbox',
     autoplayVideos: true,
 });

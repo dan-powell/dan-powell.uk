@@ -3,6 +3,15 @@
 return [
     'items' => [
         [
+            'name' => 'Adventures in 3D Printing',
+            'sub' => null,
+            'description' => '<p></p>',
+            'thumb' => 'projects/3dprint/thumb.jpg',
+            'created_at' => '2020-11-22 00:00:00',
+            'updated_at' => '2020-11-22 00:00:00',
+            'url' => ['project.home', ['3dprint']],
+        ],
+        [
             'name' => 'PICO-8 Games',
             'sub' => null,
             'description' => '<p>A collection of games I\'ve created for the PICO-8 virtual console</p>',

@@ -486,16 +486,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!****************************************************!*\
   !*** multi ./resources/scripts/sidebar/sidebar.js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/c/Users/Dan/Codebase/dan-powell/resources/scripts/sidebar/sidebar.js */"./resources/scripts/sidebar/sidebar.js");
+module.exports = __webpack_require__(/*! /Users/dan/Codebase/dan-powell/resources/scripts/sidebar/sidebar.js */"./resources/scripts/sidebar/sidebar.js");
 
 
 /***/ })
 
-},[[4,"/js/manifest","/js/vendor"]]]);
+},[[5,"/js/manifest","/js/vendor"]]]);
