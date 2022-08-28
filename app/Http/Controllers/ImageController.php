@@ -8,11 +8,8 @@ use App\Http\Requests\ImageGetRequest;
 class ImageController extends Controller
 {
 
-    private $storage;
-
-    public function __construct(Storage $storage)
+    public function __construct(private readonly Storage $storage)
     {
-        $this->storage = $storage;
     }
 
     // Returns an image from the main image storage disk

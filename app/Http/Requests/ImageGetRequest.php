@@ -29,7 +29,7 @@ class ImageGetRequest extends FormRequest
             try {
                 // Validate HTTP signature
                 $this->signatureFactory->validateRequest($this->path(), $this->all());
-            } catch (SignatureException $e) {
+            } catch (SignatureException) {
                 return false;
             }
         }

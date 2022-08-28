@@ -1,4 +1,3 @@
-
 <html manifest="game.manifest">                                           <!-- <= LINK TO MANIFEST (to cache files for offline-access= -->
 <head>
   <meta charset="utf-8">

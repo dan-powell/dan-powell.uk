@@ -7,11 +7,8 @@ use App\Repositories\PortfolioRepository;
 class PortfolioController extends Controller
 {
 
-    private $portfolioRepo;
-
-    public function __construct(PortfolioRepository $portfolioRepository)
+    public function __construct(private readonly PortfolioRepository $portfolioRepo)
     {
-        $this->portfolioRepo = $portfolioRepository;
     }
 
 	public function index()

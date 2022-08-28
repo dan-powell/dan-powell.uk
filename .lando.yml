@@ -1,0 +1,61 @@
+name: dan-powell
+recipe: laravel
+config:
+  webroot: public
+  via: nginx
+  php: '8.1'
+  composer-version: '2'
+  composer:
+    'deployer/deployer' : '~7'
+services:
+  appserver:
+    overrides:
+      environment:
+        - SSH_AUTH_SOCK=/ssh-agent
+      volumes:
+        - ${SSH_AUTH_SOCK}:/ssh-agent
+  database:
+    creds:
+      user: dan-powell
+      password: dan-powell
+      database: dan-powell
+  node:
+    type: node:14
+    build:
+      - npm install
+    scanner: false
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  pma:
+    type: phpmyadmin
+    hosts: database
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  dep:
+    service: appserver
+    desription: run deployer commands
+    cmd:
+      - "dep"
+  reset:
+    service: appserver
+    desription: erase DB and re-seed
+    cmd:
+      - "php artisan db:wipe"
+      - "php artisan migrate"
+      - "php artisan db:seed"
+proxy:
+  appserver_nginx:
+    - dan-powell.lndo.site
+    - 3dprint.dan-powell.lndo.site
+    - pico8.dan-powell.lndo.site
+    - fungifalls.dan-powell.lndo.site
+    - 365.dan-powell.lndo.site
+  node:
+    - bs.dan-powell.lndo.site:3000
+  pma:
+    - pma.dan-powell.lndo.site:80

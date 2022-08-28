@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Composers\PortfolioComposer;
+use App\Http\Composers\ProjectsComposer;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -17,12 +19,12 @@ class ViewServiceProvider extends ServiceProvider
 
         View::composer(
             ['main.home.home'],
-            'App\Http\Composers\PortfolioComposer'
+            PortfolioComposer::class
         );
 
         View::composer(
             ['main.home.home'],
-            'App\Http\Composers\ProjectsComposer'
+            ProjectsComposer::class
         );
     }
 

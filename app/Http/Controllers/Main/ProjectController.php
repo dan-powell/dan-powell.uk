@@ -10,13 +10,8 @@ use App\Repositories\ProjectRepository;
 
 class ProjectController extends Controller {
 
-    private $storage;
-    private $projectRepo;
-
-    public function __construct(Storage $storage, ProjectRepository $projectRepository)
+    public function __construct(private readonly Storage $storage, private readonly ProjectRepository $projectRepo)
     {
-        $this->storage = $storage;
-        $this->projectRepo = $projectRepository;
     }
 
 	public function index()

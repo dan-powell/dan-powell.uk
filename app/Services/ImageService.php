@@ -11,7 +11,7 @@ class ImageService
 {
 
     private $urlBuilder;
-    private $properties = [];
+    private array $properties = [];
 
     public function __construct()
     {
