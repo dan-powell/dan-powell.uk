@@ -22,9 +22,7 @@ add('shared_dirs', [
 add('writable_dirs', []);
 
 // Hosts
-inventory('hosts.yml');
-
-set('default_stage', 'staging');
+import('hosts.yml');
 
 // Tasks
 task('files:pull', function () {
