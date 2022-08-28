@@ -1,4 +1,3 @@
-
 <aside class="Sidebar">
     <div class="Sidebar-stripe">
         <a href="{{ config('app.url') }}" class="Sidebar-home">

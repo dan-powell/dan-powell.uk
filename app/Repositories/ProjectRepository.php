@@ -18,9 +18,7 @@ class ProjectRepository
 	public function lead()
 	{
         $lead = $this->all()->only(config('content.portfolio.lead'));
-        return $lead->sortBy(function($model, $key){
-            return array_search($key, config('content.portfolio.lead'));
-        });
+        return $lead->sortBy(fn($model, $key) => array_search($key, config('content.portfolio.lead')));
     }
 
     public function nonlead()

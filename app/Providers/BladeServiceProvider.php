@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Route;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
@@ -35,7 +36,7 @@ EOT;
 
         // Is the given route active?
         Blade::if('active', function ($route, $slug = null) {
-            if(\Route::currentRouteName() == $route && \Route::input('slug') == $slug) {
+            if(Route::currentRouteName() == $route && Route::input('slug') == $slug) {
                 return true;
             } else {
                 return false;

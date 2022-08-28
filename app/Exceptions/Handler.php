@@ -2,6 +2,8 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Exception;
 use Throwable;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -44,9 +46,9 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function render($request, Throwable $exception)
     {

@@ -42,17 +42,14 @@ class ImageUrl extends Command
      */
     protected $description = 'Generate a secure image link';
 
-    protected $imageService;
-
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(ImageService $imageService)
+    public function __construct(protected ImageService $imageService)
     {
         parent::__construct();
-        $this->imageService = $imageService;
     }
 
     /**

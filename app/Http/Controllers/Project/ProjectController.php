@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers\Project;
 
+use Response;
 use League\Glide\Responses\LaravelResponseFactory;
 use League\Glide\ServerFactory;
 use App\Http\Requests\ImageGetRequest;
@@ -10,13 +11,8 @@ use App\Repositories\ProjectRepository;
 
 class ProjectController extends Controller {
 
-    private $storage;
-    private $projectRepo;
-
-    public function __construct(Storage $storage, ProjectRepository $projectRepository)
+    public function __construct(private readonly Storage $storage, private readonly ProjectRepository $projectRepo)
     {
-        $this->storage = $storage;
-        $this->projectRepo = $projectRepository;
     }
 
     public function home($project)
@@ -63,7 +59,7 @@ class ProjectController extends Controller {
         $file = $filesystem->get($path);
         $type = $filesystem->mimeType($path);
 
-        $response = \Response::make($file, 200);
+        $response = Response::make($file, 200);
         $response->header("Content-Type", $type);
 
         return $response;

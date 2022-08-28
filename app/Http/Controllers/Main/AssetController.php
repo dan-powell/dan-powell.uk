@@ -1,16 +1,14 @@
 <?php namespace App\Http\Controllers\Main;
 
+use Response;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Storage;
 
 class AssetController extends Controller {
 
-    private $storage;
-
-    public function __construct(Storage $storage)
+    public function __construct(private readonly Storage $storage)
     {
-        $this->storage = $storage;
     }
 
     public function asset($filename)
@@ -27,7 +25,7 @@ class AssetController extends Controller {
         $file = $filesystem->get($path);
         $type = $filesystem->mimeType($path);
 
-        $response = \Response::make($file, 200);
+        $response = Response::make($file, 200);
         $response->header("Content-Type", $type);
 
         return $response;
