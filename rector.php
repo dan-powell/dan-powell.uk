@@ -35,7 +35,7 @@ return static function (RectorConfig $rectorConfig): void {
         // LevelSetList::UP_TO_PHP_80,
         LevelSetList::UP_TO_PHP_81,
         // LaravelSetList::LARAVEL_80,
-        LaravelLevelSetList::UP_TO_LARAVEL_80,
+        LaravelLevelSetList::UP_TO_LARAVEL_90,
         // LaravelSetList::LARAVEL_LEGACY_FACTORIES_TO_CLASSES,
         // LaravelSetList::ARRAY_STR_FUNCTIONS_TO_STATIC_CALL
         // LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
