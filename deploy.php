@@ -59,8 +59,8 @@ task('files:clean', function () {
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
-// Migrate database before symlink new release.
-//before('deploy:symlink', 'artisan:migrate');
+// Disable database migrations (because we don't use a DB)
+task('artisan:migrate')->disable();
 
 // Deploy files.
 before('deploy:symlink', 'files:push');
