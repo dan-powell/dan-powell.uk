@@ -1,10 +1,7 @@
-example.com:
-  user: user
-  stage: production
-  deploy_path: ~/www/production
-  branch: production
-staging.example.com:
-  user: user
-  stage: staging
-  deploy_path: ~/www/staging
-  branch: staging
+hosts:
+  production:
+    hostname: example.com
+    remote_user: username
+    stage: production
+    deploy_path: ~/www/production
+    branch: production

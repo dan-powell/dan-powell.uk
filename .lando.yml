@@ -3,7 +3,7 @@ recipe: laravel
 config:
   webroot: public
   via: nginx
-  php: '8.1'
+  php: '8.2'
   composer-version: '2'
   composer:
     'deployer/deployer' : '~7'
