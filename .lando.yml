@@ -32,6 +32,10 @@ services:
     type: phpmyadmin
     hosts: database
 tooling:
+  rector:
+    service: appserver
+    cmd:
+      - "vendor/bin/rector"
   node:
     service: node
   npm:
