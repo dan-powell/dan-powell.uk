@@ -44,12 +44,13 @@ class PieceResource extends Resource
                                     $set('slug', Str::slug($state));
                                 }
                             })
-                            ->reactive()
+                            ->live(debounce: 500)
                             ->required(),
-                        Forms\Components\TextInput::make('slug')
+                            Forms\Components\TextInput::make('slug')
                             ->afterStateUpdated(function (Set $set) {
                                 $set('is_slug_changed_manually', true);
                             })
+                            ->live(debounce: 500)
                             ->unique(ignoreRecord: true)
                             ->required(),
                         Forms\Components\Hidden::make('slug_changed')

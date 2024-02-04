@@ -5,12 +5,15 @@ namespace App\Http\Controllers\Ai52;
 use App\Http\Controllers\Controller;
 use App\Models\Ai52\Piece;
 use App\Models\Ai52\Theme;
+use Illuminate\Http\Request;
 
 class Ai52Controller extends Controller
 {
-    public function index()
+    public function index(Request $request)
 	{
-        $themes = Theme::with(['pieces'])->orderBy('date', 'ASC')->paginate(8);
+        $themes = Theme::with(['pieces'])->orderBy('date', $request->query('order') == 'asc' ? 'ASC' : 'DESC')->paginate(2)->appends([
+            'order' => $request->query('order'),
+        ]);
 
         return view('projects.ai52.index')->with([
             'themes' => $themes,
@@ -22,7 +25,7 @@ class Ai52Controller extends Controller
 
     public function show(string $slug)
 	{
-        $piece = Piece::with(['theme.pieces'])->where('slug', $slug)->first();
+        $piece = Piece::with(['theme.pieces'])->where('slug', $slug)->firstOrFail();
         
         $next = Piece::where('created_at', '>', $piece->created_at)->orderBy('created_at', 'ASC')->first();
         $previous = Piece::where('created_at', '<', $piece->created_at)->orderBy('created_at', 'DESC')->first();
