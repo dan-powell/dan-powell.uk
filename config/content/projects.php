@@ -3,6 +3,15 @@
 return [
     'items' => [
         [
+            'name' => 'Ai 52',
+            'sub' => null,
+            'description' => '<p></p>',
+            'thumb' => 'projects/3dprint/thumb.jpg',
+            'created_at' => '2020-11-22 00:00:00',
+            'updated_at' => '2020-11-22 00:00:00',
+            'url' => ['project.home', ['ai52']],
+        ],
+        [
             'name' => 'Adventures in 3D Printing',
             'sub' => null,
             'description' => '<p></p>',

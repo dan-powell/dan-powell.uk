@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://dan-powell.uk'),
 
 
     'domain' => env('APP_DOMAIN', 'dan-powell.uk'),

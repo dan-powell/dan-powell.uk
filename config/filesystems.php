@@ -61,6 +61,8 @@ return [
         'project_images' => [
             'driver' => 'local',
             'root' => storage_path('project_images'),
+            'visibility' => 'public',
+            'url' => env('APP_URL') . '/project_images'
         ],
 
         'project_assets' => [
@@ -74,4 +76,8 @@ return [
         ],
 
     ],
+
+    'links' => [
+        public_path('project_images') => storage_path('project_images'),
+    ]
 ];

@@ -1,0 +1,322 @@
+.Header {
+  display: flex;
+  align-items: flex-end;
+  gap: 2em;
+  margin-bottom: 2rem;
+}
+
+.Header-logo {
+  max-width: 30ch;
+  flex: 0 0 auto;
+}
+
+.Header-desc {
+  padding: 1.4em 0;
+  max-width: 66ch;
+}
+
+@media screen and (max-width: 640px) {
+  .Header {
+    flex-wrap: wrap;
+  }
+}
+
+.Index-list {
+  display: flex;
+  width: 100%;
+}
+
+.Index-list-month {
+  order: 2;
+  flex: 0 0 auto;
+}
+
+.Index-list-month-h {
+  writing-mode: vertical-rl;
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2em;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.Index-list-item {
+  display: flex;
+  gap: 2rem;
+}
+
+.Index-list-inner {
+  flex: 1 1 auto;
+  order: 1;
+}
+
+.Index-list-group-heading {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.Index-list-group-week {
+  font-size: 2.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.Index-list-group-theme {
+  font-size: 4rem;
+  line-height: 1;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.Index-list-group-items {
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.Index-pagination {
+  margin: 1rem 0;
+}
+
+.Pagination {
+  font-family: "Orbitron", san-serif;
+  justify-content: flex-start;
+}
+
+.Pagination a,
+.Pagination span {
+  border-radius: 0;
+}
+
+.Pagination a {
+  color: #FF0B4B;
+  border-color: #FF0B4B;
+}
+
+.Pagination a:hover {
+  background: #FF0B4B;
+}
+
+.Pagination li.is-active a,
+.Pagination li.is-active span {
+  border-color: #FF0B4B;
+  background: #FF0B4B;
+}
+
+.PieceExcerpt {
+  transition: all 0.2s ease-in;
+}
+
+.PieceExcerpt-link {
+  display: inline-block;
+}
+
+.PieceExcerpt-link:hover {
+  transform: rotate(4deg) scale(1.1);
+}
+
+.HeaderShow {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  width: 100%;
+}
+
+.HeaderShow-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 14ch;
+}
+
+.HeaderShow-theme-week {
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.HeaderShow-theme-theme {
+  font-size: 3rem;
+  line-height: 1;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.HeaderShow-title {
+  font-size: 6rem;
+  line-height: 1;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.HeaderShow-pagination {
+  margin-left: auto;
+  display: flex;
+  font-size: 6rem;
+  gap: 1em;
+}
+
+.HeaderShow-pagination a {
+  line-height: 1;
+  color: #FF0B4B;
+}
+
+.Show-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.Show-media {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.Show-image-img {
+  max-height: 80vh;
+}
+
+.Show-video {
+  max-height: 80vh;
+  max-width: 100%;
+}
+
+.Show-desc {
+  max-width: 66ch;
+}
+
+.Show-process-heading {
+  text-transform: uppercase;
+}
+
+.Show-process-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+}
+
+.Show-process-group-heading {
+  padding: 0.5em 0;
+}
+
+.Show-process-group-heading-h {
+  font-size: 1.6em;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.Show-process-group-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Show-metadata-heading {
+  font-size: 2.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Orbitron", san-serif;
+  color: #B5B5B5;
+}
+
+.Show-metadata-heading:hover {
+  cursor: pointer;
+}
+
+.Show-metadata-list {
+  display: block;
+  margin-top: 1em;
+}
+
+.Show-metadata-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Show-metadata-key {
+  float: left;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: right;
+  clear: left;
+}
+
+.Show-metadata-value {
+  float: left;
+  padding: 0 0.5em;
+}
+
+.Show-more-heading {
+  font-family: "Orbitron", san-serif;
+  color: #B5B5B5;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+.Show-more-heading-theme {
+  font-size: 1.2em;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.Show-more-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .HeaderShow {
+    flex-wrap: wrap;
+  }
+
+  .Show-process-group-list > * {
+    flex: 1 1 40%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", san-serif;
+  color: #B5B5B5;
+}
+
+.Container {
+  width: 100%;
+  padding: 2rem 3rem;
+  display: flex;
+}
+
+.Container > * {
+  flex: 1 1 auto;
+}
+
+.Container-side {
+  flex: 0 0 auto;
+}
+
+.Container-side > * {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .Container {
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+  }
+}
+

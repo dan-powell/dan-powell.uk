@@ -52,10 +52,11 @@ Route::domain(config('app.domain'))->group(function () {
 
 });
 
-// Custom Project controller example
-// Route::domain('projectname.' . config('app.domain'))->name('projectname.')->group(function () {
-//     Route::get('slug', ['as' => 'name', 'uses' => 'ProjectName\ProjectNameController@method']);
-// });
+// AI52 Project controller
+Route::domain('ai52.' . config('app.domain'))->name('ai52.')->group(function () {
+    Route::get('/', ['as' => 'home', 'uses' => 'Ai52\Ai52Controller@index']);
+    Route::get('/{id}', ['as' => 'show', 'uses' => 'Ai52\Ai52Controller@show']);
+});
 
 // Projects are on sub-domains
 Route::domain('{project}.' . config('app.domain'))->name('project.')->group(function () {

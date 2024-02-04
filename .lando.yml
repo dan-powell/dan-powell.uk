@@ -59,6 +59,7 @@ proxy:
     - pico8.dan-powell.lndo.site
     - fungifalls.dan-powell.lndo.site
     - 365.dan-powell.lndo.site
+    - ai52.dan-powell.lndo.site
   node:
     - bs.dan-powell.lndo.site:3000
   pma:

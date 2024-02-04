@@ -23,6 +23,7 @@ use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Http\Middleware\HandleCors;
 
 class Kernel extends HttpKernel
 {
@@ -35,6 +36,7 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         CheckForMaintenanceMode::class,
+        HandleCors::class,
         ValidatePostSize::class,
         TrimStrings::class,
         ConvertEmptyStringsToNull::class,

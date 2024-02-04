@@ -1,0 +1,203 @@
+.HeaderShow {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    width: 100%;
+    &-logo {
+        display: block;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 14ch;
+    }
+    &-theme {
+        &-week {
+            line-height: 1;
+            font-size: 2rem;
+        }
+        &-theme {
+            font-size: 3rem;
+            line-height: 1;
+            color: $theme-primary;
+            font-family: 'Dancing Script', serif;
+        }
+    }
+    &-title {
+        font-size: 6rem;
+        line-height: 1;
+        color: $theme-primary;
+        font-family: 'Dancing Script', serif;
+    }
+    &-pagination {
+        margin-left: auto;
+        display: flex;
+        font-size: 6rem;
+        gap: 1em;
+        a {
+            line-height: 1;
+            color: $theme-primary;
+        }
+    }
+}
+
+.Show {
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+    &-media {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    &-image {
+        &-img {
+            max-height: 80vh;
+        }
+    }
+    &-video {
+        max-height: 80vh;
+        max-width: 100%;
+    }
+    &-desc {
+        max-width: 66ch;
+    }
+    &-process {
+        &-heading {
+            text-transform: uppercase;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 3rem;
+        }
+        &-group {
+            &-heading {
+                padding: 0.5em 0;
+                &-h {
+                    font-size: 1.6em;
+                    color: $theme-primary;
+                    font-family: 'Dancing Script', serif;
+                }
+            }
+            &-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+        &-item {
+            &-img {
+                // max-height: 300px;
+            }
+        }
+    }
+    &-metadata {
+        &-heading {
+            font-size: 2.6rem;
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: 'Orbitron', san-serif;
+            color: #B5B5B5;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-list {
+            display: block;
+            margin-top: 1em;
+            &:after {
+                content:"";
+                display:table;
+                clear:both;
+            }
+        }
+        &-key {
+            float: left;
+            width: max-content;
+            text-align: right;
+            // padding: .25em;
+            clear: left;
+        }
+        &-value {
+            float: left;
+            // width: 60%;
+            padding: 0 0.5em;
+        }
+    }
+    &-more {
+        &-heading {
+            font-family: 'Orbitron', san-serif;
+            color: #B5B5B5;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 0.5em;
+            &-theme {
+                font-size: 1.2em;
+                color: $theme-primary;
+                font-family: 'Dancing Script', serif;
+            }
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .HeaderShow {
+        flex-wrap: wrap;
+    }
+    .Show {
+        &-media {
+
+        }
+        &-image {
+            &-img {
+                // max-height: auto;
+                // width: 100%;
+            }
+        }
+        &-process {
+            &-heading {
+
+            }
+            &-list {
+
+            }
+            &-group {
+                &-heading {
+                    &-h {
+
+                    }
+                }
+                &-list {
+                    > * {
+                        flex: 1 1 40%;
+                    }
+                }
+            }
+            &-item {
+                &-img {
+                    // height:
+                }
+            }
+        }
+        &-metadata {
+            
+        }
+        &-more {
+            &-heading {
+                &-theme {
+
+                }
+            }
+            &-list {
+
+            }
+        }
+    }
+}
