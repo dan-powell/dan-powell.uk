@@ -18,3 +18,7 @@ gulp.env.yaml
 
 # Deployment
 hosts.yml
+
+# DB Exports
+/*.sql.gz
+/*.sql

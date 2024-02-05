@@ -4,7 +4,7 @@
             <h1 class="Sidebar-home-title">
                 <span class="Sidebar-home-text Sidebar-home-text--dan">Dan</span>
                 <span class="Sidebar-home-text Sidebar-home-text--powell">Powell</span>
-                <span class="Sidebar-home-text Sidebar-home-text--web">Web</span>
+                {{-- <span class="Sidebar-home-text Sidebar-home-text--web">Web</span> --}}
                 <span class="Sidebar-home-text Sidebar-home-text--design">Design</span>
             </h1>
         </a>

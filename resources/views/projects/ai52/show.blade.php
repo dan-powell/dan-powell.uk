@@ -27,40 +27,53 @@
             <a class="Show-image" href="{{ asset(app('image')->url($piece->image_url)) }}">
                 <img class="Show-image-img" src="{{ asset(app('image')->size('2560')->url($piece->image_url)) }}"/>
             </a>
-        
-            @if($piece->video)
-                <video class="Show-video" controls>
-                    <source src="{{ asset('/assets/' . $piece->video_url) }}">
-                </video>
+
+            @if($piece->description || $piece->video)
+                <div class="Show-aside">
+                
+                    @if($piece->description)
+                        <div class="Show-desc u-content">
+                            {!! Str::markdown($piece->description) !!}
+                        </div>
+                    @endif
+
+                    @if($piece->video)
+                        <video class="Show-video" controls>
+                            <source src="{{ asset('/assets/' . $piece->video_url) }}">
+                        </video>
+                    @endif
+
+                </div>
             @endif
 
-        </div>
-
-        @if($piece->description)
-            <div class="Show-desc u-content">
-                {!! Str::markdown($piece->description) !!}
-            </div>
-        @endif
-    
-        @if(count($piece->process))
-            <div class="Show-process">
-                <h2 class="Show-process-heading">Process</h2>
-                <div class="Show-process-list">
-                    @foreach($piece->process as $key => $process)
-                        <div class="Show-process-group">
-                            <h4 class="Show-process-group-heading">{{ $key + 1 }} <span class="Show-process-group-heading-h">{{ $process['caption'] ?? '' }}</span></h4>
-                            <div class="Show-process-group-list">
-                                @foreach($process['images'] as $image)
-                                    <a class="Show-process-item" href="{{ asset(app('image')->url($piece->fixPath($image))) }}">
-                                        <img class="Show-process-item-img" src="{{ asset(app('image')->size(null, '300')->url($piece->fixPath($image))) }}"/>
-                                    </a>
-                                @endforeach
+            @if(count($piece->process))
+                <div class="Show-process">
+                    <h2 class="Show-process-heading">Process</h2>
+                    <div class="Show-process-list">
+                        @foreach($piece->process as $key => $process)
+                            <div class="Show-process-group">
+                                <h4 class="Show-process-group-heading">
+                                    {{ $key + 1 }} <span class="Show-process-group-heading-h">{{ $process['caption'] ?? '' }}</span>
+                                </h4>
+                                <div class="Show-process-group-list">
+                                    @foreach($process['images'] as $image)
+                                        <a class="Show-process-item js-lightbox" data-type="image" href="{{ asset(app('image')->url($piece->fixPath($image))) }}" title="{{ $process['caption'] ?? '' }}">
+                                            <img class="Show-process-item-img" src="{{ asset(app('image')->size(null, '300')->url($piece->fixPath($image))) }}"/>
+                                        </a>
+                                    @endforeach
+                                </div>
+                                @if(isset($process['description']))
+                                    <div class="Show-desc u-content">
+                                        {!! Str::markdown($process['description']) !!}
+                                    </div>
+                                @endif
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
-            </div>
-        @endif
+            @endif
+        </div>
+    
     
         @if(isset($piece->metadata_json) && count($piece->metadata_json) > 1)
             <details class="Show-metadata">
@@ -89,10 +102,14 @@
     <div class="Container-side">
         <div class="HeaderShow-pagination">
             @if($previous)
-                <a href="{{ $previous->url }}">&laquo;</a>
+                <div class="HeaderShow-pagination-item -prev">
+                    @include('projects.ai52.components._excerpt', ['piece' => $previous])
+                </div>
             @endif
             @if($next)
-                <a href="{{ $next->url }}">&raquo;</a>
+                <div class="HeaderShow-pagination-item -next">
+                    @include('projects.ai52.components._excerpt', ['piece' => $next])
+                </div>
             @endif
         </div>
     </div>

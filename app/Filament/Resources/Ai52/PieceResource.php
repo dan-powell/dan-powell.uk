@@ -73,9 +73,7 @@ class PieceResource extends Resource
                     ->image()
                     ->imageEditor(),
                 Forms\Components\MarkdownEditor::make('description')
-                    ->disableToolbarButtons([
-                        'attachFiles',
-                    ])
+                    ->disableToolbarButtons(['attachFiles'])
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('video')
@@ -85,6 +83,10 @@ class PieceResource extends Resource
                     Forms\Components\Repeater::make('process')
                         ->schema([
                             Forms\Components\TextInput::make('caption'),
+                            Forms\Components\MarkdownEditor::make('description')
+                                ->disableToolbarButtons(['attachFiles'])
+                                ->maxLength(5535)
+                                ->columnSpanFull(),
                             Forms\Components\FileUpload::make('images')
                                 ->disk('project_images')
                                 ->directory(fn(Get $get) => 'ai52/' . $get('id') . '/process')

@@ -486,7 +486,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!****************************************************!*\
   !*** multi ./resources/scripts/sidebar/sidebar.js ***!
   \****************************************************/
@@ -498,4 +498,4 @@ module.exports = __webpack_require__(/*! /app/resources/scripts/sidebar/sidebar.
 
 /***/ })
 
-},[[5,"/js/manifest","/js/vendor"]]]);
+},[[6,"/js/manifest","/js/vendor"]]]);

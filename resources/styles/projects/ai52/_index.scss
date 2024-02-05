@@ -37,17 +37,20 @@
         }
         &-item {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             // width: 100%;
         }
         &-inner {
             flex: 1 1 auto;
             order: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 3rem;
         }
         &-group {
             &-heading {
-                display: flex;
-                gap: 2rem;
+                // display: flex;
+                gap: 1rem;
                 align-items: flex-end;
                 flex-wrap: wrap;
             }
@@ -59,13 +62,15 @@
             &-theme {
                 font-size: 4rem;
                 line-height: 1;
+                margin-top: -0.4em;
+                padding-left: 0.5em;
                 color: $theme-primary;
                 font-family: 'Dancing Script', serif;
             }
             &-items {
-                padding: 2rem 0;
+                padding: 1rem 0;
                 display: flex;
-                gap: 2rem;
+                gap: 1rem;
                 flex-wrap: wrap;
             }
         }
@@ -106,7 +111,7 @@
 .PieceExcerpt {
     transition: all .2s ease-in;
     &-link {
-        display: inline-block;
+        display: block;
         &:hover {
             transform: rotate(4deg) scale(1.1);
         }

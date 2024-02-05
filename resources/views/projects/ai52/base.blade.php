@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="{{ mix('css/projects/ai52.css') }}" type="text/css">
 @endpush
 
-{{-- 
+
 @push('script')
-    <script defer src="{{ mix('js/projects/3dprint.js') }}"></script>
+    <script defer src="{{ mix('js/projects/ai52.js') }}"></script>
 @endpush 
---}}
+
