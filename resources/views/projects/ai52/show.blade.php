@@ -14,17 +14,41 @@
     <div class="Container-side">
         <div class="HeaderShow-pagination">
             <div>
-                <a class="HeaderShow-logo" href="/">
-                    <img src="{{ asset('assets/ai52_logo.svg') }}" class="HeaderShow-logo-img"/>
-                </a>
                 @if($previous)
                     <div class="HeaderShow-pagination-item -prev">
                         @include('projects.ai52.components._excerpt', ['piece' => $previous])
                     </div>
                 @endif
-                @if($next)
-                    <div class="HeaderShow-pagination-item -next">
-                        @include('projects.ai52.components._excerpt', ['piece' => $next])
+            </div>
+            <a class="HeaderShow-logo" href="/">
+                <img src="{{ asset('assets/ai52_logo.svg') }}" class="HeaderShow-logo-img"/>
+            </a>
+            <div>
+                <div class="HeaderShow-theme">
+                    <h2 class="HeaderShow-theme-week">Week {{ $piece->theme->date->format('W') }}</h2>
+                    <h2 class="HeaderShow-theme-theme">{{ $piece->theme->name }}</h2>
+                </div>
+            </div>
+            <div>
+                <div class="HeaderShow-theme">
+                    <h2 class="HeaderShow-theme-week">Piece 00</h2>
+                    <h2 class="HeaderShow-theme-theme HeaderShow-title">{{ $piece->name }}</h2>
+                </div>
+                @if($piece->description || $piece->video)
+                    <div class="Show-aside">
+                    
+                        @if($piece->description)
+                            <div class="Show-desc u-content">
+                                {!! Str::markdown($piece->description) !!}
+                            </div>
+                        @endif
+
+                        @if($piece->video)
+                            <video class="Show-video" controls>
+                                <source src="{{ asset('/assets/' . $piece->video_url) }}">
+                            </video>
+                        @endif
+
                     </div>
                 @endif
             </div>
@@ -32,11 +56,6 @@
                 @if($first)
                     <div class="HeaderShow-pagination-item -first">
                         @include('projects.ai52.components._excerpt', ['piece' => $first])
-                    </div>
-                @endif
-                @if($last)
-                    <div class="HeaderShow-pagination-item -last">
-                        @include('projects.ai52.components._excerpt', ['piece' => $last])
                     </div>
                 @endif
             </div>
@@ -53,38 +72,11 @@
 
     <section class="Show-inner">
 
-        <header class="HeaderShow">
-            
-            <h1 class="HeaderShow-title">{{ $piece->name }}</h1>
-            <div class="HeaderShow-theme">
-                <h2 class="HeaderShow-theme-week">Week {{ $piece->theme->date->format('W') }}</h2>
-                <h2 class="HeaderShow-theme-theme">{{ $piece->theme->name }}</h2>
-            </div>
-        </header>
-
         <div class="Show-media">
 
             <a class="Show-image" href="{{ asset(app('image')->url($piece->image_url)) }}">
                 <img class="Show-image-img" src="{{ asset(app('image')->size('2560')->url($piece->image_url)) }}"/>
             </a>
-            
-            @if($piece->description || $piece->video)
-                <div class="Show-aside">
-                
-                    @if($piece->description)
-                        <div class="Show-desc u-content">
-                            {!! Str::markdown($piece->description) !!}
-                        </div>
-                    @endif
-
-                    @if($piece->video)
-                        <video class="Show-video" controls>
-                            <source src="{{ asset('/assets/' . $piece->video_url) }}">
-                        </video>
-                    @endif
-
-                </div>
-            @endif
 
         </div>
 
@@ -98,7 +90,7 @@
                                 {{ $key + 1 }} <span class="Show-process-group-heading-h">{{ $process['caption'] ?? '' }}</span>
                             </h4>
                             <div class="Show-process-group-list">
-                                @foreach($process['images'] as $image)
+                                @foreach(array_reverse($process['images']) as $image)
                                     <a class="Show-process-item js-lightbox" data-type="image" href="{{ asset(app('image')->url($piece->fixPath($image))) }}" title="{{ $process['caption'] ?? '' }}">
                                         <img class="Show-process-item-img" src="{{ asset(app('image')->size(null, '300')->url($piece->fixPath($image))) }}"/>
                                     </a>
@@ -143,37 +135,19 @@
 
     <div class="Container-side">
         <div class="HeaderShow-pagination">
-            {{-- <a class="HeaderShow-logo" href="/">
-                <img src="{{ asset('assets/ai52_logo.svg') }}" class="HeaderShow-logo-img"/>
-            </a> --}}
-            {{-- @if($first)
-                <div class="HeaderShow-pagination-item -first">
-                    @include('projects.ai52.components._excerpt', ['piece' => $first])
-                </div>
-            @endif
-            @if($previous)
-                <div class="HeaderShow-pagination-item -prev">
-                    @include('projects.ai52.components._excerpt', ['piece' => $previous])
-                </div>
-            @endif
             @if($next)
                 <div class="HeaderShow-pagination-item -next">
                     @include('projects.ai52.components._excerpt', ['piece' => $next])
                 </div>
             @endif
+            <div>
+                
+            </div>
             @if($last)
                 <div class="HeaderShow-pagination-item -last">
                     @include('projects.ai52.components._excerpt', ['piece' => $last])
                 </div>
-            @endif --}}
-            <h2>More</h2>
-            @foreach($piece->theme->pieces as $subpiece)
-                @if($subpiece->id != $piece->id)
-                    <div class="HeaderShow-pagination-item">
-                        @include('projects.ai52.components._excerpt', ['piece' => $subpiece])
-                    </div>
-                @endif
-            @endforeach
+            @endif
         </div>
     </div>
     

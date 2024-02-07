@@ -876,75 +876,77 @@ iframe.wait-autoplay {
     background: #000;
   }
 }
-.Header {
+.Index-header {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   gap: 2em;
   margin-bottom: 2rem;
 }
 
-.Header-logo {
+.Index-header-logo {
   max-width: 30ch;
   flex: 0 0 auto;
 }
 
-.Header-desc {
+.Index-header-desc {
   padding: 1.4em 0;
   max-width: 66ch;
 }
 
 @media screen and (max-width: 640px) {
-  .Header {
+  .Index-header {
     flex-wrap: wrap;
   }
 }
 
-.Index-list {
-  display: flex;
-  width: 100%;
+.Index-months {
+  padding: 2rem;
 }
 
-.Index-list-month {
+.Index-month {
+  display: flex;
+}
+
+.Index-month-date {
   order: 2;
   flex: 0 0 auto;
 }
 
-.Index-list-month-h {
+.Index-month-date-h {
   writing-mode: vertical-rl;
+  line-height: 1;
   display: block;
   position: -webkit-sticky;
   position: sticky;
-  top: 2em;
+  top: 1em;
   text-transform: uppercase;
   font-size: 3rem;
 }
 
-.Index-list-item {
+.Index-themes {
   display: flex;
-  gap: 1rem;
-}
-
-.Index-list-inner {
-  flex: 1 1 auto;
-  order: 1;
-  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem 3rem;
+  gap: 4rem;
 }
 
-.Index-list-group-heading {
-  gap: 1rem;
-  align-items: flex-end;
-  flex-wrap: wrap;
+.Index-theme {
+  border-left: 2px solid #B5B5B5;
+  padding-left: 1em;
 }
 
-.Index-list-group-week {
+.Index-theme-heading {
+  margin-bottom: 0.5em;
+}
+
+.Index-theme-week {
   font-size: 2.6rem;
   line-height: 1;
   text-transform: uppercase;
 }
 
-.Index-list-group-theme {
+.Index-theme-name {
   font-size: 4rem;
   line-height: 1;
   margin-top: -0.4em;
@@ -953,11 +955,39 @@ iframe.wait-autoplay {
   font-family: "Dancing Script", serif;
 }
 
-.Index-list-group-items {
-  padding: 1rem 0;
+.Index-pieces {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.Index-piece {
+  position: relative;
+}
+
+.Index-piece:hover .Index-piece-img {
+  transform: rotate(4deg) scale(1.1);
+}
+
+.Index-piece:hover .Index-piece-link {
+  border-color: #FF0B4B;
+  border-width: 10px;
+}
+
+.Index-piece-link {
+  border: 0 solid transparent;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.Index-piece-img {
+  transition: all 0.2s ease-in;
+  max-height: 300px;
 }
 
 .Index-pagination {
@@ -989,18 +1019,6 @@ iframe.wait-autoplay {
   background: #FF0B4B;
 }
 
-.PieceExcerpt {
-  transition: all 0.2s ease-in;
-}
-
-.PieceExcerpt-link {
-  display: block;
-}
-
-.PieceExcerpt-link:hover {
-  transform: rotate(4deg) scale(1.1);
-}
-
 .HeaderShow {
   display: flex;
   justify-content: space-between;
@@ -1021,11 +1039,11 @@ iframe.wait-autoplay {
 
 .HeaderShow-theme-week {
   line-height: 1;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .HeaderShow-theme-theme {
-  font-size: 3rem;
+  font-size: 2.8rem;
   padding-left: 0.5em;
   margin-top: -0.4em;
   line-height: 1;
@@ -1035,7 +1053,7 @@ iframe.wait-autoplay {
 
 .HeaderShow-title {
   flex: 1 0 auto;
-  font-size: 4rem;
+  font-size: 3.4rem;
   line-height: 1;
   color: #FF0B4B;
   font-family: "Dancing Script", serif;
@@ -1045,7 +1063,6 @@ iframe.wait-autoplay {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 4em;
   gap: 1em 3em;
 }
 
@@ -1083,9 +1100,17 @@ iframe.wait-autoplay {
   left: -25%;
 }
 
+.HeaderShow-pagination-item.-prev {
+  max-width: 200px;
+}
+
 .HeaderShow-pagination-item.-prev .PieceExcerpt-link:after {
   content: "<";
   left: -15%;
+}
+
+.HeaderShow-pagination-item.-next {
+  max-width: 200px;
 }
 
 .HeaderShow-pagination-item.-next .PieceExcerpt-link:after {
@@ -1100,7 +1125,7 @@ iframe.wait-autoplay {
 .Show-inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1em 3rem;
 }
 
@@ -1120,7 +1145,7 @@ iframe.wait-autoplay {
 }
 
 .Show-desc {
-  max-width: 66ch;
+  max-width: 40ch;
 }
 
 .Show-process-heading {

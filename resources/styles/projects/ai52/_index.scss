@@ -1,84 +1,103 @@
-
-.Header {
-    display: flex;
-    align-items: flex-end;
-    gap: 2em;
-    margin-bottom: 2rem;
-    &-logo {
-        max-width: 30ch;
-        flex: 0 0 auto;
-    }
-    &-desc {
-        padding: 1.4em 0;
-        max-width: 66ch;
-    }
-    @media screen and (max-width: 640px) {
-        flex-wrap: wrap;
-    }
-}
-
 .Index {
-    &-list {
+    &-header {
         display: flex;
-        width: 100%;
-        &-month {
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 2rem;
+        &-logo {
+            max-width: 30ch;
+            flex: 0 0 auto;
+        }
+        &-desc {
+            padding: 1.4em 0;
+            max-width: 66ch;
+        }
+        @media screen and (max-width: 640px) {
+            flex-wrap: wrap;
+        }
+    }
+    &-months {
+        padding: 2rem;
+    }
+    &-month {
+        display: flex;
+        &-date {
             order: 2;
             flex: 0 0 auto;
             &-h {
-                // text-orientation: mixed;
                 writing-mode: vertical-rl;
-                // height: fit-content;
+                line-height: 1;
                 display: block;
                 position: sticky;
-                top: 2em;
+                top: 1em;
                 text-transform: uppercase;
                 font-size: 3rem;
             }
         }
-        &-item {
-            display: flex;
-            gap: 1rem;
-            // width: 100%;
+    }
+    &-themes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+    &-theme {
+        border-left: 2px solid $theme-secondary;
+        padding-left: 1em;
+        &-heading {
+            margin-bottom: 0.5em;
         }
-        &-inner {
-            flex: 1 1 auto;
-            order: 1;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem 3rem;
+        &-week {
+            font-size: 2.6rem;
+            line-height: 1;
+            text-transform: uppercase;
         }
-        &-group {
-            &-heading {
-                // display: flex;
-                gap: 1rem;
-                align-items: flex-end;
-                flex-wrap: wrap;
+        &-name {
+            font-size: 4rem;
+            line-height: 1;
+            margin-top: -0.4em;
+            padding-left: 0.5em;
+            color: $theme-primary;
+            font-family: 'Dancing Script', serif;
+        }
+    }
+    &-pieces {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    &-piece {
+        position: relative;
+        &:hover & {
+            &-img {
+                transform: rotate(4deg) scale(1.1);
             }
-            &-week {
-                font-size: 2.6rem;
-                line-height: 1;
-                text-transform: uppercase;
+            &-link {
+                border-color: $theme-primary;
+                border-width: 10px;
             }
-            &-theme {
-                font-size: 4rem;
-                line-height: 1;
-                margin-top: -0.4em;
-                padding-left: 0.5em;
-                color: $theme-primary;
-                font-family: 'Dancing Script', serif;
-            }
-            &-items {
-                padding: 1rem 0;
-                display: flex;
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
+        }
+        &-link {
+            border: 0 solid transparent;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &-img {
+            transition: all .2s ease-in;
+            max-height: 300px;
         }
     }
     &-pagination {
         margin: 1rem 0;
     }
 }
+
 
 .Pagination {
     font-family: 'Orbitron', san-serif;
@@ -106,20 +125,4 @@
             }
         }
     }
-}
-
-.PieceExcerpt {
-    transition: all .2s ease-in;
-    &-link {
-        display: block;
-        &:hover {
-            transform: rotate(4deg) scale(1.1);
-        }
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-
-
 }
