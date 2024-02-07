@@ -1,9 +1,11 @@
 .Index {
+    --gutter: 2rem;
     &-header {
         display: flex;
         align-items: flex-end;
         justify-content: center;
         gap: 2em;
+        padding: 0 var(--gutter);
         margin-bottom: 2rem;
         &-logo {
             max-width: 30ch;
@@ -18,21 +20,26 @@
         }
     }
     &-months {
-        padding: 2rem;
+        padding: var(--gutter);
     }
     &-month {
         display: flex;
+        gap: 1em;
+        justify-content: space-between;
         &-date {
             order: 2;
             flex: 0 0 auto;
+            line-height: 1;
             &-h {
                 writing-mode: vertical-rl;
-                line-height: 1;
                 display: block;
                 position: sticky;
                 top: 1em;
                 text-transform: uppercase;
-                font-size: 3rem;
+                font-size: 3em;
+                @media screen and (max-width: 640px) {
+                    font-size: 2em;
+                }
             }
         }
     }
@@ -41,31 +48,50 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 4rem;
+        @media screen and (max-width: 1280px) {
+            justify-content: flex-start;
+        }
+        @media screen and (max-width: 640px) {
+            gap: 2rem;
+        }
     }
     &-theme {
+        flex: 0 1 auto;
         border-left: 2px solid $theme-secondary;
         padding-left: 1em;
         &-heading {
             margin-bottom: 0.5em;
         }
         &-week {
-            font-size: 2.6rem;
+            font-size: 2.2em;
             line-height: 1;
             text-transform: uppercase;
         }
         &-name {
-            font-size: 4rem;
+            font-size: 3em;
             line-height: 1;
             margin-top: -0.4em;
             padding-left: 0.5em;
             color: $theme-primary;
             font-family: 'Dancing Script', serif;
         }
+        @media screen and (max-width: 970px) {
+            font-size: 0.9em;
+        }
+        @media screen and (max-width: 640px) {
+            font-size: 0.8em;
+        }
     }
     &-pieces {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+        @media screen and (max-width: 640px) {
+            gap: 1rem;
+            > * {
+                flex: 0 1 calc(50% - (2rem / 2))
+            }
+        }
     }
     &-piece {
         position: relative;
@@ -92,11 +118,24 @@
             transition: all .2s ease-in;
             max-height: 300px;
         }
+        @media screen and (max-width: 960px) {
+            &-img {
+                max-height: 200px;
+            }
+        }
     }
     &-pagination {
-        margin: 1rem 0;
+        margin: 1rem auto;
+        padding: 0 var(--gutter);
+        display: flex;
+        justify-content: center;
+    }
+    @media screen and (max-width: 480px) {
+        --gutter: 1rem;
     }
 }
+
+
 
 
 .Pagination {
