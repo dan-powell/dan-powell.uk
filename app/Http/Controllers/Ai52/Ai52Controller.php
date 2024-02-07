@@ -27,8 +27,11 @@ class Ai52Controller extends Controller
 	{
         $piece = Piece::with(['theme.pieces'])->where('slug', $slug)->firstOrFail();
         
+        $first = Piece::where('created_at', '<', $piece->created_at)->orderBy('created_at', 'ASC')->first();
         $next = Piece::where('created_at', '>', $piece->created_at)->orderBy('created_at', 'ASC')->first();
         $previous = Piece::where('created_at', '<', $piece->created_at)->orderBy('created_at', 'DESC')->first();
+        $last = Piece::where('created_at', '>', $piece->created_at)->orderBy('created_at', 'DESC')->first();
+
 
         if(!$piece) {
             abort('404');
@@ -36,8 +39,10 @@ class Ai52Controller extends Controller
 
         return view('projects.ai52.show')->with([
             'piece' => $piece, 
+            'first' =>  $first, 
             'next' =>  $next, 
-            'previous' => $previous
+            'previous' => $previous,
+            'last' => $last
         ]);
     }
 }

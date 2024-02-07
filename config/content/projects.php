@@ -6,7 +6,7 @@ return [
             'name' => 'Ai 52',
             'sub' => null,
             'description' => '<p></p>',
-            'thumb' => 'projects/3dprint/thumb.jpg',
+            'thumb' => 'projects/ai52/thumb.jpg',
             'created_at' => '2020-11-22 00:00:00',
             'updated_at' => '2020-11-22 00:00:00',
             'url' => ['project.home', ['ai52']],

@@ -1003,16 +1003,20 @@ iframe.wait-autoplay {
 
 .HeaderShow {
   display: flex;
-  align-items: center;
-  gap: 3em;
-  width: 100%;
+  justify-content: space-between;
+  gap: 1em 3em;
+  flex: 1 1 auto;
 }
 
 .HeaderShow-logo {
   display: block;
   flex: 0 0 auto;
   width: 100%;
-  max-width: 14ch;
+  max-width: 10ch;
+}
+
+.HeaderShow-theme {
+  flex: 1 0 auto;
 }
 
 .HeaderShow-theme-week {
@@ -1022,23 +1026,27 @@ iframe.wait-autoplay {
 
 .HeaderShow-theme-theme {
   font-size: 3rem;
+  padding-left: 0.5em;
+  margin-top: -0.4em;
   line-height: 1;
   color: #FF0B4B;
   font-family: "Dancing Script", serif;
 }
 
 .HeaderShow-title {
-  font-size: 6rem;
+  flex: 1 0 auto;
+  font-size: 4rem;
   line-height: 1;
   color: #FF0B4B;
   font-family: "Dancing Script", serif;
 }
 
 .HeaderShow-pagination {
-  margin-left: auto;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  justify-content: space-between;
+  padding-right: 4em;
+  gap: 1em 3em;
 }
 
 .HeaderShow-pagination-item {
@@ -1070,20 +1078,30 @@ iframe.wait-autoplay {
   font-family: "Orbitron", san-serif;
 }
 
+.HeaderShow-pagination-item.-first .PieceExcerpt-link:after {
+  content: "<<";
+  left: -25%;
+}
+
 .HeaderShow-pagination-item.-prev .PieceExcerpt-link:after {
   content: "<";
-  left: -25%;
+  left: -15%;
 }
 
 .HeaderShow-pagination-item.-next .PieceExcerpt-link:after {
   content: ">";
+  right: -15%;
+}
+
+.HeaderShow-pagination-item.-last .PieceExcerpt-link:after {
+  content: ">>";
 }
 
 .Show-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 1em 3rem;
 }
 
 .Show-media {
@@ -1093,7 +1111,7 @@ iframe.wait-autoplay {
 }
 
 .Show-image-img {
-  max-height: 80vh;
+  max-height: 90vh;
 }
 
 .Show-video {
@@ -1129,6 +1147,14 @@ iframe.wait-autoplay {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.Show-process-group-desc {
+  max-width: 20ch;
+}
+
+.Show-process-item-img {
+  max-height: 200px;
 }
 
 .Show-metadata-heading {
@@ -1220,12 +1246,16 @@ h6 {
 
 .Container-side {
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .Container-side > * {
+  flex: 1 1 auto;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 1em;
+  max-height: 90vh;
 }
 
 @media screen and (max-width: 640px) {
