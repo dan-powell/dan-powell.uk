@@ -15,6 +15,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('name');
             $table->date('date');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

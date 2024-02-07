@@ -27,9 +27,9 @@ class Piece extends Model
         'name',
         'slug',
         'description',
-        'image', 
-        'thumbnail', 
-        'process', 
+        'image',
+        'thumbnail',
+        'process',
         'video',
         'metadata',
         'theme_id',
@@ -66,10 +66,10 @@ class Piece extends Model
             get: function (?string $value, array $attributes): ?string
             {
                 return route('ai52.show', $attributes['slug']);
-            } 
+            }
         );
     }
-    
+
     /**
      * Get image URL.
      */
@@ -79,7 +79,7 @@ class Piece extends Model
             get: function (?string $value, array $attributes): ?string
             {
                 return $this->fixPath($attributes['image']);
-            } 
+            }
         );
     }
 
@@ -89,10 +89,10 @@ class Piece extends Model
     protected function thumbnailUrl(): Attribute
     {
         return Attribute::make(
-            get: function (?string $value, array $attributes): ?string 
+            get: function (?string $value, array $attributes): ?string
             {
                 return $this->fixPath($attributes['thumbnail'] ?? $attributes['image']);
-            } 
+            }
         );
     }
 
@@ -105,7 +105,7 @@ class Piece extends Model
             get: function (?string $value, array $attributes): ?string
             {
                 return $this->fixPath($attributes['video']);
-            } 
+            }
         );
     }
 
@@ -139,5 +139,6 @@ class Piece extends Model
         if(substr($path, 0, strlen($pre)) === $pre) {
             return $path = substr($path, strlen($pre));
         }
+        return null;
     }
 }
