@@ -22,6 +22,7 @@ class Theme extends Model
      */
     protected $fillable = [
         'name',
+        'description',
         'date'
     ];
 

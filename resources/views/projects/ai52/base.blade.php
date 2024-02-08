@@ -1,6 +1,6 @@
 @extends('projects.base')
 
-@push('fonts', 'Orbitron:700|Dancing+Script:400')
+@push('fonts', 'Orbitron:700|Dancing+Script:400|Lato:400')
 
 @section('title', 'Ai 52')
 @section('subtitle', '')

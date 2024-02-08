@@ -1082,74 +1082,85 @@ iframe.wait-autoplay {
   background: #FF0B4B;
 }
 
-.HeaderShow {
+.Show {
+  --padding: 2rem;
+}
+
+.Show-inner {
   display: flex;
   justify-content: space-between;
-  gap: 1em 3em;
-  flex: 1 1 auto;
 }
 
-.HeaderShow-logo {
-  display: block;
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 10ch;
-}
-
-.HeaderShow-theme {
+.Show-aside {
   flex: 1 0 auto;
 }
 
-.HeaderShow-theme-week {
-  line-height: 1;
-  font-size: 1.8rem;
+.Show-aside._last .Show-aside-inner {
+  align-items: flex-end;
 }
 
-.HeaderShow-theme-theme {
-  font-size: 2.8rem;
-  padding-left: 0.5em;
-  margin-top: -0.4em;
-  line-height: 1;
-  color: #FF0B4B;
-  font-family: "Dancing Script", serif;
-}
-
-.HeaderShow-title {
-  flex: 1 0 auto;
-  font-size: 3.4rem;
-  line-height: 1;
-  color: #FF0B4B;
-  font-family: "Dancing Script", serif;
-}
-
-.HeaderShow-pagination {
+.Show-aside-inner {
+  padding: var(--padding);
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: 100vh;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1em 3em;
+  gap: var(--padding);
 }
 
-.HeaderShow-pagination-item {
+.Show-aside-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.Show-pagination {
+  position: relative;
+  max-width: 160px;
+}
+
+.Show-pagination:hover .Show-pagination-img {
+  transform: rotate(4deg) scale(1.1);
+}
+
+.Show-pagination:hover .Show-pagination-link {
+  border-color: #FF0B4B;
+  border-width: 10px;
+}
+
+.Show-pagination-link {
+  border: 0 solid transparent;
   display: block;
-  line-height: 1;
-  color: #FF0B4B;
-  max-width: 120px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.HeaderShow-pagination-item .PieceExcerpt-link {
+.Show-pagination-img {
+  display: block;
+  transition: all 0.2s ease-in;
   position: relative;
 }
 
-.HeaderShow-pagination-item .PieceExcerpt-link:after {
+.Show-pagination:after {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  font-size: 2em;
+  font-size: 1.8em;
   top: 25%;
-  right: -25%;
-  width: 50%;
-  height: 50%;
+  padding: 0.5em;
   background: #FF0B4B;
   color: #fff;
   font-weight: bold;
@@ -1158,38 +1169,91 @@ iframe.wait-autoplay {
   font-family: "Orbitron", san-serif;
 }
 
-.HeaderShow-pagination-item.-first .PieceExcerpt-link:after {
+.Show-pagination._minor {
+  max-width: 120px;
+}
+
+.Show-pagination._first:after {
   content: "<<";
-  left: -25%;
+  left: -15%;
 }
 
-.HeaderShow-pagination-item.-prev {
-  max-width: 200px;
-}
-
-.HeaderShow-pagination-item.-prev .PieceExcerpt-link:after {
+.Show-pagination._prev:after {
   content: "<";
   left: -15%;
 }
 
-.HeaderShow-pagination-item.-next {
-  max-width: 200px;
-}
-
-.HeaderShow-pagination-item.-next .PieceExcerpt-link:after {
+.Show-pagination._next:after {
   content: ">";
   right: -15%;
 }
 
-.HeaderShow-pagination-item.-last .PieceExcerpt-link:after {
+.Show-pagination._last:after {
   content: ">>";
+  right: -15%;
 }
 
-.Show-inner {
+@media screen and (max-width: 960px) {
+  .Show-pagination {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .Show-pagination {
+    max-width: 100px;
+  }
+}
+
+.Show-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 10ch;
+}
+
+.Show-theme {
+  flex: 1 0 auto;
+}
+
+.Show-theme-week {
+  line-height: 1;
+  font-size: 1.8rem;
+}
+
+.Show-theme-name {
+  font-size: 2.8rem;
+  padding-left: 0.5em;
+  margin-top: -0.4em;
+  line-height: 1;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.Show-title {
+  flex: 1 0 auto;
+}
+
+.Show-title-num {
+  line-height: 1;
+  font-size: 1.8rem;
+}
+
+.Show-title-name {
+  font-size: 2.8rem;
+  padding-left: 0.5em;
+  margin-top: -0.4em;
+  line-height: 1;
+  color: #FF0B4B;
+  font-family: "Dancing Script", serif;
+}
+
+.Show-main {
+  flex: 0 1 auto;
+  padding: var(--padding);
+  gap: var(--padding);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1em 3rem;
 }
 
 .Show-media {
@@ -1199,7 +1263,9 @@ iframe.wait-autoplay {
 }
 
 .Show-image-img {
-  max-height: 90vh;
+  margin: 0 auto;
+  max-height: calc(100vh - var(--padding) * 2);
+  max-width: 100%;
 }
 
 .Show-video {
@@ -1208,7 +1274,7 @@ iframe.wait-autoplay {
 }
 
 .Show-desc {
-  max-width: 40ch;
+  max-width: 50ch;
 }
 
 .Show-process-heading {
@@ -1246,7 +1312,7 @@ iframe.wait-autoplay {
 }
 
 .Show-metadata-heading {
-  font-size: 2.6rem;
+  font-size: 2.2em;
   line-height: 1;
   text-transform: uppercase;
   font-family: "Orbitron", san-serif;
@@ -1282,33 +1348,52 @@ iframe.wait-autoplay {
   padding: 0 0.5em;
 }
 
-.Show-more-heading {
-  font-family: "Orbitron", san-serif;
-  color: #B5B5B5;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: 0.5em;
-}
-
-.Show-more-heading-theme {
-  font-size: 1.2em;
-  color: #FF0B4B;
-  font-family: "Dancing Script", serif;
-}
-
-.Show-more-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-@media screen and (max-width: 480px) {
-  .HeaderShow {
+@media screen and (max-width: 1280px) {
+  .Show-inner {
     flex-wrap: wrap;
   }
 
-  .Show-process-group-list > * {
-    flex: 1 1 40%;
+  .Show-aside._last .Show-aside.Show-pagination._prev {
+    display: block;
+  }
+
+  .Show-aside._last .Show-pagination._prev {
+    display: block;
+  }
+
+  .Show-aside-inner {
+    min-height: auto;
+    flex-direction: row;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .Show-aside-mid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: -1;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: none;
+  }
+
+  .Show-pagination._first {
+    display: none;
+  }
+
+  .Show-pagination._prev {
+    display: none;
+  }
+
+  .Show-pagination._last {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Show {
+    --padding: 1rem;
   }
 }
 
@@ -1320,36 +1405,5 @@ h5,
 h6 {
   font-family: "Orbitron", san-serif;
   color: #B5B5B5;
-}
-
-.Container {
-  width: 100%;
-  padding: 2rem 3rem;
-  display: flex;
-}
-
-.Container > * {
-  flex: 1 1 auto;
-}
-
-.Container-side {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.Container-side > * {
-  flex: 1 1 auto;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 1em;
-  max-height: 90vh;
-}
-
-@media screen and (max-width: 640px) {
-  .Container {
-    padding: 1rem 1rem;
-    flex-wrap: wrap;
-  }
 }
 

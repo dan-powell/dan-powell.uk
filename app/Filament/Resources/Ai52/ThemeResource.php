@@ -30,6 +30,10 @@ class ThemeResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\MarkdownEditor::make('description')
+                    ->disableToolbarButtons(['attachFiles'])
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
                 Forms\Components\DatePicker::make('date')
                     ->required(),
             ]);
