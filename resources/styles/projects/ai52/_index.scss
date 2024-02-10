@@ -21,6 +21,9 @@
     }
     &-months {
         padding: var(--gutter);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
     &-month {
         display: flex;
