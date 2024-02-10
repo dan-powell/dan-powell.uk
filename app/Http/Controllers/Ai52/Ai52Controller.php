@@ -11,7 +11,7 @@ class Ai52Controller extends Controller
 {
     public function index(Request $request)
 	{
-        $themes = Theme::with(['pieces'])->orderBy('date', $request->query('order') == 'desc' ? 'DESC' : 'ASC')->paginate(8)->appends([
+        $themes = Theme::with(['pieces'])->orderBy('date', $request->query('order') == 'asc' ? 'ASC' : 'DESC')->paginate(12)->appends([
             'order' => $request->query('order'),
         ]);
 

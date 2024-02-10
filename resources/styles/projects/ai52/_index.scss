@@ -23,7 +23,7 @@
         padding: var(--gutter);
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 6rem;
     }
     &-month {
         display: flex;
@@ -48,9 +48,10 @@
     }
     &-themes {
         display: flex;
-        justify-content: center;
+        // justify-content: center;
         flex-wrap: wrap;
         gap: 4rem;
+        margin: 0 auto;
         @media screen and (max-width: 1280px) {
             justify-content: flex-start;
         }
@@ -119,7 +120,12 @@
         }
         &-img {
             transition: all .2s ease-in;
-            max-height: 300px;
+            max-height: 400px;
+        }
+        @media screen and (max-width: 1920px) {
+            &-img {
+                max-height: 280px;
+            }
         }
         @media screen and (max-width: 960px) {
             &-img {

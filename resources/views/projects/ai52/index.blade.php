@@ -12,10 +12,10 @@
         <header class="Index-header">
             <img src="{{ asset('assets/ai52_logo.svg') }}" class="Index-header-logo"/>
             <p class="Index-header-desc">In this artistic journey of discovery, we explore the creative potential of AI by creating a unique piece of artwork each week for a span of one year. This experiment aims to uncover the boundless possibilities of a collaborative creative workflow involving both humans and artificial intelligence.
-                @if(request()->query('order') == 'desc')
-                    <a href="{{ url('/?order=asc') }}">Oldest first</a>
-                @else
+                @if(request()->query('order') == 'asc')
                     <a href="{{ url('/?order=desc') }}">Latest first</a>
+                @else
+                    <a href="{{ url('/?order=asc') }}">Oldest first</a>
                 @endif
             </p>
             
