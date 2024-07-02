@@ -4,10 +4,10 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'dan-powell.uk');
+set('application', 'autumnrain.uk');
 
 // Project repository
-set('repository', 'git@github.com:dan-powell/dan-powell.uk.git');
+set('repository', 'git@github.com:autumnrain/autumnrain.uk.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);

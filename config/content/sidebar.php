@@ -6,7 +6,7 @@ return [
         [
             'label' => 'Home',
             'icon' => 'img/sidebar/icons.svg#home',
-            'url' => '/',
+            'url' => ['home'],
         ],
         // [
         //     'prefix' => 'Professional',
@@ -41,6 +41,6 @@ return [
     ],
     'links' => [
         'projects' => ['projects.index'],
-        'github' => 'https://github.com/dan-powell',
+        'github' => 'https://github.com/autumnrain',
     ],
 ];

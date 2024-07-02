@@ -52,6 +52,16 @@ Route::domain(config('app.domain'))->group(function () {
 
 });
 
+
+Route::domain(config('app.domain2'))->group(function () {
+
+    Route::get('/', [
+        'as' => 'home2',
+        'uses' => 'Main\HomeController@alt'
+    ]);
+
+});
+
 // AI52 Project controller
 Route::domain('ai52.' . config('app.domain'))->name('ai52.')->group(function () {
     Route::get('/', ['as' => 'home', 'uses' => 'Ai52\Ai52Controller@index']);

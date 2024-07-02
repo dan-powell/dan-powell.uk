@@ -2,10 +2,10 @@
     <div class="Sidebar-stripe">
         <a href="{{ config('app.url') }}" class="Sidebar-home">
             <h1 class="Sidebar-home-title">
-                <span class="Sidebar-home-text Sidebar-home-text--dan">Dan</span>
-                <span class="Sidebar-home-text Sidebar-home-text--powell">Powell</span>
+                <span class="Sidebar-home-text Sidebar-home-text--dan">Autumn</span>
+                {{-- <span class="Sidebar-home-text Sidebar-home-text--powell">umn</span> --}}
                 {{-- <span class="Sidebar-home-text Sidebar-home-text--web">Web</span> --}}
-                <span class="Sidebar-home-text Sidebar-home-text--design">Design</span>
+                <span class="Sidebar-home-text Sidebar-home-text--design">Rain</span>
             </h1>
         </a>
         <button class="Sidebar-button Sidebar-button--menu js-sidebar">

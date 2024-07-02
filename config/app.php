@@ -52,11 +52,11 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://dan-powell.uk'),
+    'url' => env('APP_URL', 'https://autumnrain.uk'),
 
+    'domain' => env('APP_DOMAIN', 'autumnrain.uk'),
 
-    'domain' => env('APP_DOMAIN', 'dan-powell.uk'),
-
+    'domain2' => env('APP_DOMAIN_2', 'dan-powell.uk'),
 
     /*
     |--------------------------------------------------------------------------

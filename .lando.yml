@@ -1,4 +1,4 @@
-name: dan-powell
+name: autumnrain
 recipe: laravel
 config:
   webroot: public
@@ -16,9 +16,9 @@ services:
         - ${SSH_AUTH_SOCK}:/ssh-agent
   database:
     creds:
-      user: dan-powell
-      password: dan-powell
-      database: dan-powell
+      user: autumnrain
+      password: autumnrain
+      database: autumnrain
   node:
     type: node:14
     build:
@@ -54,13 +54,14 @@ tooling:
       - "php artisan db:seed"
 proxy:
   appserver_nginx:
-    - dan-powell.lndo.site
-    - 3dprint.dan-powell.lndo.site
-    - pico8.dan-powell.lndo.site
-    - fungifalls.dan-powell.lndo.site
-    - 365.dan-powell.lndo.site
-    - ai52.dan-powell.lndo.site
+    - autumnrain.lndo.site
+    - dan-powell.autumnrain.lndo.site
+    - 3dprint.autumnrain.lndo.site
+    - pico8.autumnrain.lndo.site
+    - fungifalls.autumnrain.lndo.site
+    - 365.autumnrain.lndo.site
+    - ai52.autumnrain.lndo.site
   node:
-    - bs.dan-powell.lndo.site:3000
+    - bs.autumnrain.lndo.site:3000
   pma:
-    - pma.dan-powell.lndo.site:80
+    - pma.autumnrain.lndo.site:80

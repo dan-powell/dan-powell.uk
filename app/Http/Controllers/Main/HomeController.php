@@ -17,4 +17,9 @@ class HomeController extends Controller {
         return view('main.home.home')->with('project', $this->projectRepo->all()->first());
     }
 
+    public function alt()
+	{
+        return view('main.home.alt');
+    }
+
 }
